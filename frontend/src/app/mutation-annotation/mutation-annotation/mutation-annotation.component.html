@@ -1,0 +1,25 @@
+
+<form>
+  <label class="btn btn-primary">
+    <i class="icon-file_upload"></i> 
+    {{'MutationAnnotation.btn_load-vcf' | translate}}
+    <input type="file" (change)="uploadVCF($event)" accept=".vcf">
+  </label>
+</form> 
+
+<h4 class="mt-3 mb-3" *ngIf="listArticles.length">{{'MutationAnnotation.title' | translate}}</h4>
+
+<div *ngFor="let item of listArticles | keyvalue"  class="list-group-item">
+     
+  <h6><i class="icon-topic marR-10 marL--10"></i>{{item.key}}</h6>
+
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let subItem of item.value"  class="list-group-item">
+         
+          <a [href]="subItem.article_url" target="blank">{{subItem.article_name}}</a>  
+      
+        </li>
+        
+      </ul>
+
+</div>

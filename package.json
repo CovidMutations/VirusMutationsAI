@@ -1,0 +1,29 @@
+{
+  "name": "virusmutationsai",
+  "private": true,
+  "scripts": {
+    "back": "yarn workspace @backend/virusmutationsai start:dev",
+    "back:build": "yarn workspace @backend/virusmutationsai prestart:prod",
+    "back:prod": "yarn workspace @backend/virusmutationsai prod",
+    "front": "yarn workspace @frontend/virus-mutations-ai start",
+    "front:prod": "yarn workspace @frontend/virus-mutations-ai build --prod",
+    "typecheck": "lerna run typecheck",
+    "lint": "tslint --project tsconfig.json -c tslint.json -t codeFrame backend/**/*.ts"
+  },
+  "devDependencies": {
+    "lerna": "3.15.0",
+    "tslint": "^5.17.0",
+    "husky": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint && yarn typecheck"
+    }
+  },
+
+  "workspaces": [
+    "backend", "frontend"
+  ]
+
+
+}

@@ -1,0 +1,4 @@
+server: 
+  port: 3000
+  origin: 'http://localhost:4200/'
+  mode: 'development'

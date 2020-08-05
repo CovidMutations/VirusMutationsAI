@@ -1,0 +1,51 @@
+.preloader {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  margin: auto;
+  z-index: 1000;
+  background-color: rgba($white,0.5);
+  &.m_like_bg {
+      position: absolute;
+      z-index: 0;
+
+  }
+}
+.spinner {
+  width: 30px;
+  height: 30px;
+  color: $blue;
+  margin:  auto;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+  position: relative;
+
+  
+  &:after {
+    content: "\e901";
+    font-family: 'icomoon';
+    font-size: 30px;
+    position: absolute;
+    top: -25%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
