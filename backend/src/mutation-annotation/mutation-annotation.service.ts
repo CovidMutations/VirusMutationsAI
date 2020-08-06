@@ -14,10 +14,10 @@ export class MutationAnnotationService {
     this.logger.verbose('uploadVCF');
 
     const pyPath = path.join(__dirname, '..', '..', 'scripts', 'vcf_to_articles_json.py');
-    const indexPath = path.join(__dirname, '..', '..', 'db', 'index.csv');
-    const mappingPath = path.join(__dirname, '..', '..', 'db', 'articles2mutations.txt');
+    const indexPath = '--article_index_file_name=' + path.join(__dirname, '..', '..', 'db', 'index.csv');
+    const mappingPath = '--article_mutations_file_name=' + path.join(__dirname, '..', '..', 'db', 'articles2mutations.txt');
     const filePath = path.join(__dirname, '..', '..', file);
-
+    
     const pythonShellRun = promisify(PythonShell.run);
     const results = await pythonShellRun(pyPath, {args: [filePath, indexPath, mappingPath]});
 
