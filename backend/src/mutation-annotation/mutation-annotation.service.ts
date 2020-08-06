@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger, InternalServerErrorException, HttpStatus } from '@nestjs/common';
 import * as path from 'path';
 import * as fs from 'fs';
 import {PythonShell} from 'python-shell';
@@ -10,6 +10,7 @@ export class MutationAnnotationService {
   private logger = new Logger('MutationAnnotationService');
 
   async uploadVCF(file): Promise<MutationAnnotationModel> {
+    
     this.logger.verbose('uploadVCF');
 
     const pyPath = path.join(__dirname, '..', '..', 'scripts', 'vcf_to_articles_json.py');
@@ -20,7 +21,13 @@ export class MutationAnnotationService {
 
     if (results)  { this.removeVCF(filePath); }
 
-    return JSON.parse(results.join(''));
+    const jsonRes = JSON.parse(results.join(''));
+
+    if('error_text' in jsonRes) {
+      throw new InternalServerErrorException(jsonRes,jsonRes.error_text);
+    }
+
+    return jsonRes;
   }
 
   private removeVCF(file): void {
