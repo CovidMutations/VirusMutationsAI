@@ -11,12 +11,9 @@ import vcf_parser
 COL__UID = 'uid'
 COL__MUTATIONS = 'mutations'
 
-os.chdir('../')
-abs_url = os.getcwd()
 
-DEFAULT_ARTICLE_INDEX_PATH = abs_url + '\\backend\\db\\index.csv'
-DEFAULT_ARTICLE_MUTATIONS_PATH = abs_url + '\\backend\\db\\articles2mutations.txt'
-
+DEFAULT_ARTICLE_INDEX_PATH = '../db/index.csv'
+DEFAULT_ARTICLE_MUTATIONS_PATH = '../db/articles2mutations.txt'
 
 
 # The logic is opposite to write_article_to_mutations_list_to_file in mutations_extractor.py
@@ -151,3 +148,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

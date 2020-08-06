@@ -60,3 +60,4 @@ class VcfParser:
         mutations = self.get_mutations(notation)
         mutations.to_csv(output_file, index=False)
         print(f'Success. Mutations written to file {output_file}')
+
