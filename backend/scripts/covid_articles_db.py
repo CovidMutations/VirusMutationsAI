@@ -9,24 +9,22 @@ Entrez.email = "test@domain.com"
 ncbi_db = "pmc"
 query = 'SARS-CoV-2 mutation AND "open access"[filter]' #less articles but more relevant content
 #query = 'SARS-CoV-2AND "open access"[filter]' #more articles but less relevant content
-article_root_folder = './db'
+article_root_folder = '../db/'
 
 # Init folders/files and load existing index
 if not os.path.exists(article_root_folder):
     os.makedirs(article_root_folder)
-if not os.path.exists(article_root_folder + 'db'):
-    os.makedirs(article_root_folder + 'db')
 if os.path.exists(article_root_folder + '/index.csv'):
     df_index = pd.read_csv(article_root_folder + '/index.csv')
 else:
     df_index = pd.DataFrame(columns=['uid', 'storage_id', 'title', 'url'])
 
 # Remove files in db that are not in the index (keep DB in valid state)
-files = [i for i in os.listdir(article_root_folder + '/db') if i.endswith("xml")]
+files = [i for i in os.listdir(article_root_folder) if i.endswith("xml")]
 count_removed_files = 0
 for file in files:
     if file[:-4] not in df_index['uid'].values:
-        os.remove(article_root_folder + '/db/' + file)
+        os.remove(article_root_folder + file)
         count_removed_files += 1
 print("Removed {} unindexed files".format(count_removed_files))
 
@@ -68,7 +66,7 @@ for i in range(0
             df_index = df_index.append({'uid': str_uid, 'storage_id' : all_cov_ids[i], 'title': article_title, 'url': article_uid}, ignore_index=True)
             count_appended_items +=1 
 
-            with open("c:/temp/covid19/db/" + str_uid + ".xml", "w") as file_article:
+            with open(article_root_folder + str_uid + ".xml", "w") as file_article:
                 file_article.write(str(output_str))
         else:
             count_already_added += 1
@@ -81,10 +79,5 @@ for i in range(0
         print("Progress {}/{}...".format(i, len(all_cov_ids)))
         df_index.to_csv(article_root_folder + '/index.csv', index=False)
 
-print("Appended {} articles, {} already added, {} error(s)".format(count_appended_items, count_already_added, count_errors))        
-
-
-
-
-
+print("Appended {} articles, {} already added, {} error(s)".format(count_appended_items, count_already_added, count_errors))
 
