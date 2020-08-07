@@ -7,5 +7,16 @@
   "MutationAnnotation": {
     "title": "Found following articles",
     "btn_load-vcf": "Upload VCF-File for COVID-19"
+  },
+  "admin": {
+    "title": "Update schedule the database",
+    "btn_update-now": "Update now",
+    "label_updating-frequency": "Updating frequency",
+    "label_last-update": "Last update",
+    "option_frequency": {
+      "daily": "Once a day",
+      "weekly": "Once a week",
+      "monthly": "Once a month"
+    }
   }
 }

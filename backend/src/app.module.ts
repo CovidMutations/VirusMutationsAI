@@ -7,12 +7,14 @@ import { ValidationPipe } from './shared/validation.pipe';
 // import { GraphQLModule } from '@nestjs/graphql';
 
 import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
+import { AdminModule } from './admin/admin.module';
 
 
 @Module({
   imports: [
     CacheModule.register(),
     MutationAnnotationModule,
+    AdminModule,
     // GraphQLModule.forRoot({
     //   installSubscriptionHandlers: true,
     //   typePaths: ['./**/*.graphql'],

@@ -1,0 +1,19 @@
+<h4>{{'admin.title' | translate}}</h4>
+
+<form [formGroup]="frequencyForm" class="mt-4">
+  <div class="form-group row">
+    <label for="inputState" class="col-sm-4 col-form-label">{{'admin.label_last-update' | translate}}: {{ lastUpdateDate | date: 'MMM d, y, h:mm:ss a' }}</label>
+    <div class="col-sm-4">
+      <button type="button" (click)="updateDB()" class="btn btn-primary">{{'admin.btn_update-now' | translate}}</button>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputState" class="col-sm-4 col-form-label">{{'admin.label_updating-frequency' | translate}}</label>
+    <div class="col-sm-4">
+      <select id="inputState" class="form-control" formControlName="frequency" (change)="setFrequency()">
+        <option >Choose...</option>
+        <option *ngFor="let item of dbUpdatingFrequency | keyvalue" [value]="item.key">{{'admin.option_frequency.' + item.key | translate}}</option>
+      </select>
+    </div>
+  </div>
+</form>

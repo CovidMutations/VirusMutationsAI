@@ -6,6 +6,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./mutation-annotation/mutation-annotation.module').then(m => m.MutationAnnotationModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
