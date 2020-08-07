@@ -2,12 +2,11 @@
 
 
 
-## Install packeges
+## Install packages
 
-Run `yarn`
+Install and run `yarn`
 
 ## =============================================================================
-
 
 ## Run backend
 
@@ -28,3 +27,8 @@ Run `yarn front`
 
 Run `yarn front:prod`
 
+## =============================================================================
+
+## Update articles DB manually:
+
+Launch consequently from 'backend/scripts': covid_articles_db.py, mutations_extractor.py
