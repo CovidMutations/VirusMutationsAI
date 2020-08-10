@@ -26,11 +26,12 @@ export class AdminService {
     this.API_URL = config.apiEndpoint;
   }
 
-  setFrequency(param: DBUpdatingFrequencyEnum): Observable<any> {
+  setFrequency(frequency: DBUpdatingFrequencyEnum): Observable<any> {
 
-    return this.http.post(this.API_URL + this.updatefrequencyEndpoint, {param})
+    return this.http.post(this.API_URL + this.updatefrequencyEndpoint, {frequency}, {responseType: 'text'})
     .pipe(
       tap(
+        data => {},
         err => {
           this.sharedService.errorModal('Error: ' + err.error.message);
         }
@@ -51,9 +52,10 @@ export class AdminService {
   }
 
   updateDB(): Observable<any> {
-    return this.http.post(this.API_URL + this.updatedbEndpoint, {})
+    return this.http.post(this.API_URL + this.updatedbEndpoint, {}, {responseType: 'text'})
     .pipe(
       tap(
+        data => {},
         err => {
           this.sharedService.errorModal('Error: ' + err.error.message);
         }

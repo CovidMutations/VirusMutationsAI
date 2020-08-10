@@ -25,20 +25,20 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  updateDB() {
+  updateDB(): void {
     this.adminService.updateDB().subscribe(lastUpdateDate => {
+      console.log('lastUpdateDate= ', lastUpdateDate)
       this.lastUpdateDate = lastUpdateDate;
     });
   }
 
-  setFrequency() {
- //   this.adminService.setFrequency(this.frequencyForm.get('frequency').value).subscribe();
+  setFrequency(): void {
+    this.adminService.setFrequency(this.frequencyForm.get('frequency').value).subscribe();
   }
 
-  loadData() {
+  loadData(): void {
     this.adminService.getFrequency().subscribe(frequency => {
       this.frequencyForm.get('frequency').setValue(frequency);
-      console.log( this.frequencyForm)
     });
 
     this.adminService.getUpdateDBDate().subscribe(lastUpdateDate => {

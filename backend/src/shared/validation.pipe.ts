@@ -7,7 +7,7 @@ export class ValidationPipe implements PipeTransform<any> {
   logger = new Logger('ValidationPipe');
   async transform(value: any, metadata: ArgumentMetadata) {
 
-    this.logger.verbose(` ${value}, ${metadata}`);
+    this.logger.verbose(` ${JSON.stringify(value)}, ${JSON.stringify(metadata)}`);
 
     if (value instanceof Object && this.isEmpty(value)) {
       throw new HttpException(
@@ -16,6 +16,7 @@ export class ValidationPipe implements PipeTransform<any> {
       );
     }
     const { metatype } = metadata;
+    
 
     if (!metatype || !this.toValidate(metatype)) {
       return value;
@@ -23,6 +24,7 @@ export class ValidationPipe implements PipeTransform<any> {
     const object = plainToClass(metatype, value);
 
     const errors = await validate(object);
+    console.log(errors)
     if (errors.length > 0) {
       throw new HttpException(`Validation failed: ${this.formatErrors(errors)}`, HttpStatus.BAD_REQUEST);
     }
