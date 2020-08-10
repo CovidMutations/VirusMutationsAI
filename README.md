@@ -6,7 +6,6 @@
 
 Install and run `yarn`
 
-## =============================================================================
 
 ## Run backend
 
@@ -15,9 +14,9 @@ Run `yarn back`
 ## Run backend in production mode
 
 Run `yarn back:build`
+
 Run `yarn back:prod`
 
-## =============================================================================
 
 ## Run frontend
 
@@ -27,7 +26,6 @@ Run `yarn front`
 
 Run `yarn front:prod`
 
-## =============================================================================
 
 ## Update articles DB manually:
 
