@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KeyValue } from '@angular/common';
 import { DBUpdatingFrequencyEnum } from '../../models/admin-db.model';
 import { AdminService } from '../admin.service';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -44,6 +45,10 @@ export class AdminComponent implements OnInit {
     this.adminService.getUpdateDBDate().subscribe(lastUpdateDate => {
       this.lastUpdateDate = lastUpdateDate;
     });
+  }
+
+  originalOrder = (a: KeyValue<number,string>, b: KeyValue<number,string>): number => {
+    return 0;
   }
 
 }

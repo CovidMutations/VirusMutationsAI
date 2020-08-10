@@ -6,7 +6,15 @@ export enum DBUpdatingFrequencyEnum {
   monthly = 'monthly'
 }
 
+export enum DBUpdatingCronEnum {
+  // daily = '5 * * * * *',
+  // weekly = '15 * * * * *',
+  // monthly = '25 * * * * *'
 
+  daily = '0 0 23 * * *',
+  weekly = '0 0 23 * * 6',
+  monthly = '0 0 23 1 * *'
+}
 
 export class SetFrequencyDTO {
   @IsEnum(DBUpdatingFrequencyEnum)

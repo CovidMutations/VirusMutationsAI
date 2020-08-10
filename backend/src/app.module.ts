@@ -5,14 +5,16 @@ import { HttpErrorFilter } from './shared/http-error.filter';
 import { LoggingInterceptor } from './shared/logging.interceptor';
 import { ValidationPipe } from './shared/validation.pipe';
 // import { GraphQLModule } from '@nestjs/graphql';
-
+import { ScheduleModule } from '@nestjs/schedule';
 import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
 import { AdminModule } from './admin/admin.module';
+import { TasksService } from './shared/tasks.service';
 
 
 @Module({
   imports: [
     CacheModule.register(),
+    ScheduleModule.forRoot(),
     MutationAnnotationModule,
     AdminModule,
     // GraphQLModule.forRoot({
@@ -30,6 +32,8 @@ import { AdminModule } from './admin/admin.module';
  //   {provide: 'APP_FILTER_GQL', useClass: GqlHttpExceptionFilter },
     {provide: APP_INTERCEPTOR, useClass: LoggingInterceptor },
     {provide: APP_PIPE, useClass: ValidationPipe },
+    TasksService
   ],
 })
-export class AppModule {}
+export class AppModule {
+}

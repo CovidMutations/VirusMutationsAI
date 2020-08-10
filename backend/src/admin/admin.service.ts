@@ -2,7 +2,10 @@ import { Injectable, Logger, InternalServerErrorException, HttpStatus } from '@n
 import * as path from 'path';
 import * as fs from 'fs';
 import * as csvdata from 'csvdata';
-import {SetFrequencyDTO, DBUpdatingFrequencyEnum, AdminSettingsModel} from '../model/admin.model';
+import {SchedulerRegistry} from '@nestjs/schedule';
+import { CronTime } from 'cron';
+
+import {SetFrequencyDTO, DBUpdatingFrequencyEnum, AdminSettingsModel, DBUpdatingCronEnum} from '../model/admin.model';
 
 
 @Injectable()
@@ -10,7 +13,9 @@ export class AdminService {
   private logger = new Logger('AdminService');
   private adminFilePath = path.join(__dirname, '..', '..', 'assets', 'admin.csv');
   private csvHeader = {header: 'frequency,lastUpdateDB'};
-  constructor() {
+  constructor(
+    private readonly schedulerRegistry: SchedulerRegistry
+  ) {
     this.createDefaultAdminCSV();
   }
 
@@ -24,6 +29,11 @@ export class AdminService {
     this.logger.verbose('setFrequency');
     const csv: AdminSettingsModel[] = await csvdata.load(this.adminFilePath);
     await csvdata.write(this.adminFilePath, [{...csv[0], ...res}], this.csvHeader);
+
+    const job = this.schedulerRegistry.getCronJob('updateDBCron');
+    job.setTime(new CronTime(DBUpdatingCronEnum[res.frequency]));
+    job.start();
+
     return res.frequency
   }
 
