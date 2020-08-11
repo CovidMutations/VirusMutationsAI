@@ -1,5 +1,7 @@
 import { Module, CacheModule } from '@nestjs/common';
 import { APP_INTERCEPTOR, APP_PIPE, APP_FILTER } from '@nestjs/core';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import * as path from 'path';
 // import { GqlHttpExceptionFilter } from './shared/gql-http-error.filter';
 import { HttpErrorFilter } from './shared/http-error.filter';
 import { LoggingInterceptor } from './shared/logging.interceptor';
@@ -13,6 +15,9 @@ import { TasksService } from './shared/tasks.service';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: path.join(__dirname),
+    }),
     CacheModule.register(),
     ScheduleModule.forRoot(),
     MutationAnnotationModule,
