@@ -3,10 +3,17 @@ import glob
 import os
 import pandas as pd
 import re
+import shutil
+import time
+
 
 # Supported file extensions
 EXT_XML = 'xml'
 EXT_TXT = 'txt'
+
+COL_UID = 'uid'
+COL_MUTATIONS = 'mutations'
+OUT_COLS = [COL_UID, COL_MUTATIONS]
 
 
 def get_files_by_mask(data_dir, mask, verbose=False):
@@ -29,15 +36,12 @@ def process_article_lines(lines: list, file_type: str, verbose=False):
         # Search mutations with different patterns
         # muts = re.findall(r'\d+', s)  # Find all numbers
         # muts = re.findall(r'\S+\d+\S+', s)  # Find all numbers, alone or with left/right letters
-        # muts = re.findall(r'\s[A-Z]\d+[A-Z]\s', s)  # Find patterns like P223Q
         muts.extend(re.findall(r'[A-Z]\d+[A-Z]', s))  # Find patterns like P223Q
-        muts.extend(re.findall(r'\d+[ACGT]+>[ACGT]+', s))  # Find patterns like 223A>T
-        muts.extend(re.findall(r'\d+[ACGT]+&gt;[ACGT]+', s))  # Find patterns like 223A>T
 
-        strings = re.findall(r'\d+ *[ACGT]+ *&gt; *[ACGT]+', s)  # Find patterns like 223 A > T
-        # Convert them to canonical form
+        # Find patterns like "223 A > T", "223 A &gt; T" and convert them to canonical form "223A>T"
+        strings = re.findall(r'\d+ *[ACGT]+ *(?:&gt;|>) *[ACGT]+', s)
         for ss in strings:
-            m = re.search(r'(?P<pos>\d+) *(?P<from>[ACGT]+) *&gt; *(?P<to>[ACGT]+)', ss)
+            m = re.search(r'(?P<pos>\d+) *(?P<from>[ACGT]+) *(:?&gt;|>) *(?P<to>[ACGT]+)', ss)
             mut = f"{m.group('pos')}{m.group('from')}>{m.group('to')}"
             muts.append(mut)
     if verbose:
@@ -67,20 +71,37 @@ def process_folder(input_folder, article_files_extension, verbose=False):
         res_tuple = (root, str(mut_list))  # article uid + string with list of mutations like "['23A>G', ...]"
         res_list.append(res_tuple)
     # TODO(MEDIUM_2020-08): dump a list of skipped files (may be useful if there are upper-case extensions, etc.)
-    return res_list
+    return pd.DataFrame.from_records(res_list, columns=OUT_COLS)
 
 
-# Variant with manual file creation
-# def write_article_to_mutations_list_to_file(article_to_mutations_list, out_file_name):
-#     with open(out_file_name, 'w') as f:
-#         for (uid, muts) in article_to_mutations_list:
-#             f.write(f'{uid},{muts}\n')
+def merge_new_data_with_old(new_article_to_mutations_df, old_article_to_mutations_df=None):
+    if old_article_to_mutations_df is None:
+        return new_article_to_mutations_df  # No old data
+    # Merge new data with old, replacing data in case of possible uid conflicts
+    # Ref: https://stackoverflow.com/a/52468811
+    old_df = old_article_to_mutations_df.set_index(COL_UID, drop=False)
+    new_df = new_article_to_mutations_df.set_index(COL_UID, drop=False)
+    df = new_df.combine_first(old_df)
+    df = df.reset_index(drop=True)
+    # Sanity checks
+    assert all(df.columns == OUT_COLS)
+    assert len(df) >= max(len(old_df), len(new_df))
+    return df
 
 
-# Variant with pandas
-def write_article_to_mutations_list_to_file(article_to_mutations_list, out_file_name):
-    df = pd.DataFrame.from_records(article_to_mutations_list, columns=['uid', 'mutations'])
-    df.to_csv(out_file_name, index=False)
+def try_to_load_existing_data(out_file_name):
+    df = None
+    if os.path.isfile(out_file_name):
+        df = pd.read_csv(out_file_name)
+        assert all(df.columns == OUT_COLS), f'Unexpected columns in loaded data: {df.columns} instead of {OUT_COLS}'
+    return df
+
+
+def safe_write_to_output_file(df, out_file_name):
+    """First saves df to temp file, then rename it. Should help in case of access collisions, low disk space, etc."""
+    tmp_name = f'{out_file_name}_{time.time()}'  # Ex: 'super_file.csv_223322.223322'
+    df.to_csv(tmp_name, index=False)  # In rare cases (no disk space, etc.) may fail
+    shutil.move(tmp_name, out_file_name)
 
 
 def parse_args():
@@ -90,7 +111,8 @@ def parse_args():
                         help='Path to folder with *.txt or *.xml files.')
     parser.add_argument('out_file_name',
                         type=str,
-                        help='Name of output file with article uids and list of mutation.')
+                        help='Name of output file with article uids and list of mutation. If the file already exists, '
+                             'data will be appended to it.')
     parser.add_argument('--article_files_extension',
                         type=str,
                         choices=[EXT_XML, EXT_TXT],
@@ -102,8 +124,19 @@ def parse_args():
 
 def main():
     args = parse_args()
-    article_to_mutations_list = process_folder(args.input_folder, args.article_files_extension, verbose=True)
-    write_article_to_mutations_list_to_file(article_to_mutations_list, args.out_file_name)
+    # Clean params (on some platforms there may be \r symbols in the end)
+    input_folder = args.input_folder.strip()
+    out_file_name = args.out_file_name.strip()
+
+    # Load data from existing file, if any
+    old_article_to_mutations_df = try_to_load_existing_data(out_file_name)
+
+    # Prepare new data
+    new_article_to_mutations_df = process_folder(input_folder, args.article_files_extension, verbose=True)
+
+    # Merge old + new, then write to disk
+    final_article_to_mutations_df = merge_new_data_with_old(new_article_to_mutations_df, old_article_to_mutations_df)
+    safe_write_to_output_file(final_article_to_mutations_df, out_file_name)
 
 
 if __name__ == '__main__':
