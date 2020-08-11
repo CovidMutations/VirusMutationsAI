@@ -9,19 +9,24 @@ import * as config from 'config';
 
 const serverConfig = config.get('server');
 const port = process.env.PORT || serverConfig.port;
-const mode =  serverConfig.mode || process.env.MODE;
+const mode =   process.env.MODE || serverConfig.mode;
+const origin =   process.env.ORIGIN || serverConfig.origin;
+
+
 
 async function bootstrap() {
   const logger = new Logger('bootstrap');
   const app = await NestFactory.create(AppModule);
 
+  logger.log(`process.env: ${process.env}`);
+
   if (mode === 'development') {
     logger.log(`enableCors in development mode`);
     app.enableCors();
   } else {
-    logger.log(`Accepting requests from origin "${serverConfig.origin}" `);
+    logger.log(`Accepting requests from origin "${origin}" `);
     app.enableCors({
-      origin: serverConfig.origin,
+      origin: origin,
     });
   }
 
