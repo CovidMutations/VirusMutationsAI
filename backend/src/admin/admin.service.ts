@@ -4,8 +4,9 @@ import * as fs from 'fs';
 import * as csvdata from 'csvdata';
 import {SchedulerRegistry} from '@nestjs/schedule';
 import { CronTime } from 'cron';
-
-import {SetFrequencyDTO, DBUpdatingFrequencyEnum, AdminSettingsModel, DBUpdatingCronEnum} from '../model/admin.model';
+import {PythonShell} from 'python-shell';
+import {promisify} from 'util';
+import {SetFrequencyDTO, DBUpdatingFrequencyEnum, AdminSettingsModel, DBUpdatingCronEnum, ResUpdateDBModel} from '../model/admin.model';
 
 
 @Injectable()
@@ -44,16 +45,37 @@ export class AdminService {
   }
 
 
-  async setUpdateDBDate(): Promise<number> {
+  async updateDB(): Promise<ResUpdateDBModel> {
     this.logger.verbose('setUpdateDBDate');
     const csv: AdminSettingsModel[] = await csvdata.load(this.adminFilePath);
     await csvdata.write(this.adminFilePath, [{...csv[0], lastUpdateDB: Date.now()}], this.csvHeader);
-    return Date.now();
+
+
+    const pyPath = path.join(__dirname, '..', '..', 'scripts', 'update_articles_db.py');
+    const scriptFolderPath = path.join(__dirname, '..', '..', 'scripts');
+    const dbFolderPath = path.join(__dirname, '..', '..', 'db');
+    const mappingPath = path.join(__dirname, '..', '..', 'db', 'articles2mutations.txt');
+
+
+    
+    const pythonShellRun = promisify(PythonShell.run);
+    const results = await pythonShellRun(pyPath, {args: [scriptFolderPath, dbFolderPath, mappingPath]});
+    console.log('results: ',results)
+    const jsonRes = JSON.parse(results.join(''));
+
+    if(jsonRes.status == 'ERROR') {
+      throw new InternalServerErrorException(jsonRes, jsonRes.status_text);
+    }
+
+    return { 
+      lastUpdateDate: Date.now(),
+      ...jsonRes
+    } as ResUpdateDBModel;
+
   }
 
-
-  private createDefaultAdminCSV(){
-    fs.stat(this.adminFilePath, (err, stats)=>{
+  private async createDefaultAdminCSV(){
+    await fs.stat(this.adminFilePath, (err, stats)=>{
       if(err) {
         this.logger.verbose(`createDefaultAdminCSV`);
         csvdata.write(this.adminFilePath, [{
@@ -63,5 +85,7 @@ export class AdminService {
       }
     })
   }
+
+
 
 }

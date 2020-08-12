@@ -10,7 +10,8 @@ import { ValidationPipe } from './shared/validation.pipe';
 import { ScheduleModule } from '@nestjs/schedule';
 import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
 import { AdminModule } from './admin/admin.module';
-import { TasksService } from './shared/tasks.service';
+ import { TasksService } from './services/tasks.service';
+ import { AdminService } from './admin/admin.service';
 
 
 @Module({
@@ -37,7 +38,7 @@ import { TasksService } from './shared/tasks.service';
  //   {provide: 'APP_FILTER_GQL', useClass: GqlHttpExceptionFilter },
     {provide: APP_INTERCEPTOR, useClass: LoggingInterceptor },
     {provide: APP_PIPE, useClass: ValidationPipe },
-    TasksService
+     TasksService
   ],
 })
 export class AppModule {

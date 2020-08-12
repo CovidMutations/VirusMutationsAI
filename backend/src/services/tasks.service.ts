@@ -1,4 +1,5 @@
-import { Injectable, Logger, InternalServerErrorException, HttpStatus } from '@nestjs/common';
+import { ModuleRef } from '@nestjs/core';
+import { Injectable, Logger } from '@nestjs/common';
 import { Cron, SchedulerRegistry } from '@nestjs/schedule';
 import { CronJob } from 'cron';
 import * as fs from 'fs';
@@ -7,17 +8,22 @@ import * as csvdata from 'csvdata';
 import {promisify} from 'util';
 const stat = promisify(fs.stat);
 import { DBUpdatingCronEnum, AdminSettingsModel  } from '../model/admin.model';
+import { AdminService  } from '../admin/admin.service';
 
 
 @Injectable()
 export class TasksService {
   private logger = new Logger('TasksService ');
   private adminFilePath = path.join(__dirname, '..', '..', 'assets', 'admin.csv');
+  ;
 
   constructor(
-    private readonly schedulerRegistry: SchedulerRegistry
+    private readonly schedulerRegistry: SchedulerRegistry,
+    private readonly adminService: AdminService
+ //   private readonly moduleRef: ModuleRef
   ) {
     this.createUpdateDBCron();
+  //  this.adminService = this.moduleRef.get(AdminService);
   }
 
 
@@ -35,7 +41,10 @@ export class TasksService {
 
     const job = new CronJob(cronTime, () => {
       this.logger.warn(`job ${cronName} & time (${job.cronTime.source}) running!`);
-      this.updateDBJob();
+      // =================== jobs ======================
+      this.adminService.updateDB();
+      // =================== / jobs ======================
+
     });
   
     this.schedulerRegistry.addCronJob(cronName, job);
@@ -43,8 +52,5 @@ export class TasksService {
     this.logger.warn(`job ${cronName} & time (${cronTime}) started!`);
   }
 
-  private updateDBJob() {
-
-  }
 
 }

@@ -29,3 +29,9 @@ export class AdminSettingsModel {
 }
 
 
+export class ResUpdateDBModel {
+  lastUpdateDB: number;
+  status: string;
+  status_text: string;
+}
+
