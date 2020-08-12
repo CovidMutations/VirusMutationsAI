@@ -28,7 +28,7 @@ def main():
         input_folder = args.input_folder.strip() + '/'
         out_file_name = args.out_file_name.strip()
 
-        returned = subprocess.check_output([sys.executable, script_folder  + "covid_articles_db.py"])
+        returned = subprocess.check_output([sys.executable, script_folder  + "covid_articles_db.py", input_folder])
         returned_text = returned.decode('utf-8')
 
         #print(returned_text)

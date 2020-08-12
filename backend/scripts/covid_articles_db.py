@@ -12,6 +12,11 @@ query = 'SARS-CoV-2 mutation AND "open access"[filter]' #less articles but more 
 #query = 'SARS-CoV-2AND "open access"[filter]' #more articles but less relevant content
 article_root_folder = '../db/'
 
+if len(sys.argv) > 1:
+    article_root_folder = sys.argv[1]
+
+print("DB path: {}".format(article_root_folder))
+
 # Init folders/files and load existing index
 if not os.path.exists(article_root_folder):
     os.makedirs(article_root_folder)
