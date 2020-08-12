@@ -3,8 +3,7 @@
   "private": true,
   "scripts": {
     "back": "yarn workspace @backend/virusmutationsai start:dev",
-    "back:build": "yarn workspace @backend/virusmutationsai prebuild && yarn workspace @backend/virusmutationsai build",
-    "back:prod": "yarn workspace @backend/virusmutationsai start:prod",
+    "back:prod": "yarn workspace @backend/virusmutationsai prebuild && yarn workspace @backend/virusmutationsai build",
     "front": "yarn workspace @frontend/virus-mutations-ai start",
     "front:prod": "yarn workspace @frontend/virus-mutations-ai build --prod",
     "typecheck": "lerna run typecheck",
