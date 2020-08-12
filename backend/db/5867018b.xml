@@ -1,0 +1,2410 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Cell</journal-id>
+      <journal-id journal-id-type="iso-abbrev">Cell</journal-id>
+      <journal-title-group>
+        <journal-title>Cell</journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0092-8674</issn>
+      <issn pub-type="epub">1097-4172</issn>
+      <publisher>
+        <publisher-name>Elsevier Inc.</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">32353252</article-id>
+      <article-id pub-id-type="pmc">7189862</article-id>
+      <article-id pub-id-type="publisher-id">S0092-8674(20)30483-9</article-id>
+      <article-id pub-id-type="doi">10.1016/j.cell.2020.04.020</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Development of CRISPR as an Antiviral Strategy to Combat SARS-CoV-2 and Influenza</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" id="au1">
+          <name>
+            <surname>Abbott</surname>
+            <given-names>Timothy R.</given-names>
+          </name>
+          <xref rid="aff1" ref-type="aff">1</xref>
+          <xref rid="fn1" ref-type="fn">9</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au2">
+          <name>
+            <surname>Dhamdhere</surname>
+            <given-names>Girija</given-names>
+          </name>
+          <xref rid="aff2" ref-type="aff">2</xref>
+          <xref rid="fn1" ref-type="fn">9</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au3">
+          <name>
+            <surname>Liu</surname>
+            <given-names>Yanxia</given-names>
+          </name>
+          <xref rid="aff1" ref-type="aff">1</xref>
+          <xref rid="fn1" ref-type="fn">9</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au4">
+          <name>
+            <surname>Lin</surname>
+            <given-names>Xueqiu</given-names>
+          </name>
+          <xref rid="aff1" ref-type="aff">1</xref>
+          <xref rid="fn1" ref-type="fn">9</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au5">
+          <name>
+            <surname>Goudy</surname>
+            <given-names>Laine</given-names>
+          </name>
+          <xref rid="aff1" ref-type="aff">1</xref>
+          <xref rid="fn1" ref-type="fn">9</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au6">
+          <name>
+            <surname>Zeng</surname>
+            <given-names>Leiping</given-names>
+          </name>
+          <xref rid="aff1" ref-type="aff">1</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au7">
+          <name>
+            <surname>Chemparathy</surname>
+            <given-names>Augustine</given-names>
+          </name>
+          <xref rid="aff3" ref-type="aff">3</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au8">
+          <name>
+            <surname>Chmura</surname>
+            <given-names>Stephen</given-names>
+          </name>
+          <xref rid="aff4" ref-type="aff">4</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au9">
+          <name>
+            <surname>Heaton</surname>
+            <given-names>Nicholas S.</given-names>
+          </name>
+          <xref rid="aff5" ref-type="aff">5</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au10">
+          <name>
+            <surname>Debs</surname>
+            <given-names>Robert</given-names>
+          </name>
+          <xref rid="aff4" ref-type="aff">4</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au11">
+          <name>
+            <surname>Pande</surname>
+            <given-names>Tara</given-names>
+          </name>
+          <xref rid="aff6" ref-type="aff">6</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au12">
+          <name>
+            <surname>Endy</surname>
+            <given-names>Drew</given-names>
+          </name>
+          <xref rid="aff1" ref-type="aff">1</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au13">
+          <name>
+            <surname>La Russa</surname>
+            <given-names>Marie F.</given-names>
+          </name>
+          <email>mlarussa@stanford.edu</email>
+          <xref rid="aff1" ref-type="aff">1</xref>
+          <xref rid="cor1" ref-type="corresp">&#x2217;</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au14">
+          <name>
+            <surname>Lewis</surname>
+            <given-names>David B.</given-names>
+          </name>
+          <email>dblewis@stanford.edu</email>
+          <xref rid="aff2" ref-type="aff">2</xref>
+          <xref rid="cor2" ref-type="corresp">&#x2217;&#x2217;</xref>
+        </contrib>
+        <contrib contrib-type="author" id="au15">
+          <name>
+            <surname>Qi</surname>
+            <given-names>Lei S.</given-names>
+          </name>
+          <email>stanley.qi@stanford.edu</email>
+          <xref rid="aff1" ref-type="aff">1</xref>
+          <xref rid="aff7" ref-type="aff">7</xref>
+          <xref rid="aff8" ref-type="aff">8</xref>
+          <xref rid="fn2" ref-type="fn">10</xref>
+          <xref rid="cor3" ref-type="corresp">&#x2217;&#x2217;&#x2217;</xref>
+        </contrib>
+        <aff id="aff1"><label>1</label>Department of Bioengineering, Stanford University, Stanford, CA 94305, USA</aff>
+        <aff id="aff2"><label>2</label>Department of Pediatrics, Stanford University, Stanford, CA 94305, USA</aff>
+        <aff id="aff3"><label>3</label>Department of Management Science and Engineering, Stanford University, Stanford, CA 94305, USA</aff>
+        <aff id="aff4"><label>4</label>DNARx, San Francisco, CA 94107, USA</aff>
+        <aff id="aff5"><label>5</label>Department of Molecular Genetics and Microbiology, Duke University School of Medicine, Durham, NC 27710, USA</aff>
+        <aff id="aff6"><label>6</label>Los Altos High School, Los Altos, CA 94022, USA</aff>
+        <aff id="aff7"><label>7</label>Department of Chemical and Systems Biology, Stanford University, Stanford, CA 94305, USA</aff>
+        <aff id="aff8"><label>8</label>ChEM-H, Stanford University, Stanford, CA 94305, USA</aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="cor1"><label>&#x2217;</label>Corresponding author <email>mlarussa@stanford.edu</email></corresp>
+        <corresp id="cor2"><label>&#x2217;&#x2217;</label>Corresponding author <email>dblewis@stanford.edu</email></corresp>
+        <corresp id="cor3"><label>&#x2217;&#x2217;&#x2217;</label>Corresponding author <email>stanley.qi@stanford.edu</email></corresp>
+        <fn id="fn1">
+          <label>9</label>
+          <p id="ntpara0010">These authors contributed equally</p>
+        </fn>
+        <fn id="fn2">
+          <label>10</label>
+          <p id="ntpara0015">Lead Contact</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="pmc-release">
+        <day>29</day>
+        <month>4</month>
+        <year>2020</year>
+      </pub-date>
+      <!-- PMC Release delay is 0 months and 0 days and was based on <pub-date
+\t\t\t\t\t\tpub-type="epub">.-->
+      <pub-date pub-type="ppub">
+        <day>14</day>
+        <month>5</month>
+        <year>2020</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>29</day>
+        <month>4</month>
+        <year>2020</year>
+      </pub-date>
+      <volume>181</volume>
+      <issue>4</issue>
+      <fpage>865</fpage>
+      <lpage>876.e12</lpage>
+      <history>
+        <date date-type="received">
+          <day>11</day>
+          <month>3</month>
+          <year>2020</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>24</day>
+          <month>3</month>
+          <year>2020</year>
+        </date>
+        <date date-type="accepted">
+          <day>13</day>
+          <month>4</month>
+          <year>2020</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2020 Elsevier Inc.</copyright-statement>
+        <copyright-year>2020</copyright-year>
+        <copyright-holder>Elsevier Inc.</copyright-holder>
+        <license>
+          <license-p>Since January 2020 Elsevier has created a COVID-19 resource centre with free information in English and Mandarin on the novel coronavirus COVID-19. The COVID-19 resource centre is hosted on Elsevier Connect, the company\'s public news and information website. Elsevier hereby grants permission to make all its COVID-19-related research that is available on the COVID-19 resource centre - including this research content - immediately available in PubMed Central and other publicly funded repositories, such as the WHO COVID database with rights for unrestricted research re-use and analyses in any form or by any means with acknowledgement of the original source. These permissions are granted for free by Elsevier for as long as the COVID-19 resource centre remains active.</license-p>
+        </license>
+      </permissions>
+      <abstract id="abs0010">
+        <title>Summary</title>
+        <p>The coronavirus disease 2019 (COVID-19) pandemic, caused by the SARS-CoV-2 virus, has highlighted the need for antiviral approaches that can target emerging viruses with no effective vaccines or pharmaceuticals. Here, we demonstrate a CRISPR-Cas13-based strategy, PAC-MAN (prophylactic antiviral CRISPR in human cells), for viral inhibition that can effectively degrade RNA from SARS-CoV-2 sequences and live influenza A virus (IAV) in human lung epithelial cells. We designed and screened CRISPR RNAs (crRNAs) targeting conserved viral regions and identified functional crRNAs targeting SARS-CoV-2. This approach effectively reduced H1N1 IAV load in respiratory epithelial cells. Our bioinformatic analysis showed that a group of only six crRNAs can target more than 90% of all coronaviruses. With the development of a safe and effective system for respiratory tract delivery, PAC-MAN has the potential to become an important pan-coronavirus inhibition strategy.</p>
+      </abstract>
+      <abstract abstract-type="graphical" id="abs0015">
+        <title>Graphical Abstract</title>
+        <fig id="undfig1" position="anchor">
+          <graphic xlink:href="fx1_lrg"/>
+        </fig>
+      </abstract>
+      <abstract abstract-type="author-highlights" id="abs0020">
+        <title>Highlights</title>
+        <p>
+          <list list-type="simple" id="ulist0010">
+            <list-item id="u0010">
+              <label>&#x2022;</label>
+              <p id="p0010">PAC-MAN is a CRISPR-based strategy for RNA-guided viral RNA inhibition and degradation</p>
+            </list-item>
+            <list-item id="u0015">
+              <label>&#x2022;</label>
+              <p id="p0015">Cas13d PAC-MAC is effective at targeting and cleaving SARS-CoV-2 sequences</p>
+            </list-item>
+            <list-item id="u0020">
+              <label>&#x2022;</label>
+              <p id="p0020">Cas13d PAC-MAC can reduce H1N1 IAV load in respiratory epithelial cells</p>
+            </list-item>
+            <list-item id="u0025">
+              <label>&#x2022;</label>
+              <p id="p0025">A group of six crRNAs can target more than 90% of all coronaviruses</p>
+            </list-item>
+          </list>
+        </p>
+      </abstract>
+      <abstract abstract-type="teaser" id="abs0025">
+        <p>A CRISPR-based strategy is developed to target conserved sequences across coronaviruses and other pathogenic viruses.</p>
+      </abstract>
+      <kwd-group id="kwrds0010">
+        <title>Keywords</title>
+        <kwd>CRISPR</kwd>
+        <kwd>Cas13</kwd>
+        <kwd>COVID-19</kwd>
+        <kwd>SARS-CoV-2</kwd>
+        <kwd>2019-nCoV</kwd>
+        <kwd>RdRP</kwd>
+        <kwd>nucleocapsid</kwd>
+        <kwd>IAV</kwd>
+        <kwd>influenza</kwd>
+        <kwd>antiviral</kwd>
+      </kwd-group>
+    </article-meta>
+    <notes>
+      <p id="misc0010">Published: April 29, 2020</p>
+    </notes>
+  </front>
+  <body>
+    <sec id="sec1">
+      <title>Introduction</title>
+      <p id="p0030">The world is currently faced with a pandemic of novel coronavirus disease 2019 (COVID-19), which is caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and has no preventative vaccine or proven pharmacologic treatment. It is predicted that the development of a safe and effective vaccine to prevent COVID-19 will take 12 to 18&#xA0;months, by which time many millions of people may have been infected. With a rapidly growing number of cases and deaths around the world, such emerging threats require a nimble and targeted means of protection. Because coronaviruses causing COVID-19, severe acute respiratory syndrome (SARS), and Middle East respiratory syndrome (MERS) are able to spontaneously transfer to humans from diverse animal hosts that act as viral reservoirs, there is a pressing need to develop methods to broadly combat other coronaviruses that may emerge in the future (<xref rid="bib27" ref-type="bibr">Li et&#xA0;al., 2005</xref>, <xref rid="bib34" ref-type="bibr">Mohd et&#xA0;al., 2016</xref>, <xref rid="bib40" ref-type="bibr">Shi and Hu, 2008</xref>). A recent report showed two strains (L and S) of SARS-CoV-2 with different genomic sequences are circulating and likely evolving, further highlighting the need for a pan-coronavirus targeting strategy (<xref rid="bib43" ref-type="bibr">Tang et&#xA0;al., 2020</xref>).</p>
+      <p id="p0035">The novel coronavirus causing COVID-19 belongs to a family of positive-sense RNA viruses, which typically infect the upper and lower respiratory tracts and cause disease by direct cytotoxic effects and the induction of host cytokine-mediated inflammation (<xref rid="bib29" ref-type="bibr">Liu et&#xA0;al., 2020</xref>). The SARS-CoV-2 life cycle is likely similar to the closely related coronavirus that causes SARS, in which the virus enters the cell, releases its RNA genome into the cytoplasm, and synthesizes negative-sense genomic and subgenomic RNAs from which viral mRNAs and new copies of&#xA0;the positive sense viral genome are synthesized (<xref rid="fig1" ref-type="fig">Figure&#xA0;1</xref>
+A) (<xref rid="bib8" ref-type="bibr">Du et&#xA0;al., 2009</xref>, <xref rid="bib28" ref-type="bibr">Liu, 2014</xref>). Whereas most ongoing vaccine trials&#xA0;work by priming the human immune system to recognize coronavirus proteins or attenuated viruses and decrease viral entry into cells (<xref rid="bib36" ref-type="bibr">Rappuoli, 2018</xref>), the alternative antiviral approach we propose here relies on a CRISPR-based system for recognizing and degrading the intracellular viral genome and its resulting viral mRNAs (<xref rid="fig1" ref-type="fig">Figure&#xA0;1</xref>B). Targeting the positive-sense genome and viral mRNAs to simultaneously degrade viral genome templates for replication and viral gene expression would be expected to robustly limit viral replication.<fig id="fig1"><label>Figure&#xA0;1</label><caption><p>The Hypothetical Life Cycle of SARS-CoV-2 and the PAC-MAN Approach for Inhibiting Coronavirus Using CRISPR-Cas13</p><p>(A) A hypothetical life cycle of SARS-CoV-2. Upon SARS-CoV-2 entry and genome RNA release, the positive strand RNA genome serves as a template to make negative strand genomic and subgenomic templates, which are used to produce more copies of the positive strand viral genome and viral mRNAs.</p><p>(B) Cas13d can inhibit viral function and replication by directly targeting and cleaving all viral positive-sense RNA.</p></caption><graphic xlink:href="gr1_lrg"/></fig></p>
+      <p id="p0040">To inhibit RNA viruses in human cells, we used the class 2 type VI-D CRISPR-Cas13d system derived from <italic>Ruminococcus flavefaciens</italic> XPD3002, a recently discovered RNA-guided RNA endonuclease (<xref rid="bib21" ref-type="bibr">Konermann et&#xA0;al., 2018</xref>, <xref rid="bib49" ref-type="bibr">Yan et&#xA0;al., 2018</xref>). Cas13d employs CRISPR-associated RNAs (crRNAs) that contain a customizable 22-nt spacer sequence that can direct the Cas13d protein to specific RNA molecules for targeted RNA degradation. The high catalytic activity of Cas13d in human cells provides a potential mechanism for targeting SARS-CoV-2 for specific viral RNA genome degradation and viral gene expression inhibition. Because of its small size (967 amino acids), high specificity, and strong catalytic activity, we chose Cas13d rather than other Cas13 proteins to target and destroy RNA viruses, including SARS-CoV-2 and influenza A virus (IAV) (<xref rid="bib12" ref-type="bibr">Gootenberg et&#xA0;al., 2018</xref>, <xref rid="bib42" ref-type="bibr">Smargon et&#xA0;al., 2017</xref>, <xref rid="bib49" ref-type="bibr">Yan et&#xA0;al., 2018</xref>). While this is not the first study to use a Cas13 variant to target viral sequences in human cells (<xref rid="bib2" ref-type="bibr">Bawage et&#xA0;al., 2018</xref>, <xref rid="bib9" ref-type="bibr">Freije et&#xA0;al., 2019</xref>), it remains unknown whether CRISPR tools can be designed to effectively target and cleave SARS-CoV-2 sequences. In addition, our approach differs from previous studies in that we aim to develop a strategy for simultaneously targeting multiple species of viruses within the same family to provide broad, pan-coronavirus protection.</p>
+      <p id="p0045">In this work, we developed a prophylactic antiviral CRISPR in human cells (PAC-MAN) strategy as a form of genetic intervention to target SARS-CoV-2, IAV, and potentially all coronaviruses. We created a bioinformatic pipeline to define highly conserved regions across many sequenced SARS-CoV-2 genomes and target these regions using CRISPR-Cas13d for viral sequence degradation. At the time of manuscript submission, we were unable to gain access to live SARS-CoV-2 strains. Therefore, we tested our approach using synthesized fragments of SARS-CoV-2, as well as with live infection using an H1N1 IAV strain in human lung epithelial cells. We designed and screened a&#xA0;panel of crRNA pools targeting conserved viral regions and defined the most effective crRNAs. We demonstrated the ability&#xA0;of our approach to cleave SARS-CoV-2 fragments and to reduce the amount of IAV infection in human lung epithelial cells. Our bioinformatics analysis revealed a group of six crRNAs that can target 91% of sequenced coronaviruses, as well as a group of 22 crRNAs able to target&#xA0;all sequenced coronaviruses. Through the use of crRNA pools targeting different regions of the same virus or different strains of coronavirus, this system could possibly buffer against viral evolution and escape as well as be used to protect against future related pathogenic viruses. While there are remaining hurdles to overcome before this strategy can be used clinically, PAC-MAN has the potential to become a new antiviral strategy.</p>
+    </sec>
+    <sec id="sec2">
+      <title>Results</title>
+      <sec id="sec2.1">
+        <title>Computational Design and Analysis of Cas13d-Targetable Regions in the SARS-CoV-2 Genome</title>
+        <p id="p0050">To create effective and specific crRNA sequences to target and&#xA0;cleave SARS-CoV-2, we first performed a bioinformatic analysis by aligning published SARS-CoV-2 genomes from 47 patients with SARS-CoV and MERS-CoV genomes. SARS-CoV-2 has a single-stranded RNA genome with &#x223C;30,000 nt that encodes 12 putative, functional open reading frames (<xref rid="bib5" ref-type="bibr">Chan et&#xA0;al., 2020</xref>, <xref rid="bib39" ref-type="bibr">Shang et&#xA0;al., 2020</xref>, <xref rid="bib47" ref-type="bibr">Wu et&#xA0;al., 2020</xref>). Our analysis found regions with high conservation between 47 SARS-CoV-2 strains, as well as SARS-CoV and MERS-CoV genomes (<xref rid="fig2" ref-type="fig">Figure&#xA0;2</xref>
+A). Two of the more highly conserved regions contain the RNA-dependent RNA polymerase (<italic>RdRP</italic>) gene in the&#xA0;polypeptide ORF1ab region, which maintains the proliferation of all coronaviruses, and the nucleocapsid (<italic>N</italic>) gene at the 3&#x2032; end of the genome, which encodes the capsid protein for viral packaging.<fig id="fig2"><label>Figure&#xA0;2</label><caption><p>Bioinformatic Analysis of Cas13d Target Sites for SARS-CoV-2 and Construction of the PAC-MAN System</p><p>(A) Alignment of 47 patient-derived SARS-CoV-2 sequences with SARS-CoV and MERS-CoV. Top: predicted abundance of crRNAs that are able to target SARS-CoV-2 genomes and SARS or MERS. Middle: annotation of genes in the SARS-CoV-2 genomes, along with conserved regions chosen to be synthesized into the SARS-CoV-2 reporters (magenta and purple). Bottom: percentage of conservation between aligned viral genomes. See <xref rid="mmc2" ref-type="supplementary-material">Table S2</xref> for the designed crRNA sequences and synthesized SARS-CoV-2 fragments.</p><p>(B) Schematic of the two reporters (SARS-CoV-2-F1/F2) created with synthesized viral sequences. SARS-CoV-2-F1 contains GFP fused to a portion of <italic>RdRP</italic> (RdRP-F1) and SARS-CoV-2-F2 contains GFP fused to portions of both <italic>RdRP</italic> (RDRP-F2) and <italic>N</italic>.</p><p>(C) Schematics for the constructs used to express Cas13d or crRNAs.</p><p>(D) Experiment workflow to challenge Cas13d A549 lung epithelial cells with SARS-CoV-2 reporters.</p><p>See also <xref rid="figs1" ref-type="fig">Figure&#xA0;S1</xref> and <xref rid="mmc1" ref-type="supplementary-material">Tables S1</xref> and <xref rid="mmc2" ref-type="supplementary-material">S2</xref>.</p></caption><graphic xlink:href="gr2_lrg"/></fig></p>
+        <p id="p0055">To target highly conserved SARS-CoV-2 regions, we generated an <italic>in silico</italic> collection of all 3,802 possible crRNAs (<xref rid="figs1" ref-type="fig">Figure&#xA0;S1</xref>
+). After excluding crRNAs either predicted to have potential off-target binding (&#x2264;2 mismatches) in the human transcriptome or having poly-T (&#x2265;4 Ts) sequences that may prevent crRNA expression, we obtained a collection of 3,203 crRNAs (<xref rid="mmc1" ref-type="supplementary-material">Table S1</xref>) (<xref rid="bib45" ref-type="bibr">Wessels et&#xA0;al., 2020</xref>). We designed and synthesized 40 crRNAs, with 20 crRNAs each targeting the conserved sequences of the <italic>RdRP</italic> and <italic>N</italic> genes (<xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>). Our rationale for targeting these two regions was to significantly reduce both viral genomic and subgenomic RNA and mRNA templates for expressing essential viral proteins. We also wanted&#xA0;to create a robust set of crRNAs to guard against loss of targeting activity by mutational escape.<fig id="figs1"><label>Figure&#xA0;S1</label><caption><p>A Bioinformatic Pipeline to Predict Effective and Specific crRNA Designs, Related to <xref rid="fig2" ref-type="fig">Figure&#xA0;2</xref>A</p><p>Our bioinformatic method analyzes all possible crRNAs that target regions conserved between reported SARS-CoV-2, SARS-CoV, and MERS-CoV.</p></caption><graphic xlink:href="figs1_lrg"/></fig></p>
+      </sec>
+      <sec id="sec2.2">
+        <title>PAC-MAN Is Capable of Inhibiting Coronavirus Fragment Expression in Human Lung Epithelial Cells</title>
+        <p id="p0060">To evaluate whether Cas13d is effective for targeting SARS-CoV-2 sequences, we created two reporters expressing synthesized fragments of SARS-CoV-2 fused to GFP (SARS-CoV-2-F1 and SARS-CoV-2-F2) (<xref rid="fig2" ref-type="fig">Figure&#xA0;2</xref>B; <xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>). As SARS-CoV-2 appears to mainly infect respiratory tract cells in patients (<xref rid="bib29" ref-type="bibr">Liu et&#xA0;al., 2020</xref>), we chose to use human lung epithelial A549 cells as a model cell line. We created a stable A549 cell line expressing Cas13d through lentiviral infection, followed by sorting for the&#xA0;mCherry marker that was co-expressed with Cas13d (<xref rid="fig2" ref-type="fig">Figure&#xA0;2</xref>C).</p>
+        <p id="p0065">We first investigated which regions of the SARS-CoV-2 fragments were most susceptible to Cas13d-mediated targeting and cleavage. To do this, we transfected or transduced the SARS-CoV-2 reporters into Cas13d A549 cells that had been transduced with pools of four crRNAs targeting either <italic>RdRP</italic> or&#xA0;<italic>N</italic> gene regions (<xref rid="fig2" ref-type="fig">Figure&#xA0;2</xref>D, see <xref rid="sec4" ref-type="sec">STAR Methods</xref>). We chose to evaluate the effectiveness of our system using a pool of crRNAs, because in the context of live viral infection, this would limit the possibility of escape due to a mutation in a single crRNA&#xA0;target site. A total of ten groups (G1&#x2013;G10) were tested for all 40 crRNAs (<xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>). Twenty-four hours after SARS-CoV-2 reporter transfection, we performed flow cytometry to examine levels of GFP protein expression and collected RNA from cells to perform quantitative real-time PCR to examine mRNA transcript abundance.</p>
+        <p id="p0070">We observed that most <italic>RdRP</italic>-targeting crRNA pools were able to repress reporter expression to some extent compared to the control, and one pool targeting the central region of the SARS-CoV-2-F1 <italic>RdRP</italic> fragment (G4; SARS-CoV-2 genome coordinates 13,762&#x2013;14,149) was particularly effective and able to repress GFP by 86% (p&#xA0;= 2&#xA0;&#xD7; 10<sup>&#x2212;6</sup>) (<xref rid="fig3" ref-type="fig">Figures 3</xref>
+A, <xref rid="figs2" ref-type="fig">S2</xref>
+A, and S2B; <xref rid="mmc3" ref-type="supplementary-material">Table S3</xref>). One pool of <italic>N</italic> gene-targeting crRNAs (G6; SARS-CoV-2 genome coordinates 28,322&#x2013;28,489) was able to&#xA0;substantially repress SARS-CoV-2-F2 GFP, causing a 71% decrease in expression (p&#xA0;= 2&#xA0;&#xD7; 10<sup>&#x2212;7</sup>) (<xref rid="fig3" ref-type="fig">Figures 3</xref>B, <xref rid="figs2" ref-type="fig">S2</xref>A, and S2B; <xref rid="mmc3" ref-type="supplementary-material">Table S3</xref>). Our quantitative real-time PCR analysis showed consistent results at the RNA level, with G4 and G6 inhibiting their respective reporter mRNA abundance by 83% (p&#xA0;= 3&#xA0;&#xD7; 10<sup>&#x2212;11</sup>) and 79% (p&#xA0;= 2&#xA0;&#xD7; 10<sup>&#x2212;12</sup>) (<xref rid="figs3" ref-type="fig">Figures3</xref>A and 3B; <xref rid="mmc3" ref-type="supplementary-material">Table S3</xref>). The variations in the ability of different crRNA pools to repress the SARS-CoV-2 reporters are likely due to RNA secondary structure inherent in the SARS-CoV-2 genome fragments or differences in binding affinities for each crRNA sequence composition.<fig id="fig3"><label>Figure&#xA0;3</label><caption><p>PAC-MAN Can Inhibit SARS-CoV-2 Reporters</p><p>(A and B) Left: schematics of pools of crRNAs targeting transfected (A) SARS-CoV-2-F1 or (B) SARS-CoV-2-F2 reporters. Middle: GFP expression as measured by flow cytometry. Right: mRNA abundance as measured by quantitative real-time PCR. Relative RNA expression is calculated by normalizing to the reporter only sample. p values for each group are included in <xref rid="mmc3" ref-type="supplementary-material">Table S3</xref>.</p><p>(C) GFP expression as measured by flow cytometry when SARS-CoV-2-F1 (left) or SARS-CoV-2-F2 (right) is delivered via lentiviral transduction. p values for G1 (p = 10<sup>&#x2013;6</sup>) and G4 (p = 7&#xD7;10<sup>&#x2013;6</sup>) are relative to SARS-CoV-2-F1 only, while p values for G5 (p = 0.001) and G6 (p = 3&#xD7;10<sup>&#x2013;6</sup>) are relative to SARS-CoV-2-F2 only. MOI&#xA0;= 0.5.</p><p>(D) mRNA abundance measured by quantitative real-time PCR when SARS-CoV-2-F1 (left) or SARS-CoV-F2 (right) is delivered via lentiviral transduction. Relative RNA expression is calculated by normalizing to the reporter only sample. p values for G1 (p = 10<sup>&#x2013;5</sup>) and G4 (p = 8&#xD7;10<sup>&#x2013;8</sup>) are relative to SARS-CoV-2-F1 only, while p values for G5 (p = 4&#xD7;10<sup>&#x2013;6</sup>) and G6 (p = 1&#xD7;10<sup>&#x2013;4</sup>) are relative to SARS-CoV-2-F2 only. MOI&#xA0;= 0.5.</p><p>(E) Top: schematic of pools of crRNAs tiling across SARS-CoV-2-F1 and SARS-CoV-2-F2 reporters. Bottom: GFP expression levels as measured by flow cytometry. Red, SARS-CoV-2-F1 reporter; blue, SARS-CoV-2-F2 reporter. NT, non-targeting crRNAs. p values are relative to the NT samples; p = 0.01 for the F1 pool and p = 5&#xD7;10<sup>&#x2013;4</sup> for the F2 pool.</p><p>See also <xref rid="figs2" ref-type="fig">Figures S2</xref> and <xref rid="figs3" ref-type="fig">S3</xref> and <xref rid="mmc1" ref-type="supplementary-material">Tables S1</xref>, <xref rid="mmc2" ref-type="supplementary-material">S2</xref>, and <xref rid="mmc3" ref-type="supplementary-material">S3</xref>.</p></caption><graphic xlink:href="gr3_lrg"/></fig><fig id="figs2"><label>Figure&#xA0;S2</label><caption><p>Flow Cytometry Plots Demonstrating SARS-CoV-2-19 F1 and F2 Transfection and Transduction, Related to <xref rid="fig3" ref-type="fig">Figures 3</xref>A&#x2013;3D</p><p>(A) Examination of SARS-CoV-2-19 reporter levels in A549 cells 48 hours after transfection or transduction. While transfection led to a much lower percentage of GFP positive cells compared to transduction, transfection also led to much higher levels of GFP expression, giving a better dynamic range for assessing repression.</p><p>(B) Representative flow histograms of GFP reporter levels after SARS-CoV-2 reporter challenge. Cells shown were gated for GFP+ cells only.</p></caption><graphic xlink:href="figs2_lrg"/></fig></p>
+        <p id="p0075">We next independently validated the performance of adjacent crRNA pools when SARS-CoV-2-F1 or -F2 was introduced via&#xA0;lentiviral transduction. We argue that this approach, in which the lentivirus-derived RNA serves as a PAC-MAN target prior to&#xA0;lentivirus integration into DNA, mimics the crRNA targeting conditions that would apply for natural COVID-19 infection. We&#xA0;tested a few selected crRNA pools, including the three best groups G4, G5, and G6 and one less efficient group G1, with a lentiviral MOI of 0.5. Our results revealed similar patterns to our SARS-CoV-2 transfection experiments, with the best groups (G4, G5, G6) able to repress their reporters by 69%, 71%, and 60% as measured by flow cytometry (<xref rid="fig3" ref-type="fig">Figure&#xA0;3</xref>C), or&#xA0;70%, 68%, and 49% of RNA abundance as measured by quantitative real-time PCR (<xref rid="fig3" ref-type="fig">Figure&#xA0;3</xref>D).</p>
+        <p id="p0080">We further validated the effectiveness of Cas13d-mediated repression of SARS-CoV-2 reporters by co-transfecting each reporter with a pool of crRNAs tiled along the whole fragment, compared to a pool of non-targeting control crRNAs (<xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>). We found that the <italic>RdRP</italic>- or <italic>N</italic>-targeting crRNAs were able to repress their corresponding reporters by 81% (p&#xA0;= 0.01) or 90% (p&#xA0;= 5&#xA0;&#xD7; 10<sup>&#x2212;4</sup>), respectively (<xref rid="fig3" ref-type="fig">Figures 3</xref>E and <xref rid="figs3" ref-type="fig">S3</xref>
+A). Our analysis revealed that SARS-CoV-2 inhibition was more sensitive to crRNA concentration in our samples, while lower Cas13d expression only moderately decreased inhibitory activity (<xref rid="figs3" ref-type="fig">Figure&#xA0;S3</xref>B). Thus, maintaining a high level of crRNA concentration is likely a determining factor for more effective SARS-CoV-2 sequence targeting and cleavage. Notably, there was no viability difference observed when cells were transfected with Cas13d and crRNAs (<xref rid="figs3" ref-type="fig">Figure&#xA0;S3</xref>C).<fig id="figs3"><label>Figure&#xA0;S3</label><caption><p>Flow Cytometry Plots Demonstrating Tiled crRNAs with a Strong Repression of the SARS-CoV-2 F1 and F2 Reporters, Related to <xref rid="fig3" ref-type="fig">Figure&#xA0;3</xref>E</p><p>(A) Representative flow cytometry histograms of GFP expression after SARS-CoV-2-F1 (left) and SARS-CoV-2-F2 (right) reporter challenge.</p><p>(B) Analysis of different expression levels of Cas13d (marker: mCherry) and crRNA pools (marker: BFP) and the resulting effects on SARS-CoV-2-F1/F2 reporter inhibition. Percent reduction of GFP expression is labeled on the top. Red, SARS-CoV-2-F1 reporter; blue, SARS-CoV-2-F2 reporter.</p><p>(C) Representative flow cytometry plots of forward versus side scatter (FSC versus SSC) for A549 cells expressing Cas13d, crRNAs (crNT &#x2013; non-targeting, F1 pool, or F2 pool) and the matching SARS-CoV-2 reporters in A549 cells.</p></caption><graphic xlink:href="figs3_lrg"/></fig></p>
+        <p id="p0085">These data together suggest that: (1) Cas13d PAC-MAN can be an effective system to target and degrade SARS-CoV-2 sequences in human cells, and (2) proper design of crRNAs is important for obtaining highly efficient SARS-CoV-2 inhibition.</p>
+      </sec>
+      <sec id="sec2.3">
+        <title>Cas13d PAC-MAN Is Able to Inhibit IAV Infection in Human Lung Epithelial Cells</title>
+        <p id="p0090">Because we did not have access to live SARS-CoV-2 virus, as a&#xA0;proof-of-concept, we elected to test our Cas13d PAC-MAN strategy on inhibiting an H1N1 strain of IAV, an RNA virus with a similar tropism as SARS-CoV-2 for respiratory tract epithelial cells (<xref rid="bib22" ref-type="bibr">Krammer et&#xA0;al., 2018</xref>). In contrast to SARS-CoV-2, which has only a single, continuous RNA genome, the IAV genome is&#xA0;contained in eight negative-sense RNA segments, in which each&#xA0;plays an important role in packaging the viral RNA into budding virions (<xref rid="bib3" ref-type="bibr">Breen et&#xA0;al., 2016</xref>, <xref rid="bib51" ref-type="bibr">Zhou et&#xA0;al., 2009</xref>). Previous work has shown that IAV can be inhibited using Cas13b in A549 and MDCK cells at a low MOI by targeting somewhat conserved regions (up to 2 bases with &lt;95% allele frequency per crRNA) (<xref rid="bib9" ref-type="bibr">Freije et&#xA0;al., 2019</xref>). In contrast to this work, we chose to focus on targeting highly conserved packaging regions across&#xA0;all eight IAV segments.</p>
+        <p id="p0095">To create crRNAs targeting a broad range of IAV strains, we aligned all complete IAV genomes retrieved from the Influenza Research Database and searched for the most conserved regions. Our analysis and the work of others showed that the segment ends, which are important in viral packaging, are highly conserved for all eight segments (<xref rid="bib3" ref-type="bibr">Breen et&#xA0;al., 2016</xref>, <xref rid="bib6" ref-type="bibr">Desselberger et&#xA0;al., 1980</xref>, <xref rid="bib7" ref-type="bibr">Dijk et&#xA0;al., 1979</xref>, <xref rid="bib35" ref-type="bibr">Muramoto et&#xA0;al., 2006</xref>, <xref rid="bib41" ref-type="bibr">Skehel and Hay, 1978</xref>, <xref rid="bib51" ref-type="bibr">Zhou et&#xA0;al., 2009</xref>). Due to the conserved nature of the segment ends, targeting with Cas13d could potentially inhibit a broad range of IAV strains. Additionally, previous work has shown that interfering with the packaging of one segment decreases the packaging efficiency of other segments, and thus the overall virion packaging. (<xref rid="bib10" ref-type="bibr">Fujii et&#xA0;al., 2003</xref>, <xref rid="bib11" ref-type="bibr">Gerber et&#xA0;al., 2014</xref>, <xref rid="bib24" ref-type="bibr">Lakdawala et&#xA0;al., 2014</xref>, <xref rid="bib35" ref-type="bibr">Muramoto et&#xA0;al., 2006</xref>, <xref rid="bib46" ref-type="bibr">Williams et&#xA0;al., 2018</xref>). Using sequence representation from &#x223C;140 different strains of influenza, we designed crRNAs that could robustly target as many different IAV strains as possible. Our bioinformatics analysis resulted in six crRNAs targeting highly conserved genome regions for each of the eight IAV segments, for a total of 48 crRNAs (<xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>).</p>
+        <p id="p0100">To test the efficiency of IAV-targeting crRNAs, we performed a&#xA0;screen of crRNA pools in the stable Cas13d A549 cell line to&#xA0;determine which were most effective at inhibiting IAV infection&#xA0;(<xref rid="fig4" ref-type="fig">Figure&#xA0;4</xref>
+A). To do this, we transfected a pool of six crRNAs targeting a given IAV genome segment. Two days after crRNA transfection, the Cas13d A549 cells were challenged with PR8-mNeon, a strain of H1N1 IAV (A/Puerto Rico/8/1934) engineered to express the mNeonGreen gene, a fluorescent reporter protein (hereafter referred to as PR8-mNeon) at an MOI of 2.5 or 5.0 (<xref rid="bib15" ref-type="bibr">Harding et&#xA0;al., 2017</xref>, <xref rid="bib16" ref-type="bibr">Heaton et&#xA0;al., 2017</xref>, <xref rid="bib38" ref-type="bibr">Shaner et&#xA0;al., 2013</xref>). At approximately 18&#xA0;h post-challenge, the cells were analyzed for IAV infection through flow cytometry and microscopy. We examined the percentage of cells that were mNeon positive for&#xA0;each segment-targeting crRNA pool and calculated the fold-change compared to cells transfected with a pool of non-targeting crRNAs). Notably, our study used high MOIs (2.5 or 5) compared to previous Cas13 work that used an MOI of 0.1 or 0.01 (<xref rid="bib2" ref-type="bibr">Bawage et&#xA0;al., 2018</xref>, <xref rid="bib9" ref-type="bibr">Freije et&#xA0;al., 2019</xref>). A high MOI is&#xA0;required to get an appropriate dynamic range to detect inhibition of IAV by flow cytometry and allows for the evaluation of crRNA robustness under stringent high-titer infection conditions.<fig id="fig4"><label>Figure&#xA0;4</label><caption><p>PAC-MAN Can Inhibit Infection in Lung Epithelial Cells</p><p>(A) Workflow used to challenge Cas13d A549 lung epithelial cells with PR8 mNeon IAV.</p><p>(B) Microscopy quantification of the percentage of mNeon<sup>+</sup> cells per field of view (FOV) at MOI&#xA0;= 2.5 (p&#xA0;= 1&#xA0;&#xD7; 10<sup>&#x2212;5</sup>, left) and 5 (p&#xA0;= 5&#xA0;&#xD7; 10<sup>&#x2212;9</sup>, right). Each dot represents the percentage for a single microscopy FOV. n&#xA0;= 48 FOV with at least a total of 1,100 cells counted per condition. p values for the S6 crRNA pool are relative to the NT condition; p = 1&#xD7;10<sup>&#x2013;5</sup> for MOI = 2.5 and p = 5&#xD7;10<sup>&#x2013;9</sup> for MOI = 5. NT, non-targeting crRNA pool.</p><p>(C) Flow cytometry evaluation of the percentage of mNeon<sup>+</sup> cells at MOI&#xA0;= 2.5 (p&#xA0;= 0.039, left) and 5 (p&#xA0;= 0.0058, right). n&#xA0;= 6. p values for the S6 crRNA pool are relative to the NT condition; p = 5.8&#xD7;10<sup>&#x2013;3</sup> for MOI = 2.5 and p = 0.039 for MOI = 5. NT, non-targeting crRNA pool.</p><p>(D) A histogram showing the predicted minimum number of crRNAs to target 91,600 IAV genomes. Dotted line, 90% of IAVs.</p><p>See also <xref rid="figs4" ref-type="fig">Figure&#xA0;S4</xref> and <xref rid="mmc2" ref-type="supplementary-material">Tables S2</xref> and <xref rid="mmc4" ref-type="supplementary-material">S4</xref>.</p></caption><graphic xlink:href="gr4_lrg"/></fig></p>
+        <p id="p0105">Out of all crRNAs, the crRNA pool targeting segment 6 (S6), which encodes the neuraminidase (NA) protein, delivered the most consistent and robust results across different MOIs (72% reduction for MOI&#xA0;= 2.5 and 52% reduction for MOI&#xA0;= 5; <xref rid="figs4" ref-type="fig">Figures S4</xref>
+A and S4B). Additionally, the crRNA pool targeting segment 4 (S4), which encodes the hemagglutinin protein, also showed moderate but consistent inhibition. We further confirmed Cas13d-mediated inhibitory effects on S4 and S6 at a lower MOI of 0.5. We saw strong inhibition of IAV (59% and 78%) targeting S4 and S6, respectively (<xref rid="figs4" ref-type="fig">Figure&#xA0;S4</xref>C). There is a possible trend of greater inhibition at lower viral titers, suggesting that Cas13d PAC-MAN could be more effective for prevention of new infections, which typically occur from exposure to a low level of virus.<fig id="figs4"><label>Figure&#xA0;S4</label><caption><p>Screening of Pools of Six crRNAs Targeting Each of the Eight IAV Genome Segments, Related to <xref rid="fig4" ref-type="fig">Figure&#xA0;4</xref></p><p>(A) Each panel shows the percentage of quantified mNeon+ cells under two infection conditions (MOI&#xA0;= 2.5 or 5). Each dot represents the percentage for a single randomly chosen microscopy field of view (FOV). Blue, non-targeting (NT) crRNAs; red, targeting crRNAs; n&#xA0;= 3 infected wells per condition and 9 FOV, &gt; 300 cells counted per condition.</p><p>(B) Flow cytometry screens of 6-crRNA pools targeting each IAV genome segment. The percentage of mNeon+ cells for each segment using targeting crRNA&#xA0;pooled compared to NT crRNAs at MOI&#xA0;= 2.5 (left) or 5 (right) are shown; n&#xA0;= 3 infected wells pooled together in a single flow cytometry tube for each condition.</p><p>(C) Microscopy quantification of crRNA pools targeting IAV S4 and S6 at MOI&#xA0;= 0.5; n&#xA0;= 9 randomly chosen FOV, &gt; 300 cells counted per condition with a biological n&#xA0;= 1.</p></caption><graphic xlink:href="figs4_lrg"/></fig></p>
+        <p id="p0110">We further characterized the S6-targeting crRNA pool. We performed microscopy quantification of mNeon<sup>+</sup> cells and found that mNeon expression was reduced by 62% (p&#xA0;= 10<sup>&#x2212;5</sup>) and 73% (p&#xA0;= 5&#xA0;&#xD7; 10<sup>&#x2212;9</sup>) with an MOI of 2.5 and 5, respectively, with S6-targeting crRNAs (<xref rid="fig4" ref-type="fig">Figure&#xA0;4</xref>B). This trend was also corroborated by flow cytometry (<xref rid="fig4" ref-type="fig">Figure&#xA0;4</xref>C). Interestingly, the mNeon reporter sequence is contained in S4 of the IAV genome, suggesting that we were able to have an effect on the RNA levels of IAV segments that we were not directly targeting. Together, our data show that Cas13d PAC-MAN is able to target highly conserved viral regions and robustly inhibit viral replication in human lung epithelial cells.</p>
+        <p id="p0115">We further asked if there exists a small group of crRNAs that can target&#xA0;all fully sequenced IAV strains. We analyzed 91,600 strains with complete segment sequences to identify all possible crRNAs and refined this list to define the smallest number of crRNAs that could target as many IAV genomes as possible with no mismatches. Our analysis revealed that a group of 81 crRNAs could cover all 91,600 IAVs, with a minimal group of six crRNAs targeting 92% of IAV genomes (<xref rid="fig4" ref-type="fig">Figure&#xA0;4</xref>D, <xref rid="mmc4" ref-type="supplementary-material">Table S4</xref>). One of our validated crRNAs (crRNA-S6g2), which was part of the minimal pool of six crRNAs, was able to target 32% (29,538) of IAVs. Together, these data suggest that our approach is potentially a pan-IAV-targeting strategy.</p>
+      </sec>
+      <sec id="sec2.4">
+        <title>Cas13d PAC-MAN as a Potential Pan-Coronavirus Inhibition Strategy</title>
+        <p id="p0120">In the past two decades, multiple variants of coronavirus, including those causing COVID-19, SARS, and MERS, emerged from animal reservoirs and infected humans, each time causing a significant number of fatalities (<xref rid="bib27" ref-type="bibr">Li et&#xA0;al., 2005</xref>, <xref rid="bib34" ref-type="bibr">Mohd et&#xA0;al., 2016</xref>, <xref rid="bib40" ref-type="bibr">Shi and Hu, 2008</xref>). Thus, the design of a strategy that could broadly target and prevent viral threats, including all coronavirus strains that currently reside in animals, would be an invaluable resource. We asked whether it is possible to design a minimal number of crRNAs that could target a majority of known coronaviruses found in both humans and animals. In contrast to previous Cas13 antiviral work (<xref rid="bib9" ref-type="bibr">Freije et&#xA0;al., 2019</xref>), which focused on conservation across different strains for the same species of virus, we sought to target as many strains as possible with a minimal set of crRNAs to create an even broader level of protection against a given family of viruses.</p>
+        <p id="p0125">To do this, we analyzed all known coronavirus genomes (3,051) to identify possible crRNAs that can target each of&#xA0;those genomes, ending up with approximately 6.48 million possible crRNAs (<xref rid="fig5" ref-type="fig">Figures 5</xref>
+A and <xref rid="figs5" ref-type="fig">S5</xref>
+). We refined this list to identify the smallest number of crRNAs that could target&#xA0;all&#xA0;known coronavirus genomes with zero mismatches. We found that just two crRNAs could target &#x223C;50% of coronavirus genomes, including those causing COVID-19, SARS, and MERS; six crRNAs were able to target &#x223C;91% of coronavirus genomes; and 22 crRNAs covered all sequenced coronaviruses with no mismatches (<xref rid="fig5" ref-type="fig">Figure&#xA0;5</xref>B; <xref rid="mmc4" ref-type="supplementary-material">Table S4</xref>). The ability to use a relatively small number of crRNAs to broadly target most or all coronavirus strains further highlights the unique power of our method in contrast to traditional pharmaceutical or vaccination approaches.<fig id="fig5"><label>Figure&#xA0;5</label><caption><p>Pan-Coronavirus Targeting Using a Minimal Pool of PAC-MAN crRNAs</p><p>(A) A phylogenetic tree of sequenced coronaviruses, organized by genus of the strains. The inner ring shows coverage by each of the top six (PAC-MAN-T6) pan-coronavirus crRNAs targeting all human coronaviruses. The outer ring shows current species of coronaviruses that are infectious to humans, including SARS-CoV-2 (red).</p><p>(B) A histogram showing the predicted minimum number of crRNAs to target&#xA0;all sequenced 3,051 coronavirus genomes.</p><p>(C) Analysis of experimentally validated crRNA-N18f targeting 1,087 SARS-CoV-2 sequences from GISAID. The Weblogo of the target region is shown on the top. The bar graph shows the number of strains targeted by crRNA-N18f for each type (L/S/Unknown) of SARS-CoV-2.</p><p>See also <xref rid="figs5" ref-type="fig">Figure&#xA0;S5</xref> and <xref rid="mmc4" ref-type="supplementary-material">Tables S4</xref> and <xref rid="mmc5" ref-type="supplementary-material">S5</xref>.</p></caption><graphic xlink:href="gr5_lrg"/></fig><fig id="figs5"><label>Figure&#xA0;S5</label><caption><p>A Bioinformatic Pipeline to Predict Minimum Sets of Pan-Coronavirus crRNA Designs, Related to <xref rid="fig5" ref-type="fig">Figure&#xA0;5</xref>B</p><p>The bioinformatic pipeline analyzed and predicted pan-coronavirus targeting crRNAs. The number of crRNAs at each step of the workflow is denoted in parentheses.</p></caption><graphic xlink:href="figs5_lrg"/></fig></p>
+        <p id="p0130">As a resource, we provide a map to show how the top six crRNAs (PAC-MAN-T6) target the coronavirus phylogenetic tree (<xref rid="fig5" ref-type="fig">Figure&#xA0;5</xref>A, red box). Beta coronaviruses, the genus of viruses causing COVID-19, SARS, and MERS, were mainly covered by three crRNAs (crRNA 1&#x2013;3), while the other genera were covered by crRNA 1&#x2013;3 in addition to three other crRNAs. This minimal set of six crRNAs includes one crRNA (designated crRNA-N18f) (<xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>) that has been validated as part of a pool in our work. Altogether, the PAC-MAN-T6 can target&#xA0;all known human coronaviruses with broad coverage against other&#xA0;animal coronaviruses.</p>
+        <p id="p0135">Recent work analyzed 103 SARS-CoV-2 genomes and indicated that there are different subtypes (L and S) of SARS-CoV-2 with different viral signature sequences (<xref rid="bib43" ref-type="bibr">Tang et&#xA0;al., 2020</xref>). To verify whether crRNA-N18f can target&#xA0;all L and S strains, we retrieved a set of 1,087 recently sequenced SARS-CoV-2 sequences from Global Initiative on Sharing All Influenza Data (GISAID). Notably, crRNA-N18f targets 1,083 out of 1,087 (99.6%) SARS-CoV-2 genomes, with only four SARS-CoV-2 sequences carrying &#x2265;1 mismatch (<xref rid="fig5" ref-type="fig">Figure&#xA0;5</xref>C; <xref rid="mmc5" ref-type="supplementary-material">Table S5</xref>), suggesting that our approach can robustly target different SARS-CoV-2 strains.</p>
+      </sec>
+    </sec>
+    <sec id="sec3">
+      <title>Discussion</title>
+      <p id="p0140">CRISPR-Cas13 emerged as a powerful antiviral system that is able to use sequence-specific crRNAs to protect host bacterial cells from bacteriophage infection (<xref rid="bib49" ref-type="bibr">Yan et&#xA0;al., 2018</xref>). Here, with our PAC-MAN strategy, we have repurposed the RNA-guided RNA endonuclease activity of Cas13d in human cells against viral targets, SARS-CoV-2 and IAV. We demonstrated that the Cas13d system can effectively target and cleave the RNA sequences of SARS-CoV-2 fragments and IAV with properly designed crRNAs in lung epithelial cells. In addition, our bioinformatics analyses suggested that minimal pools of six crRNAs are able to target 92% of 91,600 IAV strains and six crRNAs are able to target 91% of 3,051 sequenced coronaviruses. This expands the applications of CRISPR-Cas13 systems beyond diagnostics, such as SHERLOCK, and live-cell RNA imaging (<xref rid="bib12" ref-type="bibr">Gootenberg et&#xA0;al., 2018</xref>, <xref rid="bib44" ref-type="bibr">Wang et&#xA0;al., 2019</xref>, <xref rid="bib50" ref-type="bibr">Yang et&#xA0;al., 2019</xref>).</p>
+      <p id="p0145">For both SARS-CoV-2 and IAV, we found highly conserved regions of the viral genome to target with Cas13d. In the case of SARS-CoV-2, these genomic regions encode the RdRP and nucleocapsid proteins, which are essential for coronavirus replication and function (<xref rid="bib5" ref-type="bibr">Chan et&#xA0;al., 2020</xref>, <xref rid="bib31" ref-type="bibr">McBride et&#xA0;al., 2014</xref>). RdRP is responsible for catalyzing the replication of all viral mRNAs and nucleocapsid binds to genomic RNA, protecting it and serving as one of the two main structural proteins in virions. Targeted inhibition of these proteins could have an outsized effect on disabling virus production and function, in addition to&#xA0;reducing viral load through degradation of the viral genome itself. When targeting IAV, the crRNAs that showed the best viral&#xA0;inhibition target the conserved ends of the segment S6 that encodes NA, a viral surface protein essential for mediating budding of new virions (<xref rid="bib30" ref-type="bibr">McAuley et&#xA0;al., 2019</xref>). Prior mutation analysis has shown that mutating the packaging signals of one segment end leads to decreased packaging of other segments, indicating that there is a cooperative mechanism for packaging the IAV genome (<xref rid="bib35" ref-type="bibr">Muramoto et&#xA0;al., 2006</xref>). Thus, by inhibiting a single IAV genome segment, we could reduce the overall packaging of IAV in a synergistic fashion.</p>
+      <p id="p0150">It is important to note that PAC-MAN is currently a proof-of-concept antiviral strategy for robustly and broadly targeting conserved viral sequences with Cas13, and multiple important steps are required before it can be tested in clinical trials to possibly treat COVID-19. One immediate next step will be to validate the efficiency and specificity of crRNAs for inhibiting infection of respiratory tract cells with live SARS-CoV-2 virus. While we tested the PAC-MAN system as a prophylactic system that is&#xA0;introduced before viral challenge, we hypothesize that PAC-MAN could also be used to reduce viral load after infection, and this will also be important to examine. In future tests, our crRNA selection strategy could be combined with recently published algorithms that predict crRNA efficiency to further streamline the crRNA validation process (<xref rid="bib45" ref-type="bibr">Wessels et&#xA0;al., 2020</xref>). The crRNAs that are selected to be tested therapeutically will need to be evaluated for off-target effects experimentally such as using whole transcriptome RNA sequencing. Furthermore, while we demonstrate that the PAC-MAN system is able to inhibit viral sequences <italic>in&#xA0;vitro</italic>, therapeutic use will require an effective <italic>in&#xA0;vivo</italic> delivery method into human respiratory tract cells. Finally, PAC-MAN will need to be validated in relevant preclinical models such as ferrets or rhesus macaques, or primary human lung/airway organoid models to test its antiviral efficacy and specificity (<xref rid="bib19" ref-type="bibr">Huh et&#xA0;al., 2010</xref>). Animal models will also provide information related to Cas13d-induced immunogenicity, an issue that has arisen in studies of CRISPR-Cas9 (<xref rid="bib33" ref-type="bibr">Mehta and Merkel, 2020</xref>). These steps, including clinical trials, will likely take years; while PAC-MAN will not be able to stem the current rising tide of&#xA0;COVID-19 cases and related deaths, there is potential for it to be used against future viral threats.</p>
+      <sec id="sec3.1">
+        <title>Limitations and Future Directions</title>
+        <p id="p0155">The biggest barrier to deploying PAC-MAN clinically is the development of effective and safe <italic>in&#xA0;vivo</italic> delivery methods. There are several attractive delivery options that could be employed for the <italic>in&#xA0;vivo</italic> expression of PAC-MAN components. Cas13d and its cognate crRNAs could be delivered in RNA form within chemical polymers or lipid nanoparticles (LNPs) (<xref rid="bib17" ref-type="bibr">Hendel et&#xA0;al., 2015</xref>, <xref rid="bib32" ref-type="bibr">McKinlay et&#xA0;al., 2017</xref>, <xref rid="bib37" ref-type="bibr">Sago et&#xA0;al., 2018</xref>, <xref rid="bib48" ref-type="bibr">Xu et&#xA0;al., 2019</xref>). DNA-based liposomal delivery strategies, such as lipitoids or the recently developed HEDGES platform, are also attractive (<xref rid="bib14" ref-type="bibr">Handumrongkul et&#xA0;al., 2019</xref>, <xref rid="bib18" ref-type="bibr">Huang et&#xA0;al., 1998</xref>). Another strategy would be to deliver a ribonucleoprotein complex containing the Cas13d protein assembled with crRNAs (<xref rid="bib1" ref-type="bibr">Amirkhanov and Stepanov, 2019</xref>, <xref rid="bib48" ref-type="bibr">Xu et&#xA0;al., 2019</xref>). Other work successfully used engineered amphiphilic peptides to deliver Cas9-guide RNA complexes to airway epithelia, which provides a promising approach for delivering PAC-MAN Cas13d complexes (<xref rid="bib23" ref-type="bibr">Krishnamurthy et&#xA0;al., 2019</xref>). In addition, recent advances in gene therapy delivery strategies optimized for cystic fibrosis that&#xA0;can deliver mRNA or plasmid DNA, such as self-assembled peptide-poloxamine nanoparticles, may also be an option (<xref rid="bib13" ref-type="bibr">Guan et&#xA0;al., 2019</xref>). We anticipate that one of the above-mentioned strategies can potentially be administered to patients or healthy populations via a nebulizer system or nasal spray as an antiviral strategy.</p>
+        <p id="p0160">There are several technical limitations that will need to be overcome to use PAC-MAN in the clinic. For instance, PAC-MAN acts in&#xA0;a cell-autonomous manner, meaning that only cells that express Cas13d and crRNAs are directly protected against the targeted viruses. For PAC-MAN to be effective in patients, it needs to be able to be sufficiently expressed in a certain percentage of cells, the range of which would need to be determined experimentally. In addition, our own work has shown that SARS-CoV-2 sequence cleavage efficiency is sensitive to crRNA&#xA0;expression (<xref rid="figs3" ref-type="fig">Figure&#xA0;S3</xref>B). The ability to tune the levels of Cas13d and its cognate crRNAs in the cell may be important to&#xA0;achieving efficient viral inhibition. As another consideration, viral genomes may be less susceptible to inhibition due to the secondary structure of the RNA genome or coating with protective proteins. To address this, high-throughput screening of crRNAs may help identify highly effective crRNAs targeting live&#xA0;SARS-CoV-2. With optimization and further testing, these limitations may prove surmountable.</p>
+        <p id="p0165">If the above barriers are overcome and the PAC-MAN strategy can be used therapeutically, there are unique benefits over traditional vaccines. The potential for pan-coronavirus protection using CRISPR-Cas13d offers an alternative and complementary approach over traditional pharmaceuticals or vaccines. Traditional vaccines rely on priming the immune system through exposure to viral proteins or peptides often derived from surface proteins that exhibit a high rate of mutation, which increases the chances of viral evasion of the host immune response (<xref rid="bib4" ref-type="bibr">Carrat and Flahault, 2007</xref>). In contrast, here, we have demonstrated a genetic strategy that is able to target highly conserved regions, which would be expected to make it much less likely for the virus to escape inhibition through mutation. In addition, the ability of Cas13d to process its own crRNAs from a crRNA array&#xA0;means that multiple crRNAs targeting different regions (e.g., <xref rid="fig3" ref-type="fig">Figure&#xA0;3</xref>E<bold>,</bold> and PAC-MAN-T6 in <xref rid="fig5" ref-type="fig">Figure&#xA0;5</xref>A) could be delivered simultaneously (<xref rid="bib21" ref-type="bibr">Konermann et&#xA0;al., 2018</xref>), further reducing the chances of viral escape. As a further advantage, we demonstrate a potential pan-coronavirus strategy to target not only viruses that circulate in humans, but also those that are found in animal reservoirs. If the crRNAs targeting these viruses can be tested and validated before they ever infect humans, we can greatly accelerate the development of countermeasures for future emergent threats.</p>
+        <p id="p0170">In summary, the PAC-MAN strategy represents a potentially powerful new approach for inhibiting viral function and replication, and we envision it could be useful for targeting a diverse array of circulating and emergent viral threats.</p>
+      </sec>
+    </sec>
+    <sec id="sec4">
+      <title>STAR&#x2605;Methods</title>
+      <sec id="sec4.1">
+        <title>Key Resources Table</title>
+        <p id="p0175">
+<table-wrap position="float" id="undtbl1"><table frame="hsides" rules="groups"><thead><tr><th>REAGENT or RESOURCE</th><th>SOURCE</th><th>IDENTIFIER</th></tr></thead><tbody><tr><td colspan="3"><bold>Bacterial and Virus Strains</bold></td></tr><tr><td colspan="3"><hr/></td></tr><tr><td>Stellar chemically competent cells</td><td>TaKaRa</td><td>Cat# 636766</td></tr><tr><td>PR8-mNeon H1N1 IAV (A/Puerto Rico/8/1934)</td><td>Laboratory of Nicholas Heaton</td><td>N/A</td></tr><tr><td colspan="3"><hr/></td></tr><tr><td colspan="3"><bold>Chemicals, Peptides, and Recombinant Proteins</bold></td></tr><tr><td colspan="3"><hr/></td></tr><tr><td>Puromycin</td><td>Gold Biotech</td><td>Cat# P-600-1</td></tr><tr><td>Fetal Bovine Serum (FBS)</td><td>Clontech</td><td>Cat# 631367</td></tr><tr><td>10X PBS</td><td>ThermoFisher Scientific</td><td>Cat# 70011069</td></tr><tr><td>16% Paraformaldehyde aqueous solution</td><td>FisherScientific</td><td>Cat# 50-980-487</td></tr><tr><td>MACS BSA Stock Solution</td><td>Miltenyi Biotec</td><td>Cat# 130-091-376</td></tr><tr><td>UltraPure 0.5M EDTA, pH 8.0</td><td>ThermoFisher Scientific</td><td>Cat# 15575020</td></tr><tr><td>Trypsin-EDTA solution</td><td>Sigma</td><td>Cat# T4049-100ML</td></tr><tr><td>DMEM</td><td>ThermoFisher Scientific</td><td>Cat# 10569-044</td></tr><tr><td>Mirus TransIT-LT1</td><td>Mirus Bio</td><td>Cat# MIR 2306</td></tr><tr><td colspan="3"><hr/></td></tr><tr><td colspan="3"><bold>Experimental Models: Cell Lines</bold></td></tr><tr><td colspan="3"><hr/></td></tr><tr><td>HEK293T</td><td>ATCC</td><td>Cat# CRL-3216; RRID:CVCL_0063</td></tr><tr><td>A549</td><td>ATCC</td><td>Cat# CCL-185 RRID: CVCL_0023</td></tr><tr><td>A549&#xA0;+ Cas13d (pSLQ5428)</td><td>This paper</td><td>N/A</td></tr><tr><td colspan="3"><hr/></td></tr><tr><td colspan="3"><bold>Oligonucleotides</bold></td></tr><tr><td colspan="3"><hr/></td></tr><tr><td>Primer used in qPCR: SARS-COV-F1_F: 5&#x2032;-AACGGGTTTGCGGTGTAAGT-3&#x2032;</td><td>This paper</td><td>N/A</td></tr><tr><td>Primer used in qPCR: SARS-COV-F1_R: 5&#x2032;-AA<break/>TTTAGCAAAACCAGCTACTTTATCATTGTAG-3&#x2032;</td><td>This paper</td><td>N/A</td></tr><tr><td>Primer used in qPCR: SARS-COV-F2_F: 5&#x2032;-CAGGTGGAACCTCATCAGGAG-3&#x2032;</td><td>This paper</td><td>N/A</td></tr><tr><td>Primer used in qPCR: SARS-COV-F2_R: 5&#x2032;-GTT<break/>ACCATCAGTAGATAAAAGTGCATTAACATTG-3&#x2032;</td><td>This paper</td><td>N/A</td></tr><tr><td>Primer used in qPCR: GAPDH_F: 5&#x2032;-TGCACCACCAACTGCTTAGC-3&#x2032;</td><td>This paper</td><td>N/A</td></tr><tr><td>Primer used in qPCR: GAPDH_R: 5&#x2032;-GGCATGGACTGTGGTCATGAG-3&#x2032;</td><td>This paper</td><td>N/A</td></tr><tr><td colspan="3"><hr/></td></tr><tr><td colspan="3"><bold>Recombinant DNA</bold></td></tr><tr><td colspan="3"><hr/></td></tr><tr><td>pHR-PGK-sfGFP-SARS-COV-F1</td><td>This paper</td><td>N/A</td></tr><tr><td>pHR-PGK-sfGFP-SARS-COV-F2</td><td>This paper</td><td>N/A</td></tr><tr><td>pSLQ5428_pHR_EF1a-mCherry-P2A-Rfx_Cas13d-2xNLS-3xFLAG</td><td>This paper</td><td>N/A</td></tr><tr><td><sup>&#x2217;</sup>pSLQ5429_pUC_hU6-crScaffold_EF1a-BFP</td><td>This paper</td><td>N/A</td></tr><tr><td><sup>&#x2217;</sup>pSLQ5465_pHR_hU6-crScaffold_EF1a-PuroR-T2A-BFP</td><td>This paper</td><td>N/A</td></tr><tr><td><sup>&#x2217;</sup>Denotes generic backbone plasmid for crRNAs. Specific target sequences for crRNAs can be found in <xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>.</td><td>N/A</td><td>N/A</td></tr><tr><td colspan="3"><hr/></td></tr><tr><td colspan="3"><bold>Software and Algorithms</bold></td></tr><tr><td colspan="3"><hr/></td></tr><tr><td>crRNA design code</td><td>This paper</td><td><ext-link ext-link-type="uri" xlink:href="https://github.com/QilabGitHub/nCov2019_Guide_Design" id="interref0010">https://github.com/QilabGitHub/nCov2019_Guide_Design</ext-link></td></tr><tr><td>Cytobank</td><td>Beckman Coulter</td><td>N/A</td></tr><tr><td>FlowJo v10</td><td><ext-link ext-link-type="uri" xlink:href="https://www.flowjo.com/" id="intref0015">https://www.flowjo.com/</ext-link></td><td>N/A</td></tr><tr><td>Geneious 2020.0.4</td><td><ext-link ext-link-type="uri" xlink:href="https://www.geneious.com" id="intref0020">https://www.geneious.com</ext-link></td><td>N/A</td></tr><tr><td>MAFFT</td><td><xref rid="bib20" ref-type="bibr">Katoh and Standley, 2013</xref></td><td><ext-link ext-link-type="uri" xlink:href="https://mafft.cbrc.jp/alignment/software/" id="intref0025">https://mafft.cbrc.jp/alignment/software/</ext-link></td></tr><tr><td>Bowtie</td><td><xref rid="bib25" ref-type="bibr">Langmead et&#xA0;al., 2009</xref></td><td><ext-link ext-link-type="uri" xlink:href="http://bowtie-bio.sourceforge.net/index.shtml" id="intref0030">http://bowtie-bio.sourceforge.net/index.shtml</ext-link></td></tr><tr><td>iTOL v5.5</td><td><xref rid="bib26" ref-type="bibr">Letunic and Bork, 2019</xref></td><td><ext-link ext-link-type="uri" xlink:href="https://itol.embl.de/" id="intref0035">https://itol.embl.de/</ext-link></td></tr></tbody></table></table-wrap>
+</p>
+      </sec>
+      <sec id="sec4.2">
+        <title>Resource Availability</title>
+        <sec id="sec4.2.1">
+          <title>Lead Contact</title>
+          <p id="p0180">Further information and requests for resources and reagents should be directed to and will be fulfilled by the Lead Contact, Lei S. Qi (<ext-link ext-link-type="uri" xlink:href="mailto:stanley.qi@stanford.edu" id="intref0040">stanley.qi@stanford.edu</ext-link>).</p>
+        </sec>
+        <sec id="sec4.2.2">
+          <title>Materials Availability</title>
+          <p id="p0185">Requests for material can be directed to the lead contact, Lei S. Qi (<ext-link ext-link-type="uri" xlink:href="mailto:stanley.qi@stanford.edu" id="intref0045">stanley.qi@stanford.edu</ext-link>). All materials and reagents will be made&#xA0;available upon installment of a material transfer agreement (MTA). Plasmids will also be deposited to Addgene (<ext-link ext-link-type="uri" xlink:href="https://www.addgene.org/Stanley_Qi/" id="intref0050">https://www.addgene.org/Stanley_Qi/</ext-link>).</p>
+        </sec>
+        <sec sec-type="data-availability" id="sec4.2.3">
+          <title>Data and Code Availability</title>
+          <p id="p0190">The codes for computational analysis are deposited in GitHub (<ext-link ext-link-type="uri" xlink:href="https://github.com/QilabGitHub/nCov2019_Guide_Design" id="intref0055">https://github.com/QilabGitHub/nCov2019_Guide_Design</ext-link>).</p>
+        </sec>
+      </sec>
+      <sec id="sec4.3">
+        <title>Experimental Model and Subject Details</title>
+        <sec id="sec4.3.1">
+          <title>Cell cultures, primary cells, viral strains</title>
+          <sec id="sec4.3.1.1">
+            <title>Cell culture</title>
+            <p id="p0195">All cell lines were incubated at 37&#xB0;C and at 5% CO<sub>2</sub>. Human embryonic kidney (HEK293T) cells and A549 cells (ATCC) were cultured in 10% fetal bovine serum (Thermo Fisher Scientific) in DMEM (Thermo Fisher Scientific).</p>
+          </sec>
+          <sec id="sec4.3.1.2">
+            <title>Generation and titering of PR8 mNeon IAV</title>
+            <p id="p0200">The PR8 mNeon IAV was generated by insertion of the mNeon fluorescent gene into segment 4 of the H1N1 A/Puerto Rico/8/1934 strain (Nicholas Heaton&#x2019;s Lab, Duke University) as previously described (<xref rid="bib16" ref-type="bibr">Heaton et&#xA0;al., 2017</xref>). The PR8-mNeon virus was propagated in chicken eggs, and harvested allantoic fluid containing the virus was titered using MDCK plaque assays, and frozen in aliquots for later use.</p>
+          </sec>
+        </sec>
+      </sec>
+      <sec id="sec4.4">
+        <title>Method Details</title>
+        <sec id="sec4.4.1">
+          <title>Genome Sequences Collection</title>
+          <p id="p0205">47 complete SARS-CoV-2 assemblies were downloaded from <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/" id="intref0060">http://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/</ext-link> on February 21, 2020. All the other 3,108 Coronavirinae complete genome sequences were downloaded from ViPR (Virus Pathogen Resource) database on February 21, 2020. After excluding very short genomes, we collected in total 3,051 Coronavirinae virus genomes. 202 SARS-CoV-2 genome sequences were downloaded from GISAID (Global Initiative on Sharing All Influenza Data; <ext-link ext-link-type="uri" xlink:href="https://www.gisaid.org/" id="intref0065">https://www.gisaid.org/</ext-link>).</p>
+        </sec>
+        <sec id="sec4.4.2">
+          <title>High-throughput crRNA Design</title>
+          <p id="p0210">We developed a full computational workflow to design crRNAs for the Cas13d system. To design all possible crRNAs for the three&#xA0;pathogenic RNA viruses (SARS-CoV-2, SARS-CoV, and MERS-CoV), the reference genomes of SARS-CoV, MERS-CoV, along with SARS-CoV-2 genomes derived from 47 patients were first aligned by MAFFT using the&#x2013;auto flag. crRNA candidates were identified by using a sliding window to extract all 22-nucleotide (nt) sequences with perfect identity among the SARS-CoV-2 genomes. We annotated each crRNA candidate with the number of mismatches relative to the SARS-CoV and MERS-CoV genomes, as well as the GC content. 3,802 crRNA candidates were selected that perfectly matched the 47 SARS-CoV-2 genomes and with&#xA0;&#x2264; 1 mismatch to SARS-CoV or MERS-CoV sequences. To characterize the specificity of 22-nt crRNAs, we ensured that crRNA&#xA0;do not target any sequences in the human transcriptome. We used Bowtie 1.2.2 to align crRNAs to the human transcriptome (HG38; including non-coding RNA) and removed crRNAs that mapped to the human transcriptome with 2 or fewer mismatches.</p>
+        </sec>
+        <sec id="sec4.4.3">
+          <title>Computational prediction of minimal numbers of crRNAs for pan-coronavirus targeting</title>
+          <p id="p0215">We maximized the vertical coverage of pooled crRNAs to target a maximal set of the 3,051 Coronavirinae viruses with a minimal set of crRNAs. A sliding window was used to extract all unique 22-nt sequences in the Coronavirinae genomes, yielding 6,480,955 unique crRNA candidates. A hash table was used to map each crRNA candidate to the number of Coronavirinae genomes that it targets with a perfect match. A greedy algorithm was used to identify a minimal set of covering crRNAs. In each iteration, the crRNAs were sorted&#xA0;in descending order by the number of genomes targeted. The crRNA that targeted the most genomes was added to the minimal set of crRNAs, and all of the genomes it targeted were removed from the hash table values. If multiple crRNAs were tied&#xA0;for targeting the most genomes, the crRNAs were ranked by the length and quantity of stretches of repeated nucleotides, and the lowest ranking crRNA (i.e., the one with the fewest, shortest stretches of repeated nucleotides) was added to the set of minimal crRNAs. Using this approach, a set of 22 crRNAs were identified that were able to target&#xA0;all 3,051 Coronavirinae virus genomes (including 47 SARS-CoV-2). The phylogenetic tree and the associated annotations were generated by the Interactive Tree Of Life (iTOL v5.5; <ext-link ext-link-type="uri" xlink:href="https://itol.embl.de/" id="intref0070">https://itol.embl.de/</ext-link>).</p>
+        </sec>
+        <sec id="sec4.4.4">
+          <title>Computational prediction of minimal numbers of crRNAs for pan-IAV targeting</title>
+          <p id="p0220">The pan-IAV crRNA pools were generated using the iterative greedy algorithm described in the above methods section &#x201C;Computational prediction of minimal numbers of crRNAs for pan-coronavirus targeting.&#x201D; Unlike SARS-CoV-2, the IAV genome is composed of&#xA0;non-contiguous segments, so the computational pipeline was adjusted to extract 22-nt sliding windows from all segments. A crRNA was defined as targeting a given strain if it has a perfect match to any segment of the strain.</p>
+        </sec>
+        <sec id="sec4.4.5">
+          <title>Conservation plot creation</title>
+          <p id="p0225">All the complete SARS-CoV-2 genome sequences were aligned with the SARS-CoV and MERS-CoV NCBI Refseq sequences by MAFFT using the&#x2013;auto flag. The alignment was visualized using the Geneious Prime software (Geneious 2020.0.4; <ext-link ext-link-type="uri" xlink:href="https://www.geneious.com" id="intref0075">https://www.geneious.com</ext-link>). A consensus nucleotide (which is shared by &gt; 50% of non-gap characters at the given position) was assigned to each position in the alignment. Not every position has a consensus nucleotide. The percent conservation at each position was calculated as the percentage of sequences matching the consensus at that position. To aid interpretation, the resulting plot of percentage conservation was smoothed using a moving average with a window size of 1,001&#xA0;bp centered at each position. Positions corresponding to gap characters in the SARS-CoV-2 reference sequence were omitted.</p>
+        </sec>
+        <sec id="sec4.4.6">
+          <title>Design and cloning of RdRP- and N-targeting crRNAs</title>
+          <p id="p0230">The crRNA plasmids were cloned using standard restriction-ligation cloning. Forward and reverse oligos for each spacer (IDT) were&#xA0;annealed and inserted into backbone using T4 DNA Ligase (NEB). Assembled oligos were either inserted into a pHR or pUC19 backbone, obtained and modified from Addgene (#121514 and #109054, respectively). Spacer sequences for all crRNAs can be found in <xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>.</p>
+        </sec>
+        <sec id="sec4.4.7">
+          <title>Design and cloning of SARS-CoV-2 reporters</title>
+          <p id="p0235">To clone SARS-CoV-2 reporters, pHR-PGK-scFv GCN4-sfGFP (pSLQ1711) was digested with EcoR1 and Sbf1 and gel purified. The&#xA0;PGK promoter and sfGFP were PCR amplified from pSLQ1711 and gel purified. The SARS-CoV-2-F1 and SARS-CoV-2-F2 fragments were synthesized by Integrated DNA Technologies (IDT). Last, the PGK, sfGFP, and SARS-CoV-2-F1/F2 fragments were inserted into the linearized pSLQ1711 vector using In-Fusion cloning (Takara Bio).</p>
+        </sec>
+        <sec id="sec4.4.8">
+          <title>Lentiviral packaging and stable cell line generation</title>
+          <p id="p0240">On day 1, one confluent 100mm dish (Corning) of HEK293T cells were seeded into three 150mm dishes (Corning). On day 2, cells were &#x223C;50%&#x2013;70% confluent at the time of transfection. For each dish, 27.18&#xA0;&#x3BC;g of pHR vector containing the construct of interest, 23.76&#xA0;&#x3BC;g of dR8.91 and 2.97&#xA0;&#x3BC;g of pMD2.G (Addgene) were mixed in 4.5&#xA0;mL of Opti-MEM reduced serum media (GIBCO) with 150&#xA0;&#x3BC;L of Mirus TransIT-LT1 reagent and incubated at room temperature for 30&#xA0;minutes. The transfection complex solution was&#xA0;distributed evenly to HEK293T cultures dropwise. On day 5, lentiviruses are harvested from the supernatant with a sterile syringe and filtered through a 0.22-&#x3BC;m polyvinylidene fluoride filter (Millipore).</p>
+          <p id="p0245">For A549 cells, lentivirus precipitation solution (Alstem) was added and precipitated as per the manufacturer&#x2019;s protocol. One well of&#xA0;a 6-well plate (Corning) of A549 cells at &#x223C;50% confluency were transduced with the precipitated lentivirus. After 2-3&#xA0;days of growth, the cell supernatant containing the virus was removed and the cells were expanded. Cells were then sorted for mCherry+ cells using a Sony SH800S cell sorter.</p>
+        </sec>
+        <sec id="sec4.4.9">
+          <title>SARS-CoV-2 reporter challenge experiments</title>
+          <p id="p0250">
+<xref rid="fig3" ref-type="fig">Figure&#xA0;3</xref>A&#x2013;3D: On day 1, A549 cells stably expressing Cas13d (hereafter referred to as Cas13d A549) were seeded at a density of&#xA0;60,000 cells per well in a 12-well plate. On day 2, cells were transduced with pooled crRNAs targeting specific regions on SARS-CoV-2 (<xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>). On day 3, cells were switched to fresh medium with puromycin at 2 ug/mL. Twenty-four hours after puromycin selection, cells with transfected crRNAs were challenged with SARS-CoV-2 reporter plasmids or SARS-CoV-2 reporter lentivirus. Twenty-four hours after transfection or 48 hours after transduction, cells were tested using flow cytometry on a Beckman-Coulter CytoFLEX S and quantitative real-time PCR on a Biorad CFX384 real-time system. Statistical analyses were done using a two-sided t test with unequal variance in Excel to calculate p values.</p>
+          <p id="p0255">
+<xref rid="fig3" ref-type="fig">Figure&#xA0;3</xref>E: On day 0, 30,000 wild-type A549 cells or Cas13d A549 cells were plated in 24-well plates (Corning). On day&#xA0;1,&#xA0;Cas13d A549 cells were transfected with two pools of crRNAs targeting the two SARS-CoV-2 reporters or a non-targeting crRNA along with the respective SARS-CoV-2 reporters in an equimolar ratio using Mirus LT1 reagent (50&#xA0;&#x3BC;L Opti-MEM reduced serum media, 0.136&#xA0;&#x3BC;g crRNA pool, 0.364&#xA0;&#x3BC;g SARS-CoV-2 reporter, 1&#xA0;&#x3BC;L Mirus LT1 per well). Wild-type cells were transfected with either the crRNA pools or SARS-CoV-2 reporter plasmids as compensation controls. GFP expression was measured on day&#xA0;3 by flow cytometry on a Beckman-Coulter CytoFLEX S instrument. Statistical analyses were done using a two-sided t test with unequal variance in Excel to calculate p values.</p>
+        </sec>
+        <sec id="sec4.4.10">
+          <title>Transduction of SARS-CoV-2 reporter plasmid</title>
+          <p id="p0260">On day 0, Lenti-X 293T cells (Takara Bio) were seeded to 1:6 from a 100&#xA0;mm dish into a 150&#xA0;mm dish. The following day, Lenti-X 293T cells were transfected with 27.18&#xA0;&#x3BC;g of SARS-CoV-2 reporter, 23.76&#xA0;&#x3BC;g of dR8.91 and 2.97&#xA0;&#x3BC;g of pMD2.G (Addgene) in 4.5&#xA0;mL of Opti-MEM reduced serum media (GIBCO) with 150&#xA0;&#x3BC;L of Mirus TransIT-LT1 reagent. 30,000 Cas13d A549 or wild-type A549 cells&#xA0;were also seeded in 24-well plates. On day 2, A549 cells were transfected with pools of targeting crRNAs or a non-targeting guide (50&#xA0;&#x3BC;L Opti-MEM reduced serum media, 0.5&#xA0;&#x3BC;g crRNA pool, 1&#xA0;&#x3BC;L Mirus LT1 per well). On day 3, lentiviruses were harvested from the supernatant with a sterile syringe and filtered through a 0.22-&#x3BC;m polyvinylidene fluoride filter and precipitated with lentivirus precipitation solution and resuspended in 7&#xA0;mL DMEM media. The media on the cells was replaced with either fresh media for the compensation controls or 0.5&#xA0;mL virus-containing media at the following dilutions for the experimental conditions: undiluted, 1/2 dilution, 1/3 dilution, and 1/4 dilution. On day 4, the media on all the cells was replaced with 0.5&#xA0;mL fresh DMEM. On day 5, cells were measured by flow cytometry and assessed for GFP knockdown. Statistical analyses were done using a two-sided t test with&#xA0;unequal variance in Excel to calculate p values.</p>
+        </sec>
+        <sec id="sec4.4.11">
+          <title>IAV challenge experiments</title>
+          <p id="p0265">3.1x10<sup>6</sup> Cas13d A549 cells were plated in two 100&#xA0;mm dishes. The following day, the cells were transfected with 15&#xA0;&#x3BC;g pooled crRNAs targeting the IAV genome or non-targeting controls (<xref rid="mmc2" ref-type="supplementary-material">Table S2</xref>) in 1.5&#xA0;mL Opti-MEM reduced serum media and 30&#xA0;&#x3BC;L Mirus&#xA0;LT1 reagent. After approximately 24 hours, the transfected Cas13d A549 cells were dissociated and re-plated in 24-well plates at a density of 15-20,000 cells/well and incubated overnight. Flow cytometry was performed on excess cells to quantify the transfection efficiency. Cells were challenged overnight with mNeonGreen expressing H1N1 A/Puerto Rico/8/1934 at MOI&#xA0;= 2.5 and 5. Uninfected cells were included as a negative control. An independent two-tailed t test was used to calculate the p values and statistics in <xref rid="fig4" ref-type="fig">Figures 4</xref>B and 4C.</p>
+        </sec>
+        <sec id="sec4.4.12">
+          <title>Quantitative real-time PCR</title>
+          <p id="p0270">Quantitative real-time PCR was performed to quantify RNA abundance. For each sample, total RNA was isolated by using the RNeasy Plus&#xA0;Mini Kit (QIAGEN Cat# 74134), followed by cDNA synthesis using the iScript cDNA Synthesis Kit (BioRad, Cat# 1708890). qRT-PCR primers were ordered from Integrated DNA Technologies (IDT). Quantitative real-time PCR was performed using the PrimePCR assay with the SYBR Green Master Mix (BioRad) and run on a Biorad CFX384 real-time system (C1000 Touch Thermal Cycler), according to manufacturers&#x2019; instructions. Cq values were used to quantify RNA abundance. The relative abundance of the SARS-CoV-2 fragments was normalized to a GAPDH internal control. To calculate the relative mRNA abundance, the expression of each treatment relative to GAPDH was normalized by setting the average value in reporter only samples as 1.</p>
+        </sec>
+        <sec id="sec4.4.13">
+          <title>Microscopy</title>
+          <p id="p0275">Microscopy for IAV experiments was performed using a Keyence BZ-X810 microscope equipped with a GFP and Texas Red filter to obtain images with a 20X objective lens.</p>
+        </sec>
+        <sec id="sec4.4.14">
+          <title>Flow Cytometry</title>
+          <p id="p0280">A549 cells expressing Cas13d transfected with crRNAs and challenged with PR8 mNeon virus were washed with 1X PBS, treated&#xA0;with 1X Trypsin EDTA and fixed in 1.6% paraformaldehyde in PBS for 10&#xA0;minutes. Cells were washed with FACS buffer (1X PBS, 0.3% BSA, 1mM EDTA). A BD Accuri C6 plus flow cytometer was used to collect raw data. Raw data were processed with Cytobank (BD) software. For SARS-CoV-2 challenge experiments, data was collected using a BD Accuri C6 Cytometer and data was analyzed using FlowJo v10.</p>
+          <p id="p0285">References from <xref rid="sec4.1" ref-type="sec">Key Resources Table</xref>
+</p>
+          <p id="p0290">(<xref rid="bib20" ref-type="bibr">Katoh and Standley, 2013</xref>, <xref rid="bib25" ref-type="bibr">Langmead et&#xA0;al., 2009</xref>, <xref rid="bib26" ref-type="bibr">Letunic and Bork, 2019</xref>)</p>
+        </sec>
+      </sec>
+      <sec id="sec4.5">
+        <title>Quantification and Statistical Analysis</title>
+        <sec id="sec4.5.1">
+          <title>Flow Cytometry</title>
+          <p id="p0295">For quantification of repression efficiency by flow cytometry (<xref rid="fig3" ref-type="fig">Figures 3</xref>A&#x2013;3C), values represent mean of fluorescence signals in GFP&#xA0;positive cells. Statistical analyses were performed using a two-sided t test with unequal variance in Excel to calculate p values (<xref rid="mmc3" ref-type="supplementary-material">Table S3</xref>).</p>
+        </sec>
+        <sec id="sec4.5.2">
+          <title>Quantitative RT-PCR (qRT-PCR)</title>
+          <p id="p0300">For quantification of RNA abundance by qRT-PCR (<xref rid="fig3" ref-type="fig">Figures 3</xref>A, 3B, and 3D), the relative RNA expression of the SARS-CoV-2 fragments was normalized to a GAPDH internal control. To calculate the relative mRNA abundance, the relative RNA expression of each treatment was normalized by setting the average value in reporter only samples as 1. Statistical analyses were performed using a two-sided t test with unequal variance in Excel to calculate p values (<xref rid="mmc3" ref-type="supplementary-material">Table S3</xref>).</p>
+        </sec>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ref-list id="cebib0010">
+      <title>References</title>
+      <ref id="bib1">
+        <element-citation publication-type="journal" id="sref1">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Amirkhanov</surname>
+              <given-names>R.N.</given-names>
+            </name>
+            <name>
+              <surname>Stepanov</surname>
+              <given-names>G.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Systems of Delivery of CRISPR/Cas9 Ribonucleoprotein Complexes for Genome Editing</article-title>
+          <source>Russ. J. Bioorganic Chem.</source>
+          <volume>45</volume>
+          <year>2019</year>
+          <fpage>431</fpage>
+          <lpage>437</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib2">
+        <element-citation publication-type="journal" id="sref2">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bawage</surname>
+              <given-names>S.S.</given-names>
+            </name>
+            <name>
+              <surname>Tiwari</surname>
+              <given-names>P.M.</given-names>
+            </name>
+            <name>
+              <surname>Santangelo</surname>
+              <given-names>P.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Synthetic mRNA expressed Cas13a mitigates RNA virus infections</article-title>
+          <source>bioRxiv</source>
+          <year>2018</year>
+          <pub-id pub-id-type="doi">10.1101/370460</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib3">
+        <element-citation publication-type="journal" id="sref3">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Breen</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Nogales</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Baker</surname>
+              <given-names>S.F.</given-names>
+            </name>
+            <name>
+              <surname>Mart&#xED;nez-Sobrido</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Replication-competent influenza a viruses expressing reporter genes</article-title>
+          <source>Viruses</source>
+          <volume>8</volume>
+          <year>2016</year>
+          <fpage>1</fpage>
+          <lpage>28</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib4">
+        <element-citation publication-type="journal" id="sref4">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Carrat</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Flahault</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Influenza vaccine: the challenge of antigenic drift</article-title>
+          <source>Vaccine</source>
+          <volume>25</volume>
+          <year>2007</year>
+          <fpage>6852</fpage>
+          <lpage>6862</lpage>
+          <pub-id pub-id-type="pmid">17719149</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib5">
+        <element-citation publication-type="journal" id="sref5">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chan</surname>
+              <given-names>J.F.-W.</given-names>
+            </name>
+            <name>
+              <surname>Kok</surname>
+              <given-names>K.-H.</given-names>
+            </name>
+            <name>
+              <surname>Zhu</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Chu</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>To</surname>
+              <given-names>K.K.-W.</given-names>
+            </name>
+            <name>
+              <surname>Yuan</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Yuen</surname>
+              <given-names>K.-Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>Genomic characterization of the 2019 novel human-pathogenic coronavirus isolated from a patient with atypical pneumonia after visiting Wuhan</article-title>
+          <source>Emerg. Microbes Infect.</source>
+          <volume>9</volume>
+          <year>2020</year>
+          <fpage>221</fpage>
+          <lpage>236</lpage>
+          <pub-id pub-id-type="pmid">31987001</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib6">
+        <element-citation publication-type="journal" id="sref6">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Desselberger</surname>
+              <given-names>U.</given-names>
+            </name>
+            <name>
+              <surname>Racaniello</surname>
+              <given-names>V.R.</given-names>
+            </name>
+            <name>
+              <surname>Zazra</surname>
+              <given-names>J.J.</given-names>
+            </name>
+            <name>
+              <surname>Palese</surname>
+              <given-names>P.</given-names>
+            </name>
+          </person-group>
+          <article-title>The 3&#x2032; and 5&#x2032;-terminal sequences of influenza A, B and C virus RNA segments are highly conserved and show partial inverted complementarity</article-title>
+          <source>Gene</source>
+          <volume>8</volume>
+          <year>1980</year>
+          <fpage>315</fpage>
+          <lpage>328</lpage>
+          <pub-id pub-id-type="pmid">7358274</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib7">
+        <element-citation publication-type="journal" id="sref7">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dijk</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Garrett</surname>
+              <given-names>R.A.</given-names>
+            </name>
+            <name>
+              <surname>M&#xFC;ller</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Studies on the binding of the ribosomal protein complex L7/12-L10 and protein L11 to the 5&#x2032;-one third of 23S RNA: a functional centre of the 50S subunit</article-title>
+          <source>Nucleic Acids Res.</source>
+          <volume>6</volume>
+          <year>1979</year>
+          <fpage>2717</fpage>
+          <lpage>2729</lpage>
+          <pub-id pub-id-type="pmid">379829</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib8">
+        <element-citation publication-type="journal" id="sref8">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Du</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>He</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Zhou</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Zheng</surname>
+              <given-names>B.J.</given-names>
+            </name>
+            <name>
+              <surname>Jiang</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>The spike protein of SARS-CoV--a target for vaccine and therapeutic development</article-title>
+          <source>Nat. Rev. Microbiol.</source>
+          <volume>7</volume>
+          <year>2009</year>
+          <fpage>226</fpage>
+          <lpage>236</lpage>
+          <pub-id pub-id-type="pmid">19198616</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib9">
+        <element-citation publication-type="journal" id="sref9">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Freije</surname>
+              <given-names>C.A.</given-names>
+            </name>
+            <name>
+              <surname>Myhrvold</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Boehm</surname>
+              <given-names>C.K.</given-names>
+            </name>
+            <name>
+              <surname>Lin</surname>
+              <given-names>A.E.</given-names>
+            </name>
+            <name>
+              <surname>Welch</surname>
+              <given-names>N.L.</given-names>
+            </name>
+            <name>
+              <surname>Carter</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Metsky</surname>
+              <given-names>H.C.</given-names>
+            </name>
+            <name>
+              <surname>Luo</surname>
+              <given-names>C.Y.</given-names>
+            </name>
+            <name>
+              <surname>Abudayyeh</surname>
+              <given-names>O.O.</given-names>
+            </name>
+            <name>
+              <surname>Gootenberg</surname>
+              <given-names>J.S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Programmable Inhibition and Detection of RNA Viruses Using Cas13</article-title>
+          <source>Mol. Cell</source>
+          <volume>76</volume>
+          <year>2019</year>
+          <fpage>826</fpage>
+          <lpage>837</lpage>
+          <pub-id pub-id-type="pmid">31607545</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib10">
+        <element-citation publication-type="journal" id="sref10">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fujii</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Goto</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Watanabe</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Yoshida</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Kawaoka</surname>
+              <given-names>Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>Selective incorporation of influenza virus RNA segments into virions</article-title>
+          <source>Proc. Natl. Acad. Sci. USA</source>
+          <volume>100</volume>
+          <year>2003</year>
+          <fpage>2002</fpage>
+          <lpage>2007</lpage>
+          <pub-id pub-id-type="pmid">12574509</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib11">
+        <element-citation publication-type="journal" id="sref11">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gerber</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Isel</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Moules</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Marquet</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Selective packaging of the influenza A genome and consequences for genetic reassortment</article-title>
+          <source>Trends Microbiol.</source>
+          <volume>22</volume>
+          <year>2014</year>
+          <fpage>446</fpage>
+          <lpage>455</lpage>
+          <pub-id pub-id-type="pmid">24798745</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib12">
+        <element-citation publication-type="journal" id="sref12">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gootenberg</surname>
+              <given-names>J.S.</given-names>
+            </name>
+            <name>
+              <surname>Abudayyeh</surname>
+              <given-names>O.O.</given-names>
+            </name>
+            <name>
+              <surname>Kellner</surname>
+              <given-names>M.J.</given-names>
+            </name>
+            <name>
+              <surname>Joung</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Collins</surname>
+              <given-names>J.J.</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Multiplexed and portable nucleic acid detection platform with Cas13, Cas12a and Csm6</article-title>
+          <source>Science</source>
+          <volume>360</volume>
+          <year>2018</year>
+          <fpage>439</fpage>
+          <lpage>444</lpage>
+          <pub-id pub-id-type="pmid">29449508</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib13">
+        <element-citation publication-type="journal" id="sref13">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Guan</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Munder</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Hedtfeld</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Braubach</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Glage</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Lienenklaus</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Schultze</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Hasenpusch</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Garrels</surname>
+              <given-names>W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Self-assembled peptide-poloxamine nanoparticles enable in&#xA0;vitro and in&#xA0;vivo genome restoration for cystic fibrosis</article-title>
+          <source>Nat. Nanotechnol.</source>
+          <volume>14</volume>
+          <year>2019</year>
+          <fpage>287</fpage>
+          <lpage>297</lpage>
+          <pub-id pub-id-type="pmid">30692673</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib14">
+        <element-citation publication-type="journal" id="sref14">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Handumrongkul</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Ye</surname>
+              <given-names>A.L.</given-names>
+            </name>
+            <name>
+              <surname>Chmura</surname>
+              <given-names>S.A.</given-names>
+            </name>
+            <name>
+              <surname>Soroceanu</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Mack</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Ice</surname>
+              <given-names>R.J.</given-names>
+            </name>
+            <name>
+              <surname>Thistle</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Myers</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Ursu</surname>
+              <given-names>S.J.</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>Durable multitransgene expression in&#xA0;vivo using systemic, nonviral DNA delivery</article-title>
+          <source>Sci. Adv.</source>
+          <volume>5</volume>
+          <year>2019</year>
+          <fpage>eaax0217</fpage>
+          <pub-id pub-id-type="pmid">31807699</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib15">
+        <element-citation publication-type="journal" id="sref15">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Harding</surname>
+              <given-names>A.T.</given-names>
+            </name>
+            <name>
+              <surname>Heaton</surname>
+              <given-names>B.E.</given-names>
+            </name>
+            <name>
+              <surname>Dumm</surname>
+              <given-names>R.E.</given-names>
+            </name>
+            <name>
+              <surname>Heaton</surname>
+              <given-names>N.S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Rationally designed influenza virus vaccines that are antigenically stable during growth in eggs</article-title>
+          <source>MBio</source>
+          <volume>8</volume>
+          <year>2017</year>
+          <fpage>1</fpage>
+          <lpage>16</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib16">
+        <element-citation publication-type="journal" id="sref16">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heaton</surname>
+              <given-names>B.E.</given-names>
+            </name>
+            <name>
+              <surname>Kennedy</surname>
+              <given-names>E.M.</given-names>
+            </name>
+            <name>
+              <surname>Dumm</surname>
+              <given-names>R.E.</given-names>
+            </name>
+            <name>
+              <surname>Harding</surname>
+              <given-names>A.T.</given-names>
+            </name>
+            <name>
+              <surname>Sacco</surname>
+              <given-names>M.T.</given-names>
+            </name>
+            <name>
+              <surname>Sachs</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Heaton</surname>
+              <given-names>N.S.</given-names>
+            </name>
+          </person-group>
+          <article-title>A CRISPR Activation Screen Identifies a Pan-avian Influenza Virus Inhibitory Host Factor</article-title>
+          <source>Cell Rep.</source>
+          <volume>20</volume>
+          <year>2017</year>
+          <fpage>1503</fpage>
+          <lpage>1512</lpage>
+          <pub-id pub-id-type="pmid">28813663</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib17">
+        <element-citation publication-type="journal" id="sref17">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hendel</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Bak</surname>
+              <given-names>R.O.</given-names>
+            </name>
+            <name>
+              <surname>Clark</surname>
+              <given-names>J.T.</given-names>
+            </name>
+            <name>
+              <surname>Kennedy</surname>
+              <given-names>A.B.</given-names>
+            </name>
+            <name>
+              <surname>Ryan</surname>
+              <given-names>D.E.</given-names>
+            </name>
+            <name>
+              <surname>Roy</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Steinfeld</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Lunstad</surname>
+              <given-names>B.D.</given-names>
+            </name>
+            <name>
+              <surname>Kaiser</surname>
+              <given-names>R.J.</given-names>
+            </name>
+            <name>
+              <surname>Wilkens</surname>
+              <given-names>A.B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Chemically modified guide RNAs enhance CRISPR-Cas genome editing in human primary cells</article-title>
+          <source>Nat. Biotechnol.</source>
+          <volume>33</volume>
+          <year>2015</year>
+          <fpage>985</fpage>
+          <lpage>989</lpage>
+          <pub-id pub-id-type="pmid">26121415</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib18">
+        <element-citation publication-type="journal" id="sref18">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huang</surname>
+              <given-names>C.Y.</given-names>
+            </name>
+            <name>
+              <surname>Uno</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Murphy</surname>
+              <given-names>J.E.</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Hamer</surname>
+              <given-names>J.D.</given-names>
+            </name>
+            <name>
+              <surname>Escobedo</surname>
+              <given-names>J.A.</given-names>
+            </name>
+            <name>
+              <surname>Cohen</surname>
+              <given-names>F.E.</given-names>
+            </name>
+            <name>
+              <surname>Radhakrishnan</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Dwarki</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Zuckermann</surname>
+              <given-names>R.N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Lipitoids--novel cationic lipids for cellular delivery of plasmid DNA in&#xA0;vitro</article-title>
+          <source>Chem. Biol.</source>
+          <volume>5</volume>
+          <year>1998</year>
+          <fpage>345</fpage>
+          <lpage>354</lpage>
+          <pub-id pub-id-type="pmid">9653553</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib19">
+        <element-citation publication-type="journal" id="sref19">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huh</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Matthews</surname>
+              <given-names>B.D.</given-names>
+            </name>
+            <name>
+              <surname>Mammoto</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Montoya-Zavala</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Hsin</surname>
+              <given-names>H.Y.</given-names>
+            </name>
+            <name>
+              <surname>Ingber</surname>
+              <given-names>D.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Reconstituting Organ-Level Lung Functions on a Chip</article-title>
+          <source>Science</source>
+          <volume>328</volume>
+          <year>2010</year>
+          <fpage>1662</fpage>
+          <lpage>1668</lpage>
+          <pub-id pub-id-type="pmid">20576885</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib20">
+        <element-citation publication-type="journal" id="sref20">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Katoh</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Standley</surname>
+              <given-names>D.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>MAFFT multiple sequence alignment software version 7: improvements in performance and usability</article-title>
+          <source>Mol. Biol. Evol.</source>
+          <volume>30</volume>
+          <year>2013</year>
+          <fpage>772</fpage>
+          <lpage>780</lpage>
+          <pub-id pub-id-type="pmid">23329690</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib21">
+        <element-citation publication-type="journal" id="sref21">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Konermann</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Lotfy</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Brideau</surname>
+              <given-names>N.J.</given-names>
+            </name>
+            <name>
+              <surname>Oki</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Shokhirev</surname>
+              <given-names>M.N.</given-names>
+            </name>
+            <name>
+              <surname>Hsu</surname>
+              <given-names>P.D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Transcriptome Engineering with RNA-Targeting Type VI-D CRISPR Effectors</article-title>
+          <source>Cell</source>
+          <volume>173</volume>
+          <year>2018</year>
+          <fpage>665</fpage>
+          <lpage>676</lpage>
+          <pub-id pub-id-type="pmid">29551272</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib22">
+        <element-citation publication-type="journal" id="sref22">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krammer</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>G.J.D.</given-names>
+            </name>
+            <name>
+              <surname>Fouchier</surname>
+              <given-names>R.A.M.</given-names>
+            </name>
+            <name>
+              <surname>Peiris</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Kedzierska</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Doherty</surname>
+              <given-names>P.C.</given-names>
+            </name>
+            <name>
+              <surname>Palese</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Shaw</surname>
+              <given-names>M.L.</given-names>
+            </name>
+            <name>
+              <surname>Treanor</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Webster</surname>
+              <given-names>R.G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Influenza</article-title>
+          <source>Nat. Rev. Dis. Prim.</source>
+          <volume>4</volume>
+          <year>2018</year>
+          <fpage>3</fpage>
+          <pub-id pub-id-type="pmid">29955068</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib23">
+        <element-citation publication-type="journal" id="sref23">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krishnamurthy</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Wohlford-Lenane</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Kandimalla</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Sartre</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Meyerholz</surname>
+              <given-names>D.K.</given-names>
+            </name>
+            <name>
+              <surname>Th&#xE9;berge</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Hall&#xE9;e</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Duperr&#xE9;</surname>
+              <given-names>A.M.</given-names>
+            </name>
+            <name>
+              <surname>Del&#x2019;Guidice</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Lepetit-Stoffaes</surname>
+              <given-names>J.P.</given-names>
+            </name>
+          </person-group>
+          <article-title>Engineered amphiphilic peptides enable delivery of proteins and CRISPR-associated nucleases to airway epithelia</article-title>
+          <source>Nat. Commun.</source>
+          <volume>10</volume>
+          <year>2019</year>
+          <fpage>4906</fpage>
+          <pub-id pub-id-type="pmid">31659165</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib24">
+        <element-citation publication-type="journal" id="sref24">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lakdawala</surname>
+              <given-names>S.S.</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Wawrzusin</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Kabat</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Broadbent</surname>
+              <given-names>A.J.</given-names>
+            </name>
+            <name>
+              <surname>Lamirande</surname>
+              <given-names>E.W.</given-names>
+            </name>
+            <name>
+              <surname>Fodor</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Altan-Bonnet</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>Shroff</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Subbarao</surname>
+              <given-names>K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Influenza a virus assembly intermediates fuse in the cytoplasm</article-title>
+          <source>PLoS Pathog.</source>
+          <volume>10</volume>
+          <year>2014</year>
+          <fpage>e1003971</fpage>
+          <pub-id pub-id-type="pmid">24603687</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib25">
+        <element-citation publication-type="journal" id="sref25">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Langmead</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Trapnell</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Pop</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Salzberg</surname>
+              <given-names>S.L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Ultrafast and memory-efficient alignment of short DNA sequences to the human genome</article-title>
+          <source>Genome Biol.</source>
+          <volume>10</volume>
+          <year>2009</year>
+          <fpage>R25</fpage>
+          <pub-id pub-id-type="pmid">19261174</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib26">
+        <element-citation publication-type="journal" id="sref26">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Letunic</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Bork</surname>
+              <given-names>P.</given-names>
+            </name>
+          </person-group>
+          <article-title>Interactive Tree Of Life (iTOL) v4: recent updates and new developments</article-title>
+          <source>Nucleic Acids Res.</source>
+          <volume>47</volume>
+          <issue>W1</issue>
+          <year>2019</year>
+          <fpage>W256</fpage>
+          <lpage>W259</lpage>
+          <pub-id pub-id-type="pmid">30931475</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib27">
+        <element-citation publication-type="journal" id="sref27">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Li</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Shi</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Yu</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Ren</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Epstein</surname>
+              <given-names>J.H.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Crameri</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Hu</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Bats are natural reservoirs of SARS-like coronaviruses</article-title>
+          <source>Science</source>
+          <volume>310</volume>
+          <year>2005</year>
+          <fpage>676</fpage>
+          <lpage>679</lpage>
+          <pub-id pub-id-type="pmid">16195424</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib28">
+        <element-citation publication-type="journal" id="sref28">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Liu</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Fields Virology, 6th Edition</article-title>
+          <source>Clin. Infect. Dis.</source>
+          <volume>59</volume>
+          <year>2014</year>
+          <fpage>613</fpage>
+        </element-citation>
+      </ref>
+      <ref id="bib29">
+        <element-citation publication-type="journal" id="sref29">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Liu</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Zheng</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Tong</surname>
+              <given-names>Q.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Sutter</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Trilling</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Lu</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Dittmer</surname>
+              <given-names>U.</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Overlapping and discrete aspects of the pathology and pathogenesis of the emerging human pathogenic coronaviruses SARS-CoV, MERS-CoV, and 2019-nCoV</article-title>
+          <source>J.&#xA0;Med. Virol.</source>
+          <volume>92</volume>
+          <year>2020</year>
+          <fpage>491</fpage>
+          <lpage>494</lpage>
+          <pub-id pub-id-type="pmid">32056249</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib30">
+        <element-citation publication-type="journal" id="sref30">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McAuley</surname>
+              <given-names>J.L.</given-names>
+            </name>
+            <name>
+              <surname>Gilbertson</surname>
+              <given-names>B.P.</given-names>
+            </name>
+            <name>
+              <surname>Trifkovic</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>L.E.</given-names>
+            </name>
+            <name>
+              <surname>McKimm-Breschkin</surname>
+              <given-names>J.L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Influenza virus neuraminidase structure and functions</article-title>
+          <source>Front. Microbiol.</source>
+          <volume>10</volume>
+          <year>2019</year>
+          <fpage>39</fpage>
+          <pub-id pub-id-type="pmid">30761095</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib31">
+        <element-citation publication-type="journal" id="sref31">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McBride</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>van Zyl</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Fielding</surname>
+              <given-names>B.C.</given-names>
+            </name>
+          </person-group>
+          <article-title>The coronavirus nucleocapsid is a multifunctional protein</article-title>
+          <source>Viruses</source>
+          <volume>6</volume>
+          <year>2014</year>
+          <fpage>2991</fpage>
+          <lpage>3018</lpage>
+          <pub-id pub-id-type="pmid">25105276</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib32">
+        <element-citation publication-type="journal" id="sref32">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McKinlay</surname>
+              <given-names>C.J.</given-names>
+            </name>
+            <name>
+              <surname>Vargas</surname>
+              <given-names>J.R.</given-names>
+            </name>
+            <name>
+              <surname>Blake</surname>
+              <given-names>T.R.</given-names>
+            </name>
+            <name>
+              <surname>Hardy</surname>
+              <given-names>J.W.</given-names>
+            </name>
+            <name>
+              <surname>Kanada</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Contag</surname>
+              <given-names>C.H.</given-names>
+            </name>
+            <name>
+              <surname>Wender</surname>
+              <given-names>P.A.</given-names>
+            </name>
+            <name>
+              <surname>Waymouth</surname>
+              <given-names>R.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Charge-altering releasable transporters (CARTs) for the delivery and release of mRNA in living animals</article-title>
+          <source>Proc. Natl. Acad. Sci. USA</source>
+          <volume>114</volume>
+          <year>2017</year>
+          <fpage>E448</fpage>
+          <lpage>E456</lpage>
+          <pub-id pub-id-type="pmid">28069945</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib33">
+        <element-citation publication-type="journal" id="sref33">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mehta</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Merkel</surname>
+              <given-names>O.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Immunogenicity of Cas9 Protein</article-title>
+          <source>J.&#xA0;Pharm. Sci.</source>
+          <volume>109</volume>
+          <year>2020</year>
+          <fpage>62</fpage>
+          <lpage>67</lpage>
+          <pub-id pub-id-type="pmid">31589876</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib34">
+        <element-citation publication-type="journal" id="sref34">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mohd</surname>
+              <given-names>H.A.</given-names>
+            </name>
+            <name>
+              <surname>Al-Tawfiq</surname>
+              <given-names>J.A.</given-names>
+            </name>
+            <name>
+              <surname>Memish</surname>
+              <given-names>Z.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Middle East Respiratory Syndrome Coronavirus (MERS-CoV) origin and animal reservoir</article-title>
+          <source>Virol. J.</source>
+          <volume>13</volume>
+          <year>2016</year>
+          <fpage>87</fpage>
+          <pub-id pub-id-type="pmid">27255185</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib35">
+        <element-citation publication-type="journal" id="sref35">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Muramoto</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Takada</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Fujii</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Noda</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Iwatsuki-Horimoto</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Watanabe</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Horimoto</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Kida</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Kawaoka</surname>
+              <given-names>Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>Hierarchy among viral RNA (vRNA) segments in their role in vRNA incorporation into influenza A virions</article-title>
+          <source>J.&#xA0;Virol.</source>
+          <volume>80</volume>
+          <year>2006</year>
+          <fpage>2318</fpage>
+          <lpage>2325</lpage>
+          <pub-id pub-id-type="pmid">16474138</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib36">
+        <element-citation publication-type="journal" id="sref36">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rappuoli</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Glycoconjugate vaccines: Principles and mechanisms</article-title>
+          <source>Sci. Transl. Med.</source>
+          <volume>10</volume>
+          <year>2018</year>
+          <fpage>1</fpage>
+          <lpage>7</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib37">
+        <element-citation publication-type="journal" id="sref37">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sago</surname>
+              <given-names>C.D.</given-names>
+            </name>
+            <name>
+              <surname>Lokugamage</surname>
+              <given-names>M.P.</given-names>
+            </name>
+            <name>
+              <surname>Paunovska</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Vanover</surname>
+              <given-names>D.A.</given-names>
+            </name>
+            <name>
+              <surname>Monaco</surname>
+              <given-names>C.M.</given-names>
+            </name>
+            <name>
+              <surname>Shah</surname>
+              <given-names>N.N.</given-names>
+            </name>
+            <name>
+              <surname>Gamboa Castro</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Anderson</surname>
+              <given-names>S.E.</given-names>
+            </name>
+            <name>
+              <surname>Rudoltz</surname>
+              <given-names>T.G.</given-names>
+            </name>
+            <name>
+              <surname>Lando</surname>
+              <given-names>G.N.</given-names>
+            </name>
+          </person-group>
+          <article-title>High-throughput in&#xA0;vivo screen of functional mRNA delivery identifies nanoparticles for endothelial cell gene editing</article-title>
+          <source>Proc. Natl. Acad. Sci. USA</source>
+          <volume>115</volume>
+          <year>2018</year>
+          <fpage>E9944</fpage>
+          <lpage>E9952</lpage>
+          <pub-id pub-id-type="pmid">30275336</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib38">
+        <element-citation publication-type="journal" id="sref38">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shaner</surname>
+              <given-names>N.C.</given-names>
+            </name>
+            <name>
+              <surname>Lambert</surname>
+              <given-names>G.G.</given-names>
+            </name>
+            <name>
+              <surname>Chammas</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Ni</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Cranfill</surname>
+              <given-names>P.J.</given-names>
+            </name>
+            <name>
+              <surname>Baird</surname>
+              <given-names>M.A.</given-names>
+            </name>
+            <name>
+              <surname>Sell</surname>
+              <given-names>B.R.</given-names>
+            </name>
+            <name>
+              <surname>Allen</surname>
+              <given-names>J.R.</given-names>
+            </name>
+            <name>
+              <surname>Day</surname>
+              <given-names>R.N.</given-names>
+            </name>
+            <name>
+              <surname>Israelsson</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>A bright monomeric green fluorescent protein derived from Branchiostoma lanceolatum</article-title>
+          <source>Nat. Methods</source>
+          <volume>10</volume>
+          <year>2013</year>
+          <fpage>407</fpage>
+          <lpage>409</lpage>
+          <pub-id pub-id-type="pmid">23524392</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib39">
+        <element-citation publication-type="journal" id="sref39">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shang</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Rao</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Rao</surname>
+              <given-names>X.</given-names>
+            </name>
+          </person-group>
+          <article-title>The outbreak of SARS-CoV-2 pneumonia calls for viral vaccines</article-title>
+          <source>NPJ Vaccines</source>
+          <volume>5</volume>
+          <year>2020</year>
+          <fpage>18</fpage>
+          <pub-id pub-id-type="pmid">32194995</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib40">
+        <element-citation publication-type="journal" id="sref40">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shi</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Hu</surname>
+              <given-names>Z.</given-names>
+            </name>
+          </person-group>
+          <article-title>A review of studies on animal reservoirs of the SARS coronavirus</article-title>
+          <source>Virus Res.</source>
+          <volume>133</volume>
+          <year>2008</year>
+          <fpage>74</fpage>
+          <lpage>87</lpage>
+          <pub-id pub-id-type="pmid">17451830</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib41">
+        <element-citation publication-type="journal" id="sref41">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Skehel</surname>
+              <given-names>J.J.</given-names>
+            </name>
+            <name>
+              <surname>Hay</surname>
+              <given-names>A.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Nucleotide sequences at the 5&#x2032; termini of influenza virus RNAs and their transcripts</article-title>
+          <source>Nucleic Acids Res.</source>
+          <volume>5</volume>
+          <year>1978</year>
+          <fpage>1207</fpage>
+          <lpage>1219</lpage>
+          <pub-id pub-id-type="pmid">652519</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib42">
+        <element-citation publication-type="journal" id="sref42">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smargon</surname>
+              <given-names>A.A.</given-names>
+            </name>
+            <name>
+              <surname>Cox</surname>
+              <given-names>D.B.T.</given-names>
+            </name>
+            <name>
+              <surname>Pyzocha</surname>
+              <given-names>N.K.</given-names>
+            </name>
+            <name>
+              <surname>Zheng</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Slaymaker</surname>
+              <given-names>I.M.</given-names>
+            </name>
+            <name>
+              <surname>Gootenberg</surname>
+              <given-names>J.S.</given-names>
+            </name>
+            <name>
+              <surname>Abudayyeh</surname>
+              <given-names>O.A.</given-names>
+            </name>
+            <name>
+              <surname>Essletzbichler</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Shmakov</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Makarova</surname>
+              <given-names>K.S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Cas13b Is a Type VI-B CRISPR-Associated RNA-Guided RNase Differentially Regulated by Accessory Proteins Csx27 and Csx28</article-title>
+          <source>Mol. Cell</source>
+          <volume>65</volume>
+          <year>2017</year>
+          <fpage>618</fpage>
+          <lpage>630</lpage>
+          <pub-id pub-id-type="pmid">28065598</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib43">
+        <element-citation publication-type="journal" id="sref43">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tang</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Yao</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Duan</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Qian</surname>
+              <given-names>Z.</given-names>
+            </name>
+          </person-group>
+          <article-title>On the origin and continuing evolution of SARS-CoV-2</article-title>
+          <source>Natl. Sci. Rev.</source>
+          <year>2020</year>
+          <pub-id pub-id-type="doi">10.1093/nsr/nwaa036</pub-id>
+          <comment>nwaa036</comment>
+        </element-citation>
+      </ref>
+      <ref id="bib44">
+        <element-citation publication-type="journal" id="sref44">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Nakamura</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Abbott</surname>
+              <given-names>T.R.</given-names>
+            </name>
+            <name>
+              <surname>Zhao</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Luo</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Yu</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Nguyen</surname>
+              <given-names>C.M.</given-names>
+            </name>
+            <name>
+              <surname>Lo</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Daley</surname>
+              <given-names>T.P.</given-names>
+            </name>
+            <name>
+              <surname>La Russa</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>CRISPR-mediated live imaging of genome editing and transcription</article-title>
+          <source>Science</source>
+          <volume>365</volume>
+          <year>2019</year>
+          <fpage>1301</fpage>
+          <lpage>1305</lpage>
+          <pub-id pub-id-type="pmid">31488703</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib45">
+        <element-citation publication-type="journal" id="sref45">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wessels</surname>
+              <given-names>H.-H.</given-names>
+            </name>
+            <name>
+              <surname>M&#xE9;ndez-Mancilla</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Legut</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Daniloski</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Sanjana</surname>
+              <given-names>N.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Massively parallel Cas13 screens reveal principles for guide RNA design</article-title>
+          <source>Nat. Biotechnol.</source>
+          <year>2020</year>
+          <pub-id pub-id-type="doi">10.1038/s41587-020-0456-9</pub-id>
+          <comment>Published online March 16, 2020</comment>
+        </element-citation>
+      </ref>
+      <ref id="bib46">
+        <element-citation publication-type="journal" id="sref46">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Williams</surname>
+              <given-names>G.D.</given-names>
+            </name>
+            <name>
+              <surname>Townsend</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Wylie</surname>
+              <given-names>K.M.</given-names>
+            </name>
+            <name>
+              <surname>Kim</surname>
+              <given-names>P.J.</given-names>
+            </name>
+            <name>
+              <surname>Amarasinghe</surname>
+              <given-names>G.K.</given-names>
+            </name>
+            <name>
+              <surname>Kutluay</surname>
+              <given-names>S.B.</given-names>
+            </name>
+            <name>
+              <surname>Boon</surname>
+              <given-names>A.C.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Nucleotide resolution mapping of influenza A virus nucleoprotein-RNA interactions reveals RNA features required for replication</article-title>
+          <source>Nat. Commun.</source>
+          <volume>9</volume>
+          <year>2018</year>
+          <fpage>465</fpage>
+          <pub-id pub-id-type="pmid">29386621</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib47">
+        <element-citation publication-type="journal" id="sref47">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wu</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Zhao</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Yu</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>Y.-M.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Z.-G.</given-names>
+            </name>
+            <name>
+              <surname>Hu</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Tao</surname>
+              <given-names>Z.-W.</given-names>
+            </name>
+            <name>
+              <surname>Tian</surname>
+              <given-names>J.-H.</given-names>
+            </name>
+            <name>
+              <surname>Pei</surname>
+              <given-names>Y.-Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>A new coronavirus associated with human respiratory disease in China</article-title>
+          <source>Nature</source>
+          <volume>579</volume>
+          <year>2020</year>
+          <fpage>265</fpage>
+          <lpage>269</lpage>
+          <pub-id pub-id-type="pmid">32015508</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib48">
+        <element-citation publication-type="journal" id="sref48">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Xu</surname>
+              <given-names>C.F.</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>G.J.</given-names>
+            </name>
+            <name>
+              <surname>Luo</surname>
+              <given-names>Y.L.</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Zhao</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Lu</surname>
+              <given-names>Z.D.</given-names>
+            </name>
+            <name>
+              <surname>Czarna</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Gu</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Rational designs of in&#xA0;vivo CRISPR-Cas delivery systems</article-title>
+          <source>Adv. Drug Deliv. Rev.</source>
+          <year>2019</year>
+          <pub-id pub-id-type="doi">10.1016/j.addr.2019.11.005</pub-id>
+          <comment>Published online November 21, 2019</comment>
+        </element-citation>
+      </ref>
+      <ref id="bib49">
+        <element-citation publication-type="journal" id="sref49">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yan</surname>
+              <given-names>W.X.</given-names>
+            </name>
+            <name>
+              <surname>Chong</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Makarova</surname>
+              <given-names>K.S.</given-names>
+            </name>
+            <name>
+              <surname>Koonin</surname>
+              <given-names>E.V.</given-names>
+            </name>
+            <name>
+              <surname>Cheng</surname>
+              <given-names>D.R.</given-names>
+            </name>
+            <name>
+              <surname>Scott</surname>
+              <given-names>D.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Cas13d Is a Compact RNA-Targeting Type VI CRISPR Effector Positively Modulated by a WYL-Domain-Containing Accessory Protein</article-title>
+          <source>Mol. Cell</source>
+          <volume>70</volume>
+          <year>2018</year>
+          <fpage>327</fpage>
+          <lpage>339</lpage>
+          <pub-id pub-id-type="pmid">29551514</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib50">
+        <element-citation publication-type="journal" id="sref50">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yang</surname>
+              <given-names>L.Z.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>S.Q.</given-names>
+            </name>
+            <name>
+              <surname>Yao</surname>
+              <given-names>R.W.</given-names>
+            </name>
+            <name>
+              <surname>Luan</surname>
+              <given-names>P.F.</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Carmichael</surname>
+              <given-names>G.G.</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>L.L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic Imaging of RNA in Living Cells by CRISPR-Cas13 Systems</article-title>
+          <source>Mol. Cell</source>
+          <volume>76</volume>
+          <year>2019</year>
+          <fpage>981</fpage>
+          <lpage>997</lpage>
+          <pub-id pub-id-type="pmid">31757757</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib51">
+        <element-citation publication-type="journal" id="sref51">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhou</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Donnelly</surname>
+              <given-names>M.E.</given-names>
+            </name>
+            <name>
+              <surname>Scholes</surname>
+              <given-names>D.T.</given-names>
+            </name>
+            <name>
+              <surname>St George</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Hatta</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Kawaoka</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Wentworth</surname>
+              <given-names>D.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Single-reaction genomic amplification accelerates sequencing and vaccine production for classical and Swine origin human influenza a viruses</article-title>
+          <source>J.&#xA0;Virol.</source>
+          <volume>83</volume>
+          <year>2009</year>
+          <fpage>10309</fpage>
+          <lpage>10313</lpage>
+          <pub-id pub-id-type="pmid">19605485</pub-id>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <sec id="app2" sec-type="supplementary-material">
+      <title>Supplemental Information</title>
+      <p id="p0325">
+<supplementary-material content-type="local-data" id="mmc1"><caption><title>Table S1. Sequences of 3,203 Predicted crRNAs Targeting SARS-CoV-2 and Their Coordinates on the SARS-CoV-2 Genome, Related to Figure&#xA0;2A</title></caption><media xlink:href="mmc1.xlsx"/></supplementary-material>
+<supplementary-material content-type="local-data" id="mmc2"><caption><title>Table S2. All Sequences Used in the Study, Related to Figures 2B, 3, and 4</title><p>Included are sequences of 40 crRNAs targeting SARS-CoV-2, 48 crRNAs targeting H1N1 IAV, non-targeting crRNAs, and sequences of synthesized SARS-CoV-2 fragments.</p></caption><media xlink:href="mmc2.xlsx"/></supplementary-material>
+<supplementary-material content-type="local-data" id="mmc3"><caption><title>Table S3. p Values for Testing crRNA Pools, Related to Figures 3A and 3B</title></caption><media xlink:href="mmc3.xlsx"/></supplementary-material>
+<supplementary-material content-type="local-data" id="mmc4"><caption><title>Table S4. Prediction of Minimal crRNA Pools for Targeting All Sequenced IAVs (91,600) or All Sequenced Coronaviruses (3,051), Related to Figures 4D and 5B</title><p>We highlight the top 6 covering 92% of IAVs, all 81 crRNAs targeting all 91,600 IAVs, the top 6 (PAC-MAN-T6) covering 91% of coronaviruses, and 22 crRNA targeting all coronaviruses including all published SARS-CoV-2 strains, SARS-CoV, and MERS-CoV.</p></caption><media xlink:href="mmc4.xlsx"/></supplementary-material>
+<supplementary-material content-type="local-data" id="mmc5"><caption><title>Table S5. Analysis of 1,087 Sequenced SARS-CoV-2 for Their Types and Targeting by crRNA-N18f, Related to Figure&#xA0;5C</title></caption><media xlink:href="mmc5.xlsx"/></supplementary-material>
+</p>
+    </sec>
+    <ack id="ack0010">
+      <title>Acknowledgments</title>
+      <p>The authors thank all members from the Stanley Qi lab and David Lewis lab for facilitating experiments and useful discussions. The authors thank the researchers who generated and contributed the SARS-CoV-2 sequence data to GISAID (<ext-link ext-link-type="uri" xlink:href="https://www.gisaid.org/" id="intref0080">https://www.gisaid.org/</ext-link>). The authors would also like to thank Dr. Elodie Ghedin (NYU) for her advice on targeting influenza with Cas13 and insights about influenza replication. The project is supported by a contract grant from <funding-source id="gs1"><institution-wrap><institution-id institution-id-type="doi">10.13039/100000185</institution-id><institution>Defense Advanced Research Projects Agency</institution></institution-wrap></funding-source> (DARPA) (HR001119C0060). L.S.Q. is also supported by the <funding-source id="gs2">Li Ka Shing Foundation</funding-source>.</p>
+      <sec id="sec5">
+        <title>Author Contributions</title>
+        <p id="p0310">T.R.A., M.F.L., D.B.L., and L.S.Q. conceived the idea. S.C., R.D., and D.E. provided key insights and suggestions. T.R.A., G.D., Y.L., L.G., L.Z., M.F.L., D.B.L., and L.S.Q. planned the experiments. T.R.A., X.L., and L.G. designed crRNAs. T.R.A., L.G., and T.P. cloned crRNAs. Y.L. designed and cloned SARS-CoV-2 reporters. T.R.A., Y.L., L.G., and L.Z. performed SARS-CoV-2 reporter cell culture experiments. T.R.A. and G.D. performed IAV cell culture experiments. N.S.H. facilitated IAV viral challenge experiments. X.L. and A.C. performed SARS-CoV-2 bioinformatics analyses. T.R.A. performed IAV bioinformatics analyses. T.R.A., G.D., Y.L., L.G., M.F.L., D.B.L., and L.S.Q. analyzed the experimental data. M.F.L., D.B.L., and L.S.Q. wrote the manuscript and secured funding. All authors read and commented on the manuscript.</p>
+      </sec>
+      <sec sec-type="COI-statement" id="sec6">
+        <title>Declaration of Interests</title>
+        <p id="p0315">The authors have filed provisional patents via Stanford University related to this work.</p>
+      </sec>
+    </ack>
+    <fn-group>
+      <fn id="app1" fn-type="supplementary-material">
+        <p id="p0320">Supplemental Information can be found online at <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.cell.2020.04.020" id="intref0085">https://doi.org/10.1016/j.cell.2020.04.020</ext-link>.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>
