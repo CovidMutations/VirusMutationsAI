@@ -26,12 +26,37 @@ export class SetFrequencyDTO {
 export class AdminSettingsModel {
   lastUpdateDB: number;
   frequency: string;
+  status: string;
+  status_text: string;
+
+  constructor(row?) {
+    if(row) {
+      Object.keys(row).forEach(innerProp =>{
+        if(this.hasOwnProperty(innerProp)) {
+          this[innerProp] = row[innerProp];
+        }
+      })
+    } else {
+      this.frequency = DBUpdatingFrequencyEnum.monthly;
+      this.lastUpdateDB = Date.now();
+      this.status = 'none';
+      this.status_text = 'none';
+    }
+  }
 }
 
 
 export class ResUpdateDBModel {
-  lastUpdateDB: number;
-  status: string;
-  status_text: string;
+  lastUpdateDB: number = undefined;
+  status: string = undefined;
+  status_text: string = undefined;
+
+  constructor(row) {
+    Object.keys(row).forEach(innerProp =>{
+      if(this.hasOwnProperty(innerProp)) {
+        this[innerProp] = row[innerProp];
+      }
+    })
+  }
 }
 

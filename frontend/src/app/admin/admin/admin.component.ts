@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { KeyValue } from '@angular/common';
-import { DBUpdatingFrequencyEnum } from '../../models/admin-db.model';
+import { DBUpdatingFrequencyEnum, UpdateDBStatusModel } from '../../models/admin-db.model';
 import { AdminService } from '../admin.service';
 import { FormGroup, FormControl } from '@angular/forms';
 
@@ -11,7 +11,9 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AdminComponent implements OnInit {
   dbUpdatingFrequency = DBUpdatingFrequencyEnum;
-  lastUpdateDate = '';
+  lastUpdateDate: number;
+  dbStatus: string;
+  dbStatusText: string;
   frequencyForm: FormGroup;
 
   constructor(
@@ -27,9 +29,10 @@ export class AdminComponent implements OnInit {
   }
 
   updateDB(): void {
-    this.adminService.updateDB().subscribe(lastUpdateDate => {
-      console.log('lastUpdateDate= ', lastUpdateDate)
-      this.lastUpdateDate = lastUpdateDate;
+    this.adminService.updateDB().subscribe((res: UpdateDBStatusModel) => {
+      this.lastUpdateDate = res.lastUpdateDB;
+      this.dbStatus = res.status;
+      this.dbStatusText = res.status_text;
     });
   }
 
@@ -42,8 +45,10 @@ export class AdminComponent implements OnInit {
       this.frequencyForm.get('frequency').setValue(frequency);
     });
 
-    this.adminService.getUpdateDBDate().subscribe(lastUpdateDate => {
-      this.lastUpdateDate = lastUpdateDate;
+    this.adminService.getUpdateDBStatus().subscribe((res: UpdateDBStatusModel) => {
+      this.lastUpdateDate = res.lastUpdateDB;
+      this.dbStatus = res.status;
+      this.dbStatusText = res.status_text;
     });
   }
 

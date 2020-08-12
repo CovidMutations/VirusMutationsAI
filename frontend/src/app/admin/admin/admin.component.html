@@ -2,13 +2,13 @@
 
 <form [formGroup]="frequencyForm" class="mt-4">
   <div class="form-group row">
-    <label for="inputState" class="col-sm-4 col-form-label">{{'admin.label_last-update' | translate}}: {{ lastUpdateDate | date: 'MMM d, y, h:mm:ss a' }}</label>
+    <label for="inputState" class="col-sm-4 col-form-label">{{'admin.label_manual-update' | translate}}: </label>
     <div class="col-sm-4">
       <button type="button" (click)="updateDB()" class="btn btn-primary">{{'admin.btn_update-now' | translate}}</button>
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputState" class="col-sm-4 col-form-label">{{'admin.label_updating-frequency' | translate}}</label>
+    <label for="inputState" class="col-sm-4 col-form-label">{{'admin.label_auto-update' | translate}}</label>
     <div class="col-sm-4">
       <select id="inputState" class="form-control" formControlName="frequency" (change)="setFrequency()">
         <option >Choose...</option>
@@ -16,4 +16,13 @@
       </select>
     </div>
   </div>
+  <div class="form-group row">
+    <div class="col">
+      <h6 class="mb-3">{{'admin.label_status' | translate}}: {{ lastUpdateDate | date: 'MMM d, y, h:mm:ss a' }} </h6>
+      <div *ngIf="dbStatus" class="alert" [class.alert-success]="dbStatus=='OK'" [class.alert-danger]="dbStatus!='OK'" role="alert">
+        {{dbStatus}}: {{dbStatusText}}
+      </div>
+    </div>
+  </div>
+
 </form>

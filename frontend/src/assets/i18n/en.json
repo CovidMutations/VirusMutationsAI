@@ -11,8 +11,10 @@
   "admin": {
     "title": "Update schedule the database",
     "btn_update-now": "Update now",
-    "label_updating-frequency": "Updating frequency",
+    "label_auto-update": "Automatic update",
     "label_last-update": "Last update",
+    "label_manual-update": "Manual update",
+    "label_status": "Status on",
     "option_frequency": {
       "daily": "Once a day",
       "weekly": "Once a week",

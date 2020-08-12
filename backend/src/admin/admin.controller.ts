@@ -24,7 +24,7 @@ export class AdminController {
   }
 
   @Get('/updatedb')
-  getUpdateDBDate(): Promise<number> {
+  getUpdateDBDate(): Promise<ResUpdateDBModel> {
     this.logger.verbose(`getUpdateDBDate`);
     return this.adminService.getUpdateDBDate();
   }

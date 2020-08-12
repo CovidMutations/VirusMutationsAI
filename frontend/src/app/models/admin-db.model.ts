@@ -10,3 +10,10 @@ export class AdminUpdateDBModel {
   lastUpdate: string;
   updatingFrequency: string;
 }
+
+export class UpdateDBStatusModel {
+  lastUpdateDB: number;
+  status: string;
+  status_text: string;
+}
+

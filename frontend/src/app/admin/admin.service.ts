@@ -6,7 +6,7 @@ import { APP_CONFIG, IAppConfig } from '../app.config';
 import { SharedService } from '../shared/shared.service';
 
 import { HashMap } from '@datorama/akita';
-import { DBUpdatingFrequencyEnum } from '../models/admin-db.model';
+import { DBUpdatingFrequencyEnum, UpdateDBStatusModel } from '../models/admin-db.model';
 
 // import {Apollo} from 'apollo-angular';
 // import gql from 'graphql-tag';
@@ -26,7 +26,7 @@ export class AdminService {
     this.API_URL = config.apiEndpoint;
   }
 
-  setFrequency(frequency: DBUpdatingFrequencyEnum): Observable<any> {
+  setFrequency(frequency: DBUpdatingFrequencyEnum): Observable<string> {
 
     return this.http.post(this.API_URL + this.updatefrequencyEndpoint, {frequency}, {responseType: 'text'})
     .pipe(
@@ -39,7 +39,7 @@ export class AdminService {
     );
   }
 
-  getFrequency(): Observable<any> {
+  getFrequency(): Observable<string> {
     return this.http.get(this.API_URL + this.updatefrequencyEndpoint, {responseType: 'text'})
     .pipe(
       tap(
@@ -51,19 +51,23 @@ export class AdminService {
     );
   }
 
-  updateDB(): Observable<any> {
+  updateDB(): Observable<UpdateDBStatusModel> {
+    this.sharedService.setLoader(true);
     return this.http.post(this.API_URL + this.updatedbEndpoint, {}, {responseType: 'text'})
     .pipe(
       tap(
-        data => {},
+        data => {
+          this.sharedService.setLoader(false);
+        },
         err => {
           this.sharedService.errorModal('Error: ' + err.error.message);
+          this.sharedService.setLoader(false);
         }
       )
-    );
+    ) as Observable<UpdateDBStatusModel>;
   }
 
-  getUpdateDBDate(): Observable<any> {
+  getUpdateDBStatus(): Observable<UpdateDBStatusModel> {
     return this.http.get(this.API_URL + this.updatedbEndpoint)
     .pipe(
       tap(
@@ -72,7 +76,7 @@ export class AdminService {
           this.sharedService.errorModal('Error: ' + err.error.message);
         }
       )
-    );
+    ) as Observable<UpdateDBStatusModel>;
   }
 
 }
