@@ -24,8 +24,8 @@ def main():
     try:
         args = parse_args()
         # Clean params (on some platforms there may be \r symbols in the end)
-        script_folder = args.script_folder.strip()
-        input_folder = args.input_folder.strip()
+        script_folder = args.script_folder.strip() + '/'
+        input_folder = args.input_folder.strip() + '/'
         out_file_name = args.out_file_name.strip()
 
         returned = subprocess.check_output([sys.executable, script_folder  + "covid_articles_db.py"])
