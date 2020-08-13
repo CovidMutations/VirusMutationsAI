@@ -1,0 +1,35 @@
+@import '../../../sass/variables';
+
+.m_row-height {
+  height: calc(100vh - 250px);
+  & > [class*="col"] {
+    height: 100%;
+  }
+}
+
+.m_scroll {
+  overflow: auto;
+  height: 100%;
+  display: block;
+}
+
+.m_content_scroll {
+  @extend .m_scroll;
+  height: calc(100% + 50px);
+}
+
+.wrap_icon-cancel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  .icon-cancel {
+    position: absolute;
+    right: 10px;
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+.cursor {
+  cursor: pointer;
+}

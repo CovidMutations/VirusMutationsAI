@@ -7,7 +7,7 @@ import { SharedService } from './shared/shared.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  isMenuShow = false;
   isLoading = false;
   modalMessage = '';
 

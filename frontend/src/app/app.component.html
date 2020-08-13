@@ -1,7 +1,10 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-primary mb-3">
-  <a class="navbar-brand" href="/"> <i class="icon-coronavirus fs-30"></i> VirusMutationsAI</a>
+<nav class="navbar navbar-light navbar-expand-lg bg-light border-bottom mb-3">
+  <a class="navbar-brand" href="/"> <i class="icon-coronavirus logo"></i> VirusMutationsAI</a>
+  <button class="navbar-toggler" type="button" (click)="isMenuShow =!isMenuShow">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <div class="collapse navbar-collapse">
+  <div class="collapse navbar-collapse" [class.show]="isMenuShow">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" routerLink="/">{{'menu.MutationAnnotation' | translate }}</a>
