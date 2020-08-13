@@ -47,16 +47,6 @@ export class MutationAnnotationComponent implements OnInit {
     }
   }
 
-  // private sortListArticles(list: HashMap<MutationAnnotationModel>): HashMap<MutationAnnotationModel> {
-  //   const dd =  Object['fromEntries'](Object.entries(list).sort(([keyA], [keyB]) => {
-  //     return keyA - keyB;
-  //   }));
-  //   console.log(dd);
-
-  //   return dd;
-  // }
-
-
   onFilterListArticles(val): void {
     this.listArticles = Object['fromEntries'](Object.entries(this.listArticlesOrigin).filter(([key]) => {
       return key.indexOf(val) > -1;
