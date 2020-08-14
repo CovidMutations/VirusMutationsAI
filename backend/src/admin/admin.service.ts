@@ -6,6 +6,7 @@ import {SchedulerRegistry} from '@nestjs/schedule';
 import { CronTime } from 'cron';
 import {PythonShell} from 'python-shell';
 import {promisify} from 'util';
+import * as parseJson from 'parse-json';
 import {SetFrequencyDTO, DBUpdatingFrequencyEnum, AdminSettingsModel, DBUpdatingCronEnum, ResUpdateDBModel} from '../model/admin.model';
 
 
@@ -58,7 +59,7 @@ export class AdminService {
     const pythonShellRun = promisify(PythonShell.run);
     const results = await pythonShellRun(pyPath, {args: [scriptFolderPath, dbFolderPath, mappingPath]});
 
-    const jsonRes = JSON.parse(results.join(''));
+    const jsonRes = parseJson(results.join(''));
 
     const csv: AdminSettingsModel[] = await csvdata.load(this.adminFilePath, this.csvOption);
     await csvdata.write(this.adminFilePath, [{...csv[0], lastUpdateDB: Date.now(),  status: jsonRes['status'], status_text: '"' + jsonRes['status_text'] + '"' }], this.csvOption);
