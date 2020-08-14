@@ -12,7 +12,7 @@ export class AdminUpdateDBModel {
 }
 
 export class UpdateDBStatusModel {
-  lastUpdateDB: number;
+  lastUpdateDate: number;
   status: string;
   status_text: string;
 }

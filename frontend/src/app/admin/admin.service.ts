@@ -53,7 +53,7 @@ export class AdminService {
 
   updateDB(): Observable<UpdateDBStatusModel> {
     this.sharedService.setLoader(true);
-    return this.http.post(this.API_URL + this.updatedbEndpoint, {}, {responseType: 'text'})
+    return this.http.post(this.API_URL + this.updatedbEndpoint, {})
     .pipe(
       tap(
         data => {

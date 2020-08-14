@@ -3,7 +3,6 @@ import * as path from 'path';
 import * as fs from 'fs';
 import {PythonShell} from 'python-shell';
 import {promisify} from 'util';
-import * as parseJson from 'parse-json';
 import {MutationAnnotationModel} from '../model/mutation-annotation.model';
 
 @Injectable()
@@ -24,7 +23,7 @@ export class MutationAnnotationService {
 
     if (results)  { this.removeVCF(filePath); }
 
-    const jsonRes = parseJson(results.join(''));
+    const jsonRes = JSON.parse(results.join(''));
     
     if('error_text' in jsonRes) {
       throw new InternalServerErrorException(jsonRes,jsonRes.error_text);

@@ -2,14 +2,14 @@
 
 <form [formGroup]="frequencyForm" class="mt-4">
   <div class="form-group row">
-    <label for="inputState" class="col-sm-4 col-form-label">{{'admin.label_manual-update' | translate}}: </label>
-    <div class="col-sm-4">
+    <label for="inputState" class="col-sm-6 col-form-label">{{'admin.label_manual-update' | translate}}: </label>
+    <div class="col-sm-7">
       <button type="button" (click)="updateDB()" class="btn btn-primary">{{'admin.btn_update-now' | translate}}</button>
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputState" class="col-sm-4 col-form-label">{{'admin.label_auto-update' | translate}}</label>
-    <div class="col-sm-4">
+    <label for="inputState" class="col-sm-6 col-form-label">{{'admin.label_auto-update' | translate}}</label>
+    <div class="col-sm-7">
       <select id="inputState" class="form-control" formControlName="frequency" (change)="setFrequency()">
         <option >Choose...</option>
         <option *ngFor="let item of dbUpdatingFrequency | keyvalue: originalOrder" [value]="item.key">{{'admin.option_frequency.' + item.key | translate}}</option>
@@ -24,5 +24,4 @@
       </div>
     </div>
   </div>
-
 </form>

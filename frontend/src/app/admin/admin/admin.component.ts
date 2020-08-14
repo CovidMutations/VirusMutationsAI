@@ -30,9 +30,11 @@ export class AdminComponent implements OnInit {
 
   updateDB(): void {
     this.adminService.updateDB().subscribe((res: UpdateDBStatusModel) => {
-      this.lastUpdateDate = res.lastUpdateDB;
+      console.log('updateDB: ',res)
+      this.lastUpdateDate = res.lastUpdateDate;
       this.dbStatus = res.status;
       this.dbStatusText = res.status_text;
+
     });
   }
 
@@ -46,7 +48,7 @@ export class AdminComponent implements OnInit {
     });
 
     this.adminService.getUpdateDBStatus().subscribe((res: UpdateDBStatusModel) => {
-      this.lastUpdateDate = res.lastUpdateDB;
+      this.lastUpdateDate = res.lastUpdateDate;
       this.dbStatus = res.status;
       this.dbStatusText = res.status_text;
     });
