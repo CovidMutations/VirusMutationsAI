@@ -2,6 +2,7 @@ import argparse
 import ast
 from collections import defaultdict
 import json
+import numpy as np
 import os
 import pandas as pd
 
@@ -58,15 +59,27 @@ def find_articles_by_vcf_mutations(vcf_mutations: list, mutation_to_articles_dic
     return out_list, not_founds
 
 
-def append_found_results_to_out_dict(found_articles, article_index_df, out_dict):
+def append_found_results_to_out_dict(found_articles, article_index_df, out_dict, verbose=False):
     for (vcf_mut, uids) in found_articles:
         mutation_list = []
         for uid in uids:
             mutation_map = {}
             temp_df = article_index_df[article_index_df.uid == uid]
             assert len(temp_df) == 1, f"Unexpected number of results ({len(temp_df)}) for article uid '{uid}'"
-            mutation_map['article_name'] = temp_df.title.iloc[0]    # Get first (and the only) item
-            mutation_map['article_url'] = temp_df.url.iloc[0]       # Get first (and the only) item
+
+            # Get and check article title
+            title = temp_df.title.iloc[0]  # Get first (and the only) item
+            if not isinstance(title, str):
+                if verbose:
+                    print(f"WARNING: Article with uid {uid} has non-string title: '{title}' -> will be skipped.")
+                continue
+            mutation_map['article_name'] = title
+            
+            # Get and check article url
+            url = temp_df.url.iloc[0]       # Get first (and the only) item
+            assert isinstance(url, str)
+            mutation_map['article_url'] = url
+
             mutation_list.append(mutation_map)
         out_dict[vcf_mut] = mutation_list  # Modify the dict in-place
 
@@ -132,7 +145,7 @@ def main():
         article_index_df = pd.read_csv(args.article_index_file_name)
 
         # Prepare final structure for json
-        append_found_results_to_out_dict(found_articles, article_index_df, out_dict)
+        append_found_results_to_out_dict(found_articles, article_index_df, out_dict, verbose)
         if verbose:
             out_dict['mutations_without_articles'] = not_founds  # VCF mutations without found articles
 
@@ -142,7 +155,7 @@ def main():
         out_dict['error_text'] = str(e)
 
     # Convert to json and print it to stdout
-    out_json = json.dumps(out_dict, indent=4)
+    out_json = json.dumps(out_dict, allow_nan=False, indent=4)
     print(out_json)
 
 
