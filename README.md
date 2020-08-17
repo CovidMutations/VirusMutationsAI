@@ -23,7 +23,7 @@ Launch consequently from 'backend/scripts': covid_articles_db.py, mutations_extr
 
 ## Deploy
 
-# 1. Run backend in production mode
+### 1. Run backend in production mode
 
 Run `yarn back:prod`
 
@@ -34,7 +34,7 @@ Launch on server: `npm i`, `pm2 delete covid`, `pm2 start ecosystem.json`
 Watch logs: `pm2 logs --lines 200`
 
 
-# 2. Run frontend in production mode
+### 2. Run frontend in production mode
 
 Run `yarn front:prod`
 
