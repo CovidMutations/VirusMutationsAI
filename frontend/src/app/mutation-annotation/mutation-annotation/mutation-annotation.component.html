@@ -6,11 +6,11 @@
   </label>
 </form> 
 
-<h4 class="mt-3 mb-3" *ngIf="listArticles">{{'MutationAnnotation.title' | translate}}</h4>
+<h4 class="mt-3 mb-3" *ngIf="listArticles.length">{{'MutationAnnotation.title' | translate}}</h4>
 
 <div class="row m_row-height">
   <div class="col-8">
-    <form class="mb-3 wrap_icon-cancel">
+    <form *ngIf="listArticles.length" class="mb-3 wrap_icon-cancel">
         <i class="icon-cancel" *ngIf="box.value" (click)="box.value='';onFilterListArticles(box.value)"></i>
         <input  #box class="form-control" (keyup)="onFilterListArticles(box.value)">
     </form>
