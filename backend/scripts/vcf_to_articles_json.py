@@ -87,9 +87,9 @@ def append_found_results_to_out_dict(found_articles, article_index_df, out_dict,
 def parse_args():
     parser = argparse.ArgumentParser(description='For each mutation in VCF file tries to find related articles. ' +
                                      'The output in JSON format is dumped to stdout.')
-    parser.add_argument('vcf_file_name',
+    parser.add_argument('vcf_file_or_request',
                         type=str,
-                        help='Path to input VCF file with mutations.')
+                        help='Path to input VCF file with mutations OR mutation for search')
     parser.add_argument('--article_index_file_name',
                         type=str,
                         default=DEFAULT_ARTICLE_INDEX_PATH,
@@ -116,22 +116,25 @@ def main():
         # Parse and check args
         args = parse_args()
         verbose = args.verbose
-        print('DBG: check input files..') if verbose > 0 else None
-        if not os.path.isfile(args.vcf_file_name):
-            raise FileNotFoundError(f"Cannot find VCF file: {args.vcf_file_name}")
-        if not os.path.isfile(args.article_index_file_name):
-            raise FileNotFoundError(f"Cannot find article index file: {args.article_index_file_name}")
-        if not os.path.isfile(args.article_mutations_file_name):
-            raise FileNotFoundError(f"Cannot find article mutations file: {args.article_mutations_file_name}")
+        if args.vcf_file_or_request.endswith('.vcf'):
+            print('DBG: check input files..') if verbose > 0 else None
+            if not os.path.isfile(args.vcf_file_or_request):
+                raise FileNotFoundError(f"Cannot find VCF file: {args.vcf_file_or_request}")
+            if not os.path.isfile(args.article_index_file_name):
+                raise FileNotFoundError(f"Cannot find article index file: {args.article_index_file_name}")
+            if not os.path.isfile(args.article_mutations_file_name):
+                raise FileNotFoundError(f"Cannot find article mutations file: {args.article_mutations_file_name}")
 
-        # Parse VCF into sequence of mutations
-        vcf_parser_obj = vcf_parser.VcfParser()
-        try:
-            vcf_parser_obj.read_vcf_file(args.vcf_file_name, verbose=verbose)
-            vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose).tolist()
-        except Exception as e:
-            # Re-raise exception with additional context
-            raise Exception(f'ERROR while parsing vcf file: {e}')
+            # Parse VCF into sequence of mutations
+            vcf_parser_obj = vcf_parser.VcfParser()
+            try:
+                vcf_parser_obj.read_vcf_file(args.vcf_file_or_request, verbose=verbose)
+                vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose).tolist()
+            except Exception as e:
+                # Re-raise exception with additional context
+                raise Exception(f'ERROR while parsing vcf file: {e}')
+        else:
+            vcf_mutations = [args.vcf_file_or_request]
 
         # Create mapping "mutation -> article(s)"
         tmp_df = _read_article_to_mutations_df_from_file(args.article_mutations_file_name)
