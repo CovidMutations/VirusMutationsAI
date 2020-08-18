@@ -1,0 +1,42 @@
+<!-- 
+<form *ngIf="commonForm.size" [formGroup]="commonForm">
+
+  <ng-container *ngFor="let field of commonForm">
+  
+      <div *ngIf="field[1].type == enumTypeField.Select" class="form-group">
+          <label>{{'selector.'+field[0] | translate}} <span *ngIf="!Array.isArray(field[1].validation)" class="text-danger">*</span></label>
+          <select class="form-control custom-select" [formControlName]="field[0]">
+              <option value="">{{'filter.optionNone' | translate}}</option>
+              <option *ngFor="let option of field[1].options;let i = index" [value]="option.id">{{option.name}}</option>
+          </select>
+      </div>
+
+      <div *ngIf="field[1].type == enumTypeField.Radio" class="form-group m_radio_form-group">
+          <label >{{'selector.'+field[0] | translate}} <span *ngIf="!Array.isArray(field[1].validation)" class="text-danger">*</span></label>
+          <div *ngFor="let option of field[1].options;let i = index" class="form-check m_radio mb-1">
+              <input class="form-check-input" type="radio" 
+                  [name]="field[0]"
+                  [formControlName]="field[0]"
+                  [id]="field[0]+option.id"
+                  [value]="option.id"
+              >
+              <label class="form-check-label" [for]="field[0]+option.id">
+                  {{'selector.'+option.name | translate}}
+              </label>
+          </div>
+      </div>
+
+      <div *ngIf="field[1].type == enumTypeField.Text" class="form-group">
+          <label>{{'selector.'+field[0] | translate}} <span *ngIf="!Array.isArray(field[1].validation)" class="text-danger">*</span></label>
+          <input type="text" class="form-control" [formControlName]="field[0]">
+      </div>
+
+      <div *ngIf="field[1].type == enumTypeField.Date" class="form-group">
+          <label>{{'selector.'+field[0] | translate}} <span *ngIf="!Array.isArray(field[1].validation)" class="text-danger">*</span></label>
+          <app-edit-datapicker [textEditValue]="field[1].value" class="isRelative" (finishEditing)="dateEditing($event, field[0])"></app-edit-datapicker>
+      </div>
+  </ng-container>
+</form>
+
+
+ -->
