@@ -4,6 +4,7 @@ import uuid
 import pandas as pd
 import os
 import sys
+import time
 
 # Input params
 Entrez.email = "test@domain.com"
@@ -23,7 +24,8 @@ if not os.path.exists(article_root_folder):
 if os.path.exists(article_root_folder + '/index.csv'):
     df_index = pd.read_csv(article_root_folder + '/index.csv')
 else:
-    df_index = pd.DataFrame(columns=['uid', 'storage_id', 'title', 'url'])
+    df_index = pd.DataFrame(columns=['uid', 'storage_id', 'add_time', 'title', 'url'])
+
 
 # Make request to NCBI with the query string
 start = 0
@@ -60,7 +62,7 @@ for i in range(0
             article_uid = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + tree.find(".//front/article-meta/article-id[@pub-id-type='pmc']").text
             str_uid = uuid.uuid4().hex[0:8]
 
-            df_index = df_index.append({'uid': str_uid, 'storage_id' : all_cov_ids[i], 'title': article_title, 'url': article_uid}, ignore_index=True)
+            df_index = df_index.append({'uid': str_uid, 'storage_id' : all_cov_ids[i], 'add_time' : int(time.time()), 'title': article_title, 'url': article_uid}, ignore_index=True)
             count_appended_items +=1 
 
             with open(article_root_folder + str_uid + ".xml", "w") as file_article:
