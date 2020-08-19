@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import {   Store, StoreConfig } from '@datorama/akita';
-import {  AuthModel } from '../../models/auth.model';
+import { Store, StoreConfig } from '@datorama/akita';
+import { UserInfoModel } from '../../models/auth.model';
 
 
-export interface AuthState extends AuthModel { }
+export interface AuthState extends UserInfoModel { }
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ export interface AuthState extends AuthModel { }
 export class  AuthStore extends Store<AuthState> {
 
   constructor() {
-    super(new AuthModel());
+    super(new UserInfoModel());
   }
 }
 

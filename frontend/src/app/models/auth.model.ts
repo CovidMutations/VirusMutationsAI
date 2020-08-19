@@ -1,7 +1,7 @@
 import {BaseModel} from './base.model';
 
 
-export class AuthModel extends BaseModel {
+export class UserInfoModel extends BaseModel {
   name: string = undefined;
   email: string = undefined;
   constructor(row?){
@@ -18,3 +18,14 @@ export class RegistrationFormModel extends BaseModel {
     super(); super.checkFields(row);
   }
 }
+
+
+export class LoginFormModel extends BaseModel {
+  email: string = undefined;
+  password: string = undefined;
+  constructor(row?){
+    super(); super.checkFields(row);
+  }
+}
+
+

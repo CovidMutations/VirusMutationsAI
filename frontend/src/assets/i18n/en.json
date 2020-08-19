@@ -18,6 +18,15 @@
       "err_message": "Incorrect data"
     }
   },
+  "auth":{
+    "title": "Login",
+    "form": {
+      "email": "Email address",
+      "password": "Password",
+      "btn_submit": "Submit",
+      "err_message": "Incorrect data"
+    }
+  },
   "admin": {
     "title": "Update schedule the database",
     "btn_update-now": "Update now",

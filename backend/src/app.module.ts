@@ -10,8 +10,10 @@ import { ValidationPipe } from './shared/validation.pipe';
 import { ScheduleModule } from '@nestjs/schedule';
 import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
 import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
+
  import { TasksService } from './services/tasks.service';
- import { AdminService } from './admin/admin.service';
+
 
 
 @Module({
@@ -23,6 +25,7 @@ import { AdminModule } from './admin/admin.module';
     ScheduleModule.forRoot(),
     MutationAnnotationModule,
     AdminModule,
+    AuthModule
     // GraphQLModule.forRoot({
     //   installSubscriptionHandlers: true,
     //   typePaths: ['./**/*.graphql'],
