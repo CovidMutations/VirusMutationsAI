@@ -30,6 +30,7 @@ else:
 # Make request to NCBI with the query string
 start = 0
 all_cov_ids = []
+
 while True:
     handle = Entrez.esearch(db="pmc", retmax=500, retstart=start, term=query)
     record = Entrez.read(handle)
@@ -58,6 +59,10 @@ for i in range(0
 
             tree = etree.fromstring(output_str)
             article_title = tree.find('.//front/article-meta/title-group/article-title').text
+            if not article_title:
+                article_title = tree.find('.//front/article-meta/title-group/article-title/*')
+                article_title = article_title.text + (article_title.tail if article_title.tail else '')
+
             article_title = article_title.replace('\n', '')
             article_uid = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + tree.find(".//front/article-meta/article-id[@pub-id-type='pmc']").text
             str_uid = uuid.uuid4().hex[0:8]
@@ -72,6 +77,7 @@ for i in range(0
             pass
     except:
         count_errors += 1
+        print("ERROR: {}: {}".format(i, all_cov_ids[i]))
         pass
     if i % int(len(all_cov_ids)/10) == 0:
         # the index is dumped to the file from time to time do not loose all collected data on crash
@@ -90,4 +96,4 @@ for file in files:
         count_removed_files += 1
 print("Removed {} unindexed files".format(count_removed_files))
 
-print("XX Appended {} articles, {} already added, {} error(s) XX".format(count_appended_items, count_already_added, count_errors))
+print("XX Indexed {} new article(s), {} already in the index, {} error(s) XX".format(count_appended_items, count_already_added, count_errors))
