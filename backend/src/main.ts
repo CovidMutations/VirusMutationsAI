@@ -9,8 +9,6 @@ import { ValidationPipe } from './shared/validation.pipe';
 
 import * as config from 'config';
 
-process.env.NODE_CONFIG_DIR = '../config'
-
 const serverConfig = config.get('server');
 const port = process.env.PORT || serverConfig.port;
 const mode =   process.env.MODE || serverConfig.mode;
