@@ -11,6 +11,9 @@
     "menu": {
       "search_by_mutation":"Search by mutation",
       "search_by_file":"Search by VCF-file"
+    },
+    "search": {
+      "title": "Find articles by mutation"
     }
   },
   "registration":{

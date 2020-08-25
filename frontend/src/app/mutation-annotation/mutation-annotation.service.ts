@@ -30,7 +30,6 @@ export class MutationAnnotationService {
     this.API_URL = config.apiEndpoint;
 
     this.mutationAnnotationQuery.selectLoading().subscribe(loadingState => {
-      console.log('mutationAnnotation loadingState', loadingState);
       this.sharedService.setLoader(loadingState);
     });
    }
@@ -62,12 +61,14 @@ export class MutationAnnotationService {
   }
 
   searchMutationAnnotationArticles(mutation: string): Observable<MutationAnnotationModel[]> {
+    this.mutationAnnotationStore.setLoading(true);
     return this.http.post(this.API_URL + this.searchMutationApiEndpoint, {mutation},   {
       reportProgress: true, // for progress data
     }).pipe(
       tap(
-        list => { },
+        list => {this.mutationAnnotationStore.setLoading(false); },
         err => {
+          this.mutationAnnotationStore.setLoading(false);
           this.sharedService.errorModal('Error: ' + JSON.stringify(err));
         }
       ),

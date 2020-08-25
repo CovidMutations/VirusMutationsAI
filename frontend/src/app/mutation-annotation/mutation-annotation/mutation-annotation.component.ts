@@ -26,6 +26,10 @@ export class MutationAnnotationComponent implements OnInit {
     });
   }
 
+  isEmpty(object): boolean {
+    return Object.keys(object).length === 0;
+  }
+
   private setActiveItem(): void {
     if (Object.keys(this.listArticles).length) {
       this.activeItem = this.keyValuePipe.transform(this.listArticles)[0].key;

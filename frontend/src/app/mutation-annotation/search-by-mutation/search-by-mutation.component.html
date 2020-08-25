@@ -1,11 +1,11 @@
 
-<h4 class="mt-3 mb-3" >{{'MutationAnnotation.title' | translate}}</h4>
+<h4 class="mt-3 mb-3" >{{'MutationAnnotation.search.title' | translate}}</h4>
 
 <div class="row">
   <div class="col-8">
     <form  class="mb-3 wrap_icon-cancel">
         <i class="icon-cancel" *ngIf="box.value" (click)="box.value='';onFilterListArticles(box.value)"></i>
-        <input  #box class="form-control" (keyup)="onFilterListArticles(box.value)">
+        <input  #box class="form-control" (keyup)="onFilterListArticles(box.value)" placeholder="241C>T">
     </form>
 
   </div>
