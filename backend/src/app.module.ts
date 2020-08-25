@@ -2,6 +2,8 @@ import { Module, CacheModule } from '@nestjs/common';
 import { APP_INTERCEPTOR, APP_PIPE, APP_FILTER } from '@nestjs/core';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import * as path from 'path';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
 // import { GqlHttpExceptionFilter } from './shared/gql-http-error.filter';
 import { HttpErrorFilter } from './shared/http-error.filter';
 import { LoggingInterceptor } from './shared/logging.interceptor';
@@ -11,13 +13,17 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 
  import { TasksService } from './services/tasks.service';
+
+ import { typeOrmConfig } from '../typeorm.config';
 
 
 
 @Module({
   imports: [
+ //   TypeOrmModule.forRoot(typeOrmConfig),
     ServeStaticModule.forRoot({
       rootPath: path.join(__dirname),
     }),
@@ -25,7 +31,8 @@ import { AuthModule } from './auth/auth.module';
     ScheduleModule.forRoot(),
     MutationAnnotationModule,
     AdminModule,
-    AuthModule
+    AuthModule,
+    UserModule
     // GraphQLModule.forRoot({
     //   installSubscriptionHandlers: true,
     //   typePaths: ['./**/*.graphql'],

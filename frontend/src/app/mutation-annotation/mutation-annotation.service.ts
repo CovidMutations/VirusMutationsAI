@@ -16,8 +16,9 @@ import { HashMap } from '@datorama/akita';
   providedIn: 'root'
 })
 export class MutationAnnotationService {
-  uploadVCFapiEndpoint = 'uploadVCF';
-  API_URL;
+  private readonly uploadVCFapiEndpoint = 'uploadVCF';
+  private readonly searchMutationApiEndpoint = 'search-mutation';
+  private API_URL;
   constructor(
     private readonly http: HttpClient,
     private readonly mutationAnnotationStore: MutationAnnotationStore,
@@ -59,5 +60,24 @@ export class MutationAnnotationService {
   getMutationAnnotationArticles(): Observable<HashMap<MutationAnnotationModel>> {
     return this.mutationAnnotationQuery.selectAll({ asObject: true });
   }
+  searchMutationAnnotationArticles(mutation: string): Observable<HashMap<MutationAnnotationModel>> {
+    this.http.post(this.API_URL + this.searchMutationApiEndpoint, {mutation},   {
+      reportProgress: true, // for progress data
+    }).pipe(
+      tap(
+        list => {
+          console.log(list)
+       //   this.mutationAnnotationStore.set(list);
+        },
+        err => {
+         // this.mutationAnnotationStore.setLoading(false);
+          this.sharedService.errorModal('Error: ' + err.error.message);
+        }
+      )
+    );
 
+
+
+   return this.mutationAnnotationQuery.selectAll({ asObject: true });
+  }
 }

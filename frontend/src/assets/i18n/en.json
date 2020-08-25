@@ -6,7 +6,11 @@
   },
   "MutationAnnotation": {
     "title": "Found following articles",
-    "btn_load-vcf": "Upload VCF-File for COVID-19"
+    "btn_load-vcf": "Upload VCF-File for COVID-19",
+    "menu": {
+      "search_by_mutation":"Search by mutation",
+      "search_by_file":"Search by VCF-file"
+    }
   },
   "registration":{
     "title": "Registration",

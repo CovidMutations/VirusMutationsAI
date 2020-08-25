@@ -12,11 +12,30 @@ export class MutationAnnotationService {
   async uploadVCF(file): Promise<MutationAnnotationModel> {
     
     this.logger.verbose('uploadVCF');
+    return this.getArticles(file);
+  }
+
+  async getArticlesByMutation(mutation: string): Promise<MutationAnnotationModel> {
+    this.logger.verbose('getArticlesByMutation');
+    return this.getArticles(mutation);
+  }
+
+  private removeVCF(file): void {
+    this.logger.verbose('removeVCF');
+    fs.unlink(file, (err) => {
+      if (err) {
+        this.logger.error(err, 'error in file removed');
+      }
+      this.logger.verbose(file, 'file removed');
+    });
+  }
+
+  private async getArticles(fileOrMutation) {
 
     const pyPath = path.join(__dirname, '..', '..', 'scripts', 'vcf_to_articles_json.py');
     const indexPath = '--article_index_file_name=' + path.join(__dirname, '..', '..', 'db', 'index.csv');
     const mappingPath = '--article_mutations_file_name=' + path.join(__dirname, '..', '..', 'db', 'articles2mutations.txt');
-    const filePath = path.join(__dirname, '..', '..', file);
+    const filePath = path.join(__dirname, '..', '..', fileOrMutation);
     
     const pythonShellRun = promisify(PythonShell.run);
     const results = await pythonShellRun(pyPath, {args: [filePath, indexPath, mappingPath]});
@@ -30,16 +49,6 @@ export class MutationAnnotationService {
     }
 
     return jsonRes;
-  }
-
-  private removeVCF(file): void {
-    this.logger.verbose('removeVCF');
-    fs.unlink(file, (err) => {
-      if (err) {
-        this.logger.error(err, 'error in file removed');
-      }
-      this.logger.verbose(file, 'file removed');
-    });
   }
 
 }

@@ -9,7 +9,6 @@ import { HashMap } from '@datorama/akita';
   selector: 'app-mutation-annotation',
   templateUrl: './mutation-annotation.component.html',
   styleUrls: ['./mutation-annotation.component.scss'],
-  providers: [KeyValuePipe]
 })
 export class MutationAnnotationComponent implements OnInit {
   private listArticlesOrigin: HashMap<MutationAnnotationModel>;

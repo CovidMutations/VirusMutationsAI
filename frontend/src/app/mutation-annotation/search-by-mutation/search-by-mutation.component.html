@@ -1,16 +1,9 @@
-<form class="mb-3">
-  <label class="btn btn-primary btn-sm">
-    <i class="icon-file_upload"></i>
-    {{'MutationAnnotation.btn_load-vcf' | translate}}
-    <input type="file" (change)="uploadVCF($event)" accept=".vcf">
-  </label>
-</form>
 
-<h4 class="mt-3 mb-3" *ngIf="listArticles.length">{{'MutationAnnotation.title' | translate}}</h4>
+<h4 class="mt-3 mb-3" >{{'MutationAnnotation.title' | translate}}</h4>
 
 <div class="row m_row-height">
   <div class="col-8">
-    <form *ngIf="listArticles.length" class="mb-3 wrap_icon-cancel">
+    <form  class="mb-3 wrap_icon-cancel">
         <i class="icon-cancel" *ngIf="box.value" (click)="box.value='';onFilterListArticles(box.value)"></i>
         <input  #box class="form-control" (keyup)="onFilterListArticles(box.value)">
     </form>

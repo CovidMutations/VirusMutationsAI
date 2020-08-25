@@ -2,11 +2,12 @@ server:
   port: 3000
   origin: 'http://localhost:4200/'
   mode: 'development'
-
 db: 
   type: 'postgres'
-  port: 5432
-  database: 'ideas'
-  
+  host: 'localhost'
+  username: 'postgres'
+  database: 'covid'
+  password: 1
+  synchronize: true
 jwt: 
-  expiresIn: '1h'
+  secret: 'TopSecret51'
