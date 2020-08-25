@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MutationAnnotationService } from '../mutation-annotation.service';
 import { MutationAnnotationModel } from '../../models/mutation-annotation.model';
-import { HashMap } from '@datorama/akita';
-import { KeyValuePipe} from '@angular/common';
+import {  BehaviorSubject } from 'rxjs';
+import { distinctUntilChanged, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search-by-mutation',
@@ -10,41 +10,28 @@ import { KeyValuePipe} from '@angular/common';
   styleUrls: ['./search-by-mutation.component.scss']
 })
 export class SearchByMutationComponent implements OnInit {
-
-    private listArticlesOrigin: HashMap<MutationAnnotationModel>;
-    listArticles: HashMap<MutationAnnotationModel>;
+    private mutationBS = new BehaviorSubject('');
+    listArticles: MutationAnnotationModel[] = undefined;
     activeItem = '';
 
     constructor(
       private readonly mutationAnnotationService: MutationAnnotationService,
-      private readonly keyValuePipe: KeyValuePipe,
     ) {
-      this.mutationAnnotationService.getMutationAnnotationArticles().subscribe(list => {
-        this.listArticlesOrigin = list;
-        this.listArticles = this.listArticlesOrigin;
-        this.setActiveItem();
+      this.mutationBS.pipe(
+        distinctUntilChanged(),
+        filter(mutation => /^[^>]+>{1,1}[^>]+$/gmi.test(mutation))
+      ).subscribe(mutation => {
+          this.mutationAnnotationService.searchMutationAnnotationArticles(mutation).subscribe(list => {
+            this.listArticles = list || [];
+          });
       });
-    }
-
-    private setActiveItem(): void {
-      if (Object.keys(this.listArticles).length) {
-        this.activeItem = this.keyValuePipe.transform(this.listArticles)[0].key;
-      }
     }
 
     ngOnInit(): void {
     }
 
-
-
     onFilterListArticles(val): void {
-      if (val.length >= 3) {
-        this.mutationAnnotationService.searchMutationAnnotationArticles(val).subscribe(list => {
-
-        })
-      }
-
-     // this.setActiveItem();
+      this.mutationBS.next(val.trim());
     }
 
 }

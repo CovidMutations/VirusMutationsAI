@@ -1,0 +1,1354 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="abstract">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Res Pract Thromb Haemost</journal-id>
+      <journal-id journal-id-type="iso-abbrev">Res Pract Thromb Haemost</journal-id>
+      <journal-id journal-id-type="doi">10.1002/(ISSN)2475-0379</journal-id>
+      <journal-id journal-id-type="publisher-id">RTH2</journal-id>
+      <journal-title-group>
+        <journal-title>Research and Practice in Thrombosis and Haemostasis</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">2475-0379</issn>
+      <publisher>
+        <publisher-name>John Wiley and Sons Inc.</publisher-name>
+        <publisher-loc>Hoboken</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmc">7419733</article-id>
+      <article-id pub-id-type="doi">10.1002/rth2.12413</article-id>
+      <article-id pub-id-type="publisher-id">RTH212413</article-id>
+      <article-categories>
+        <subj-group subj-group-type="overline">
+          <subject>Abstracts</subject>
+        </subj-group>
+        <subj-group subj-group-type="heading">
+          <subject>Abstracts</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Abstracts</article-title>
+      </title-group>
+      <pub-date pub-type="epub">
+        <day>11</day>
+        <month>8</month>
+        <year>2020</year>
+      </pub-date>
+      <pub-date pub-type="collection">
+        <month>7</month>
+        <year>2020</year>
+      </pub-date>
+      <volume>4</volume>
+      <issue>Suppl 2</issue>
+      <issue-id pub-id-type="doi">10.1002/rth2.v4.s2</issue-id>
+      <issue-title content-type="special-issue-title">Late&#x2010;Breaking and COVID&#x2010;19 Oral Communication Session</issue-title>
+      <fpage>1</fpage>
+      <lpage>28</lpage>
+      <permissions>
+        <!--<copyright-statement content-type="issue-copyright"> &#x000a9; 2020 International Society on Thrombosis and Haemostasis <copyright-statement>-->
+        <copyright-statement content-type="article-copyright">&#xA9; 2020 The Authors. <italic>Research and Practice in Thrombosis and Haemostasis</italic> published by Wiley Periodicals LLC on behalf of International Society on Thrombosis and Haemostasis.</copyright-statement>
+        <license license-type="creativeCommonsBy-nc-nd">
+          <license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non&#x2010;commercial and no modifications or adaptations are made.</license-p>
+        </license>
+      </permissions>
+      <self-uri content-type="pdf" xlink:href="file:RTH2-4-1.pdf"/>
+      <counts>
+        <fig-count count="0"/>
+        <table-count count="0"/>
+        <page-count count="28"/>
+        <word-count count="14178"/>
+      </counts>
+      <custom-meta-group>
+        <custom-meta>
+          <meta-name>source-schema-version-number</meta-name>
+          <meta-value>2.0</meta-value>
+        </custom-meta>
+        <custom-meta>
+          <meta-name>cover-date</meta-name>
+          <meta-value>July 2020</meta-value>
+        </custom-meta>
+        <custom-meta>
+          <meta-name>details-of-publishers-convertor</meta-name>
+          <meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:5.8.6 mode:remove_FC converted:12.08.2020</meta-value>
+        </custom-meta>
+      </custom-meta-group>
+    </article-meta>
+  </front>
+  <body id="rth212413-body-0001">
+    <sec id="rth212413-sec-0001">
+      <title>Late&#x2010;Breaking and COVID&#x2010;19 Oral Communication Session</title>
+    </sec>
+    <sec id="rth212413-sec-0002">
+      <title>LB/CO01.1</title>
+      <sec id="rth212413-sec-0003">
+        <title>A Novel Adeno Associated Virus (AAV) Gene Therapy (FLT180a) Achieves Normal FIX Activity Levels in Severe Hemophilia B (HB) Patients (B&#x2010;AMAZE Study)</title>
+        <p>
+<bold><underline underline-style="single">P. Chowdary</underline><sup>1,2</sup>, S. Shapiro<sup>3</sup>, M. Makris<sup>4</sup>, G. Evans<sup>5</sup>, S. Boyce<sup>6</sup>, K. Talks<sup>7</sup>, G. Dolan<sup>8</sup>, U. Reiss<sup>9</sup>, M. Phillips<sup>1</sup>, A. Riddell<sup>1</sup>, M.R. Peralta<sup>1</sup>, M. Quaye<sup>2</sup>, E. Tuddenham<sup>1</sup>, J. Krop<sup>10</sup>, G. Short<sup>11</sup>, S. Kar<sup>11</sup>, A. Smith<sup>11</sup>, A. Nathwani<sup>1,2</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Katharine Dormandy Haemophilia and Thrombosis Centre, Royal Free Hospital NHS Foundation Trust, London, United Kingdom<sup>2</sup>University College London, London, United Kingdom<sup>3</sup>Oxford Haemophilia &amp; Thrombosis Centre and Oxford NIHR BRC, Oxford, United Kingdom<sup>4</sup>University of Sheffield, Sheffield, United Kingdom<sup>5</sup>Kent &amp; Canterbury Hospital, Canterbury, United Kingdom<sup>6</sup>University Hospital Southampton, Southampton, United Kingdom<sup>7</sup>Newcastle Haemophilia Comprehensive Care Centre, Newcastle, United Kingdom<sup>8</sup>Guy\'s &amp; St Thomas&#x2019; NHS Foundation Trust, London, United Kingdom<sup>9</sup>St Jude Children\'s Research Hospital, Memphis, United States<sup>10</sup>Freeline, Boston, United States<sup>11</sup>Freeline, Stevenage, United Kingdom</p>
+        <p>
+<bold>Background: </bold>FLT180a is an investigational gene therapy medicinal product candidate intended for treating HB patients. It includes a novel synthetic capsid, AAVS3, with a higher liver transduction efficiency than wild type AAV, and a codon optimised <italic>F9</italic> gene with a gain of function mutation.</p>
+        <p>
+<bold>Aims: </bold>To assess the safety and efficacy of a single systemic administration of FLT180a in adult patients with HB.</p>
+        <p>
+<bold>Methods: </bold>Phase 1/2, multi&#x2010;centre, ongoing, open&#x2010;label and long&#x2010;term follow&#x2010;up study assessing FLT180a dose levels in an escalating/descending adaptive design, to identify a dose that consistently normalises FIX activity (50&#x2010;150%). Participants have severe or moderately severe HB and are negative for neutralising AAVS3 antibodies. Pre&#x2010;emptive immunosuppression is given to mitigate vector related transaminitis and associated reduction in FIX expression.</p>
+        <p>
+<bold>Results: </bold>Ten patients with severe HB have been treated across 4 dose levels, with week 3 FIX activity levels ranging between 24 and 168%. The first two patients, receiving the 4.5e11vg/Kg dose, have stable, therapeutic, FIX activity levels through week 104. No patient has had a bleeding episode requiring FIX concentrates. The most common drug related serious adverse event was transient transaminitis (in four patients) requiring supplemental immunosuppression. FIX activity levels above 150% have been observed, which were individually assessed for risk of thrombosis, and one patient is being treated with DOACs. Refinement of the immunosuppression regimen for the latest three patients (9.75e11 vg/kg dose) prevented transaminitis during the critical phase (4&#x2010; 16&#xA0;weeks).</p>
+        <p>
+<bold>Conclusions: </bold>FLT180a achieves clinically meaningful, durable FIX activity levels in patients with HB, associated with independence from FIX replacement therapy and zero treated bleeds. Transient transaminitis was largely averted by prophylactic immunosuppression. A dose between 7.5 to 9.75e11vg/Kg can potentially create sustained, normal FIX activity levels in patients with severe HB.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-1" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Mean FIX activity levels at certain timepoints</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="2" valign="top" colspan="1">Dose Level vg/kg</th><th align="left" colspan="5" valign="top" rowspan="1">Mean FIX activity % (range)</th></tr><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">Week 3</th><th align="left" valign="top" rowspan="1" colspan="1">Week 26</th><th align="left" valign="top" rowspan="1" colspan="1">Week 52</th><th align="left" valign="top" rowspan="1" colspan="1">Week 78</th><th align="left" valign="top" rowspan="1" colspan="1">Week 104</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">4.5e11 (n&#xA0;=&#xA0;2)</td><td align="char" char="(" rowspan="1" colspan="1">24.5 (24&#x2010;25)</td><td align="left" rowspan="1" colspan="1">40.0 (35&#x2010;45)</td><td align="left" rowspan="1" colspan="1">37.5 (36&#x2010;39)</td><td align="left" rowspan="1" colspan="1">43.5 (40&#x2010;47)</td><td align="left" rowspan="1" colspan="1">37.5 (37&#x2010;38)</td></tr><tr><td align="left" rowspan="1" colspan="1">1.5e12 (n&#xA0;=&#xA0;2)</td><td align="char" char="(" rowspan="1" colspan="1">130.0 (92&#x2010;168)</td><td align="left" rowspan="1" colspan="1">160.0 (i) (67&#x2010;253)</td><td align="left" rowspan="1" colspan="1">&#x2010;</td><td align="left" rowspan="1" colspan="1">&#x2010;</td><td align="left" rowspan="1" colspan="1">&#x2010;</td></tr><tr><td align="left" rowspan="1" colspan="1">7.5e11 (n&#xA0;=&#xA0;2)</td><td align="char" char="(" rowspan="1" colspan="1">25.5 (25&#x2010;26)</td><td align="left" rowspan="1" colspan="1">32.0 (i) (9&#x2010;55)</td><td align="left" rowspan="1" colspan="1">31.0 (i) (2&#x2010;60)</td><td align="left" rowspan="1" colspan="1">&#x2010;</td><td align="left" rowspan="1" colspan="1">&#x2010;</td></tr><tr><td align="left" rowspan="1" colspan="1">9.75e11 (n&#xA0;=&#xA0;4)</td><td align="char" char="(" rowspan="1" colspan="1">100.5 (73&#x2010;142)</td><td align="left" rowspan="1" colspan="1">98.0 (ii) (57&#x2010;139)</td><td align="left" rowspan="1" colspan="1">&#x2010;</td><td align="left" rowspan="1" colspan="1">&#x2010;</td><td align="left" rowspan="1" colspan="1">&#x2010;</td></tr><tr><td align="left" colspan="6" rowspan="1">Arithmetic means, per dose level for FIX activity levels (%) at corresponding study visits. FIX activity levels (%) measured by local assay (results for minimum of 2 patients). (i) Includes one patient with reduction in FIX expression following transaminitis. (ii) Data from 2 patients and includes one patient with reduction in FIX expression following transaminitis</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0001" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Dosing schematic for FLT180a B&#x2010;AMAZE phase 1/ 2 study</p></caption><graphic xlink:href="RTH2-4-1-g001.jpg" position="anchor" id="nlm-graphic-1" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0004">
+      <title>LB/CO01.2</title>
+      <sec id="rth212413-sec-0005">
+        <title>Thrombosis, Bleeding, and the Effect of Anticoagulation on Survival in Critically Ill Patients with COVID&#x2010;19 in the United States</title>
+        <p>
+<bold><underline underline-style="single">H. Al&#x2010;Samkari</underline><sup>1,2</sup>, S. Gupta<sup>2,3</sup>, R. Karp Leaf<sup>1,2</sup>, W. Wang<sup>4</sup>, R. Rosovsky<sup>1,2</sup>, K. Bauer<sup>2,5</sup>, D. Leaf<sup>2,3</sup>, STOP&#x2010;COVID Investigators</bold>
+</p>
+        <p>
+<sup>1</sup>Massachusetts General Hospital, Division of Hematology, Boston, United States<sup>2</sup>Harvard Medical School, Boston, United States<sup>3</sup>Brigham and Women\'s Hospital, Division of Renal Medicine, Boston, United States<sup>4</sup>Brigham and Women\'s Hospital, Divisions of Medicine and Neurology, Boston, United States<sup>5</sup>Beth Israel Deaconess Medical Center, Division of Hematology and Oncology, Boston, United States</p>
+        <p>
+<bold>Background: </bold>Hypercoagulability may be a key mechanism of death in patients with coronavirus disease 2019 (COVID&#x2010;19).</p>
+        <p>
+<bold>Aims: </bold>To examine incidence of radiographically&#x2010;confirmed venous thromboembolism (VTE) and major bleeding in a large nationally&#x2010;representative U.S. cohort and assess whether therapeutic anticoagulation affects survival.</p>
+        <p>
+<bold>Methods: </bold>In a 67&#x2010;center cohort study of 3239 critically ill adults with COVID&#x2010;19, we examined incidence of VTE and major bleeding within 14&#xA0;days following intensive care unit (ICU) admission. We identified predictors of VTE using multivariable logistic regression. To estimate the effect of therapeutic anticoagulation on 28&#x2010;day mortality, we emulated a target trial in which critically ill patients with COVID&#x2010;19 were assigned to receive or not receive therapeutic anticoagulation in the first two days of ICU admission (FIGURE 1). We adjusted for confounding using a Cox model with inverse probability weighting.</p>
+        <p>
+<bold>Results: </bold>Patients&#x2019; median age was 61&#xA0;years (IQR, 53&#x2010;71) and 2088 (64.5%) were male. 204 patients (6.3%) developed VTE, and 90 (2.8%) had a major bleeding event. Independent predictors of VTE were male sex (odds ratio [OR], 1.70; 95% CI, 1.05&#x2010;2.77), severe obesity (OR 2.08; 95% CI, 1.17&#x2010;3.70 for body mass index&#xA0;&#x2265;&#xA0;40.0 versus&#xA0;&lt;&#xA0;30&#xA0;kg/m<sup>2</sup>), and higher D&#x2010;dimer on ICU day 1 (OR 4.20; 95% CI, 2.17&#x2010;8.14 for&#xA0;&gt;&#xA0;10,000 versus&#xA0;&#x2264;&#xA0;1000&#xA0;ng/ml). Among 2809 patients included in the target trial emulation, 384 (11.9%) received therapeutic anticoagulation in the first two days of ICU admission. In the primary analysis, during a median follow&#x2010;up of 27&#xA0;days, patients receiving therapeutic anticoagulation had a similar risk of death as those who did not (hazard ratio, 1.12; 95% CI, 0.92 to 1.35), FIGURE 2A. Results were similar in subgroup analyses, FIGURE 2B.</p>
+        <p>
+<bold>Conclusions: </bold>Among 3239 critically ill adults with COVID&#x2010;19, the 14&#x2010;day incidence of VTE and major bleeding were 6.3% and 2.8%. Receipt of therapeutic anticoagulation early after ICU admission did not affect survival.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0002" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Flow diagram for target trial emulation of therapeutic anticoagulation</p></caption><graphic xlink:href="RTH2-4-1-g002.jpg" position="anchor" id="nlm-graphic-3" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0003" orientation="portrait"><caption><p>
+<bold>FIGURE 2</bold> Target trial emulation. (A) Survival in patients receiving therapeutic anticoagulation vs. those who did not. (B) Subgroup analyses</p></caption><graphic xlink:href="RTH2-4-1-g003.jpg" position="anchor" id="nlm-graphic-5" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0006">
+      <title>LB/CO01.3</title>
+      <sec id="rth212413-sec-0007">
+        <title>Incidence of Venous Thromboembolism in Patients Discharged after COVID&#x2010;19 Hospitalisation</title>
+        <p>
+<bold><underline underline-style="single">M.M. Engelen</underline>, T. Vanassche, T. Balthazar, E. Claeys, J. Gunst, M. Jacquemin, S. Janssens, N. Lorent, L. Liesenborghs, K. Peerlinck, G. Pieters, S. Rex, P. Sinonquel, L. Van der Linden, C. Van Laer, R. Vos, J. Wauters, A. Wilmer, P. Verhamme, C. Vandenbriele</bold>
+</p>
+        <p>University Hospitals Leuven, Leuven, Belgium</p>
+        <p>
+<bold>Background: </bold>Coronavirus (SARS&#x2010;CoV&#x2010;2) induced pneumonia (COVID&#x2010;19) is associated with a pro&#x2010;thrombotic state. In hospitalised patients with COVID&#x2010;19, D&#x2010;dimer levels are often high and a predictor of mortality, with an incidence of venous thromboembolism (VTE) up to 30&#x2010;50%. Therefore, thromboprophylaxis with prophylactic or intermediate dose of low molecular weight heparins (LMWHs) became the standard of care for COVID&#x2010;19 patients at our institution. However, little is known about the incidence of COVID&#x2010;19 associated VTE after discharge.</p>
+        <p>
+<bold>Aims: </bold>To evaluate the residual thrombotic risk and incidence of VTE in patients following hospitalisation for COVID&#x2010;19.</p>
+        <p>
+<bold>Methods: </bold>In COVID&#x2010;19 patients, we measured D&#x2010;dimers and performed venous ultrasound screening (VUS) at a multidisciplinary outpatient follow&#x2010;up 6&#xA0;weeks after discharge. In patients who were hospitalised on an intensive care unit (ICU) or had D&#x2010;dimer levels&#xA0;&#x2265;&#xA0;2000&#xA0;ng/mL, CT pulmonary angiogram (CTPA) or ventilation/perfusion lung scan (V/Q) was performed. Patients with known VTE were excluded. The study was approved by the ethical committee.</p>
+        <p>
+<bold>Results: </bold>So far, we analysed 102 patients with a mean age of 57&#xA0;years (SD 12.4). Twenty&#x2010;six patients were hospitalised at ICU with a mean stay of 10&#xA0;days (SD 6.4); 44% of which required mechanical ventilation. Follow&#x2010;up took place 44&#xA0;days (SD 9.5) after hospital discharge. Mean D&#x2010;dimer levels were significantly lower at follow&#x2010;up (593&#xA0;ng/mL) compared to discharge (1101&#xA0;ng/mL) and to the highest value during hospitalisation (2618&#xA0;ng/mL) (figure). Only 8% of patients received prophylactic LMWHs after discharge (mean 13&#xA0;days) without major or clinically relevant bleedings. There were no symptomatic VTE cases. Systematic screening with VUS with or without CTPA or V/Q revealed only one asymptomatic VTE (deep vein thrombosis) (0.98%).</p>
+        <p>
+<bold>Conclusions: </bold>We report a very low incidence of VTE (&lt; 1%) in COVID&#x2010;19 patients after hospitalisation, supported by a significant decrease in D&#x2010;dimers. These results suggest that extended thromboprophylaxis after hospitalisation is not routinely needed.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0004" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> In&#x2010;hospital D&#x2010;dimer values compared to outpatient follow&#x2010;up values</p></caption><graphic xlink:href="RTH2-4-1-g004.jpg" position="anchor" id="nlm-graphic-7" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0008">
+      <title>LB/CO01.4</title>
+      <sec id="rth212413-sec-0009">
+        <title>Higher Incidence of Thrombotic Complications in Hospitalized Patients with SARS&#x2010;COV&#x2010;2 Virus versus Influenza Virus Infections</title>
+        <p>
+<bold><underline underline-style="single">M.A.M. Stals</underline><sup>1</sup>, M.J.J.H. Grootenboers<sup>2</sup>, C. van Guldener<sup>3</sup>, F.H.J. Kaptein<sup>1</sup>, S.J.E. Braken<sup>1</sup>, Q. Chen<sup>4</sup>, G. Chu<sup>1</sup>, E.M. van Driel<sup>5</sup>, A. Iglesias del Sol<sup>6</sup>, F. Pals<sup>1</sup>, M.M.A. Toorop<sup>4</sup>, S.C. Cannegieter<sup>1,4</sup>, F.A. Klok<sup>1</sup>, M.V. Huisman<sup>1</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Leiden University Medical Center, Department of Thrombosis and Hemostasis, Leiden, The Netherlands<sup>2</sup>Amphia Hospital, Department of Pulmonology, Breda and Oosterhout, The Netherlands<sup>3</sup>Amphia Hospital, Department of Internal Medicine, Breda and Oosterhout, The Netherlands<sup>4</sup>Leiden University Medical Center, Department of Clinical Epidemiology, Leiden, The Netherlands<sup>5</sup>Alrijne Hospital, Department of Intensive Care Medicine, Leiderdorp, The Netherlands<sup>6</sup>Alrijne Hospital, Department of Internal Medicine, Leiderdorp, The Netherlands</p>
+        <p>
+<bold>Background: </bold>COVID&#x2010;19 may lead to thrombotic complications, aggravated by a stay at the Intensive Care Unit (ICU). The incidence of thrombotic complications in COVID&#x2010;19 patients on general wards is understudied. It is unknown how the incidence of thrombotic complications in hospitalized COVID&#x2010;19 patients compares to hospitalized influenza patients.</p>
+        <p>
+<bold>Aims: </bold>To analyze the cumulative incidence of venous and arterial thrombotic complications in hospitalized patients with COVID&#x2010;19 on general wards and for all hospitalized patients (both ward and ICU), and to compare the venous thrombotic complications (VTE) with hospitalized influenza patients.</p>
+        <p>
+<bold>Methods: </bold>We studied all admitted COVID&#x2010;19 patients in three Dutch hospitals: Leiden University Medical Center, Amphia Hospital Breda and Alrijne Hospital Leiderdorp (February 24<sup>st</sup> &#x2010; April 25<sup>th</sup>). All patients received pharmacological thromboprophylaxis. Patient charts were scrutinized for thrombotic complications. Hospitalization data from Statistics Netherlands (period 2013 until 2018) were used to obtain information on venous thrombotic complications in influenza.</p>
+        <p>
+<bold>Results: </bold>579 COVID&#x2010;19 patients were admitted, of whom 94 (16.2%) to the ICU only. 67 patients were diagnosed with 71 thrombotic complications during admission (17 during stay at a general ward, 50 at the ICU), mostly with pulmonary embolism (54/71, 76.1%). The 30&#x2010;day cumulative incidence, adjusted for competing risk of death, of all thrombotic complications was 5.3% (95% CI 2.4&#x2010;8.2) during stay at the general ward and 20.5% (95% CI 15.6&#x2010;25.4) in ward and ICU patients combined (Table 1). The 30&#x2010;day cumulative incidence of VTE during stay at the ward was 3.8% (95% CI 1.3&#x2010;6.3), and 18.7% (95% CI 14.0&#x2010;23.4) in ward and ICU patients combined, versus 1.04% (95% CI 0.92&#x2010;1.16) in hospitalized influenza patients (both ward and ICU).</p>
+        <p>
+<bold>Conclusions: </bold>The incidence of thrombotic complications in hospitalized COVID&#x2010;19 patients was substantial, and considerably higher than that in hospitalized influenza patients, suggesting a possible SARS&#x2010;COV&#x2010;2 specific effect. Further studies are needed to substantiate our findings and to explore explanations for this large difference.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0005" orientation="portrait"><caption><p>
+<bold>TABLE 1</bold> Cumulative incidences of thrombotic complications in hospitalized patients with COVID&#x2010;19 and hospitalized influenza patients</p></caption><graphic xlink:href="RTH2-4-1-g005.jpg" position="anchor" id="nlm-graphic-9" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0010">
+      <title>COVID&#x2010;19 EPOSTERS</title>
+    </sec>
+    <sec id="rth212413-sec-0011">
+      <title>PB/CO01</title>
+      <sec id="rth212413-sec-0012">
+        <title>Dipyridamole Added to Anticoagulant Prophylaxis: Decline in Poor Outcome of Clinically Severe Ill COVID&#x2010;2019 Patients</title>
+        <p>
+<bold><underline underline-style="single">S. Kalayoglu Besisik</underline>, M. Ozbalak, Y.B. Tor, A. Alibeyoglu, M. Kose, N. &#x15E;enkal, A. Cagatay, M. Erelel, A. Gul, F. Esen, S. Umman, U. Isoglu Alkoclar, T. Tukek</bold>
+</p>
+        <p>Istanbul University Istanbul Medical Faculty, Istanbul, Turkey</p>
+        <p>
+<bold>Background: </bold>Initial reports suggest a coagulopathy mimicking DIC and thrombotic microangiopathy associates Coronavirus disease 2019 (COVID&#x2010;2019). The outcome was with thrombotic complications related morbidity which was found to be the main contributor to death in patients with severe COVID&#x2010;2019. The guidelines are established and anticoagulant therapy became the standard of care.</p>
+        <p>
+<bold>Aims: </bold>We here present our experience with hospitalized COVID&#x2010;2019 patients, in whom we added dipyridamole to anticoagulant prophylaxis.</p>
+        <p>
+<bold>Methods: </bold>All hospitalized COVID&#x2010;2019 adult patients were stratified as moderate, severe or critically ill disease according to radiology and clinical findings. The data was collected retrospectively by screening the medical records from electronic files. The treatment protocol included favipravir and anticytokine treatment when patients deteriorating under treatment hydroxychlorakine and azytromycin. All patients had received anticoagulant treatment with low molecular weight heparins and dypridamole as bid 75&#xA0;mg orally.</p>
+        <p>
+<bold>Results: </bold>A total of 510 patients were hospitalized with a diagnosis of COVID&#x2010;2019 between March 11<sup>th</sup> and May 5<sup>th</sup> of 2020 (Table 1). A total of 48 patients were excluded from the analysis. 462 patients were included in the final analysis. The median age was 56 and 61.5% were male. About 30% were above the age of 65. About 62% had SARS&#x2010;CoV2 positivity in nose and throat swab polymerase chain reaction analysis. 93 patients did not receive dypridamol. The administration of dypiridamol independently decreased the risk of both demonstrated coagulopathy (HR:0.62;p&#xA0;=&#xA0;0.018; 95% CI:0.0062&#x2010;0.62) and highly suspected coagulopathy (HR: 0.12; p&#xA0;=&#xA0;0.001, 95% CI: 0.032&#x2010;0.41) (Table 2). Dypiridamol administration did not have an impact on the survival and severity progression in the short&#x2010;term follow&#x2010;up.</p>
+        <p>
+<bold>Conclusions: </bold>Dipyridamole is an antiplatelet agent and acts as a phosphodiesterase inhibitor that increases intracellular cAMP/cGMP. Its probable antiviral activity, antinflammatory and mucosal healing and inhibitory propert against acute injury and progressive fibrosis. We advocate further trials for DIP adjunctive therapy for patients with COVID&#x2010;2019, particularly for those with early signs of elevated concentrations of D&#x2010;dimer.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-2" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Demographic characteristics, initial signs and symptomatology</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">Median Age (range)</th><th align="left" valign="top" rowspan="1" colspan="1">56 (23&#x2010;98)</th><th align="left" valign="top" rowspan="1" colspan="1">Initial vital signs</th><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">Comorbid conditions</th><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">Anti&#x2010;hypertensive exposure</th><th align="left" valign="top" rowspan="1" colspan="1">177 (38%)</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Sex</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">Median saturation on pulse oximetry (range)</td><td align="left" rowspan="1" colspan="1">96% (70&#x2010;100)</td><td align="left" rowspan="1" colspan="1">Hypertension</td><td align="left" rowspan="1" colspan="1">182 (40%)</td><td align="left" rowspan="1" colspan="1">ACE inh</td><td align="left" rowspan="1" colspan="1">35 (8%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Female (%) Male (%)</td><td align="left" rowspan="1" colspan="1">178 (38.5%) 284 (61.5%)</td><td align="left" rowspan="1" colspan="1">Median systolic blood pressure (range)</td><td align="left" rowspan="1" colspan="1">130 (80&#x2010;250)</td><td align="left" rowspan="1" colspan="1">Diabetes mellitus</td><td align="left" rowspan="1" colspan="1">100 (22%)</td><td align="left" rowspan="1" colspan="1">ARB</td><td align="left" rowspan="1" colspan="1">83 (18%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Initial symptoms</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">Median diastolic blood pressure (range)</td><td align="left" rowspan="1" colspan="1">75 (50&#x2010;136)</td><td align="left" rowspan="1" colspan="1">COPD or Asthma</td><td align="left" rowspan="1" colspan="1">56 (12%)</td><td align="left" rowspan="1" colspan="1">Acute conditions at the time of initial presentation</td><td align="left" rowspan="1" colspan="1">&#xA0;</td></tr><tr><td align="left" rowspan="1" colspan="1">Fatigue and myalgia</td><td align="left" rowspan="1" colspan="1">432 (94%)</td><td align="left" rowspan="1" colspan="1">Median pulse rate (range)</td><td align="left" rowspan="1" colspan="1">93 (66&#x2010;190)</td><td align="left" rowspan="1" colspan="1">Coronary artery disease</td><td align="left" rowspan="1" colspan="1">51 (11%)</td><td align="left" rowspan="1" colspan="1">Acut kidney failure</td><td align="left" rowspan="1" colspan="1">10</td></tr><tr><td align="left" rowspan="1" colspan="1">Cough</td><td align="left" rowspan="1" colspan="1">389 (84%)</td><td align="left" rowspan="1" colspan="1">Median respiratory rate (range)</td><td align="left" rowspan="1" colspan="1">18 (12&#x2010;36)</td><td align="left" rowspan="1" colspan="1">Congestive heart failure</td><td align="left" rowspan="1" colspan="1">30 (6.5%)</td><td align="left" rowspan="1" colspan="1">Increase in creatinine kinase</td><td align="left" rowspan="1" colspan="1">4</td></tr><tr><td align="left" rowspan="1" colspan="1">Fever</td><td align="left" rowspan="1" colspan="1">224 (72%)</td><td align="left" rowspan="1" colspan="1">COVID RT&#x2010;PCR positive vs negative</td><td align="left" rowspan="1" colspan="1">285 vs 177</td><td align="left" rowspan="1" colspan="1">Solid malignancy</td><td align="left" rowspan="1" colspan="1">22 (5)</td><td align="left" rowspan="1" colspan="1">Acute myocardial infarction</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">Dyspnea</td><td align="left" rowspan="1" colspan="1">198 (43%)</td><td align="left" rowspan="1" colspan="1">Initial computerized tomography feature</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">Hematologic malignancy</td><td align="left" rowspan="1" colspan="1">13 (3%)</td><td align="left" rowspan="1" colspan="1">Deep venous thrombosis</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">Nausea Diarrhea</td><td align="left" rowspan="1" colspan="1">71 (15%) 54 (12%)</td><td align="left" rowspan="1" colspan="1">Mild pneumonia</td><td align="left" rowspan="1" colspan="1">218 (49%)</td><td align="left" rowspan="1" colspan="1">Median number of comorbidities (range)</td><td align="left" rowspan="1" colspan="1">1 (0&#x2010;6)</td><td align="left" rowspan="1" colspan="1">Hypertensive pulmonary edema</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">Ansomia Sputum</td><td align="left" rowspan="1" colspan="1">38 (8%) 14 (3%)</td><td align="left" rowspan="1" colspan="1">Mild pneumonia</td><td align="left" rowspan="1" colspan="1">230 (51%)</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">Cerebrovascular accident</td><td align="left" rowspan="1" colspan="1">1</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<table-wrap id="nlm-table-wrap-3" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 2</bold> Independent risk factors affectng coagulopathy and highly suspected coagulopathy</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">Variable</th><th align="left" valign="top" rowspan="1" colspan="1">HR</th><th align="left" valign="top" rowspan="1" colspan="1">p</th><th align="left" valign="top" rowspan="1" colspan="1">95% CI</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Independent risk factors affecting coagulopathy</td><td align="left" rowspan="1" colspan="1">Peak D&#x2010;dimer&#xA0;&gt;&#xA0;15.000 U/ml</td><td align="char" char="." rowspan="1" colspan="1">29.53</td><td align="char" char="." rowspan="1" colspan="1">0.012</td><td align="char" char="." rowspan="1" colspan="1">2.08&#x2010;417</td></tr><tr><td align="left" rowspan="1" colspan="1">Dipiridamol administration</td><td align="char" char="." rowspan="1" colspan="1">0.062</td><td align="char" char="." rowspan="1" colspan="1">0.018</td><td align="char" char="." rowspan="1" colspan="1">0.0062&#x2010;0.62</td></tr><tr><td align="left" rowspan="1" colspan="1">Independent risk factors affecting highly suspected coagulopathy</td><td align="left" rowspan="1" colspan="1">Moderate or severe CT findings</td><td align="char" char="." rowspan="1" colspan="1">69.198</td><td align="char" char="." rowspan="1" colspan="1">0.001</td><td align="char" char="." rowspan="1" colspan="1">6.11&#x2010;761.02</td></tr><tr><td align="left" rowspan="1" colspan="1">Initial SpO2&#xA0;&#x2264;&#xA0;85%</td><td align="char" char="." rowspan="1" colspan="1">23.23</td><td align="char" char="." rowspan="1" colspan="1">0.003</td><td align="char" char="." rowspan="1" colspan="1">2.85&#x2010;189.11</td></tr><tr><td align="left" rowspan="1" colspan="1">Peak Hgb&#xA0;&lt;&#xA0;8.5&#xA0;g/dl</td><td align="char" char="." rowspan="1" colspan="1">7.52</td><td align="char" char="." rowspan="1" colspan="1">&#xA0;</td><td align="char" char="." rowspan="1" colspan="1">&#xA0;</td></tr><tr><td align="left" rowspan="1" colspan="1">Peak direct bilirubin&#xA0;&gt;&#xA0;1.3&#xA0;mg/dl</td><td align="char" char="." rowspan="1" colspan="1">472</td><td align="char" char="." rowspan="1" colspan="1">0.001</td><td align="char" char="." rowspan="1" colspan="1">9.46&#x2010;23632</td></tr><tr><td align="left" rowspan="1" colspan="1">Peak ferritin&#xA0;&gt;&#xA0;20.000&#xA0;ng/ml</td><td align="char" char="." rowspan="1" colspan="1">15.82</td><td align="char" char="." rowspan="1" colspan="1">0.033</td><td align="char" char="." rowspan="1" colspan="1">1.25&#x2010;199.25</td></tr><tr><td align="left" rowspan="1" colspan="1">Progresive severity</td><td align="char" char="." rowspan="1" colspan="1">86.57</td><td align="char" char="." rowspan="1" colspan="1">0.012</td><td align="char" char="." rowspan="1" colspan="1">2.62&#x2010;2856.54</td></tr><tr><td align="left" rowspan="1" colspan="1">Dipiridamol administration</td><td align="char" char="." rowspan="1" colspan="1">0.12</td><td align="char" char="." rowspan="1" colspan="1">0.001</td><td align="char" char="." rowspan="1" colspan="1">0.032&#x2010;0.41</td></tr></tbody></table></table-wrap>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0013">
+      <title>PB/CO02</title>
+      <sec id="rth212413-sec-0014">
+        <title>Clinical and Computed Tomography Characteristics of COVID&#x2010;19 Associated Acute Pulmonary Embolism: A Different Phenotype of Thrombotic Disease?</title>
+        <p>
+<bold><underline underline-style="single">L.F. van Dam</underline><sup>1</sup>, L.J.M. Kroft<sup>2</sup>, L.I. van der Wal<sup>3</sup>, S.C. Cannegieter<sup>4</sup>, J. Eikenboom<sup>1</sup>, E. de Jonge<sup>3</sup>, M.V. Huisman<sup>1</sup>, F.A. Klok<sup>1</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Leiden Univeristy Medical Center, Thrombosis and Hemostasis, Leiden, The Netherlands<sup>2</sup>Leiden Univeristy Medical Center, Radiology, Leiden, The Netherlands<sup>3</sup>Leiden Univeristy Medical Center, Intensive Care Medicine, Leiden, The Netherlands<sup>4</sup>Leiden Univeristy Medical Center, Clinical Epidemiology, Leiden, The Netherlands</p>
+        <p>
+<bold>Background: </bold>COVID&#x2010;19 infections are associated with a high prevalence of venous thromboembolism, particularly pulmonary embolism (PE). It is suggested that COVID&#x2010;19 associated PE represents in situ immunothrombosis rather than venous thromboembolism, although the origin of thrombotic lesions in COVID&#x2010;19 patients remains largely unknown.</p>
+        <p>
+<bold>Aims: </bold>We aimed to determine the clinical and computed tomography (CT) parameters of patients with COVID&#x2010;19 associated PE.</p>
+        <p>
+<bold>Methods: </bold>We assessed the clinical and CT characteristics of PE in 23 consecutive patients with COVID&#x2010;19 pneumonia and compared these to those of 100 consecutive control patients diagnosed with acute PE before the COVID&#x2010;19 outbreak. Specifically, RV/LV diameter ratio, pulmonary artery trunk diameter and total thrombus load (according to Qanadli) were measured and compared.</p>
+        <p>
+<bold>Results: </bold>We observed that all thrombotic lesions in COVID&#x2010;19 patients were found to be in lung parenchyma affected by COVID&#x2010;19. Also, the thrombus load was lower in COVID&#x2010;19 patients (Qanadli score &#x2010;8%, 95% confidence interval [95% CI] &#x2010;16 to &#x2010;0.36%) as was the prevalence of the most proximal PE in the main/lobar pulmonary artery (17% versus 47%; &#x2010;30%, 95% CI &#x2010;44% to &#x2010;8.2). Moreover, the mean RV/LV ratio (mean difference &#x2010;0.23, 95% CI &#x2010;0.39 to &#x2010;0.07) and the prevalence of RV/LV ratio&#xA0;&gt;&#xA0;1.0 (prevalence difference &#x2010;23%, 95% CI &#x2010;41 to &#x2010;0.86%) were lower in the COVID&#x2010;19 patients.</p>
+        <p>
+<bold>Conclusions: </bold>Our findings therefore suggest that the phenotype of COVID&#x2010;19 associated PE indeed differs from PE in patients without COVID&#x2010;19, fuelling the discussion on its pathophysiology.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0006" orientation="portrait"><caption><p>
+<bold>TABLE 1</bold> Characteristics of pulmonary embolism (PE) patients with and without COVID&#x2010;19</p></caption><graphic xlink:href="RTH2-4-1-g006.jpg" position="anchor" id="nlm-graphic-11" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0007" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold>
+</p></caption><graphic xlink:href="RTH2-4-1-g007.jpg" position="anchor" id="nlm-graphic-13" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0015">
+      <title>PB/CO03</title>
+      <sec id="rth212413-sec-0016">
+        <title>The Prothrombotic Imbalance Between VWF and ADAMTS13 in COVID&#x2010;19</title>
+        <p>
+<bold><underline underline-style="single">I. Mancini</underline><sup>1</sup>, L. Baronciani<sup>2</sup>, A. Artoni<sup>2</sup>, P. Colpani<sup>2</sup>, M. Biganzoli<sup>2</sup>, G. Cozzi<sup>2</sup>, C. Novembrino<sup>2</sup>, M. Boscolo<sup>2</sup>, V. De Zan<sup>1</sup>, S. Aliberti<sup>1,3</sup>, M. Panigada<sup>4</sup>, G. Grasselli<sup>1,4</sup>, F. Blasi<sup>1,3</sup>, F. Peyvandi<sup>1,2</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Universit&#xE0; degli Studi di Milano, Department of Pathophysiology and Transplantation, Milan, Italy<sup>2</sup>Fondazione IRCCS Ca&#x2019; Granda Ospedale Maggiore Policlinico, Angelo Bianchi Bonomi Hemophilia and Thrombosis Center, Milan, Italy<sup>3</sup>Fondazione IRCCS Ca&#x2019; Granda Ospedale Maggiore Policlinico, UOC Pneumologia, Milan, Italy<sup>4</sup>Fondazione IRCCS Ca&#x2019; Granda Ospedale Maggiore Policlinico, UOC Anestesia e Terapia Intensiva Adulti, Milan, Italy</p>
+        <p>
+<bold>Background: </bold>Coronavirus Disease 2019 (COVID&#x2010;19) is Characterized by a Hypercoagulable Status and Massive Inflammation in its Most Severe Forms, with Evidence of Elevated von Willebrand Factor (VWF)</p>
+        <p>
+<bold>Aims: </bold>To investigate the role of VWF and ADAMTS13 in COVID&#x2010;19.</p>
+        <p>
+<bold>Methods: </bold>We performed a cross&#x2010;sectional study of 50 COVID&#x2010;19 patients referred to Fondazione IRCCS Ca&#x2019; Granda Ospedale Maggiore Policlinico, Milan (Italy), between March and mid&#x2010;April 2020. Patients were stratified by admission to three different intensity of care units: low intensive care, requiring high&#x2010;flow nasal cannula oxygen therapy (n&#xA0;=&#xA0;14); intermediate sub&#x2010;intensive care, requiring continuous positive airway pressure devices (n&#xA0;=&#xA0;17); high intensive care, requiring intubation and mechanical ventilation (n&#xA0;=&#xA0;19). VWF antigen (VWF:Ag) and ristocetin&#x2010;cofactor activity (VWF:RCo) were measured using HemosIL<sup>&#xAE;</sup> commercial kits on an ACL TOP 700 analyzer (Werfen, USA). VWF multimers were evaluated with the Hydragel 11 von Willebrand multimers kit (Sebia, France). ADAMTS13 activity (ADAMTS13:Act) was measured with the FRETS&#x2010;VWF73 assay. Statistical analysis was performed using the Kruskal&#x2010;Wallis test.</p>
+        <p>
+<bold>Results: </bold>VWF:Ag and VWF:RCo were increased in the vast majority of patients and associated with increasing intensity of care (Table 1). VWF:Ag increased more than VWF:RCo, so that median VWF:RCo/VWF:Ag ratios resulted similar or slightly reduced. We found a progressively lower proportion of HMW VWF multimers with increasing intensity of care, as shown by the decreased median ratio of HMW to LMW multimers. A negative association of ADAMTS13:Act with the intensity of care was observed, with median values decreasing from 82 to 62 and 55&#xA0;IU/dl. The increase of VWF:Ag over the decrease of ADAMTS13:Act yielded markedly elevated VWF:Ag/ADAMTS13:Act ratios, increasing with intensive care status.</p>
+        <p>
+<bold>Conclusions: </bold>We found an imbalance of the VWF&#x2010;ADAMTS13 axis in COVID&#x2010;19 patients, with an elevated VWF:Ag/ADAMTS13:Act ratio being strongly associated with disease severity. Such imbalance further increases the hypercoagulable status promoted by COVID&#x2010;19 disease and the risk of microthrombosis in these patients.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-4" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Laboratory results in COVID&#x2010;19 patients by intensity of care</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" colspan="3" valign="top" rowspan="1">
+<bold>Intensity of care</bold>
+</th><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th></tr><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">
+<bold>Low (n&#xA0;=&#xA0;14)</bold>
+</th><th align="left" valign="top" rowspan="1" colspan="1">
+<bold>Intermediate (n&#xA0;=&#xA0;17)</bold>
+</th><th align="left" valign="top" rowspan="1" colspan="1">
+<bold>High (n&#xA0;=&#xA0;19)</bold>
+</th><th align="left" valign="top" rowspan="1" colspan="1">
+<bold>Kruskal&#x2010;Wallis test p&#x2010;value</bold>
+</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Platelet count, &#xD7; 10<sup>9</sup>/l</td><td align="char" char="(" rowspan="1" colspan="1">234 (173&#x2010;293)</td><td align="char" char="(" rowspan="1" colspan="1">362 (304&#x2010;483)</td><td align="char" char="(" rowspan="1" colspan="1">358 (299&#x2010;467)</td><td align="char" char="." rowspan="1" colspan="1">0.021</td></tr><tr><td align="left" rowspan="1" colspan="1">VWF:Ag, IU/dl</td><td align="char" char="(" rowspan="1" colspan="1">268 (225&#x2010;309)</td><td align="char" char="(" rowspan="1" colspan="1">386 (305&#x2010;468)</td><td align="char" char="(" rowspan="1" colspan="1">476 (380&#x2010;537)</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001</td></tr><tr><td align="left" rowspan="1" colspan="1">VWF:RCo, IU/dl</td><td align="char" char="(" rowspan="1" colspan="1">216 (188&#x2010;262)</td><td align="char" char="(" rowspan="1" colspan="1">334 (257&#x2010;407)</td><td align="char" char="(" rowspan="1" colspan="1">388 (328&#x2010;438)</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001</td></tr><tr><td align="left" rowspan="1" colspan="1">VWF:RCo to VWF:Ag ratio</td><td align="char" char="(" rowspan="1" colspan="1">0.88 (0.76&#x2010;0.93)</td><td align="char" char="(" rowspan="1" colspan="1">0.87 (0.79&#x2010;0.93)</td><td align="char" char="(" rowspan="1" colspan="1">0.81 (0.79&#x2010;0.85)</td><td align="char" char="." rowspan="1" colspan="1">0.118</td></tr><tr><td align="left" rowspan="1" colspan="1">HMW to IMW VWF multimer ratio</td><td align="char" char="(" rowspan="1" colspan="1">1.50 (1.29&#x2010;1.75)</td><td align="char" char="(" rowspan="1" colspan="1">1.35 (1.04&#x2010;1.47)</td><td align="char" char="(" rowspan="1" colspan="1">1.28 (1.03&#x2010;1.39)</td><td align="char" char="." rowspan="1" colspan="1">0.034</td></tr><tr><td align="left" rowspan="1" colspan="1">HMW to LMW VWF multimer ratio</td><td align="char" char="(" rowspan="1" colspan="1">3.18 (2.54&#x2010;3.80)</td><td align="char" char="(" rowspan="1" colspan="1">2.76 (2.33&#x2010;3.38)</td><td align="char" char="(" rowspan="1" colspan="1">2.30 (1.70&#x2010;3.06)</td><td align="char" char="." rowspan="1" colspan="1">0.035</td></tr><tr><td align="left" rowspan="1" colspan="1">ADAMTS13:Act, IU/dl</td><td align="char" char="(" rowspan="1" colspan="1">82 (71&#x2010;101)</td><td align="char" char="(" rowspan="1" colspan="1">62 (54&#x2010;67)</td><td align="char" char="(" rowspan="1" colspan="1">55 (42&#x2010;68)</td><td align="char" char="." rowspan="1" colspan="1">0.001</td></tr><tr><td align="left" rowspan="1" colspan="1">VWF:Ag to ADAMTS13 ratio</td><td align="char" char="(" rowspan="1" colspan="1">3.42 (1.98&#x2010;3.92)</td><td align="char" char="(" rowspan="1" colspan="1">6.77 (4.62&#x2010;8.25)</td><td align="char" char="(" rowspan="1" colspan="1">8.33 (5.49&#x2010;11.61)</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001</td></tr></tbody></table></table-wrap>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0017">
+      <title>PB/CO04</title>
+      <sec id="rth212413-sec-0018">
+        <title>Identification of a COVID&#x2010;19 Subpopulation Responsive to Hydroxychloroquine Using Machine Learning: The IDENTIFY Trial</title>
+        <p>
+<bold>C. Lam, S. Mataraso, <underline underline-style="single">A. Lynn&#x2010;Palevsky</underline>, A. Green&#x2010;Saxena, G. Barnes, J. Hoffman, J. Calvert, E. Pellegrini, R. Das</bold>
+</p>
+        <p>Dascena, Inc., Oakland, United States</p>
+        <p>
+<bold>Background: </bold>Hydroxychloroquine has emerged as a controversial treatment for COVID&#x2010;19. While some studies have suggested a survival benefit for patients prescribed hydroxychloroquine, other studies have suggested an increased risk of mortality and cardiovascular complications including de&#x2010;novo arrhythmias. Precision medicine based methods to identify a subpopulation of COVID&#x2010;19 positive patients who are likely to benefit from the use of hydroxychloroquine may help to reduce COVID&#x2010;19&#x2010;related mortality while preventing hydroxychloroquine complications.</p>
+        <p>
+<bold>Aims: </bold>To identify a subpopulation of COVID&#x2010;19 patients for whom treatment with hydroxychloroquine improves survival.</p>
+        <p>
+<bold>Methods: </bold>We performed a pragmatic clinical trial of a machine learning algorithm to identify patients likely to respond positively to hydroxychloroquine. Patients were enrolled from 7 U.S. health centers. Treatment with hydroxychloroquine was not randomized; inverse probability of treatment weighting was used to adjust for baseline confounding factors, including demographic characteristics, medical history, and medication use. The primary endpoint was a composite outcome of ventilation or mortality in the subpopulation identified by the algorithm. The secondary endpoint was in&#x2010;hospital mortality in the general COVID&#x2010;19 population. Outcomes were assessed using Fine and Gray Cox Proportional Hazards models for competing risks to account for the competing outcome of hospital discharge.</p>
+        <p>
+<bold>Results: </bold>201 patients were enrolled. In the subpopulation identified by the algorithm, those treated with hydroxychloroquine were less likely to experience mechanical ventilation or death (adjusted HR 0.29, 95% CI 0.11 &#x2010; 0.75, p&#xA0;=&#xA0;0.01) (Figure 1). In the general population, hydroxychloroquine was not associated with decreased risk of ventilation or mortality (adjusted HR 1.59, 95% CI 0.89 &#x2010; 2.83, p&#xA0;=&#xA0;0.12) (Figure 2).</p>
+        <p>
+<bold>Conclusions: </bold>It is possible to identify a subpopulation of COVID&#x2010;19 patients for whom hydroxychloroquine is associated with increased survival. Identification of these patients can reduce COVID&#x2010;19 mortality as well as morbidity associated with COVID&#x2010;19 complications, such as pulmonary embolism and cerebral thromboembolism.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0008" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Adjusted survival curves among those identified as suitable for treatment by the algorithm</p></caption><graphic xlink:href="RTH2-4-1-g008.jpg" position="anchor" id="nlm-graphic-15" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0009" orientation="portrait"><caption><p>
+<bold>FIGURE 2</bold> Adjusted survival curves for the whole study population</p></caption><graphic xlink:href="RTH2-4-1-g009.jpg" position="anchor" id="nlm-graphic-17" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0019">
+      <title>PB/CO05</title>
+      <sec id="rth212413-sec-0020">
+        <title>A Low Dose Heparin Protocol Is Associated with Improved Duration of Arterial Line Patency in Critically Ill COVID&#x2010;19 Patients</title>
+        <p>
+<bold><underline underline-style="single">L. Maurer</underline><sup>1</sup>, C. Luckhurst<sup>1</sup>, A. Hamidi<sup>2</sup>, K. Newman<sup>2</sup>, M. Barra<sup>2</sup>, M. El Hechi<sup>3</sup>, A. Mokhtari<sup>3</sup>, K. Breen<sup>3</sup>, L. Lux<sup>4</sup>, L. Prout<sup>4</sup>, J. Lee<sup>3,5</sup>, E. Bittner<sup>6</sup>, D. Chang<sup>1,7</sup>, H. Kaafarani<sup>3</sup>, R. Roberts<sup>2</sup>, R. Rosovsky<sup>8</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Massachusetts General Hospital, Department of Surgery, Boston, United States<sup>2</sup>Massachusetts General Hospital, Department of Pharmacy, Boston, United States<sup>3</sup>Massachusetts General Hospital, Division of Trauma, Emergency Surgery, and Surgical Critical Care, Boston, United States<sup>4</sup>Massachusetts General Hospital, Department of Nursing, Boston, United States<sup>5</sup>Massachusetts General Hospital, Department of Emergency Medicine, Boston, United States<sup>6</sup>Massachusetts General Hospital, Department of Anesthesia, Critical Care and Pain Medicine, Boston, United States<sup>7</sup>Massachusetts General Hospital, Codman Center for Clinical Effectiveness in Surgery, Boston, United States<sup>8</sup>Massachusetts General Hospital, Department of Hematology &amp; Oncology, Boston, United States</p>
+        <p>
+<bold>Background: </bold>Critically ill patients with COVID&#x2010;19 have high rates of thrombotic complications, including frequent line thrombosis. In response to this issue, a low dose heparinized saline (LDHS) arterial line protocol was initiated.</p>
+        <p>
+<bold>Aims: </bold>To compare the duration of arterial line patency and incidence of bleeding complications in LDHS versus control patients.</p>
+        <p>
+<bold>Methods: </bold>All adult COVID&#x2010;19 positive patients admitted to an ICU from March 20 to May 25, 2020 with documented thrombosis of an arterial line were included. LDHS patients had heparinized saline administered through an arterial line pressure bag at 10 units/hour. Historical control patients had at least one documented episode of arterial line thrombosis prior to the introduction of the institutional LDHS protocol. Duration of arterial line patency and bleeding complication rates were compared using Wilcoxon test and Fisher\'s exact test, respectively. Kaplan Meier and Cox regression were performed with arterial line thrombosis as the endpoint.</p>
+        <p>
+<bold>Results: </bold>Thirty patients received the LDHS protocol, compared to 41 controls. LDHS and control patients were similar in age (61 versus 54&#xA0;years; p&#xA0;=&#xA0;0.24), male sex (60% versus 61%; p&#xA0;=&#xA0;1.00), presence of thrombotic risk factors (57% versus 66%; p&#xA0;=&#xA0;0.47), median Sequential Organ Failure Assessment Score (6 versus 7; p&#xA0;=&#xA0;0.67), and systemic anticoagulation (47% versus 32%, p&#xA0;=&#xA0;0.32). The median duration of arterial line patency in LDHS patients was significantly longer than in controls (8.5 versus 2.9&#xA0;days; p&#xA0;&lt;&#xA0;0.001) (Table 1, stratified by anticoagulation). Cox regression showed the LDHS protocol to be independently protective against thrombosis (HR 0.13, 95% CI 0.05&#x2010;0.34; P&#xA0;&lt;&#xA0;0.001). Kaplan Meier curves were significantly different by log rank test (Figure 1) (p&#xA0;&lt;&#xA0;0.0001). Incidence of bleeding complications was similar between LDHS and control patients (13% versus 10%, p&#xA0;=&#xA0;0.71).</p>
+        <p>
+<bold>Conclusions: </bold>A LDHS protocol was associated with clinically significant improvement in duration of arterial line patency in COVID&#x2010;19 patients, without increased risk of bleeding.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-5" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Outcomes</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="2" valign="top" colspan="1">Outcome</th><th align="left" colspan="3" valign="top" rowspan="1">Therapeutic Anticoagulation</th><th align="left" colspan="3" valign="top" rowspan="1">No Therapeutic Anticoagulation</th></tr><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">Low Dose Heparin (N&#xA0;=&#xA0;14)</th><th align="left" valign="top" rowspan="1" colspan="1">Controls (N&#xA0;=&#xA0;13)</th><th align="left" valign="top" rowspan="1" colspan="1">P value</th><th align="left" valign="top" rowspan="1" colspan="1">Low Dose Heparin (N&#xA0;=&#xA0;16)</th><th align="left" valign="top" rowspan="1" colspan="1">Controls (N&#xA0;=&#xA0;28)</th><th align="left" valign="top" rowspan="1" colspan="1">P value</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Arterial line patency duration, median days (IQR)</td><td align="left" rowspan="1" colspan="1">13.9 (9.3, 18.3)</td><td align="left" rowspan="1" colspan="1">4.1 (1.0, 10.1)</td><td align="left" rowspan="1" colspan="1">P&#xA0;&lt;&#xA0;0.001</td><td align="left" rowspan="1" colspan="1">4.9 (3.3, 8.5)</td><td align="left" rowspan="1" colspan="1">2.2 (0.7, 6.1)</td><td align="left" rowspan="1" colspan="1">P&#xA0;=&#xA0;0.026</td></tr><tr><td align="left" rowspan="1" colspan="1">Bleeding Complications</td><td align="left" rowspan="1" colspan="1">3 (21.4%)</td><td align="left" rowspan="1" colspan="1">2 (15.4%)</td><td align="left" rowspan="1" colspan="1">P&#xA0;=&#xA0;1.00</td><td align="left" rowspan="1" colspan="1">1 (6.3%)</td><td align="left" rowspan="1" colspan="1">2 (7.1%)</td><td align="left" rowspan="1" colspan="1">P&#xA0;=&#xA0;1.00</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>Major</italic>
+</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">&#x2013;</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">&#x2013;</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>Clinically Relevant Non&#x2010;Major</italic>
+</td><td align="left" rowspan="1" colspan="1">3</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">&#x2013;</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">&#x2013;</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>Minor</italic>
+</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">&#x2013;</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">&#x2013;</td></tr><tr><td align="left" rowspan="1" colspan="1">Death</td><td align="left" rowspan="1" colspan="1">2 (14.3%)</td><td align="left" rowspan="1" colspan="1">4 (30.8%)</td><td align="left" rowspan="1" colspan="1">P&#xA0;=&#xA0;0.38</td><td align="left" rowspan="1" colspan="1">4 (25.0%)</td><td align="left" rowspan="1" colspan="1">6 (21.4%)</td><td align="left" rowspan="1" colspan="1">P&#xA0;=&#xA0;1.00</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0010" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Kaplan Meier of the duration of index arterial line patency in patients receiving a low dose heparinized saline protocol versus controls</p></caption><graphic xlink:href="RTH2-4-1-g010.jpg" position="anchor" id="nlm-graphic-19" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0021">
+      <title>PB/CO06</title>
+      <sec id="rth212413-sec-0022">
+        <title>Disantangling the Mechanisms behind the Thrombotic Complications of COVID&#x2010;19 Patients: Insights into Platelet and Endothelial Activation</title>
+        <p>
+<bold>P. Canzano<sup>1</sup>, M. Brambilla<sup>1</sup>, E. Tortorici<sup>2</sup>, N. Cosentino<sup>1</sup>, B. Porro<sup>1</sup>, M. Pengo<sup>2</sup>, A. Bonomi<sup>1</sup>, F. Veglia<sup>1</sup>, G. Parati<sup>2</sup>, V. Cavalca<sup>1</sup>, E. Omodeosal&#xE8;<sup>1</sup>, E. Tremoli<sup>1</sup>, <underline underline-style="single">M. Camera</underline><sup>1,3</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Centro Cardiologico Monzino IRCCS, Milan, Italy<sup>2</sup>Istituto Auxologico Italiano, Milan, Italy<sup>3</sup>Universit&#xE0; degli Studi di Milano, Milan, Italy</p>
+        <p>
+<bold>Background: </bold>Patients with severe COVID&#x2010;19 pneumonia experience hypoxemia, endothelial dysfunction and a systemic cytokine storm, leading to micro&#x2010; and macro&#x2010;thrombosis. The cytokine storm may lead to consistent blood cell activation, resulting in a generalized cell&#x2010;based Tissue Factor (TF)&#x2010;mediated activation of blood coagulation, release of procoagulant microvesicles (MVs), and in a massive platelet activation.</p>
+        <p>
+<bold>Aims: </bold>To assess in 46 COVID&#x2010;19 patients: 1) levels of TF<sup>+</sup> circulating cells and MVs; 2) residual plasma thrombin generation capacity despite heparin treatment; and 3) extent of platelet and endothelial activation. Finally, through an <italic>in vitro</italic> approach, we verified whether: 4) plasma from COVID&#x2010;19 patients was able to reproduce the platelet activation observed <italic>in vivo</italic> when added to blood cells from healthy subjects (HS); 5) treatment with tocilizumab or antiplatelet drugs was effective in reverting platelet activation.</p>
+        <p>
+<bold>Methods: </bold>TF<sup>+</sup> platelets, monocytes, granulocytes, and platelet&#x2010;leukocyte aggregates (PLA), platelet activation markers (P&#x2010;selectin and the percentage of PLA) and the MVs were evaluated by whole&#x2010;blood&#x2010;flow cytometry. Thrombin generation (TG) was assessed by CAT. L&#x2010;arginine (Arg)/nitric oxide (NO) biosynthetic pathway was also assessed. The extent of activation was compared to that of HS.</p>
+        <p>
+<bold>Results: </bold>In COVID&#x2010;19 patients TF<sup>+</sup> cells and MVs were two&#x2010; to four&#x2010;fold higher than HS (p&#xA0;&lt;&#xA0;0.0001). P&#x2010;selectin and PLA behaved similarly. A residual TG correlated with disease severity. Global Arg bioavailability ratio was significantly reduced in COVID patient (p&#xA0;&lt;&#xA0;0.0001). COVID plasma, when added to blood cells of healthy subjects, closely reproduced the activation observed <italic>in vivo</italic> in terms of TF induction and platelet stimulation. This effect was blunted by preincubation with tocilizumab as well as by aspirin and AR&#x2010;C69931MX.</p>
+        <p>
+<bold>Conclusions: </bold>All toghether these results provide insights into the IL&#x2010;6 driven pathophysiological mechanisms that trigger the hypercoagulable state in COVID&#x2010;19 and suggest the potential effectiveness of antiplatelet drugs.</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0023">
+      <title>PB/CO07</title>
+      <sec id="rth212413-sec-0024">
+        <title>Venous Thrombotic Complications in Cancer Patients with SARS&#x2010;CoV&#x2010;2 Infection: Report from the COVID&#x2010;19 and Cancer Consortium (CCC19) Registry Analysis</title>
+        <p>
+<bold><underline underline-style="single">R. Rosovsky</underline><sup>1</sup>, A. Li<sup>2</sup>, A. Desai<sup>3</sup>, D. Shah<sup>4</sup>, J. Fu<sup>5</sup>, S. Gulati<sup>6</sup>, R. Zon<sup>7</sup>, M. Thompson<sup>8</sup>, P. Grivas<sup>9</sup>, G. de Lima Lopes<sup>10</sup>, Y. Shyr<sup>11</sup>, J. Warner<sup>11</sup>, A. Khaki<sup>9</sup>, T. Choueiri<sup>12</sup>, S. Peters<sup>13</sup>, D. Rivera<sup>14</sup>, B. Rini<sup>11</sup>, G. Lyman<sup>15</sup>, J. Connors<sup>16</sup>, N. Kuderer<sup>17</sup>, on behalf of the COVID&#x2010;19 Cancer Consortium CCC19</bold>
+</p>
+        <p>
+<sup>1</sup>Massachusetts General Hospital and Harvard Medical School, Boston, United States<sup>2</sup>Baylor College of Medicine, Houston, United States<sup>3</sup>University of Connecticut, Farmington, United States<sup>4</sup>Mays Cancer Center at UT Health San Antonio MD Anderson, San Antonio, United States<sup>5</sup>Tufts Medical Center, Boston, United States<sup>6</sup>University of Cincinnati, Cincinnati, United States<sup>7</sup>Brigham and Women\'s Hospital, Boston, United States<sup>8</sup>Advocate Aurora Health, Milwaukee, United States<sup>9</sup>University of Washington, Seattle, United States<sup>10</sup>University of Miami, Miami, United States<sup>11</sup>Vanderbilt University Medical Center, Nashville, United States<sup>12</sup>Dana Farber Cancer Institute, Boston, United States<sup>13</sup>Centre Hospitalier Universitaire Vaudois, Lausanne, Switzerland<sup>14</sup>National Cancer Institute, Rockville, United States<sup>15</sup>Fred Hutchinson Cancer Research Center, Seattle, United States<sup>16</sup>Brigham and Women\'s Hospital and Harvard Medical School, Boston, United States<sup>17</sup>Advanced Cancer Research Group, Kirkland, United States</p>
+        <p>
+<bold>Background: </bold>Venous thromboembolism (VTE) is a major cause of morbidity and mortality in patients with cancer. Patients with COVID&#x2010;19, especially those admitted to the intensive care unit (ICU), are also reported to have increased risk of VTE. Data investigating VTE in patients with both cancer and COVID&#x2010;19 are limited.</p>
+        <p>
+<bold>Aims: </bold>The COVID&#x2010;19 and Cancer Consortium (CCC19) (NCT04354701) international cohort study aimed to investigate the clinical course and complications of SARS&#x2010;CoV&#x2010;2 in patients with cancer.</p>
+        <p>
+<bold>Methods: </bold>Chart review was used to identify endpoints including incident VTE stratified by high risk subgroups, initial COVID&#x2010;19 severity, and cancer treatment status.</p>
+        <p>
+<bold>Results: </bold>From March 17, 2020 to May 16, 2020, 2199 patients were accrued with 58% of patients greater than 2&#x2010;weeks follow&#x2010;up. Median age was 67 (18&#x2010;89) and 50.5% were men. While all COVID&#x2010;19 patients had current or past history of cancer (1741 solid; 458 hematologic), only 55% received anti&#x2010;cancer therapy in preceding 3&#xA0;months. Initial COVID&#x2010;19 severity was mild (outpatient), moderate (hospitalization), and severe (ICU) in 42%, 43%, and 12% of patients, respectively, with 3% unknown. VTE complications occurred in 3.5% of all patients. Among these, 1.3% (12/931), 4.2% (39/936), and 10.0% (26/260) occurred in outpatient, non&#x2010;ICU hospitalization, and intensive care setting, respectively. Furthermore, VTE was more frequent in patients receiving any recent anti&#x2010;cancer therapy than those without (5.2% vs. 2.2%) and in patients with progressive disease compared to those in remission/NED (7.1% vs 2.0%). The results reported here are likely an underestimate of true incidence given limited follow&#x2010;up to date. Data collection is currently ongoing; a detailed assessment of pre&#x2010;specified cancer subgroups with increased susceptibility for VTE will be presented. Continued follow&#x2010;up assessment is required for formal VTE risk prediction.</p>
+        <p>
+<bold>Conclusions: </bold>Our study is the largest cancer cohort to date describing the incidence of VTE in COVID&#x2010;19 patients. Results will inform global thrombosis care in this population.</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0025">
+      <title>PB/CO08</title>
+      <sec id="rth212413-sec-0026">
+        <title>Neutrophil Extracellular Traps Infiltrate Lung Vascular, Interstitial and Airway Compartments in Severe Covid&#x2010;19</title>
+        <p>
+<bold><underline underline-style="single">C. Oury</underline><sup>1</sup>, C. Radermecker<sup>2</sup>, N. Detrembleur<sup>3</sup>, J. Guiot<sup>4</sup>, M. Henket<sup>4</sup>, C. D\'Emal<sup>1</sup>, C. Vanwinge<sup>5</sup>, D. Cataldo<sup>5</sup>, P. Delvenne<sup>3</sup>, T. Marichal<sup>2</sup></bold>
+</p>
+        <p>
+<sup>1</sup>University of Li&#xE8;ge, Laboratory of Cardiology, GIGA Institute, Li&#xE8;ge, Belgium<sup>2</sup>University of Li&#xE8;ge, Laboratory of Immunophysiology, GIGA Institute, Li&#xE8;ge, Belgium<sup>3</sup>CHU University Hospital, Pathology, Li&#xE8;ge, Belgium<sup>4</sup>CHU University Hospital, Pneumology, Li&#xE8;ge, Belgium<sup>5</sup>University of Li&#xE8;ge, Laboratory of Tumor and Development Biology, GIGA Institute, Li&#xE8;ge, Belgium</p>
+        <p>
+<bold>Background: </bold>While hyperinflammatory tissue&#x2010;damaging, thromboembolic or immunothrombotic responses triggered by SARS&#x2010;Cov&#x2010;2 are thought to be major causes of respiratory failure and death in Covid&#x2010;19, how they relate to lung immunopathological changes remains unclear. Neutrophil extracellular traps (NETs) can be formed in the lungs upon infection with respiratory viruses. They have the ability to promote lung damage, thrombosis and fibrosis, three cardinal features encountered in severe Covid&#x2010;19. However, whether NETs infiltrate lungs from Covid&#x2010;19 patients is unknown.</p>
+        <p>
+<bold>Aims: </bold>To assess whether NET structures could be identified in post&#x2010;mortem lung biopsies from Covid&#x2010;19 patients, and whether they located in particular lesions and micro&#x2010;anatomical lung compartments.</p>
+        <p>
+<bold>Methods: </bold>We performed immunofluorescence staining of myeloperoxidase (MPO), citrullinated histone H3 (Cit&#x2010;H3) and nuclear acid (DAPI) on sections of paraffin&#x2010;embedded lung biopsies from four Covid&#x2010;19 patients who succumbed Covid&#x2010;19 and from four patients who died from a Covid&#x2010;19&#x2010;unrelated cause.</p>
+        <p>
+<bold>Results: </bold>The four patients represented prototypical severe and fatal cases of Covid&#x2010;19, characterized by pneumonia and fatal respiratory distress associated with signs of systemic inflammation, neutrophilia and coagulopathy. NETs were uniquely detected in the lungs of each Covid&#x2010;19 patients (Figure 1). In lungs from non&#x2010;Covid&#x2010;19 patients, we only sporadically detected MPO&#x2010;positive &#x2018;primed&#x2019; neutrophils, whose nuclei stained positive for Cit&#x2010;H3. Detailed histopathological analysis revealed widely distributed NET&#x2010;infiltrating areas encompassing several lung compartments, including arteriolar microthrombi, neutrophil&#x2010;rich inflammatory areas of lung interstitium as well as alveoli or bronchioles where they often co&#x2010;localized with occluding fibrin&#x2010;rich deposits.</p>
+        <p>
+<bold>Conclusions: </bold>Our data support the hypothesis that NETs may represent drivers of Covid&#x2010;19&#x2010;associated severe pulmonary complications, and suggest that NET&#x2010;targeting approaches could represent potential avenues for the treatment of uncontrolled tissue&#x2010;damaging, thrombotic or fibrotic responses to SARS&#x2010;Cov&#x2010;2.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0011" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> NETs are uniquely detected in lungs of Covid&#x2010;19 patients</p></caption><graphic xlink:href="RTH2-4-1-g011.jpg" position="anchor" id="nlm-graphic-21" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0027">
+      <title>PB/CO10</title>
+      <sec id="rth212413-sec-0028">
+        <title>Prevalence of Pulmonary Embolism in Patients at the Time of Hospital Admission for COVID&#x2010;19</title>
+        <p>
+<bold><underline underline-style="single">M. Jevnikar</underline><sup>1,2,3</sup>, O. Sanchez<sup>4,5</sup>, M. Andronikov<sup>1,6</sup>, M. Raphael<sup>1,7</sup>, R. Chocron<sup>5,8</sup>, M.&#x2010;F. Bellin<sup>1,9</sup>, D. Montani<sup>1,2,3</sup>, L. Fournier<sup>5,10</sup>, M. Humbert<sup>1,2,3</sup>, F. Parent<sup>1,2,3</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Universit&#xE9; Paris&#x2010;Saclay, Faculty of Medicine, Le Kremlin&#x2010;Bic&#xEA;tre, France<sup>2</sup>INSERM UMR_S 999, &#xAB;Pulmonary Hypertension: Pathophysiology and Novel Therapies&#xBB;, H&#xF4;pital Marie Lannelongue, Le Plessis&#x2010;Robinson, France<sup>3</sup>Assistance Publique &#x2010; H&#xF4;pitaux de Paris (AP&#x2010;HP), Department of Respiratory and Intensive Care Medicine, Pulmonary Hypertension National Referral Center, H&#xF4;pital Bic&#xEA;tre, Le Kremlin&#x2010;Bic&#xEA;tre, France<sup>4</sup>Assistance Publique &#x2010; H&#xF4;pitaux de Paris (AP&#x2010;HP), Department of Respiratory and Intensive Care Medicine, H&#xF4;pital Europ&#xE9;en Georges Pompidou, Paris, France<sup>5</sup>Universit&#xE9; Paris Descartes,Faculty of Medicine, Paris, France<sup>6</sup>Assistance Publique &#x2010; H&#xF4;pitaux de Paris (AP&#x2010;HP), Emergency department, H&#xF4;pital Antoine B&#xE9;cl&#xE8;re, Clamart, France<sup>7</sup>Assistance Publique &#x2010; H&#xF4;pitaux de Paris (AP&#x2010;HP), Emergency department, H&#xF4;pital Bic&#xEA;tre, Le Kremlin&#x2010;Bic&#xEA;tre, France<sup>8</sup>Assistance Publique &#x2010; H&#xF4;pitaux de Paris (AP&#x2010;HP), Emergency department, H&#xF4;pital Europ&#xE9;en Georges Pompidou, Paris, France<sup>9</sup>Assistance Publique &#x2010; H&#xF4;pitaux de Paris (AP&#x2010;HP), Department of Radiology, H&#xF4;pital Bic&#xEA;tre, Le Kremlin&#x2010;Bic&#xEA;tre, France<sup>10</sup>Assistance Publique &#x2010; H&#xF4;pitaux de Paris (AP&#x2010;HP), Department of radiology, H&#xF4;pital Europ&#xE9;en Georges Pompidou, Paris, France</p>
+        <p>
+<bold>Background: </bold>Infection with SARS&#x2010;CoV&#x2010;2 is responsible for systemic coagulation activation and thromboembolic events are reported as common during hospitalisation. However, the prevalence of pulmonary embolism (PE) on hospital admission for Coronavirus disease 2019 (COVID&#x2010;19) is unknown. PE suspicion is challenging on admission, especially if patients have high levels of D&#x2010;Dimers.</p>
+        <p>
+<bold>Aims: </bold>The main objective of the study was to establish the PE prevalence on hospital admission for patients with COVID&#x2010;19.</p>
+        <p>
+<bold>Methods: </bold>This prospective multicentre study analysed consecutive adult patients on hospital admission for proven COVID&#x2010;19 between April 15th and May 23rd 2020. If not contraindicated, patients were systematically screened with a computed tomography pulmonary angiography (CTPA). Clinical characteristics, biological samples, and YEARS items for PE suspicion were collected. Data are presented as median [min&#x2010;max] for quantitative variables and as the number (percentage) for categorical variables.</p>
+        <p>
+<bold>Results: </bold>135 consecutive patients were admitted at hospital for confirmed COVID&#x2010;19, of whom 107 (79.2%) underwent CTPA. Among them, PE was diagnosed in 16 patients (prevalence 15%, CI95% 8.8 &#x2010; 23.1) (Table 1). Patients with PE, compared to patients without PE, were significantly older, had significantly higher D&#x2010;dimer concentrations and had more frequently risk factors for venous thromboembolism. Median time from symptoms to hospital admission was not different between the 2 groups (Table 1). Only 18/107 patients (16.8%) had&#xA0;&#x2265;&#xA0;1 YEARS items. Application of the YEARS diagnostic algorithm would have avoided 37 (34%; CI95% 25&#x2010;44%) CTPA but at a cost of one patient with PE (3.2%). Data of the prospective follow&#x2010;up of patients will be available at the time of presentation.</p>
+        <p>
+<bold>Conclusions: </bold>Despite a low level of clinical suspicion of PE, this prospective study demonstrated a high prevalence of PE at the time of hospital admission for COVID&#x2010;19. Therefore, a systematic CTPA, instead of non&#x2010;contrast chest CT, may be useful in this population.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-6" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Baseline characteristics. *= median [min&#x2010;max]; VTE: venous thromboembolism. PE= pulmonary embolism</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">All patients (n&#xA0;=&#xA0;107)</th><th align="left" valign="top" rowspan="1" colspan="1">Patients with PE (n&#xA0;=&#xA0;16)</th><th align="left" valign="top" rowspan="1" colspan="1">Patients without PE (n&#xA0;=&#xA0;91)</th><th align="left" valign="top" rowspan="1" colspan="1">P&#x2010; value</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Age (years) *</td><td align="left" rowspan="1" colspan="1">63 [18&#x2010;99]</td><td align="left" rowspan="1" colspan="1">81 [47&#x2010;96]</td><td align="left" rowspan="1" colspan="1">62 [18&#x2010;99]</td><td align="char" char="." rowspan="1" colspan="1">0.018</td></tr><tr><td align="left" rowspan="1" colspan="1">Time from COVID symptoms and hospital admission (days)*</td><td align="left" rowspan="1" colspan="1">8 [1&#x2010;43]</td><td align="left" rowspan="1" colspan="1">9 [2&#x2010;27]</td><td align="left" rowspan="1" colspan="1">8 [1&#x2010;43]</td><td align="char" char="." rowspan="1" colspan="1">0.7</td></tr><tr><td align="left" rowspan="1" colspan="1">D&#x2010;Dimers concentration (ng/ml)*</td><td align="left" rowspan="1" colspan="1">1190 [270&#x2010;6160]</td><td align="left" rowspan="1" colspan="1">3219 [530&#x2010;4000]</td><td align="left" rowspan="1" colspan="1">1047 [270&#x2010;6160]</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.0001</td></tr><tr><td align="left" rowspan="1" colspan="1">YEARS items&#xA0;&#x2265;&#xA0;1 n (%)</td><td align="left" rowspan="1" colspan="1">18 (17)</td><td align="left" rowspan="1" colspan="1">5 (31)</td><td align="left" rowspan="1" colspan="1">13 (14)</td><td align="char" char="." rowspan="1" colspan="1">0.2</td></tr><tr><td align="left" rowspan="1" colspan="1">Patients with risk factors for VTE n (%)</td><td align="left" rowspan="1" colspan="1">30 (28)</td><td align="left" rowspan="1" colspan="1">8 (50)</td><td align="left" rowspan="1" colspan="1">22 (24)</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.05</td></tr><tr><td align="left" rowspan="1" colspan="1">Oxygen needed on admission n (%)</td><td align="left" rowspan="1" colspan="1">34 (32)</td><td align="left" rowspan="1" colspan="1">11 (69)</td><td align="left" rowspan="1" colspan="1">23 (25)</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001</td></tr></tbody></table></table-wrap>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0029">
+      <title>PB/CO11</title>
+      <sec id="rth212413-sec-0030">
+        <title>Biomarkers of COVID&#x2010;19 Coagulopathy and D&#x2010;dimer in a Biracial Cohort Study</title>
+        <p>
+<bold><underline underline-style="single">D. Kamin Mukaz</underline><sup>1</sup>, M. Gergi<sup>1</sup>, I. Koh<sup>1</sup>, N.A. Zakai<sup>1</sup>, S.E. Judd<sup>2</sup>, M. Sholzberg<sup>3</sup>, L. Baumann Kreuziger<sup>4</sup>, K. Freeman<sup>1</sup>, C. Colovos<sup>1</sup>, M. Cushman<sup>1</sup></bold>
+</p>
+        <p>
+<sup>1</sup>University of Vermont, Burlington, United States<sup>2</sup>University of Alabama at Birmingham, Birmingham, United States<sup>3</sup>St. Michael\'s Hospital, Toronto, Canada<sup>4</sup>Versiti Blood Research Institute, Milwaukee, United States</p>
+        <p>
+<bold>Background: </bold>COVID&#x2010;19 coagulopathy is characterized by abnormal levels of thrombo&#x2010;inflammatory biomarkers, especially elevated D&#x2010;dimer, which predicts need for critical care and death. In the general healthy population, these biomarkers are higher in Black than White individuals. Black individuals also have higher rates of COVID&#x2010;19 infection and death</p>
+        <p>
+<bold>Aims: </bold>We hypothesized that the racial disparity in COVID&#x2010;19 severity might relate partly to differences in thrombo&#x2010;inflammatory response to infection. To address this, we studied correlations of thrombo&#x2010;inflammatory biomarkers with D&#x2010;dimer in healthy participants of the biracial REasons for Geographic and Racial Differences in Stroke (REGARDS) cohort. Black&#x2010;White differences in associations were studied.</p>
+        <p>
+<bold>Methods: </bold>We leveraged available data on 1068 participants with biomarkers measured. Linear regression was used to study the association of each biomarker with D&#x2010;dimer, and interaction terms were used to identify racial differences in these associations. The University of Alabama at Birmingham IRB approved the study. NIH grant U01&#x2010;NS041588 funds REGARDS.</p>
+        <p>
+<bold>Results: </bold>Table 1 shows that adverse levels of the majority of biomarkers were associated with higher D&#x2010;dimer. Table 2 shows associations that differed significantly by race; the association between factor VIII with D&#x2010;dimer was twice as large in Black compared to White participants (29% higher D&#x2010;dimer per SD higher factor VIII in Blacks compared to 14% higher D&#x2010;dimer per SD in Whites). In Black adults, IL&#x2010;10 and sCD14 were associated with D&#x2010;dimer, but this was not seen in White adults. In contrast, albumin negatively correlated with D&#x2010;dimer in Whites only.</p>
+        <p>
+<bold>Conclusions: </bold>In this study, some biomarkers of COVID&#x2010;19 coagulopathy were more strongly associated with D&#x2010;dimer in Black compared with White individuals. This suggests a hypothesis that Black persons may have a more thrombo&#x2010;inflammatory response to infection due to their different basal state of these biomarkers. Future research should examine the role of thrombo&#x2010;inflammation in racial disparities in COVID&#x2010;19.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0012" orientation="portrait"><caption><p>
+<bold>TABLE 1</bold> Percent difference in D&#x2010;dimer level per standard deviation increment of each biomarker*</p></caption><graphic xlink:href="RTH2-4-1-g013.jpg" position="anchor" id="nlm-graphic-23" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0013" orientation="portrait"><caption><p>
+<bold>TABLE 2</bold> Differences in associations of biomarkers with D&#x2010;dimer by race#</p></caption><graphic xlink:href="RTH2-4-1-g012.jpg" position="anchor" id="nlm-graphic-25" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0031">
+      <title>PB/CO12</title>
+      <sec id="rth212413-sec-0032">
+        <title>Platelet Activation is Associated with Thrombosis or Death in Patients with COVID&#x2010;19</title>
+        <p>
+<bold><underline underline-style="single">T. Barrett</underline>, A. Lee, Y. Xia, L. Hsulin, M. Black, P. Cotzia, J. Hochman, J. Berger</bold>
+</p>
+        <p>NYU School of Medicine, New York, United States</p>
+        <p>
+<bold>Background: </bold>COVID&#x2010;19 is a global pandemic with patients at increased risk for thrombosis. Platelets are central protagonists of thrombosis, and virus&#x2010;platelet interactions are linked to viral pathogenesis and increased thrombotic risk.</p>
+        <p>
+<bold>Aims: </bold>To investigate the relationship between in vivo platelet activity markers, and thrombosis or death in hospitalized patients with COVID&#x2010;19.</p>
+        <p>
+<bold>Methods: </bold>Plasma samples were collected from 100 hospitalized patients on the day of PCR&#x2010;confirmed COVID&#x2010;19 diagnosis. Thromboxane B2 (TxB2), P&#x2010;selectin (P&#x2010;selectin), and soluble CD40 ligand (sCD40L) were measured in plasma, and mean platelet volume (MPV) assessed. Subjects were followed until discharge or death, and thrombotic events recorded.</p>
+        <p>
+<bold>Results: </bold>Among 100 patients, the median age was 65&#xA0;years (IQR: 55, 75), 39% were female, and 32 died or experienced a thrombotic event. Baseline platelet activation markers were higher in patients who developed an adverse clinical event. After adjustment for age, sex, race/ethnicity, platelet count, antiplatelet therapy, and chronic obstructive pulmonary disease, TxB2 (p&#xA0;=&#xA0;0.006), P&#x2010;selectin (p&#xA0;=&#xA0;0.005), sCD40L (p&#xA0;=&#xA0;0.016), and MPV (p&#xA0;=&#xA0;0.012) were independently associated with thrombosis or death (Table 1). Correlation analysis between biomarkers identified that TxB2 is correlated with P&#x2010;selectin (&#x3C1;=0.42, p&#xA0;&lt;&#xA0;0.0001) and platelet count (&#x3C1;=0.35, p&#xA0;=&#xA0;0.0004), MPV is correlated with platelet count (&#x3C1;=&#x2010;0.31, p&#xA0;=&#xA0;0.002), and P&#x2010;selectin is correlated with sCD40L (&#x3C1;=0.67, p&#xA0;&lt;&#xA0;0.0001).</p>
+        <p>
+<table-wrap id="nlm-table-wrap-7" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Multivariable regression models predicting thrombosis or all&#x2010;cause mortality</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">OR [95% CI]</th><th align="left" valign="top" rowspan="1" colspan="1">P value</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">MPV</td><td align="left" rowspan="1" colspan="1">2.17 [1.22, 4.15]</td><td align="char" char="." rowspan="1" colspan="1">0.012</td></tr><tr><td align="left" rowspan="1" colspan="1">sCD40L</td><td align="left" rowspan="1" colspan="1">1.94 [1.15, 3.43]</td><td align="char" char="." rowspan="1" colspan="1">0.016</td></tr><tr><td align="left" rowspan="1" colspan="1">P&#x2010;selectin</td><td align="left" rowspan="1" colspan="1">2.36 [1.36, 4.56]</td><td align="char" char="." rowspan="1" colspan="1">0.005</td></tr><tr><td align="left" rowspan="1" colspan="1">TxB2</td><td align="left" rowspan="1" colspan="1">2.59 [1.37, 5.43]</td><td align="char" char="." rowspan="1" colspan="1">0.006</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<bold>Conclusions: </bold>Biomarkers of platelet activation are significantly associated with death or thrombosis in patients hospitalized with COVID&#x2010;19. Our findings suggest multiple platelet activation mechanisms may contribute to adverse events. Further investigation into the mechanistic role of platelets in COVID&#x2010;19 pathogenesis and the potential role of antiplatelet therapy is warranted.</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0033">
+      <title>PB/CO13</title>
+      <sec id="rth212413-sec-0034">
+        <title>Macrovascular Thrombotic Events in a Mayo Clinic Enterprise&#x2010;wide Sample of Hospitalized COVID&#x2010;19 Positive Compared to Negative Patients</title>
+        <p>
+<bold><underline underline-style="single">D. Houghton</underline><sup>1</sup>, R. Chaudhary<sup>2</sup>, L. Padrnos<sup>3</sup>, E. Wysokinska<sup>4</sup>, R. Pruthi<sup>5</sup>, S. Misra<sup>5</sup>, W. Wysokinski<sup>6</sup>, R. McBane<sup>6</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Mayo Clinic, Cardiovascular Diseases, Rochester, United States<sup>2</sup>Mayo Clinic Rochester, Internal Medicine, Rochester, United States<sup>3</sup>Mayo Clinic Arizona, Scottsdale, United States<sup>4</sup>Mayo Clinic Florida, Jacksonville, United States<sup>5</sup>Mayo Clinic Rochester, Rochester, United States<sup>6</sup>Mayo Clinic Rochester, Cardiovascular Diseases, Rochester, United States</p>
+        <p>
+<bold>Background: </bold>Reports from areas significantly affected by the COVID&#x2010;19 pandemic have observed high rates of thromboembolic events ranging from (2&#x2010;69%) but studies have lacked an adequate control population, making interpretations of the results difficult.</p>
+        <p>
+<bold>Aims: </bold>Determine thrombotic outcomes (venous and arterial) in hospitalized patients with COVID&#x2010;19 testing.</p>
+        <p>
+<bold>Methods: </bold>Adult hospitalized patients with COVID&#x2010;19 testing by PCR assay were identified through electronic health records across the Mayo Clinic Enterprise (academic and regional hospitals representing different regions of the United States) through 5/8/2020. Thrombotic outcomes (venous and arterial) were identified from the hospital problem list.</p>
+        <p>
+<bold>Results: </bold>3790 patients with admission and COVID&#x2010;19 testing were identified across 19 different hospitals, among which 102 tested positive. Median age was lower in the COVID positive patients (62 vs 67, p&#xA0;=&#xA0;0.02; Table 1). Median length of hospitalization was longer in COVID positive patients (9 vs 4&#xA0;days, p&#xA0;&lt;&#xA0;0.001) and more required ICU care (57.1% vs 26.7%, p&#xA0;&lt;&#xA0;0.001). Comorbidities such as atrial fibrillation/flutter, heart failure, chronic kidney disease, and malignancy were all observed less frequently with COVID positive admissions (Table 1). Any VTE was identified in 2.9% of COVID positive and 4.6% of COVID negative patients (p&#xA0;=&#xA0;0.41; Table 2). The frequency of venous and arterial events was not significantly different between the groups. The unadjusted OR for COVID positive patients for any VTE was 0.63 (95% CI 0.19&#x2010;2.02). In a multivariate logistic regression model evaluating death within 30&#xA0;days of hospital discharge, neither COVID positivity (aOR 1.02, 95% CI 0.49&#x2010;2.11) nor any thromboembolism (aOR 0.90, 95% CI 0.60&#x2010;1.32) was associated with death.</p>
+        <p>
+<bold>Conclusions: </bold>Early experience with COVID&#x2010;19 patients across multiple academic and regional hospitals representing different regions of the United States demonstrates a lower than previously reported incidence of thrombotic events in a high&#x2010;risk cohort, which is not significantly higher than COVID negative hospitalized patients.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-8" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Characteristics and comorbidities in COVID positive and negative hospitalized patients</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">COVID positive N&#xA0;=&#xA0;102</th><th align="left" valign="top" rowspan="1" colspan="1">COVID negative N&#xA0;=&#xA0;3688</th><th align="left" valign="top" rowspan="1" colspan="1">P value</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Age, Median (IQR)</td><td align="left" rowspan="1" colspan="1">62 (52&#x2010;74)</td><td align="left" rowspan="1" colspan="1">67 (54&#x2010;78)</td><td align="char" char="." rowspan="1" colspan="1">0.03*</td></tr><tr><td align="left" rowspan="1" colspan="1">BMI, median (IQR)</td><td align="left" rowspan="1" colspan="1">28.9 (24.7&#x2010;35.65)</td><td align="left" rowspan="1" colspan="1">27.2 (23.4&#x2010;32.5)</td><td align="char" char="." rowspan="1" colspan="1">0.005</td></tr><tr><td align="left" rowspan="1" colspan="1">LOS (days), median (IQR)</td><td align="left" rowspan="1" colspan="1">8.5 (4.0&#x2010;14.25)</td><td align="left" rowspan="1" colspan="1">4 (3&#x2010;7)</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001*</td></tr><tr><td align="left" rowspan="1" colspan="1">ICU care, % (n)</td><td align="left" rowspan="1" colspan="1">57% (58)</td><td align="left" rowspan="1" colspan="1">27% (987)</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001</td></tr><tr><td align="left" rowspan="1" colspan="1">Hospital Day of COVID Test, median (IQR)</td><td align="left" rowspan="1" colspan="1">1 (0&#x2010;4)</td><td align="left" rowspan="1" colspan="1">0 (0&#x2010;1)</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001*</td></tr><tr><td align="left" rowspan="1" colspan="1">History of VTE, % (n)</td><td align="left" rowspan="1" colspan="1">2.9% (3)</td><td align="left" rowspan="1" colspan="1">3.4% (127)</td><td align="char" char="." rowspan="1" colspan="1">0.78</td></tr><tr><td align="left" rowspan="1" colspan="1">Atrial fibrillation/flutter, % (n)</td><td align="left" rowspan="1" colspan="1">13% (13)</td><td align="left" rowspan="1" colspan="1">23% (848)</td><td align="char" char="." rowspan="1" colspan="1">0.02</td></tr><tr><td align="left" rowspan="1" colspan="1">Heart failure, % (n)</td><td align="left" rowspan="1" colspan="1">14% (14)</td><td align="left" rowspan="1" colspan="1">26% (968)</td><td align="char" char="." rowspan="1" colspan="1">0.004</td></tr><tr><td align="left" rowspan="1" colspan="1">Malignancy, % (n)</td><td align="left" rowspan="1" colspan="1">13% (13)</td><td align="left" rowspan="1" colspan="1">27% (983)</td><td align="char" char="." rowspan="1" colspan="1">0.002</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<table-wrap id="nlm-table-wrap-9" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 2</bold> Thromboembolic, bleeding, and death in COVID positive versus negative hospitalized patients</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">COVID positive N&#xA0;=&#xA0;102</th><th align="left" valign="top" rowspan="1" colspan="1">COVID negative N&#xA0;=&#xA0;3688</th><th align="left" valign="top" rowspan="1" colspan="1">P value</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Any VTE event, % (n)</td><td align="left" rowspan="1" colspan="1">2.9% (3)</td><td align="left" rowspan="1" colspan="1">4.6% (168)</td><td align="char" char="." rowspan="1" colspan="1">0.43</td></tr><tr><td align="left" rowspan="1" colspan="1">PE, % (n)</td><td align="left" rowspan="1" colspan="1">1.0% (1)</td><td align="left" rowspan="1" colspan="1">2.5% (91)</td><td align="char" char="." rowspan="1" colspan="1">0.34</td></tr><tr><td align="left" rowspan="1" colspan="1">LE&#x2010;DVT, % (n)</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">1.7% (62)</td><td align="char" char="." rowspan="1" colspan="1">0.19</td></tr><tr><td align="left" rowspan="1" colspan="1">UE&#x2010;DVT, % (n)</td><td align="left" rowspan="1" colspan="1">2.9% (3)</td><td align="left" rowspan="1" colspan="1">0.6% (22)</td><td align="char" char="." rowspan="1" colspan="1">0.004</td></tr><tr><td align="left" rowspan="1" colspan="1">Atypical DVT, % (n)</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">0.5% (19)</td><td align="char" char="." rowspan="1" colspan="1">0.47</td></tr><tr><td align="left" rowspan="1" colspan="1">Any VTE (ICU admissions), % (n)</td><td align="left" rowspan="1" colspan="1">3.5% (2)</td><td align="left" rowspan="1" colspan="1">7.2% (71)</td><td align="char" char="." rowspan="1" colspan="1">0.28</td></tr><tr><td align="left" rowspan="1" colspan="1">Any thromboembolism, % (n)</td><td align="left" rowspan="1" colspan="1">5.9% (6)</td><td align="left" rowspan="1" colspan="1">10% (375)</td><td align="char" char="." rowspan="1" colspan="1">0.16</td></tr><tr><td align="left" rowspan="1" colspan="1">Any bleeding, % (n)</td><td align="left" rowspan="1" colspan="1">2.9% (3)</td><td align="left" rowspan="1" colspan="1">7.0% (259)</td><td align="char" char="." rowspan="1" colspan="1">0.11</td></tr><tr><td align="left" rowspan="1" colspan="1">Death (30&#xA0;day), % (n)</td><td align="left" rowspan="1" colspan="1">8.9% (9)</td><td align="left" rowspan="1" colspan="1">7.2% (267)</td><td align="char" char="." rowspan="1" colspan="1">0.54</td></tr></tbody></table></table-wrap>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0035">
+      <title>PB/CO14</title>
+      <sec id="rth212413-sec-0036">
+        <title>The Acquired Coagulopathy of COVID&#x2010;19</title>
+        <p>
+<bold><underline underline-style="single">F. Peyvandi</underline><sup>1,2</sup>, A. Artoni<sup>2</sup>, C. Novembrino<sup>2</sup>, S. Aliberti<sup>1,3</sup>, M. Panigada<sup>4</sup>, M. Boscarino<sup>2</sup>, R. Gualtierotti<sup>1,2</sup>, R. Palla<sup>1</sup>, F. Rossi<sup>2</sup>, I. Martinelli<sup>2</sup>, G. Grasselli<sup>1,4</sup>, F. Blasi<sup>1,3</sup>, A. Tripodi<sup>2</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Universit&#xE0; degli Studi di Milano, Department of Pathophysiology and Transplantation, Milan, Italy<sup>2</sup>Fondazione IRCCS Ca&#x2019; Granda Ospedale Maggiore Policlinico, Angelo Bianchi Bonomi Hemophilia and Thrombosis Center, Milan, Italy<sup>3</sup>Fondazione IRCCS Ca&#x2019; Granda Ospedale Maggiore Policlinico, UOC Pneumologia, Milan, Italy<sup>4</sup>Fondazione IRCCS Ca&#x2019; Granda Ospedale Maggiore Policlinico, UOC Anestesia e Terapia Intensiva Adulti, Milan, Italy</p>
+        <p>
+<bold>Background: </bold>An acquired coagulopathy is common in patients with COVID&#x2010;19 and multiple mechanisms have been described. Early cases in China suggested the presence of disseminated intravascular coagulation (DIC) but later studies in Europe and the USA did not confirm this event. The discrepancy must be clarified, because it might influence therapeutic choices and related outcomes.</p>
+        <p>
+<bold>Aims: </bold>This study aims at understanding hemostasis alterations in 62 symptomatic COVID&#x2010;19 patients admitted to a large hub hospital in Milan.</p>
+        <p>
+<bold>Methods: </bold>Patients were from 3 groups characterized by different degrees of severity and thus of care intensity: 1) lowest level, requiring only high&#x2010;flow oxygen by nasal cannula, 2) intermediate levels, requiring continuous positive airway pressure, and 3) high intensity levels, requiring mechanical ventilation.</p>
+        <p>All hemostasis measurements (PT, APTT, FVIII, FII, VWF:Ag, VWF:RCo, fibrinogen, D&#x2010;dimer, free protein S antigen, antithrombin and protein C activity) were performed in capped vacuum tubes on the ACLTop (Werfen). Platelet counts and other biochemical markers (C&#x2010;reactive protein and ferritin, ALT, AST, creatinine) were obtained from the patients&#x2019; clinical records.</p>
+        <p>
+<bold>Results: </bold>Parameters employed to diagnose DIC with consumption coagulopathy, such as low plasma fibrinogen and platelet counts, were normal or even increased, and plasma levels of the naturally occurring anticoagulants were normal or high. Median (min&#x2010;max) factor VIII increased progressively from 208 U/dL (121&#x2010;347) at low to 223 (109&#x2010;423) at intermediate and 302 (178&#x2010;374) at high care intensity. An even stronger increase was observed for von Willebrand factor (VWF) [262 U/dL (90&#x2010;577) at low, 371 (132&#x2010;769) at intermediate and 466 (231&#x2010;746) at intermediate and high care intensity], with a lower ratio of FVIII/VWF antigen. Figures 1 and 2</p>
+        <p>
+<bold>Conclusions: </bold>These findings identify in COVID&#x2010;19 an acquired hypercoagulable state characterized by a severe procoagulant imbalance and endothelial perturbation associated with the clinical severity of the disease as epitomized by the different levels of care intensity.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0014" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold>
+</p></caption><graphic xlink:href="RTH2-4-1-g014.jpg" position="anchor" id="nlm-graphic-27" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0015" orientation="portrait"><caption><p>
+<bold>FIGURE 2</bold>
+</p></caption><graphic xlink:href="RTH2-4-1-g015.jpg" position="anchor" id="nlm-graphic-29" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0037">
+      <title>PB/CO15</title>
+      <sec id="rth212413-sec-0038">
+        <title>Increased Doses of Low&#x2010;molecular&#x2010;weight Heparin in Hospitalized Patients with Covid&#x2010;19</title>
+        <p>
+<bold><underline underline-style="single">I. Martinelli</underline><sup>1</sup>, A. Ciavarella<sup>1</sup>, M. Abbattista<sup>1</sup>, S. Aliberti<sup>2,3</sup>, V. De Zan<sup>3</sup>, C. Folli<sup>4</sup>, M. Panigada<sup>5</sup>, A. Gori<sup>3,6</sup>, A. Artoni<sup>1</sup>, A.M. Ierardi<sup>7</sup>, G. Carrafiello<sup>7</sup>, V. Monzani<sup>4</sup>, G. Grasselli<sup>3,5</sup>, F. Blasi<sup>2,3</sup>, F. Peyvandi<sup>1,3</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Fondazione IRCCS Ca&#x2019; Granda &#x2010; Ospedale Policlinico, A. Bianchi Bonomi Hemophilia and Thrombosis Center, Milan, Italy<sup>2</sup>Fondazione IRCCS Ca&#x2019; Granda &#x2010; Ospedale Maggiore Policlinico, Respiratory Unit and Cystic Fibrosis Adult Center, Milan, Italy<sup>3</sup>University of Milan, Department of Pathophysiology and Transplantation, Milan, Italy<sup>4</sup>Fondazione IRCCS Ca&#x2019; Granda &#x2010; Ospedale Maggiore Policlinico, Department of Medicine &#x2010; Acute Medical Unit, Milan, Italy<sup>5</sup>Fondazione IRCCS Ca&#x2019; Granda &#x2010; Ospedale Maggiore Policlinico, Department of Anesthesia, Intensive Care and Emergency, Milan, Italy<sup>6</sup>Fondazione IRCCS Ca&#x2019; Granda &#x2010; Ospedale Maggiore Policlinico, Department of Internal Medicine, Infectious Diseases Unit, Milan, Italy<sup>7</sup>Fondazione IRCCS Ca&#x2019; Granda &#x2010; Ospedale Maggiore Policlinico, Radiology Unit, Milan, Italy</p>
+        <p>
+<bold>Background: </bold>Standard prophylactic doses of low&#x2010;molecular&#x2010;weight heparin may be insufficient to prevent venous thromboembolism in patients with Covid&#x2010;19.</p>
+        <p>
+<bold>Aims: </bold>To investigate whether high doses of enoxaparin are associated with better clinical outcomes than standard prophylactic doses among hospitalized patients with Covid&#x2010;19.</p>
+        <p>
+<bold>Methods: </bold>We conducted an observational cohort study in adult patients consecutively admitted to our hospital from March 9 to April 7, 2020 for the respiratory illness Covid&#x2010;19. The high rate of venous thromboembolism prompted us to increase the prophylactic doses of enoxaparin from 40&#xA0;mg daily to 1&#xA0;mg/kg twice daily in patients admitted to intensive care units (ICU), 0.7&#xA0;mg/kg twice daily in high&#x2010;intensity of care wards and 1&#xA0;mg/kg daily in low&#x2010;intensity of care wards. Patients on high enoxaparin doses were compared to those who received prophylaxis with standard dosage. The primary endpoint was mortality and clinical deterioration. Other endpoints were the occurrence of venous thromboembolism and bleeding.</p>
+        <p>
+<bold>Results: </bold>Of 278 patients with Covid&#x2010;19, 127 received high enoxaparin doses and 151 standard doses prophylaxis. At 21&#xA0;days, the incidence rate of death and clinical deterioration were lower in patients on high doses than in those on the standard dosage prophylaxis (hazard ratio 0.38, 95% confidence interval 0.23&#x2010;0.62) (Figure 1), and the incidence of venous thromboembolism was also lower (hazard ratio 0.30, 95% confidence interval 0.14&#x2010;0.65) (Figure 2). Major bleeding occurred in 4 of 127 patients (3.1%) on the high enoxaparin doses.</p>
+        <p>
+<bold>Conclusions: </bold>In patients with Covid&#x2010;19, high enoxaparin dosages resulted in a 60% reduction of mortality and clinical deterioration and a 70% reduction of venous thromboembolism compared to standard dosage prophylaxis. However, 3% of patients on high enoxaparin dosages had non&#x2010;fatal major bleeding.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0016" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold>
+</p></caption><graphic xlink:href="RTH2-4-1-g016.jpg" position="anchor" id="nlm-graphic-31" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0017" orientation="portrait"><caption><p>
+<bold>FIGURE 2</bold>
+</p></caption><graphic xlink:href="RTH2-4-1-g017.jpg" position="anchor" id="nlm-graphic-33" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0039">
+      <title>PB/CO16</title>
+      <sec id="rth212413-sec-0040">
+        <title>The Effect of Anticoagulation on Mortality in COVID&#x2010;19 Patients: The Drug, the Dose, and the D&#x2010;Dimer</title>
+        <p>
+<bold><underline underline-style="single">H. Billett</underline><sup>1</sup>, M. Reyes Gil<sup>2</sup>, J. Szymanski<sup>2</sup>, K. Ikemura<sup>2</sup>, L. Stahl<sup>3</sup>, Y. Lo<sup>4</sup>, S. Rahman<sup>1</sup>, J. Gonzalez Lugo<sup>1</sup>, M. Kushnir<sup>1</sup>, M. Barouqa<sup>2</sup>, L. Golestaneh<sup>5</sup>, E. Bellin<sup>4</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Montefiore Medical Center, Division of Hematology, Bronx, United States<sup>2</sup>Montefiore Medical Center, Pathology Department, Bronx, United States<sup>3</sup>Montefiore Medical Center, Department of Information Technology, Bronx, United States<sup>4</sup>Albert Einstein College of Medicine, Dept. of Epidemiology and Population Health, Bronx, United States<sup>5</sup>Montefiore Medical Center, Division of Nephrology, Bronx, United States</p>
+        <p>
+<bold>Background: </bold>Mortality in COVID&#x2010;19 is associated with increases in prothrombotic parameters, particularly D&#x2010;Dimer levels. Many institutions have adopted anticoagulation guidelines, often adjusted for illness severity.</p>
+        <p>
+<bold>Aims: </bold>We wanted to investigate whether anticoagulation improves survival in COVID&#x2010;19.</p>
+        <p>
+<bold>Methods: </bold>We analyzed the results of anticoagulation therapeutic intent in the first 48&#xA0;hours of hospitalization to imitate therapy assignment of a clinical trial with subsequent outcome attributed to that assignment, an observational intention to treat analysis.</p>
+        <p>
+<bold>Results: </bold>We analyzed 3,842 COVID+ inpatients for mortality based on therapeutic anticoagulant choice. We controlled for age, GFR, oxygen saturation, ventilation requirement and time period, all determined during the first 48&#xA0;hours. Patients on other clinical trials were excluded (n&#xA0;=&#xA0;305). When adjusted and then stratified by D&#x2010;Dimer level, apixaban prophylaxis was associated with decreased mortality for D&#x2010;Dimer levels 1&#x2010;3ug/ml [OR: 0.43 (95% CI 0.21 &#x2010; 0.89), p&#xA0;=&#xA0;0.022] while apixaban therapy was beneficial for those with higher D&#x2010;Dimers levels of&#xA0;&gt;&#xA0;10ug/ml [OR: 0.26 (95% CI:0.10&#x2010;0.72), p&#xA0;=&#xA0;0.009]. Neither enoxaparin nor unfractionated heparin at prophylaxis or therapeutic doses was associated with decreased mortality at any D&#x2010;Dimer level while full enoxaparin therapy was associated with increased mortality at D&#x2010;Dimers&#xA0;&lt;&#xA0;1 ug/ml. [OR 14.75 (95% CI:1.80&#x2010;120.78), p&#xA0;=&#xA0;0.012]. Adjusted analysis of the entire population with all comorbidities and D&#x2010;Dimer in the model showed that only apixaban prophylaxis was associated with decreased mortality [OR:0.52 (95% CI:0.31&#x2010;0.87) p&#xA0;&lt;&#xA0;0.013].</p>
+        <p>
+<bold>Conclusions: </bold>We conclude that patients with COVID, particularly those with severe illness, benefit from D&#x2010;Dimer&#x2010;dependent anticoagulation and that apixaban is effective in decreasing mortality in this disease.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0018" orientation="portrait"><caption><p>
+<bold>TABLE 1</bold> Characteristics of the study population</p></caption><graphic xlink:href="RTH2-4-1-g018.jpg" position="anchor" id="nlm-graphic-35" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0019" orientation="portrait"><caption><p>
+<bold>TABLE 2</bold> Adjusted mortality per therapeutic modality, stratified by D&#x2010;Dimer &#x2010; use odds ratios and confidence intervals</p></caption><graphic xlink:href="RTH2-4-1-g028.jpg" position="anchor" id="nlm-graphic-37" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0041">
+      <title>PB/CO17</title>
+      <sec id="rth212413-sec-0042">
+        <title>Thrombin Generation in Severe COVID&#x2010;19 Patients Hospitalized in the ICU</title>
+        <p>
+<bold><underline underline-style="single">M.G. Zermatten</underline><sup>1</sup>, F.J. Gomez<sup>1</sup>, O. Pantet<sup>2</sup>, M. Papadimitriou&#x2010;Olivgeris<sup>3,4</sup>, O. Hugli<sup>5</sup>, P.&#x2010;A. Bart<sup>6</sup>, A. Aliotta<sup>1</sup>, D. Bertaggia Calderara<sup>1</sup>, M. M&#xE9;an<sup>6</sup>, L. Mazzolai<sup>7</sup>, L. Alberio<sup>1</sup>, The COVID&#x2010;19 Interdisciplinary Collaboration</bold>
+</p>
+        <p>
+<sup>1</sup>Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Department of Hematology and Central Hematology Laboratory, Lausanne, Switzerland<sup>2</sup>Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Department of Intensive Care Medicine, Lausanne, Switzerland<sup>3</sup>Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Department of Infectious Diseases, Lausanne, Switzerland<sup>4</sup>Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Department of Hospital Preventive Medicine, Lausanne, Switzerland<sup>5</sup>Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Emergency Department, Lausanne, Switzerland<sup>6</sup>Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Department of Internal Medicine, Lausanne, Switzerland<sup>7</sup>Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Department of Angiology, Lausanne, Switzerland</p>
+        <p>
+<bold>Background: </bold>The coronavirus disease 2019 (COVID&#x2010;19) is characterized by hypercoagulability with a high incidence of venous thromboembolic events (VTE). However, the underlying mechanisms are not yet fully elucidated. Specifically, the role of coagulation factor VIII (FVIII) and of natural anticoagulants is still unknown. Moreover, identification of patients at high VTE&#x2010;risk remains challenging.</p>
+        <p>
+<bold>Aims: </bold>To investigate the specific roles of FVIII, protein C (PC), protein S (PS), and antithrombin (AT) in COVID&#x2010;19 hypercoagulability. To assess the ability of thrombin generation (TG) assays to identify patients at high VTE&#x2010;risk.</p>
+        <p>
+<bold>Methods: </bold>Retrospective single&#x2010;center study performed at a tertiary care teaching hospital. We included 38 patients hospitalized in the ICU for severe COVID&#x2010;19. Standard thromboprophylaxis (enoxaparine 40&#xA0;mg once daily or unfractionated heparin 10000 UI/24&#xA0;h) was recommended in all patients. TG was measured using the ST Genesia (Stago, Asni&#xE8;res&#x2010;sur&#x2010;Seine, France) with and without thrombomodulin. Correlations between FVIII, PC/S, AT, and TG parameters were assessed (Pearson or Spearman). Comparisons between patients without and with VTE were made using Mann&#x2010;Whitney test.</p>
+        <p>
+<bold>Results: </bold>Among the 38 patients (21.1% females, median age 61&#xA0;years), seven had a VTE. FVIII, proteins C/S, and AT did not differ between patients with or without VTE. Peak height and velocity index of TG were significantly higher in patients with VTE compared to those without (Figure 1). FVIII levels correlated with peak height and endogenous thrombin potential (ETP), but not with velocity index (Table 1). PS correlated only with thrombomodulin&#x2010;mediated TG&#x2010;inhibition while PC and AT did not correlate with any TG&#x2010;parameter (Table 1).</p>
+        <p>
+<bold>Conclusions: </bold>FVIII, previously described as increased in severe COVID&#x2010;19, seems to participate to the hypercoagulability in these patients. The natural anticoagulants do not seem to play an important role in this hypercoagulability. TG, in particular velocity index and peak eight, may help identifying patients at increased VTE&#x2010;risk.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-10" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Correlations results between FVIII, PC/S, and AT and TG parameters. *Results of Pearson correlation; **Results of Spearman correlation</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" colspan="2" valign="top" rowspan="1">FVIII*</th><th align="left" colspan="2" valign="top" rowspan="1">Protein C**</th><th align="left" colspan="2" valign="top" rowspan="1">Protein S*</th><th align="left" colspan="2" valign="top" rowspan="1">Antithrombin*</th></tr><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">r</th><th align="left" valign="top" rowspan="1" colspan="1">p&#x2010;value</th><th align="left" valign="top" rowspan="1" colspan="1">r</th><th align="left" valign="top" rowspan="1" colspan="1">p&#x2010;value</th><th align="left" valign="top" rowspan="1" colspan="1">r</th><th align="left" valign="top" rowspan="1" colspan="1">p&#x2010;value</th><th align="left" valign="top" rowspan="1" colspan="1">r</th><th align="left" valign="top" rowspan="1" colspan="1">p&#x2010;value</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Peak height (absolute)</td><td align="char" char="." rowspan="1" colspan="1">0.435</td><td align="char" char="." rowspan="1" colspan="1">
+<bold>0.006</bold>
+</td><td align="char" char="." rowspan="1" colspan="1">0.009</td><td align="char" char="." rowspan="1" colspan="1">0.958</td><td align="left" rowspan="1" colspan="1">&#x2010;0.081</td><td align="char" char="." rowspan="1" colspan="1">0.639</td><td align="char" char="." rowspan="1" colspan="1">0.066</td><td align="char" char="." rowspan="1" colspan="1">0.704</td></tr><tr><td align="left" rowspan="1" colspan="1">Peak height (normalized)</td><td align="char" char="." rowspan="1" colspan="1">0.438</td><td align="char" char="." rowspan="1" colspan="1">
+<bold>0.006</bold>
+</td><td align="char" char="." rowspan="1" colspan="1">0.010</td><td align="char" char="." rowspan="1" colspan="1">0.952</td><td align="left" rowspan="1" colspan="1">&#x2010;0.078</td><td align="char" char="." rowspan="1" colspan="1">0.652</td><td align="char" char="." rowspan="1" colspan="1">0.065</td><td align="char" char="." rowspan="1" colspan="1">0.704</td></tr><tr><td align="left" rowspan="1" colspan="1">ETP (absolute)</td><td align="char" char="." rowspan="1" colspan="1">0.442</td><td align="char" char="." rowspan="1" colspan="1">
+<bold>0.006</bold>
+</td><td align="char" char="." rowspan="1" colspan="1">&#x2010;0.142</td><td align="char" char="." rowspan="1" colspan="1">0.407</td><td align="left" rowspan="1" colspan="1">&#x2010;0.004</td><td align="char" char="." rowspan="1" colspan="1">0.981</td><td align="char" char="." rowspan="1" colspan="1">&#x2010;0.293</td><td align="char" char="." rowspan="1" colspan="1">0.083</td></tr><tr><td align="left" rowspan="1" colspan="1">ETP (normalized)</td><td align="char" char="." rowspan="1" colspan="1">0.452</td><td align="char" char="." rowspan="1" colspan="1">
+<bold>0.004</bold>
+</td><td align="char" char="." rowspan="1" colspan="1">&#x2010;0.124</td><td align="char" char="." rowspan="1" colspan="1">0.473</td><td align="left" rowspan="1" colspan="1">0.008</td><td align="char" char="." rowspan="1" colspan="1">0.963</td><td align="char" char="." rowspan="1" colspan="1">&#x2010;0.296</td><td align="char" char="." rowspan="1" colspan="1">0.080</td></tr><tr><td align="left" rowspan="1" colspan="1">Velocity index (absolute)</td><td align="char" char="." rowspan="1" colspan="1">0.292</td><td align="char" char="." rowspan="1" colspan="1">0.075</td><td align="char" char="." rowspan="1" colspan="1">&#x2010;0.081</td><td align="char" char="." rowspan="1" colspan="1">0.637</td><td align="left" rowspan="1" colspan="1">&#x2010;0.137</td><td align="char" char="." rowspan="1" colspan="1">0.427</td><td align="char" char="." rowspan="1" colspan="1">0.074</td><td align="char" char="." rowspan="1" colspan="1">0.668</td></tr><tr><td align="left" rowspan="1" colspan="1">Velocity index (normalized)</td><td align="char" char="." rowspan="1" colspan="1">0.298</td><td align="char" char="." rowspan="1" colspan="1">0.069</td><td align="char" char="." rowspan="1" colspan="1">&#x2010;0.102</td><td align="char" char="." rowspan="1" colspan="1">0.552</td><td align="left" rowspan="1" colspan="1">&#x2010;0.128</td><td align="char" char="." rowspan="1" colspan="1">0.457</td><td align="char" char="." rowspan="1" colspan="1">0.077</td><td align="char" char="." rowspan="1" colspan="1">0.655</td></tr><tr><td align="left" rowspan="1" colspan="1">Thrombomodulin&#x2010;mediated inhibition</td><td align="char" char="." rowspan="1" colspan="1">&#x2010;0.074</td><td align="char" char="." rowspan="1" colspan="1">0.671</td><td align="char" char="." rowspan="1" colspan="1">0.157</td><td align="char" char="." rowspan="1" colspan="1">0.374</td><td align="left" rowspan="1" colspan="1">0.363</td><td align="char" char="." rowspan="1" colspan="1">
+<bold>0.035</bold>
+</td><td align="char" char="." rowspan="1" colspan="1">&#x2010;0.003</td><td align="char" char="." rowspan="1" colspan="1">0.985</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0020" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Comparisons of TG parameters in patients with and without venous thromboembolic events (VTE). * p&#x2010;value&#xA0;&lt;&#xA0;0.05; TM, thrombomodulin</p></caption><graphic xlink:href="RTH2-4-1-g019.jpg" position="anchor" id="nlm-graphic-39" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0043">
+      <title>PB/CO18</title>
+      <sec id="rth212413-sec-0044">
+        <title>Reduction of Venous Thromboembolic Events in Hospitalized Patients with Coronavirus Disease 2019 after Intensification of Thromboprophylaxis</title>
+        <p>
+<bold><underline underline-style="single">P. Filippidis</underline><sup>1</sup>, E. Kampouri<sup>1</sup>, B. Viala<sup>1</sup>, M. M&#xE9;an<sup>1</sup>, O. Pantet<sup>1</sup>, F. Desgranges<sup>1</sup>, J. Tschopp<sup>1</sup>, J. Regina<sup>1</sup>, E. Karachalias<sup>2</sup>, C. Bianchi<sup>1</sup>, M. Zermatten<sup>1</sup>, K. Jaton<sup>1</sup>, S.D. Qanadli<sup>1</sup>, P.&#x2010;A. Bart<sup>1</sup>, J.&#x2010;L. Pagani<sup>1</sup>, B. Guery<sup>1</sup>, M. Papadimitriou&#x2010;Olivgeris<sup>1</sup>, L. Alberio<sup>1</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Lausanne, Switzerland<sup>2</sup>Office for National Statistics, Newport, United Kingdom</p>
+        <p>
+<bold>Background: </bold>Coronavirus disease 2019 (COVID&#x2010;19) was associated with venous thromboembolic events (VTE).</p>
+        <p>
+<bold>Aims: </bold>To determine the incidence VTE among hospitalized patients with COVID&#x2010;19 before and after changes in thromboprophylaxis.</p>
+        <p>
+<bold>Methods: </bold>A retrospective study was performed to the University Hospital of Lausanne for patients admitted with COVID&#x2010;19 from February 28 to April 30, 2020. Because the level of awareness of VTE complications related to COVID&#x2010;19 rose rapidly during the pandemic period, the study period was divided in three periods: first period from February 28 to March 25 (low awareness of SARS&#x2010;CoV&#x2010;2 thrombogenic potential), second from March 26 to April 5 (increased level of awareness), and third from April 6 to May 5 (intermediate intensity thromboprophylaxis in ICU patients).</p>
+        <p>
+<bold>Results: </bold>Among 450 admitted patients with COVID&#x2010;19, VTE were diagnosed in 41 patients (27 pulmonary embolisms, 12 deep vein thrombosis, one pulmonary embolism and deep vein thrombosis, one portal vein thrombosis). VTE occurred within 72&#xA0;hours from admission in 18 (43.9%) patients and later during the hospital stay in 23 (56.1%) patients. A total of 171 chest CT&#x2010;scans were performed in 135 patients. Figure 1 illustrates the daily number of performed CT and VTE diagnosed upon admission and within 72&#xA0;h (1A) or after 72&#xA0;h of hospitalization (1B, 1C). During hospitalization, CT&#x2010;scans performed during hospitalization increased steadily throughout the three periods. However, while VTE diagnoses per 1000&#x2010;patient&#x2010;days increased from the first to second period, a decrease was observed from the second to the third one (Table). Specifically, 22 ICU&#x2010;admitted patients developed VTE (six early and 16 late VTE). Thirteen late VTE occurred under standard&#x2010;of&#x2010;care thromboprophylaxis (18.5 per 1000 ICU&#x2010;days) and three under intermediate intensity thromboprophylaxis (4.9 per 1000 ICU&#x2010;days; <italic>P</italic> 0.040).</p>
+        <p>
+<bold>Conclusions: </bold>This reduction of VTE diagnoses could reflect the effect of more aggressive anticoagulation strategies implemented in ICU hospitalized patients on April 6, 2020.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-11" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> CT&#x2010;scan and VTE per 100&#x2010;admissions or per 1000&#x2010;patient&#x2010;days in the three periods</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">Period 1 (February 28 to March 25)</th><th align="left" valign="top" rowspan="1" colspan="1">Period 2 (March 26 to April 5)</th><th align="left" valign="top" rowspan="1" colspan="1">Period 3 (April 6 to May 7)</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Upon admission and within 72&#xA0;h</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">&#xA0;</td></tr><tr><td align="left" rowspan="1" colspan="1">CT&#x2010;scan performed</td><td align="left" rowspan="1" colspan="1">18</td><td align="left" rowspan="1" colspan="1">34</td><td align="left" rowspan="1" colspan="1">31</td></tr><tr><td align="left" rowspan="1" colspan="1">VTE</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">10</td><td align="left" rowspan="1" colspan="1">6</td></tr><tr><td align="left" rowspan="1" colspan="1">VTE per 100&#x2010;admissions</td><td align="left" rowspan="1" colspan="1">1.1</td><td align="left" rowspan="1" colspan="1">6.8</td><td align="left" rowspan="1" colspan="1">5.2</td></tr><tr><td align="left" rowspan="1" colspan="1">During hospitalization (after 72&#xA0;h from admission)</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">&#xA0;</td><td align="left" rowspan="1" colspan="1">&#xA0;</td></tr><tr><td align="left" rowspan="1" colspan="1">CT&#x2010;scan performed</td><td align="left" rowspan="1" colspan="1">11</td><td align="left" rowspan="1" colspan="1">20</td><td align="left" rowspan="1" colspan="1">57</td></tr><tr><td align="left" rowspan="1" colspan="1">VTE</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">12</td><td align="left" rowspan="1" colspan="1">9</td></tr><tr><td align="left" rowspan="1" colspan="1">VTE per 1000&#x2010;patient&#x2010;days</td><td align="left" rowspan="1" colspan="1">1.8</td><td align="left" rowspan="1" colspan="1">7.7</td><td align="left" rowspan="1" colspan="1">3.4</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0021" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Daily number of performed CT and VTE diagnosed upon admission and within 72&#xA0;h (1A) or after 72&#xA0;h of hospitalization (1B, 1C)</p></caption><graphic xlink:href="RTH2-4-1-g020.jpg" position="anchor" id="nlm-graphic-41" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0045">
+      <title>PB/CO19</title>
+      <sec id="rth212413-sec-0046">
+        <title>Elevated D&#x2010;dimers Useful Prediction of Pulmonary Artery Thrombosis in COVID&#x2010;19 Patients at Initial Presentation to Hospital</title>
+        <p>
+<bold><underline underline-style="single">A. Perera</underline><sup>1</sup>, P. Chowdary<sup>2</sup>, J. Johnson<sup>1</sup>, L. Lamb<sup>3,4</sup>, A. Drebes<sup>2</sup>, N. Mir<sup>5</sup>, T. Sood<sup>1</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Royal Free NHS Trust, Emergency, London, United Kingdom<sup>2</sup>Royal Free NHS Trust, Katharine Dormandy Haemophilia and Thrombosis Centre, London, United Kingdom<sup>3</sup>Royal Free NHS Trust, Department of Infectious Diseases, London, United Kingdom<sup>4</sup>Royal Centre for Defence Medicine, Academic Department of Military Medicine, Birmingham, United Kingdom<sup>5</sup>Royal Free NHS Trust, Department of Radiology, London, United Kingdom</p>
+        <p>
+<bold>Background: </bold>Elevated d&#x2010;dimers in COVID&#x2010;19 patients are associated with poor prognosis and increased mortality. However, they have not been used consistently to identify patients for evaluation of concurrent pulmonary artery thrombosis (PAT).</p>
+        <p>
+<bold>Aims: </bold>To evaluate the prevalence of PAT in COVID&#x2010;19 patients attending the emergency department (ED), and investigate d&#x2010;dimer cut&#x2010;offs for diagnosis through computed tomography pulmonary angiogram (CTPA).</p>
+        <p>
+<bold>Methods: </bold>This retrospective review included 685 COVID&#x2010;19 positive patients. D&#x2010;dimers were performed in 512 patients, 89 had CTPA, and 82 had both within 48&#xA0;hrs of admission.</p>
+        <p>
+<bold>Results: </bold>PAT was detected in 42% (37/89) of patients who had a CTPA within 48&#xA0;hrs of admission. In the group with CTPA and d&#x2010;dimers (n&#xA0;=&#xA0;82) receiver operator characteristic analysis demonstrated that d&#x2010;dimers were good for predicting PAT (AUC of 0.78, P&#xA0;&lt;&#xA0;0.0001). A d&#x2010;dimer cut&#x2010;off of 2000&#xA0;ng/mL had a 87.5% sensitivity, with 83.3% negative predictive value for PAT detection. In this group, 71% of patients had a d&#x2010;dimer&#xA0;&gt;&#xA0;2000&#xA0;ng/mL with almost half of them having a positive scan. Implementing this cut&#x2010;off across the cohort with d&#x2010;dimer results only (n&#xA0;=&#xA0;430) would require nearly a third of the COVID&#x2010;19 patients to have CTPA.</p>
+        <p>
+<bold>Conclusions: </bold>Our data suggest a significant prevalence of PAT in patients with COVID&#x2010;19 at initial presentation. Due to the significant overlap of the clinical syndrome of COVID&#x2010;19 with that of PAT, it is difficult to select patients for CTPA based on the clinical presentation alone. Locally agreed d&#x2010;dimer cut&#x2010;offs can be used to guide the need for CTPA.</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0047">
+      <title>PB/CO20</title>
+      <sec id="rth212413-sec-0048">
+        <title>Monitoring Unfractionated Heparin Using PTT Versus Anti&#x2010;Xa in Veno&#x2010;venous Extracorporeal Membrane Oxygenation Patients with COVID&#x2010;19 Infection</title>
+        <p>
+<bold><underline underline-style="single">B. Thoma</underline><sup>1</sup>, N. Al&#x2010;Rawas<sup>2</sup>, R. Leong<sup>2</sup>, L. McDermott<sup>2</sup>, J. Dovidio<sup>2</sup>, J. Kopenitz<sup>2</sup>, J. Gong<sup>3</sup>, R. Rhoades<sup>4</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Thomas Jefferson University Hospital, Pharmacy, Philadelphia, United States<sup>2</sup>Thomas Jefferson University Hospital, Anesthesia, Philadelphia, United States<sup>3</sup>Thomas Jefferson University Hospital, Pathology, Anatomy, Cell Biology, Philadelphia, United States<sup>4</sup>Thomas Jefferson University Hospital, Hematology, Philadelphia, United States</p>
+        <p>
+<bold>Background: </bold>Managing the coagulopathy of severe COVID&#x2010;19 infection represents a unique challenge. COVID&#x2010;19 infection is associated with increased thrombotic risk, however high rates of bleeding and intracranial hemorrhage have also been observed in COVID&#x2010;19 patients requiring veno&#x2010;venous ECMO (VV ECMO). This difficult balance prompted a change in practice at our institution for monitoring intravenous unfractionated heparin (UFH) infusions, from PTT&#x2010;based UFH titration to anti&#x2010;Xa&#x2010;based. This occurred as a gradual shift, providing a means to compare both strategies.</p>
+        <p>
+<bold>Aims: </bold>We aim to determine whether titration of UFH infusion using anti&#x2010;Xa compared to PTT resulted in fewer heparin titrations and a greater percentage of therapeutic values in patients with COVID&#x2010;19 infection on VV ECMO.</p>
+        <p>
+<bold>Methods: </bold>Seventeen consecutive COVID&#x2010;19 patients managed with VV ECMO and UFH were retrospectively reviewed to determine anti&#x2010;Xa and PTT results and the concurrent UFH target and rate. Rate changes were included if deemed a result of the prior PTT or anti&#x2010;Xa; changes were excluded if the infusion was changed or stopped for other reasons, including bleeding or discontinuation of ECMO. The therapeutic range was ascertained from the medication order or clinical documentation at the time of a coagulation lab draw, and a determination was made for each PTT or anti&#x2010;Xa whether the value fell into that range.</p>
+        <p>
+<bold>Results: </bold>Results are shown in Table 1.</p>
+        <p>
+<bold>Conclusions: </bold>In our population of COVID&#x2010;19 patients on VV ECMO, we observed labile coagulation lab results and frequent UFH infusion rate titrations, with a low percentage of results in therapeutic range whether being monitored by PTT or anti&#x2010;Xa. In addition to coagulopathy, this may be attributed to narrow goal therapeutic ranges and frequent interruptions of therapy in this population. We did observe a significantly lower mean UFH rate and greater percentage of therapeutic values when targeting anti&#x2010;Xa compared to PTT, as well as a trend toward fewer UFH titrations.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-12" xml:lang="en" orientation="portrait" position="anchor"><caption><p>TABLE 1</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">PTT</th><th align="left" valign="top" rowspan="1" colspan="1">Anti&#x2010;Xa</th><th align="left" valign="top" rowspan="1" colspan="1">P value</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Times used for UFH titration &#x2010; No. (%)</td><td align="char" char="(" rowspan="1" colspan="1">175 (39%)</td><td align="char" char="(" rowspan="1" colspan="1">272 (61%)</td><td align="left" rowspan="1" colspan="1">&#xA0;</td></tr><tr><td align="left" rowspan="1" colspan="1">Mean UFH rate &#x2010; units/kg/hr (range)</td><td align="char" char="(" rowspan="1" colspan="1">13.3 (2.5&#x2010;30.5)</td><td align="char" char="(" rowspan="1" colspan="1">11.5 (3.4&#x2010;29.0)</td><td align="left" rowspan="1" colspan="1">0.002</td></tr><tr><td align="left" rowspan="1" colspan="1">Therapeutic values &#x2010; No. (%)</td><td align="char" char="(" rowspan="1" colspan="1">69/169 (41%)</td><td align="char" char="(" rowspan="1" colspan="1">151/251 (60%)</td><td align="left" rowspan="1" colspan="1">0.000</td></tr><tr><td align="left" rowspan="1" colspan="1">UFH rate change in response to result &#x2010; No. (%)</td><td align="char" char="(" rowspan="1" colspan="1">73/162 (45%)</td><td align="char" char="(" rowspan="1" colspan="1">91/242 (39%)</td><td align="left" rowspan="1" colspan="1">0.135</td></tr></tbody></table></table-wrap>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0049">
+      <title>PB/CO21</title>
+      <sec id="rth212413-sec-0050">
+        <title>COVID&#x2010;19 Pandemic: Dissecting Coagulation apart from Inflammation</title>
+        <p>
+<bold><underline underline-style="single">J. Gonzalez&#x2010;Lugo</underline><sup>1</sup>, S. Rahman<sup>1</sup>, M. Barouqa<sup>2</sup>, J. Szymanski<sup>2</sup>, H. Billett<sup>1</sup>, M. Reyes Gil<sup>2</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Montefiore Medical Center&#x2010;Albert Einstein College of Medicine, Division of Hematology, Department of Medical Oncology, New York, United States<sup>2</sup>Montefiore Medical Center&#x2010;Albert Einstein College of Medicine, Department of Pathology, New York, United States</p>
+        <p>
+<bold>Background: </bold>Coagulopathy in COVID&#x2010;19 is a common complication associated with poorer outcomes. This Coagulopathy presents as a prothrombotic state and there is evidence that anticoagulation may reduce mortality. The partial thromboplastin time (PTT) has been found to be prolonged in some COVID&#x2010;19 patients. The etiology of this prolongation is unclear but it may indicate the presence of Lupus Anticoagulant (LA) or it may be due to interference from elevated C&#x2010;Reactive Protein (CRP) levels, which are known to interfere with LA PTT&#x2010;based tests.</p>
+        <p>
+<bold>Aims: </bold>Examine the relationship between coagulation and inflammation in COVID&#x2010;19.</p>
+        <p>
+<bold>Methods: </bold>Coagulation data of 214 specimens were evaluated for LA from March 2<sup>nd</sup> to April 30<sup>th</sup>, 2020 at Montefiore Health System, Bronx, NY. After excluding patients that were COVID&#x2010;19 negative and&#xA0;&lt;&#xA0;18&#xA0;years&#x2010;old, we identified 68 cases.</p>
+        <p>
+<bold>Results: </bold>30 (44%) of 68 patients were LA+ by DRVVT (DRVVT+), of which 13 (43%) also tested positive by hexagonal phospholipid neutralization STACLOT&#x2010;LA test (Table 1). Eight (12%) were positive only for STACLOT&#x2010;LA. These had significantly higher CRP levels.</p>
+        <p>Of the 30 DRVVT+, 19 had documented thrombosis (arterial and/or venous), event rate of 63% as compared to DRVVT&#x2010; of 34% (p&#xA0;=&#xA0;0.03). No statistically significant difference was found for gender, race, ethnicity or mortality. Although the average CRP levels were higher in DRVVT+ (14.8 vs. 7.4, P&#xA0;&lt;&#xA0;0.01), patients with thrombosis did not have significantly higher CRP levels. After adjusting for CRP, LA was found to be significantly associated with thrombosis (OR: 4.5 p&#xA0;=&#xA0;0.01). Initial D&#x2010;Dimer was significantly higher in patients with thrombosis (9.14&#xA0;&#xB1;&#xA0;7.58 vs. 4.98&#xA0;&#xB1;&#xA0;6.33, p&#xA0;=&#xA0;0.04). (Table 2).</p>
+        <p>
+<bold>Conclusions: </bold>We show a higher incidence of LA positivity in COVID&#x2010;19 patients, even when controlled for CRP, and an increased incidence of thrombosis among COVID&#x2010;19 patients with positive LA. As these patients have a marked risk of arterial and venous thrombosis, therapeutic anticoagulation may be warranted.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0022" orientation="portrait"><caption><p>
+<bold>TABLE 1</bold> COVID&#x2010;19 positive patients: outcomes in patients by LA result</p></caption><graphic xlink:href="RTH2-4-1-g021.jpg" position="anchor" id="nlm-graphic-43" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0023" orientation="portrait"><caption><p>
+<bold>TABLE 2</bold> Thrombotic events in study population</p></caption><graphic xlink:href="RTH2-4-1-g022.jpg" position="anchor" id="nlm-graphic-45" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0051">
+      <title>Late&#x2010;Breaking Eposters</title>
+    </sec>
+    <sec id="rth212413-sec-0052">
+      <title>PB/LB01</title>
+      <sec id="rth212413-sec-0053">
+        <title>Elevated BAFF Promote B Cell Survival and Autoantibody Production through Upregulating let&#x2010;7b in Immune Thrombocytopenia</title>
+        <p>
+<bold><underline underline-style="single">Y. He</underline></bold>
+</p>
+        <p>MOH Key Lab of Thrombosis and Hemostasis, Jiangsu Institute of Hematology, the First Affiliated Hospital of Soochow University, Suzhou, China</p>
+        <p>
+<bold>Background: </bold>The pathogenesis of immune thrombocytopenia (ITP) has not yet been completely elucidated. It has been shown that B cell activating factor BAFF is overexpressed ITP patients and dysregulated miRNAs contribute to ITP pathogenesis. However, it is unclear that whether BAFF can affect B cell function through regulating miRNA levels in ITP.</p>
+        <p>
+<bold>Aims: </bold>We aimed to investigate whether and how BAFF affect B cell homeostasis through regulating miRNA levels in ITP.</p>
+        <p>
+<bold>Methods: </bold>The CD19<sup>+</sup> B cells were isolated from peripheral mononuclear cells of ITP patients and healthy controls using immunomagnetic microbeads. The miRNA levels were detected by real&#x2010;time quantitative PCR. The function of miRNAs in B cell were verified in primary human B cells and in a splenocytes transferring model by transfecting miRNA mimics or inhibitors. B cell survival and antibody production were evaluated by flow cytometry and enzyme&#x2010;linked immunosorbent assay, respectively.</p>
+        <p>
+<bold>Results: </bold>Our results showed that plasma BAFF was significantly elevated in ITP patients with positive platelet autoantibodies and the expression of let&#x2010;7b was significantly increased in B cells from ITP patients. We found that plasma BAFF was positively correlated with the let&#x2010;7b level in B cells in ITP patients. Transfection of let&#x2010;7b mimics into healthy primary B cells enhanced BAFF&#x2010;induced B cell survival and antibody production <italic>in vitro</italic>, while transfection of let&#x2010;7b inhibitors showed opposite effects. We also found that transfection of let&#x2010;7b inhibitors into immunized mouse CD61 knockout splenocytes which were then transferred to SCID mice, can abolish platelet antibody production <italic>in vivo</italic>.</p>
+        <p>
+<bold>Conclusions: </bold>Elevated plasma BAFF can promote B cell survival and autoantibody production through upregulating let&#x2010;7b levels in ITP.</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0054">
+      <title>PB/LB02</title>
+      <sec id="rth212413-sec-0055">
+        <title>Low 1&#x2010;Year Venous Thromboembolic Recurrence Rates in Patients with and without Thrombotic Risk Factors in Routine Clinical Practice Treated with Edoxaban: The Global ETNA&#x2010;VTE Study</title>
+        <p>
+<bold><underline underline-style="single">A. Cohen</underline><sup>1</sup>, C. Chen<sup>2</sup>, K.&#x2010;M. Chiu<sup>3,4</sup>, W.&#x2010;I. Choi<sup>5</sup>, M. Nakamura<sup>6</sup>, W. Zierhut<sup>7</sup>, P.&#x2010;E. Reimitz<sup>8</sup>, M. Unverdorben<sup>2</sup>, G. Agnelli<sup>9</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Guy\'s and St Thomas&#x2019; NHS Foundation Trust, King\'s College London, London, United Kingdom<sup>2</sup>Daiichi Sankyo, Inc., Global Medical Affairs, Basking Ridge, United States<sup>3</sup>Far Eastern Memorial Hospital, Cardiovascular Center, New Taipei City, Taiwan, Republic of China<sup>4</sup>Yuan Ze University, Electrical Engineering, Taoyuan City, Taiwan, Republic of China<sup>5</sup>Hanyang University Myongji Hospital, Department of Internal Medicine, Goyang&#x2010;si, Korea, Republic of<sup>6</sup>Nakamura Medical Clinic, Department of Internal Medicine, Pediatrics and Cardiology, Kuwana, Japan<sup>7</sup>Daiichi Sankyo Europe GmbH, Medical Affairs Europe, Munich, Germany<sup>8</sup>Daiichi Sankyo Europe GmbH, Clinical Operations and Biostatistics and Data Operations, Munich, Germany<sup>9</sup>University of Perugia, Internal and Cardiovascular Medicine&#x2010;Stroke Unit, Perugia, Italy</p>
+        <p>
+<bold>Background: </bold>The direct oral anticoagulant edoxaban was noninferior to conventional therapy with significantly less bleeding in patients with venous thromboembolism (VTE), including severe pulmonary embolism (PE). There is a paucity of contemporary baseline and outcome data comparing patients with and without VTE recurrence in the real&#x2010;world clinical setting.</p>
+        <p>
+<bold>Aims: </bold>To analyze the impact of each individual provoked and unprovoked risk factor, including cancer, on VTE recurrence.</p>
+        <p>
+<bold>Methods: </bold>From eight European and three Asian countries, unselected acute symptomatic VTE patients treated with edoxaban participated in the non&#x2010;interventional ETNA&#x2010;VTE study and were followed for up to 12&#xA0;months for safety and effectiveness.</p>
+        <p>
+<bold>Results: </bold>Of 4595 patients (48% male, mean age 64.9&#xA0;years [SD 15.5]), 2666 (58%) were from Europe, 1652 (36%) from Japan, and 277 (6%) from South Korea and Taiwan. The vast majority of patients were on the recommended edoxaban doses of 60&#xA0;mg/30&#xA0;mg QD (4102/4595; 89%). VTE recurrence rates in Europe (68/2666; 2.6%), Japan (38/1652; 2.3%), and South Korea/Taiwan (10/277; 3.6%) were similar. The recurrence rate by index event, i.e., PE with/without DVT and DVT only were both 2.5%. Patients with VTE recurrence vs those without VTE recurrence were younger (62.7 [14.7] vs 65 [15.5] years), had the same VTE&#x2010;BLEED score (median 1.5), had higher annualized event rates for all&#x2010;cause mortality (11%/yr vs 5%/yr), major bleeding (5.6%/yr vs 2.4%/yr), and clinically relevant non&#x2010;major bleeding (6.6%/yr vs 3.5%/yr).</p>
+        <p>
+<bold>Conclusions: </bold>The 12&#x2010;month recurrence rate of VTE was low in patients receiving edoxaban, overall and by risk subgroups. In patients with active cancer and reversible provoked risk factors, VTE recurrence was more prevalent. Patients with VTE recurrence had higher annualized rates of bleeding events.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-13" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Baseline characteristics</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">
+<bold>Baseline Characteristics</bold>
+</th><th align="left" valign="top" rowspan="1" colspan="1">
+<bold>All patients[N&#xA0;=&#xA0;4595]</bold>
+</th><th align="left" valign="top" rowspan="1" colspan="1">
+<bold>Without VTE recurrence[N&#xA0;=&#xA0;4479]</bold>
+</th><th align="left" valign="top" rowspan="1" colspan="1">
+<bold>With VTE recurrence[N&#xA0;=&#xA0;116]</bold>
+</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Body weight [kg], mean (SD)</td><td align="left" rowspan="1" colspan="1">72.8 (19.20)</td><td align="left" rowspan="1" colspan="1">72.8 (19.16)</td><td align="left" rowspan="1" colspan="1">75.5 (20.59)</td></tr><tr><td align="left" rowspan="1" colspan="1">Recalculated CrCl [mL/min], mean (SD)</td><td align="left" rowspan="1" colspan="1">87.9 (40.61)</td><td align="left" rowspan="1" colspan="1">87.7 (40.57)</td><td align="left" rowspan="1" colspan="1">96.9 (41.41)</td></tr><tr><td align="left" rowspan="1" colspan="1">Current smoker</td><td align="left" rowspan="1" colspan="1">551 (12%)</td><td align="left" rowspan="1" colspan="1">535 (12%)</td><td align="left" rowspan="1" colspan="1">16 (14%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Active cancer</td><td align="left" rowspan="1" colspan="1">539 (12%)</td><td align="left" rowspan="1" colspan="1">519 (12%)</td><td align="left" rowspan="1" colspan="1">20 (17%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Any reversible provoking risk factor*</td><td align="left" rowspan="1" colspan="1">992 (22%)</td><td align="left" rowspan="1" colspan="1">960 (21%)</td><td align="left" rowspan="1" colspan="1">32 (28%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Thrombophilia**</td><td align="left" rowspan="1" colspan="1">92 (2.0%)</td><td align="left" rowspan="1" colspan="1">90 (2.0%)</td><td align="left" rowspan="1" colspan="1">2 (1.7%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Unprovoked VTE</td><td align="left" rowspan="1" colspan="1">2981 (65%)</td><td align="left" rowspan="1" colspan="1">2919 (65%)</td><td align="left" rowspan="1" colspan="1">62 (53%)</td></tr><tr><td align="char" char=" " rowspan="1" colspan="1">History of VTEHistory of major bleeding</td><td align="char" char=" " rowspan="1" colspan="1">793 (17%)96 (2.1%)</td><td align="char" char=" " rowspan="1" colspan="1">775 (17%)94 (2.1%)</td><td align="left" rowspan="1" colspan="1">18 (16%)2 (1.7%)</td></tr><tr><td align="left" colspan="4" rowspan="1">
+<p>All values are n (%) unless otherwise noted.</p>
+<p>*Includes: major surgery or trauma, prolonged bed rest (5&#x2010;7&#xA0;days), and puerperium</p>
+<p>**Includes: Antiphospholipid syndrome, deficiencies of protein C, protein S, and antithrombotic proteinAll individual factors will be presented at the conference.</p>
+</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0024" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> VTE recurrence (%) by risk factor</p></caption><graphic xlink:href="RTH2-4-1-g023.jpg" position="anchor" id="nlm-graphic-47" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0056">
+      <title>PB/LB03</title>
+      <sec id="rth212413-sec-0057">
+        <title>Differences in Outcomes between Real&#x2010;World vs Clinical Trial in Atrial Fibrillation and Chronic Kidney Disease</title>
+        <p>
+<bold><underline underline-style="single">W.Y. Ding</underline><sup>1</sup>, J.M.R. Caravaca<sup>1,2</sup>, V. Rold&#xE1;n<sup>3</sup>, G.Y.H. Lip<sup>1,4</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Liverpool Centre for Cardiovascular Science, University of Liverpool and Liverpool Heart &amp; Chest Hospital, Liverpool, United Kingdom<sup>2</sup>Hospital Cl&#xED;nico Universitario Virgen de la Arrixaca, Instituto Murciano de Investigaci&#xF3;n Biosanitaria (IMIB&#x2010;Arrixaca), CIBERCV, Murcia, Spain<sup>3</sup>Hospital General Universitario Morales Meseguer, University of Murcia, Murcia, Spain<sup>4</sup>Aalborg Thrombosis Research Unit, Aalborg University, Aalborg, Denmark</p>
+        <p>
+<bold>Background: </bold>Subgroup analyses of patients with atrial fibrillation (AF) and chronic kidney disease (CKD) in randomised controlled trials may not reflect real&#x2010;world outcomes.</p>
+        <p>
+<bold>Aims: </bold>Our aims were to evaluate the incidence and risk of adverse events in a &#x2018;real&#x2010;world&#x2019; vs &#x2018;clinical trial&#x2019; cohort of AF patients with CKD.</p>
+        <p>
+<bold>Methods: </bold>We studied vitamin K antagonist&#x2010;treated AF patients with a creatinine clearance of below 60&#xA0;mL/min from the real&#x2010;world Murcia AF Project and AMADEUS clinical trial. The primary study endpoint was a composite of first ischaemic stroke, major bleeding and all&#x2010;cause mortality. Secondary endpoints were ischaemic stroke, major bleeding, all&#x2010;cause mortality, cardiovascular mortality, non&#x2010;cardiovascular mortality, myocardial infarction and intracranial haemorrhage.</p>
+        <p>
+<bold>Results: </bold>This study included 1,108 AF patients with CKD: 365 (32.9%) real&#x2010;world and 743 (67.1%) clinical trial patients. Median age was 77 (IQR 73&#x2010;81) years with 616 (55.6%) females. Both cohorts had similar renal function (<italic>p&#xA0;</italic>=<italic>&#xA0;</italic>0.889). In comparison to the AMADEUS trial, real&#x2010;world patients were older, more likely to be females and suffering from multiple comorbidities. These characteristics were reflected by higher CHA2DS2&#x2010;VASc (5 [IQR 4&#x2010;6] vs. 4 [IQR 3&#x2010;5], <italic>p&#xA0;</italic>=<italic>&#xA0;</italic>0.005) and HAS&#x2010;BLED (3 [IQR 2&#x2010;3] vs 2 [IQR 2&#x2010;3], <italic>p&#xA0;</italic>&lt;<italic>&#xA0;</italic>0.001) scores in the real&#x2010;world cohort. Annual rate of the composite study outcome was significantly higher in the real&#x2010;world cohort (13.4% vs 6.6%) with an incidence rate ratio of 2.04 (95% CI 1.34&#x2010;3.09), <italic>p&#xA0;</italic>&lt;<italic>&#xA0;</italic>0.001 (Table). Furthermore, the individual annual rates of major bleeding, all&#x2010;cause mortality and non&#x2010;cardiovascular mortality were significantly greater in the real&#x2010;world cohort, even after multivariable adjustment for other risk factors (Figure).</p>
+        <p>
+<bold>Conclusions: </bold>Vitamin K antagonist&#x2010;treated AF patients with CKD are exposed to significant annual rates of major adverse events including all&#x2010;cause mortality. Furthermore, this risk may be under&#x2010;appreciated in the idealised environment of randomised controlled trials. Therefore, treatment decisions in this real&#x2010;world cohort of patients should focus on a holistic approach.</p>
+        <p>
+<table-wrap id="nlm-table-wrap-14" xml:lang="en" orientation="portrait" position="anchor"><caption><p>
+<bold>TABLE 1</bold> Major adverse events at 1&#x2010;year among the CKD cohort in Real&#x2010;World vs Clinical Trial</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" colspan="3" valign="top" rowspan="1">Real&#x2010;world</th><th align="left" colspan="3" valign="top" rowspan="1">AMADEUS</th><th align="left" colspan="3" valign="top" rowspan="1">&#xA0;</th></tr><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">&#xA0;</th><th align="left" valign="top" rowspan="1" colspan="1">n</th><th align="left" valign="top" rowspan="1" colspan="1">Annual event rate (%)</th><th align="left" valign="top" rowspan="1" colspan="1">95% CI</th><th align="left" valign="top" rowspan="1" colspan="1">n</th><th align="left" valign="top" rowspan="1" colspan="1">Annual event rate (%)</th><th align="left" valign="top" rowspan="1" colspan="1">95% CI</th><th align="left" valign="top" rowspan="1" colspan="1">Incidence rate ratio</th><th align="left" valign="top" rowspan="1" colspan="1">95% CI</th><th align="left" valign="top" rowspan="1" colspan="1">p value</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Composite of ischaemic stroke/major bleeding/all&#x2010;cause mortality</td><td align="left" rowspan="1" colspan="1">49</td><td align="char" char="." rowspan="1" colspan="1">13.43</td><td align="left" rowspan="1" colspan="1">9.93 &#x2010; 17.75</td><td align="left" rowspan="1" colspan="1">49</td><td align="char" char="." rowspan="1" colspan="1">6.59</td><td align="left" rowspan="1" colspan="1">4.88 &#x2010; 8.71</td><td align="char" char="." rowspan="1" colspan="1">2.04</td><td align="left" rowspan="1" colspan="1">1.34 &#x2010; 3.09</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001</td></tr><tr><td align="left" rowspan="1" colspan="1">Ischaemic stroke</td><td align="left" rowspan="1" colspan="1">7</td><td align="char" char="." rowspan="1" colspan="1">1.92</td><td align="left" rowspan="1" colspan="1">0.77 &#x2010; 3.95</td><td align="left" rowspan="1" colspan="1">11</td><td align="char" char="." rowspan="1" colspan="1">1.48</td><td align="left" rowspan="1" colspan="1">0.74 &#x2010; 2.65</td><td align="char" char="." rowspan="1" colspan="1">1.29</td><td align="left" rowspan="1" colspan="1">0.43 &#x2010; 3.66</td><td align="char" char="." rowspan="1" colspan="1">0.591</td></tr><tr><td align="left" rowspan="1" colspan="1">Major bleeding</td><td align="left" rowspan="1" colspan="1">17</td><td align="char" char="." rowspan="1" colspan="1">4.66</td><td align="left" rowspan="1" colspan="1">2.71 &#x2010; 7.45</td><td align="left" rowspan="1" colspan="1">14</td><td align="char" char="." rowspan="1" colspan="1">1.88</td><td align="left" rowspan="1" colspan="1">1.03 &#x2010; 3.16</td><td align="char" char="." rowspan="1" colspan="1">2.47</td><td align="left" rowspan="1" colspan="1">1.15 &#x2010; 5.42</td><td align="char" char="." rowspan="1" colspan="1">0.010</td></tr><tr><td align="left" rowspan="1" colspan="1">All&#x2010;cause mortality</td><td align="left" rowspan="1" colspan="1">37</td><td align="char" char="." rowspan="1" colspan="1">10.14</td><td align="left" rowspan="1" colspan="1">7.14 &#x2010; 13.97</td><td align="left" rowspan="1" colspan="1">31</td><td align="char" char="." rowspan="1" colspan="1">4.17</td><td align="left" rowspan="1" colspan="1">2.83 &#x2010; 5.92</td><td align="char" char="." rowspan="1" colspan="1">2.43</td><td align="left" rowspan="1" colspan="1">1.47 &#x2010; 4.05</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001</td></tr><tr><td align="left" rowspan="1" colspan="1">Cardiovascular mortality</td><td align="left" rowspan="1" colspan="1">12</td><td align="char" char="." rowspan="1" colspan="1">3.29</td><td align="left" rowspan="1" colspan="1">1.70 &#x2010; 5.74</td><td align="left" rowspan="1" colspan="1">13</td><td align="char" char="." rowspan="1" colspan="1">1.75</td><td align="left" rowspan="1" colspan="1">0.93 &#x2010; 2.99</td><td align="char" char="." rowspan="1" colspan="1">1.88</td><td align="left" rowspan="1" colspan="1">0.78 &#x2010; 4.47</td><td align="char" char="." rowspan="1" colspan="1">0.109</td></tr><tr><td align="left" rowspan="1" colspan="1">Non&#x2010;cardiovascular mortality</td><td align="left" rowspan="1" colspan="1">25</td><td align="char" char="." rowspan="1" colspan="1">6.84</td><td align="left" rowspan="1" colspan="1">4.43 &#x2010; 10.11</td><td align="left" rowspan="1" colspan="1">18</td><td align="char" char="." rowspan="1" colspan="1">2.42</td><td align="left" rowspan="1" colspan="1">1.44 &#x2010; 3.83</td><td align="char" char="." rowspan="1" colspan="1">2.83</td><td align="left" rowspan="1" colspan="1">1.48 &#x2010; 5.50</td><td align="char" char="." rowspan="1" colspan="1">&lt;0.001</td></tr><tr><td align="left" rowspan="1" colspan="1">Myocardial infarction</td><td align="left" rowspan="1" colspan="1">6</td><td align="char" char="." rowspan="1" colspan="1">1.64</td><td align="left" rowspan="1" colspan="1">0.60 &#x2010; 3.58</td><td align="left" rowspan="1" colspan="1">8</td><td align="char" char="." rowspan="1" colspan="1">1.08</td><td align="left" rowspan="1" colspan="1">0.46 &#x2010; 2.12</td><td align="char" char="." rowspan="1" colspan="1">1.53</td><td align="left" rowspan="1" colspan="1">0.44 &#x2010; 5.02</td><td align="char" char="." rowspan="1" colspan="1">0.430</td></tr><tr><td align="left" rowspan="1" colspan="1">Intracranial haemorrhage</td><td align="left" rowspan="1" colspan="1">4</td><td align="char" char="." rowspan="1" colspan="1">1.10</td><td align="left" rowspan="1" colspan="1">0.30 &#x2010; 2.80</td><td align="left" rowspan="1" colspan="1">2</td><td align="char" char="." rowspan="1" colspan="1">0.26</td><td align="left" rowspan="1" colspan="1">0.03 &#x2010; 0.97</td><td align="char" char="." rowspan="1" colspan="1">4.07</td><td align="left" rowspan="1" colspan="1">0.58 &#x2010; 45.00</td><td align="char" char="." rowspan="1" colspan="1">0.079</td></tr></tbody></table></table-wrap>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0025" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Forest plot for comparison of adjusted adverse clinical events among patients with chronic kidney disease in Real&#x2010;World vs Clinical Trial</p></caption><graphic xlink:href="RTH2-4-1-g024.jpg" position="anchor" id="nlm-graphic-49" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0058">
+      <title>PB/LB04</title>
+      <sec id="rth212413-sec-0059">
+        <title>The eTHINK Study: Cognitive and Behavioral Outcomes in Children with Hemophilia</title>
+        <p>
+<bold><underline underline-style="single">C. Mrakotsky</underline><sup>1</sup>, C. Buranahirun<sup>2</sup>, D.L. Cooper<sup>3</sup>, S.E. Croteau<sup>1</sup>, M. Greybels<sup>4</sup>, C. Hannemann<sup>5</sup>, M. Rajpurkar<sup>6</sup>, K.A. Shapiro<sup>7</sup>, G.N. Wilkening<sup>8</sup>, P. Ventola<sup>9</sup>, K.S. Walsh<sup>10</sup>, on behalf of the eTHINK Study Group</bold>
+</p>
+        <p>
+<sup>1</sup>Boston Children\'s Hospital/Harvard Medical School, Boston, United States<sup>2</sup>Keck School of Medicine, University of Southern California/Children\'s Hospital Los Angeles, Los Angeles, United States<sup>3</sup>Novo Nordisk Inc., Plainsboro, United States<sup>4</sup>Novo Nordisk A/S, S&#xF8;borg, Denmark<sup>5</sup>Indiana Hemophilia and Thrombosis Center, Indianapolis, United States<sup>6</sup>Carman and Ann Adams Department of Pediatrics, Children\'s Hospital of Michigan/Wayne State University, Detroit, United States<sup>7</sup>Cortica Healthcare, San Diego, United States<sup>8</sup>Children\'s Hospital Colorado, Aurora, United States<sup>9</sup>Cogstate, New Haven, United States<sup>10</sup>Children\'s National Hospital, Washington, DC, United States</p>
+        <p>
+<bold>Background: </bold>Studies conducted decades ago in children with hemophilia demonstrated a negative impact of the disease on cognition. Reduction in HIV and hepatitis C burden and improvements in the standard of care may have changed the ways in which hemophilia influences cognitive development; however, this had not been systematically studied.</p>
+        <p>
+<bold>Aims: </bold>The eTHINK study assessed contemporary effects of hemophilia and associated care on cognitive and neurobehavioral development and established a normative data set for the monitoring of cognitive functions and development in children and adolescents receiving the current hemophilia standard of care.</p>
+        <p>
+<bold>Methods: </bold>Males with hemophilia A or B of any severity, with or without inhibitors, aged 1 to 21&#xA0;years, were eligible for the study, which was approved by local IRBs at each site. All participants provided informed consent/assent and hemophilia and developmental histories. Children underwent neurological examination and neuropsychological assessment, including age&#x2010;appropriate standardized tests of developmental (Bayley&#x2010;III) or intellectual (WPPSI&#x2010;IV/WASI&#x2010;II) ability, processing speed, attention (Cogstate Computerized Battery), and parent&#x2010; and self&#x2010;report ratings of executive function (BRIEF&#x2010;P/&#x2010;2/&#x2010;A), emotional/behavioral adjustment (BASC&#x2010;3), and adaptive skills (ABAS&#x2010;3).</p>
+        <p>
+<bold>Results: </bold>551 males with hemophilia A (n&#xA0;=&#xA0;433) or B (n&#xA0;=&#xA0;101) were enrolled. For the cohort as a whole, performance on tests of overall intelligence, attention, and processing speed was comparable to that of age&#x2010;referenced US population norms. However, subgroups of participants and their parents reported more difficulty with adaptive skills and executive function in daily life, particularly adolescents/young adults and those with a diagnosis of attention deficit/hyperactivity disorder (ADHD; n&#xA0;=&#xA0;71) (Figure).</p>
+        <p>
+<bold>Conclusions: </bold>Overall, males with hemophilia performed within age expectation on standardized cognitive tests in the structured test setting. However, adolescents/young adults appear to be at risk for difficulties with attention, executive function, and independence skills in their daily lives. Findings lend support to the need for specific behavioral interventions as patients transition to independence.</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0026" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Box and whisker plots of z&#x2010;score distributions for 5 assessment domains for all participants combined and the subgroup with ADHD</p></caption><graphic xlink:href="RTH2-4-1-g025.jpg" position="anchor" id="nlm-graphic-51" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0060">
+      <title>PB/LB05</title>
+      <sec id="rth212413-sec-0061">
+        <title>Phase 2 Study of Efgartigimod, a Novel FcRn Antagonist, in Adult Patients with Primary Immune Thrombocytopenia</title>
+        <p>
+<bold><underline underline-style="single">A.C. Newland</underline><sup>1</sup>, B. Sanchez&#x2010;Gonzalez<sup>2</sup>, L. Rejt&#x151;<sup>3</sup>, M. Egyed<sup>4</sup>, N. Romanyuk<sup>5</sup>, M. Godar<sup>6</sup>, K. Verschueren<sup>6</sup>, D. Gandini<sup>6</sup>, P. Ulrichts<sup>6</sup>, J. Beauchamp<sup>6</sup>, T. Dreier<sup>6</sup>, S. Ward<sup>7</sup>, M. Michel<sup>8</sup>, H.A. Liebman<sup>9</sup>, H. de Haard<sup>6</sup>, N. Leupin<sup>6</sup>, D. Kuter<sup>10</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Centre for Haematology, The Royal London Hospital, London, United Kingdom<sup>2</sup>Hospital del Mar, Hematology Department, Barcelona, Spain<sup>3</sup>Josa Andr&#xE1;s Teaching Hospital, Ny&#xED;regyh&#xE1;za, Hungary<sup>4</sup>Kaposi Mor Teaching Hospital, Kaposvar, H&#x2010;, Hungary<sup>5</sup>Mykolaiv Regional Clinical Hospital, Mykolaiv,, Ukraine<sup>6</sup>argenx, Ghent, Belgium<sup>7</sup>Centre For Cancer Immunology, University of Southampton, Southampton, SO BJ, United Kingdom<sup>8</sup>Henri Mondor Hospital, Assistance Publique Hopitaux de Paris, UPEC, Creteil, France<sup>9</sup>University of Southern California, Los Angeles, United States<sup>10</sup>Massachusetts General Hospital, Boston, United States</p>
+        <p>
+<bold>Background: </bold>Primary immune thrombocytopenia (ITP) is an acquired autoimmune bleeding disorder, characterized by a low platelet count in the absence of other causes for thrombocytopenia and is in most patients caused by pathogenic IgG.</p>
+        <p>
+<bold>Aims: </bold>Targeted reduction of autoantibodies through FcRn blockade by efgartigimod may prevent their pathogenic actions and this was further investigated in a Phase 2 clinical trial (NCT03102593).</p>
+        <p>
+<bold>Methods: </bold>Thirty&#x2010;eight adult confirmed primary ITP patients with an average of &#x2C2;30&#xA0;&#xD7;&#xA0;10<sup>9</sup>/L platelets, were randomized 1:1:1 for 4 weekly intravenous infusions of placebo (N&#xA0;=&#xA0;12), efgartigimod 5&#xA0;mg/kg (N&#xA0;=&#xA0;13) or 10&#xA0;mg/kg (N&#xA0;=&#xA0;13), followed by 8&#x2010;week follow&#x2010;up, 13&#xA0;weeks extended follow&#x2010;up and a 1&#x2010;year open&#x2010;label treatment period with 10&#xA0;mg/kg efgartigimod (N&#xA0;=&#xA0;12). Concurrent therapies at stable doses were permitted.</p>
+        <p>
+<bold>Results: </bold>Patients were predominantly refractory to previous lines of therapy (median disease duration 4.8 [0.1&#x2010;47.8] years and 20 patients [52.6%] had baseline platelet count&#xA0;&lt;&#xA0;15&#xA0;&#xD7;&#xA0;10<sup>9</sup>/L) and had insufficient response to prior ITP therapy (e.g., 14 [36.8%] patients had previously received a TPO&#x2010;RA of whom 10 were continuing a TPO&#x2010;RA at baseline) or failed splenectomy (N&#xA0;=&#xA0;6 [15.8%]). Efgartigimod was safe, consistent with previous observations in Phase 1 (NCT03457649). A rapid reduction of total IgG levels was obtained (up to 63.7% mean change from baseline), which was associated with clinically relevant increases in platelet counts (46% patients on efgartigimod <italic>vs</italic>. 25% on placebo achieved a platelet count of&#xA0;&#x2265;&#xA0;50&#xA0;&#xD7;&#xA0;10<sup>9</sup>/L on at least 2 occasions and 38% <italic>vs</italic>. 0% achieved&#xA0;&#x2265;&#xA0;50&#xA0;&#xD7;&#xA0;10<sup>9</sup>/L for at least 10 cumulative days, Figure 1), and a reduced proportion of patients with bleeding (Figure 2). In the open&#x2010;label treatment period, 8/12 patients achieved platelet count&#xA0;&#x2265;&#xA0;50&#xA0;&#xD7;&#xA0;10<sup>9</sup>/L on at least 2 occasions.</p>
+        <p>
+<bold>Conclusions: </bold>Targeted IgG reduction with efgartigimod is a potential new treatment modality in primary ITP and warrants evaluation of longer&#x2010;term treatment in a Phase 3 study (NCT04225156).</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0027" orientation="portrait"><caption><p>
+<bold>FIGURE 1</bold> Proportion of patients achieving increasing thresholds of platelet count assessed during the main study and open&#x2010;label treatement period</p></caption><graphic xlink:href="RTH2-4-1-g026.jpg" position="anchor" id="nlm-graphic-53" orientation="portrait"/></boxed-text>
+</p>
+        <p>
+<boxed-text position="anchor" content-type="graphic" id="rth212413-blkfxd-0028" orientation="portrait"><caption><p>
+<bold>FIGURE 2</bold> Mean platelet count (&#xB1;SEM), reduction of total IgGs (&#xB1;SEM), and percentage of patients with total WHO score superior to zero assessed in the study</p></caption><graphic xlink:href="RTH2-4-1-g027.jpg" position="anchor" id="nlm-graphic-55" orientation="portrait"/></boxed-text>
+</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-0062">
+      <title>PB/LB06</title>
+      <sec id="rth212413-sec-0063">
+        <title>Oral Anticoagulation in Elderly Patients with Atrial Fibrillation: The Murcia AF Project Phase II</title>
+        <p>
+<bold><underline underline-style="single">J.M. Rivera&#x2010;Caravaca</underline><sup>1</sup>, J. Y&#xE1;&#xF1;ez Rodr&#xED;guez<sup>2</sup>, V. Vicente<sup>3</sup>, F. Mar&#xED;n<sup>1</sup>, G.Y.H. Lip<sup>4,5</sup>, V. Rold&#xE1;n<sup>3</sup></bold>
+</p>
+        <p>
+<sup>1</sup>Department of Cardiology, Hospital Cl&#xED;nico Universitario Virgen de la Arrixaca, University of Murcia, Instituto Murciano de Investigaci&#xF3;n Biosanitaria (IMIB&#x2010;Arrixaca), CIBERCV, Murcia, Spain<sup>2</sup>Faculty of Medicine, University of Murcia, Murcia, Spain<sup>3</sup>Department of Hematology and Clinical Oncology, Hospital General Universitario Morales Meseguer, University of Murcia, Murcia, Spain<sup>4</sup>Liverpool Centre for Cardiovascular Science, University of Liverpool and Liverpool Heart and Chest Hospital, Liverpool, United Kingdom<sup>5</sup>Department of Clinical Medicine, Aalborg Thrombosis Research Unit, Aalborg University, Aalborg, Denmark</p>
+        <p>
+<bold>Background: </bold>Atrial fibrillation (AF) is the most common arrhythmia and increases the risk of stroke, systemic thromboembolism and dementia. Oral anticoagulation (OAC) is central for the management of AF but elderly patients are less likely to be prescribed this therapy because of a perceived higher risk of bleeding events.</p>
+        <p>
+<bold>Aims: </bold>To demonstrate outcomes related to maintaining or discontinuing OAC in elderly AF patients. Second, to identify variables associated with discontinuation of OAC therapy.</p>
+        <p>
+<bold>Methods: </bold>Interim analysis at 2&#x2010;years of a prospective observational cohort of AF patients starting OAC de novo. Patients with valvular AF were excluded. The study was approved by a recognized medical ethics committee.</p>
+        <p>
+<bold>Results: </bold>646 patients were included (51.5% males, median age 77 [IQR 68&#x2010;82] years). Median CHA2DS2&#x2010;VASc and HAS&#x2010;BLED sores were 4 (IQR 3&#x2010;5) and 3 (IQR 2&#x2010;3), respectively. From 646 patients, 251 (38.9%) were&#xA0;&#x2265;&#xA0;80&#xA0;years. Elderly patients had a higher rate of stroke/TIA (8.0% vs. 4.1%; p&#xA0;=&#xA0;0.034) and death (24.7% vs. 12.7%; p&#xA0;&lt;&#xA0;0.001), but non&#x2010;significantly higher rate of major bleeding (8.0% vs. 5.1%; p&#xA0;=&#xA0;0.135). The proportions of OAC withdrawals were similar in elderly and non&#x2010;elderly patients (6.4% vs. 7.1%, p&#xA0;=&#xA0;0.725) but elderly patients suffered a higher risk of stroke/TIA (HR 6.24; 95% CI 1.72&#x2010;22.69) and mortality (HR 4.46; 95% CI 2.19&#x2010;9.12) when OAC was stopped. On multivariate Cox regression analysis, concomitant antiplatelet therapy at inclusion (HR 2.73, 95% CI 1.01&#x2010;7.36; p&#xA0;=&#xA0;0.048) and major bleeding episodes during the follow&#x2010;up (HR 9.47, 95% CI 3.38&#x2010;26.59; p&#xA0;&lt;&#xA0;0.001), were independently associated with OAC cessation in the elderly population.</p>
+        <p>
+<bold>Conclusions: </bold>Elderly AF patients are exposed to higher risk of thromboembolism and mortality, and these risks are particularly increased when OAC is withdrawn. Concomitant use of antiplatelets therapy as well as major bleeding events, are associated with a higher risk of OAC cessation.</p>
+      </sec>
+    </sec>
+    <sec id="rth212413-sec-5501">
+      <title>AUTHOR INDEX</title>
+      <p>
+<bold>A</bold>
+</p>
+      <p>Abbattista M., PB/CO15</p>
+      <p>Agnelli G., PB/LB02</p>
+      <p>Alberio L., PB/CO18, PB/CO17</p>
+      <p>Aliberti S., PB/CO14, PB/CO15, PB/CO03</p>
+      <p>Alibeyoglu A., PB/CO01</p>
+      <p>Aliotta A., PB/CO17</p>
+      <p>Al&#x2010;Rawas N., PB/CO20</p>
+      <p>Al&#x2010;Samkari H., <bold>LB/CO01.2</bold>
+</p>
+      <p>Andronikov M., PB/CO10</p>
+      <p>Artoni A., PB/CO15, PB/CO03, PB/CO14</p>
+      <p>
+<bold>B</bold>
+</p>
+      <p>Balthazar T., LB/CO01.3</p>
+      <p>Bareille M., PB/CO09</p>
+      <p>Barnes G., PB/CO04</p>
+      <p>Baronciani L., PB/CO03</p>
+      <p>Barouqa M., PB/CO16, PB/CO21</p>
+      <p>Barra M., PB/CO05</p>
+      <p>Barrett T., <bold>PB/CO12</bold>
+</p>
+      <p>Bart P.&#x2010;A., PB/CO18, PB/CO17</p>
+      <p>Bauer K., LB/CO01.2</p>
+      <p>Baumann Kreuziger L., PB/CO11</p>
+      <p>Beauchamp J., PB/LB05</p>
+      <p>Bellin E., PB/CO16</p>
+      <p>Bellin M.&#x2010;F., PB/CO10</p>
+      <p>Berger J., PB/CO12</p>
+      <p>Bertaggia Calderara D., PB/CO17</p>
+      <p>Bianchi C., PB/CO18</p>
+      <p>Biganzoli M., PB/CO03</p>
+      <p>Billett H., <bold>PB/CO16</bold>, PB/CO21</p>
+      <p>Bittner E., PB/CO05</p>
+      <p>Black M., PB/CO12</p>
+      <p>Blasi F., PB/CO15, PB/CO03, PB/CO14</p>
+      <p>Bonomi A., PB/CO06</p>
+      <p>Boscarino M., PB/CO14</p>
+      <p>Boscolo M., PB/CO03</p>
+      <p>Boyce S., LB/CO01.1</p>
+      <p>Braken S.J.E., LB/CO01.4</p>
+      <p>Brambilla M., PB/CO06</p>
+      <p>Breen K., PB/CO05</p>
+      <p>Bulpa P., PB/CO09</p>
+      <p>Buranahirun C., PB/LB04</p>
+      <p>
+<bold>C</bold>
+</p>
+      <p>Cagatay A., PB/CO01</p>
+      <p>Calvert J., PB/CO04</p>
+      <p>Camera M., <bold>PB/CO06</bold>
+</p>
+      <p>Cannegieter S.C., LB/CO01.4, PB/CO02</p>
+      <p>Canzano P., PB/CO06</p>
+      <p>Caravaca J.M.R., PB/LB03</p>
+      <p>Carrafiello G., PB/CO15</p>
+      <p>Cataldo D., PB/CO08</p>
+      <p>Cavalca V., PB/CO06</p>
+      <p>Chang D., PB/CO05</p>
+      <p>Chaudhary R., PB/CO13</p>
+      <p>Chen C., PB/LB02</p>
+      <p>Chen Q., LB/CO01.4</p>
+      <p>Chiu K.&#x2010;M., PB/LB02</p>
+      <p>Chocron R., PB/CO10</p>
+      <p>Choi W.&#x2010;I., PB/LB02</p>
+      <p>Choueiri T., PB/CO07</p>
+      <p>Chowdary P., <bold>LB/CO01.1</bold>, PB/CO19</p>
+      <p>Chu G., LB/CO01.4</p>
+      <p>Ciavarella A., PB/CO15</p>
+      <p>Claeys E., LB/CO01.3</p>
+      <p>Cohen A., <bold>PB/LB02</bold>
+</p>
+      <p>Colovos C., PB/CO11</p>
+      <p>Colpani P., PB/CO03</p>
+      <p>Connors J., PB/CO07</p>
+      <p>Cooper D.L., PB/LB04</p>
+      <p>Cosentino N., PB/CO06</p>
+      <p>Cotzia P., PB/CO12</p>
+      <p>Cozzi G., PB/CO03</p>
+      <p>Croteau S.E., PB/LB04</p>
+      <p>Cushman M., PB/CO11</p>
+      <p>
+<bold>D</bold>
+</p>
+      <p>Das R., PB/CO04</p>
+      <p>De Haard H., PB/LB05</p>
+      <p>De Jonge E., PB/CO02</p>
+      <p>De Lima Lopes G., PB/CO07</p>
+      <p>De Zan V., PB/CO03, PB/CO15</p>
+      <p>Delvenne P., PB/CO08</p>
+      <p>D\'Emal C., PB/CO08</p>
+      <p>Desai A., PB/CO07</p>
+      <p>Desgranges F., PB/CO18</p>
+      <p>Detrembleur N., PB/CO08</p>
+      <p>Ding W.Y., <bold>PB/LB03</bold>
+</p>
+      <p>Dive A., PB/CO09</p>
+      <p>Dogne J.&#x2010;M., PB/CO09</p>
+      <p>Dolan G., LB/CO01.1</p>
+      <p>Douxfils J., PB/CO09</p>
+      <p>Dovidio J., PB/CO20</p>
+      <p>Drebes A., PB/CO19</p>
+      <p>Dreier T., PB/LB05</p>
+      <p>
+<bold>E</bold>
+</p>
+      <p>Egyed M., PB/LB05</p>
+      <p>Eikenboom J., PB/CO02</p>
+      <p>El Hechi M., PB/CO05</p>
+      <p>Engelen M.M., <bold>LB/CO01.3</bold>
+</p>
+      <p>Erelel M., PB/CO01</p>
+      <p>Esen F., PB/CO01</p>
+      <p>Evans G., LB/CO01.1</p>
+      <p>
+<bold>F</bold>
+</p>
+      <p>Filippidis P., <bold>PB/CO18</bold>
+</p>
+      <p>Folli C., PB/CO15</p>
+      <p>Fournier L., PB/CO10</p>
+      <p>Freeman K., PB/CO11</p>
+      <p>Fu J., PB/CO07</p>
+      <p>
+<bold>G</bold>
+</p>
+      <p>Gandini D., PB/LB05</p>
+      <p>Gergi M., PB/CO11</p>
+      <p>Godar M., PB/LB05</p>
+      <p>Golestaneh L., PB/CO16</p>
+      <p>Gomez F.J., PB/CO17</p>
+      <p>Gong J., PB/CO20</p>
+      <p>Gonzalez Lugo J., PB/CO16</p>
+      <p>Gonzalez&#x2010;Lugo J., <bold>PB/CO21</bold>
+</p>
+      <p>Gori A., PB/CO15</p>
+      <p>Grasselli G., PB/CO15, PB/CO03, PB/CO14</p>
+      <p>Green&#x2010;Saxena A., PB/CO04</p>
+      <p>Greybels M., PB/LB04</p>
+      <p>Grivas P., PB/CO07</p>
+      <p>Grootenboers M.J.J.H., LB/CO01.4</p>
+      <p>Gualtierotti R., PB/CO14</p>
+      <p>Guery B., PB/CO18</p>
+      <p>Guiot J., PB/CO08</p>
+      <p>Gul A., PB/CO01</p>
+      <p>Gulati S., PB/CO07</p>
+      <p>Gunst J., LB/CO01.3</p>
+      <p>Gupta S., LB/CO01.2</p>
+      <p>
+<bold>H</bold>
+</p>
+      <p>Hamidi A., PB/CO05</p>
+      <p>Hannemann C., PB/LB04</p>
+      <p>Hardy M., <bold>PB/CO09</bold>
+</p>
+      <p>He Y., <bold>PB/LB01</bold>
+</p>
+      <p>Henket M., PB/CO08</p>
+      <p>Hochman J., PB/CO12</p>
+      <p>Hoffman J., PB/CO04</p>
+      <p>Horlait G., PB/CO09</p>
+      <p>Houghton D., <bold>PB/CO13</bold>
+</p>
+      <p>Hsulin L., PB/CO12</p>
+      <p>Hugli O., PB/CO17</p>
+      <p>Huisman M.V., LB/CO01.4, PB/CO02</p>
+      <p>Humbert M., PB/CO10</p>
+      <p>
+<bold>I</bold>
+</p>
+      <p>Ierardi A.M., PB/CO15</p>
+      <p>Iglesias del Sol A., LB/CO01.4</p>
+      <p>Ikemura K., PB/CO16</p>
+      <p>Isoglu Alkoclar U., PB/CO01</p>
+      <p>
+<bold>J</bold>
+</p>
+      <p>Jacqmin H., PB/CO09</p>
+      <p>Jacquemin M., LB/CO01.3</p>
+      <p>Janssens S., LB/CO01.3</p>
+      <p>Jaton K., PB/CO18</p>
+      <p>Jevnikar M., <bold>PB/CO10</bold>
+</p>
+      <p>Johnson J., PB/CO19</p>
+      <p>Judd S.E., PB/CO11</p>
+      <p>
+<bold>K</bold>
+</p>
+      <p>Kaafarani H., PB/CO05</p>
+      <p>Kalayoglu Besisik S., <bold>PB/CO01</bold>
+</p>
+      <p>Kamin Mukaz D., <bold>PB/CO11</bold>
+</p>
+      <p>Kampouri E., PB/CO18</p>
+      <p>Kaptein F.H.J., LB/CO01.4</p>
+      <p>Kar S., LB/CO01.1</p>
+      <p>Karachalias E., PB/CO18</p>
+      <p>Karp Leaf R., LB/CO01.2</p>
+      <p>Khaki A., PB/CO07</p>
+      <p>Klok F.A., LB/CO01.4, PB/CO02</p>
+      <p>Koh I., PB/CO11</p>
+      <p>Kopenitz J., PB/CO20</p>
+      <p>Kose M., PB/CO01</p>
+      <p>Kroft L.J.M., PB/CO02</p>
+      <p>Krop J., LB/CO01.1</p>
+      <p>Kuderer N., PB/CO07</p>
+      <p>Kushnir M., PB/CO16</p>
+      <p>Kuter D., PB/LB05</p>
+      <p>
+<bold>L</bold>
+</p>
+      <p>Lam C., PB/CO04</p>
+      <p>Lamb L., PB/CO19</p>
+      <p>Leaf D., LB/CO01.2</p>
+      <p>Lee A., PB/CO12</p>
+      <p>Lee J., PB/CO05</p>
+      <p>Leong R., PB/CO20</p>
+      <p>Lessire S., PB/CO09</p>
+      <p>Leupin N., PB/LB05</p>
+      <p>Li A., PB/CO07</p>
+      <p>Liebman H.A., PB/LB05</p>
+      <p>Liesenborghs L., LB/CO01.3</p>
+      <p>Lip G.Y.H., PB/LB06, PB/LB03</p>
+      <p>Lo Y., PB/CO16</p>
+      <p>Lorent N., LB/CO01.3</p>
+      <p>Luckhurst C., PB/CO05</p>
+      <p>Lux L., PB/CO05</p>
+      <p>Lyman G., PB/CO07</p>
+      <p>Lynn&#x2010;Palevsky A., <bold>PB/CO04</bold>
+</p>
+      <p>
+<bold>M</bold>
+</p>
+      <p>Makris M., LB/CO01.1</p>
+      <p>Mancini I., <bold>PB/CO03</bold>
+</p>
+      <p>Marichal T., PB/CO08</p>
+      <p>Mar&#xED;n F., PB/LB06</p>
+      <p>Martinelli I., PB/CO14, <bold>PB/CO15</bold>
+</p>
+      <p>Mataraso S., PB/CO04</p>
+      <p>Maurer L., <bold>PB/CO05</bold>
+</p>
+      <p>Mazzolai L., PB/CO17</p>
+      <p>McBane R., PB/CO13</p>
+      <p>McDermott L., PB/CO20</p>
+      <p>M&#xE9;an M., PB/CO18, PB/CO17</p>
+      <p>Michaux I., PB/CO09</p>
+      <p>Michel M., PB/LB05</p>
+      <p>Mir N., PB/CO19</p>
+      <p>Misra S., PB/CO13</p>
+      <p>Mokhtari A., PB/CO05</p>
+      <p>Montani D., PB/CO10</p>
+      <p>Monzani V., PB/CO15</p>
+      <p>Mrakotsky C., <bold>PB/LB04</bold>
+</p>
+      <p>Mullier F., PB/CO09</p>
+      <p>
+<bold>N</bold>
+</p>
+      <p>Nakamura M., PB/LB02</p>
+      <p>Nathwani A., LB/CO01.1</p>
+      <p>Newland A.C., <bold>PB/LB05</bold>
+</p>
+      <p>Newman K., PB/CO05</p>
+      <p>Novembrino C., PB/CO03, PB/CO14</p>
+      <p>
+<bold>O</bold>
+</p>
+      <p>Omodeosal&#xE8; E., PB/CO06</p>
+      <p>Oury C., <bold>PB/CO08</bold>
+</p>
+      <p>Ozbalak M., PB/CO01</p>
+      <p>
+<bold>P</bold>
+</p>
+      <p>Padrnos L., PB/CO13</p>
+      <p>Pagani J.&#x2010;L., PB/CO18</p>
+      <p>Palla R., PB/CO14</p>
+      <p>Pals F., LB/CO01.4</p>
+      <p>Panigada M., PB/CO03, PB/CO14, PB/CO15</p>
+      <p>Pantet O., PB/CO18, PB/CO17</p>
+      <p>Papadimitriou&#x2010;Olivgeris M., PB/CO17, PB/CO18</p>
+      <p>Parati G., PB/CO06</p>
+      <p>Parent F., PB/CO10</p>
+      <p>Peerlinck K., LB/CO01.3</p>
+      <p>Pellegrini E., PB/CO04</p>
+      <p>Pengo M., PB/CO06</p>
+      <p>Peralta M.R., LB/CO01.1</p>
+      <p>Perera A., <bold>PB/CO19</bold>
+</p>
+      <p>Peters S., PB/CO07</p>
+      <p>Peyvandi F., PB/CO03, PB/CO15, <bold>PB/CO14</bold>
+</p>
+      <p>Phillips M., LB/CO01.1</p>
+      <p>Pieters G., LB/CO01.3</p>
+      <p>Porro B., PB/CO06</p>
+      <p>Prout L., PB/CO05</p>
+      <p>Pruthi R., PB/CO13</p>
+      <p>
+<bold>Q</bold>
+</p>
+      <p>Qanadli S.D., PB/CO18</p>
+      <p>Quaye M., LB/CO01.1</p>
+      <p>
+<bold>R</bold>
+</p>
+      <p>Radermecker C., PB/CO08</p>
+      <p>Rahman S., PB/CO16, PB/CO21</p>
+      <p>Rajpurkar M., PB/LB04</p>
+      <p>Raphael M., PB/CO10</p>
+      <p>Regina J., PB/CO18</p>
+      <p>Reimitz P.&#x2010;E., PB/LB02</p>
+      <p>Reiss U., LB/CO01.1</p>
+      <p>Rejt&#x151; L., PB/LB05</p>
+      <p>Rex S., LB/CO01.3</p>
+      <p>Reyes Gil M., PB/CO21, PB/CO16</p>
+      <p>Rhoades R., PB/CO20</p>
+      <p>Riddell A., LB/CO01.1</p>
+      <p>Rini B., PB/CO07</p>
+      <p>Rivera D., PB/CO07</p>
+      <p>Rivera&#x2010;Caravaca J.M., <bold>PB/LB06</bold>
+</p>
+      <p>Roberts R., PB/CO05</p>
+      <p>Rold&#xE1;n V., PB/LB03, PB/LB06</p>
+      <p>Romanyuk N., PB/LB05</p>
+      <p>Rosovsky R., LB/CO01.2, PB/CO05, <bold>PB/CO07</bold>
+</p>
+      <p>Rossi F., PB/CO14</p>
+      <p>
+<bold>S</bold>
+</p>
+      <p>Sanchez O., PB/CO10</p>
+      <p>Sanchez&#x2010;Gonzalez B., PB/LB05</p>
+      <p>&#x15E;enkal N., PB/CO01</p>
+      <p>Shah D., PB/CO07</p>
+      <p>Shapiro K.A., PB/LB04</p>
+      <p>Shapiro S., LB/CO01.1</p>
+      <p>Sholzberg M., PB/CO11</p>
+      <p>Short G., LB/CO01.1</p>
+      <p>Shyr Y., PB/CO07</p>
+      <p>Sinonquel P., LB/CO01.3</p>
+      <p>Smith A., LB/CO01.1</p>
+      <p>Sood T., PB/CO19</p>
+      <p>Stahl L., PB/CO16</p>
+      <p>Stals M.A.M., <bold>LB/CO01.4</bold>
+</p>
+      <p>Szymanski J., PB/CO16, PB/CO21</p>
+      <p>
+<bold>T</bold>
+</p>
+      <p>Talks K., LB/CO01.1</p>
+      <p>Testa S., PB/CO09</p>
+      <p>Thoma B., <bold>PB/CO20</bold>
+</p>
+      <p>Thompson M., PB/CO07</p>
+      <p>Toorop M.M.A., LB/CO01.4</p>
+      <p>Tor Y.B., PB/CO01</p>
+      <p>Tortorici E., PB/CO06</p>
+      <p>Tremoli E., PB/CO06</p>
+      <p>Tripodi A., PB/CO14</p>
+      <p>Tschopp J., PB/CO18</p>
+      <p>Tuddenham E., LB/CO01.1</p>
+      <p>Tukek T., PB/CO01</p>
+      <p>
+<bold>U</bold>
+</p>
+      <p>Ulrichts P., PB/LB05</p>
+      <p>Umman S., PB/CO01</p>
+      <p>Unverdorben M., PB/LB02</p>
+      <p>
+<bold>V</bold>
+</p>
+      <p>Van Dam L.F., <bold>PB/CO02</bold>
+</p>
+      <p>Van der Linden L., LB/CO01.3</p>
+      <p>Van der Wal L.I., PB/CO02</p>
+      <p>Van Driel E.M., LB/CO01.4</p>
+      <p>Van Guldener C., LB/CO01.4</p>
+      <p>Van Laer C., LB/CO01.3</p>
+      <p>Vanassche T., LB/CO01.3</p>
+      <p>Vandenbriele C., LB/CO01.3</p>
+      <p>Vanwinge C., PB/CO08</p>
+      <p>Veglia F., PB/CO06</p>
+      <p>Ventola P., PB/LB04</p>
+      <p>Verhamme P., LB/CO01.3</p>
+      <p>Verschueren K., PB/LB05</p>
+      <p>Viala B., PB/CO18</p>
+      <p>Vicente V., PB/LB06</p>
+      <p>Vos R., LB/CO01.3</p>
+      <p>
+<bold>W</bold>
+</p>
+      <p>Walsh K.S., PB/LB04</p>
+      <p>Wang W., LB/CO01.2</p>
+      <p>Ward S., PB/LB05</p>
+      <p>Warner J., PB/CO07</p>
+      <p>Wauters J., LB/CO01.3</p>
+      <p>Wilkening G.N., PB/LB04</p>
+      <p>Wilmer A., LB/CO01.3</p>
+      <p>Wysokinska E., PB/CO13</p>
+      <p>Wysokinski W., PB/CO13</p>
+      <p>
+<bold>X</bold>
+</p>
+      <p>Xia Y., PB/CO12</p>
+      <p>
+<bold>Y</bold>
+</p>
+      <p>Y&#xE1;&#xF1;ez Rodr&#xED;guez J., PB/LB06</p>
+      <p>
+<bold>Z</bold>
+</p>
+      <p>Zakai N.A., PB/CO11</p>
+      <p>Zermatten M., PB/CO18</p>
+      <p>Zermatten M.G., <bold>PB/CO17</bold>
+</p>
+      <p>Zierhut W., PB/LB02</p>
+      <p>Zon R., PB/CO07</p>
+    </sec>
+  </body>
+</article>
+</pmc-articleset>

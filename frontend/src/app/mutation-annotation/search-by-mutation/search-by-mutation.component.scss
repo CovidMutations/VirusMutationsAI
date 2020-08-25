@@ -1,0 +1,29 @@
+@import '../../../sass/variables';
+
+
+.m_scroll {
+  overflow: auto;
+  height: 100%;
+  display: block;
+}
+
+.m_content_scroll {
+  @extend .m_scroll;
+  height: calc(100vh - 250px);
+}
+
+.wrap_icon-cancel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  .icon-cancel {
+    position: absolute;
+    right: 10px;
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+.cursor {
+  cursor: pointer;
+}

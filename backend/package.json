@@ -6,6 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "copy": "cp -rv ./src/assets/ dist/assets/ && cp -rv ./py ./dist/py",
+    "copyw": "xcopy assets dist\\assets /E/C/I && xcopy py dist\\py /E/C/I ",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",

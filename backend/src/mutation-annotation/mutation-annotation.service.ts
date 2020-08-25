@@ -12,12 +12,12 @@ export class MutationAnnotationService {
   async uploadVCF(file): Promise<MutationAnnotationModel> {
     
     this.logger.verbose('uploadVCF');
-    return this.getArticles(file);
+    return await this.getArticles(file);
   }
 
   async getArticlesByMutation(mutation: string): Promise<MutationAnnotationModel> {
     this.logger.verbose('getArticlesByMutation');
-    return this.getArticles(mutation);
+    return await this.getArticles(mutation);
   }
 
   private removeVCF(file): void {
@@ -31,19 +31,20 @@ export class MutationAnnotationService {
   }
 
   private async getArticles(fileOrMutation) {
+    let isFile = typeof fileOrMutation !== 'string';
 
-    const pyPath = path.join(__dirname, '..', '..', 'scripts', 'vcf_to_articles_json.py');
-    const indexPath = '--article_index_file_name=' + path.join(__dirname, '..', '..', 'db', 'index.csv');
-    const mappingPath = '--article_mutations_file_name=' + path.join(__dirname, '..', '..', 'db', 'articles2mutations.txt');
-    const filePath = path.join(__dirname, '..', '..', fileOrMutation);
+    const pyPath = path.join(__dirname, '..', '..', 'py', 'vcf_to_articles_json.py');
+    const indexPath = '--article_index_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'index.csv');
+    const mappingPath = '--article_mutations_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'articles2mutations.txt');
+    const filePath = (isFile) ? path.join(__dirname, '..', '..', 'py', fileOrMutation) :  fileOrMutation ;
     
     const pythonShellRun = promisify(PythonShell.run);
     const results = await pythonShellRun(pyPath, {args: [filePath, indexPath, mappingPath]});
 
-    if (results)  { this.removeVCF(filePath); }
+    if (results && isFile)  { this.removeVCF(filePath); }
 
     const jsonRes = JSON.parse(results.join(''));
-    
+
     if('error_text' in jsonRes) {
       throw new InternalServerErrorException(jsonRes,jsonRes.error_text);
     }
@@ -52,3 +53,4 @@ export class MutationAnnotationService {
   }
 
 }
+// vcf_to_articles_json.py "11083G>T" --article_index_file_name=db/index.csv --article_mutations_file_name=db/articles2mutations.txt

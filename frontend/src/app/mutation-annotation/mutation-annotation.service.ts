@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpParameterCodec} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 import { APP_CONFIG, IAppConfig } from '../app.config';
 import { SharedService } from '../shared/shared.service';
 import { MutationAnnotationStore } from './store/mutation-annotation.store';
@@ -60,24 +60,19 @@ export class MutationAnnotationService {
   getMutationAnnotationArticles(): Observable<HashMap<MutationAnnotationModel>> {
     return this.mutationAnnotationQuery.selectAll({ asObject: true });
   }
-  searchMutationAnnotationArticles(mutation: string): Observable<HashMap<MutationAnnotationModel>> {
-    this.http.post(this.API_URL + this.searchMutationApiEndpoint, {mutation},   {
+
+  searchMutationAnnotationArticles(mutation: string): Observable<MutationAnnotationModel[]> {
+    return this.http.post(this.API_URL + this.searchMutationApiEndpoint, {mutation},   {
       reportProgress: true, // for progress data
     }).pipe(
       tap(
-        list => {
-          console.log(list)
-       //   this.mutationAnnotationStore.set(list);
-        },
+        list => { },
         err => {
-         // this.mutationAnnotationStore.setLoading(false);
-          this.sharedService.errorModal('Error: ' + err.error.message);
+          this.sharedService.errorModal('Error: ' + JSON.stringify(err));
         }
-      )
-    );
+      ),
+      map(list => Object.values(list)[0])
+    ) as Observable<MutationAnnotationModel[]>;
 
-
-
-   return this.mutationAnnotationQuery.selectAll({ asObject: true });
   }
 }

@@ -1,0 +1,745 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Front Microbiol</journal-id>
+      <journal-id journal-id-type="iso-abbrev">Front Microbiol</journal-id>
+      <journal-id journal-id-type="publisher-id">Front. Microbiol.</journal-id>
+      <journal-title-group>
+        <journal-title>Frontiers in Microbiology</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1664-302X</issn>
+      <publisher>
+        <publisher-name>Frontiers Media S.A.</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmc">7387429</article-id>
+      <article-id pub-id-type="doi">10.3389/fmicb.2020.01800</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Microbiology</subject>
+          <subj-group>
+            <subject>Original Research</subject>
+          </subj-group>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Geographic and Genomic Distribution of SARS-CoV-2 Mutations</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Mercatelli</surname>
+            <given-names>Daniele</given-names>
+          </name>
+          <xref ref-type="author-notes" rid="fn002">
+            <sup>&#x2020;</sup>
+          </xref>
+          <uri xlink:type="simple" xlink:href="http://loop.frontiersin.org/people/645690/overview"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Giorgi</surname>
+            <given-names>Federico M.</given-names>
+          </name>
+          <xref ref-type="corresp" rid="c001">
+            <sup>*</sup>
+          </xref>
+          <xref ref-type="author-notes" rid="fn003">
+            <sup>&#x2020;</sup>
+          </xref>
+          <uri xlink:type="simple" xlink:href="http://loop.frontiersin.org/people/64106/overview"/>
+        </contrib>
+      </contrib-group>
+      <aff><institution>Department of Pharmacy and Biotechnology, University of Bologna</institution>, <addr-line>Bologna</addr-line>, <country>Italy</country></aff>
+      <author-notes>
+        <fn fn-type="edited-by">
+          <p>Edited by: Anna Kramvis, University of the Witwatersrand, South Africa</p>
+        </fn>
+        <fn fn-type="edited-by">
+          <p>Reviewed by: Longping Victor Tse, The University of North Carolina at Chapel Hill, United States; Tetsuro Ikegami, The University of Texas Medical Branch at Galveston, United States</p>
+        </fn>
+        <corresp id="c001">*Correspondence: Federico M. Giorgi <email>federico.giorgi@unibo.it</email></corresp>
+        <fn fn-type="other" id="fn001">
+          <p>This article was submitted to Virology, a section of the journal Frontiers in Microbiology</p>
+        </fn>
+        <fn fn-type="other" id="fn002">
+          <p>&#x2020;ORCID: Daniele Mercatelli <ext-link ext-link-type="uri" xlink:href="http://orcid.org/0000-0003-3228-0580">orcid.org/0000-0003-3228-0580</ext-link></p>
+        </fn>
+        <fn fn-type="other" id="fn003">
+          <p>Federico M. Giorgi <ext-link ext-link-type="uri" xlink:href="http://orcid.org/0000-0002-7325-9908">orcid.org/0000-0002-7325-9908</ext-link></p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="epub">
+        <day>22</day>
+        <month>7</month>
+        <year>2020</year>
+      </pub-date>
+      <pub-date pub-type="collection">
+        <year>2020</year>
+      </pub-date>
+      <pub-date pub-type="pmc-release">
+        <day>22</day>
+        <month>7</month>
+        <year>2020</year>
+      </pub-date>
+      <!-- PMC Release delay is 0 months and 0 days and was based on the <pub-date pub-type="epub"/>. -->
+      <volume>11</volume>
+      <elocation-id>1800</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>27</day>
+          <month>4</month>
+          <year>2020</year>
+        </date>
+        <date date-type="accepted">
+          <day>09</day>
+          <month>7</month>
+          <year>2020</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright &#xA9; 2020 Mercatelli and Giorgi.</copyright-statement>
+        <copyright-year>2020</copyright-year>
+        <copyright-holder>Mercatelli and Giorgi</copyright-holder>
+        <license xlink:href="http://creativecommons.org/licenses/by/4.0/">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>The novel respiratory disease COVID-19 has reached the status of worldwide pandemic and large efforts are currently being undertaken in molecularly characterizing the virus causing it, SARS-CoV-2. The genomic variability of SARS-CoV-2 specimens scattered across the globe can underly geographically specific etiological effects. In the present study, we gather the 48,635 SARS-CoV-2 complete genomes currently available thanks to the collection endeavor of the GISAID consortium and thousands of contributing laboratories. We analyzed and annotated all SARS-CoV-2 mutations compared with the reference Wuhan genome NC_045512.2, observing an average of 7.23 mutations per sample. Our analysis shows the prevalence of single nucleotide transitions as the major mutational type across the world. There exist at least three clades characterized by geographic and genomic specificity. In particular, clade G, prevalent in Europe, carries a D614G mutation in the Spike protein, which is responsible for the initial interaction of the virus with the host human cell. Our analysis may facilitate custom-designed antiviral strategies based on the molecular specificities of SARS-CoV-2 in different patients and geographical locations.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>SARS-CoV-2</kwd>
+        <kwd>genome evolution</kwd>
+        <kwd>COVID-19</kwd>
+        <kwd>genomics</kwd>
+        <kwd>coronavirus</kwd>
+      </kwd-group>
+      <funding-group>
+        <award-group>
+          <funding-source id="cn001">Ministero dell\'Istruzione, dell\'Universit&#xE0; e della Ricerca<named-content content-type="fundref-id">10.13039/501100003407</named-content></funding-source>
+        </award-group>
+      </funding-group>
+      <counts>
+        <fig-count count="6"/>
+        <table-count count="2"/>
+        <equation-count count="0"/>
+        <ref-count count="28"/>
+        <page-count count="13"/>
+        <word-count count="6421"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec sec-type="intro" id="s1">
+      <title>Introduction</title>
+      <p>Initially reported in mid-December 2019 in the Chinese city of Wuhan, the newly emerged severe acute respiratory syndrome virus (SARS-CoV-2) is a single-stranded RNA beta-coronavirus with a compact 29,903 nucleotides-long genome. This virus causes a serious disease known as Coronavirus Disease 2019 (COVID-19), which has spread in over 210 countries in &lt;4 months, counting more than 10 million confirmed cases and almost 500,000 deaths reported worldwide as of June 28, 2020 (source: World Health Organization). A difference in case fatality rates across countries was observed, possibly due to a diverse demographic composition and the type of measures that have been taken in different countries to limit viral spreading (Dowd et al., <xref rid="B9" ref-type="bibr">2020</xref>). According to data from the public database of the Global Initiative on Sharing All Influenza Data (GISAID), three major clades of SARS-CoV-2 can be identified (Forster et al., <xref rid="B10" ref-type="bibr">2020</xref>), that have been subsequently named as clade G (variant of the spike protein S-D614G), clade V (variant of the ORF3a coding protein NS3-G251), and clade S (variant ORF8-L84S). However, as more complete sequences become available, the need to define specific geographic distributions of virus variants becomes of practical importance to define clinical and political strategies at the local level. Despite several reports having confirmed a relatively low variability of SARS-CoV-2 genomes (Ceraolo and Giorgi, <xref rid="B5" ref-type="bibr">2020</xref>; Lu et al., <xref rid="B18" ref-type="bibr">2020</xref>), it is still unclear if different fatality rates or speed of transmission observed in different countries may be the consequence of clade\'s differences in virulence, as discussed by a recent commentary comparing different strains in the USA (Brufsky, <xref rid="B4" ref-type="bibr">2020</xref>). It is therefore possible that more insights into the pathogenesis and virulence of this virus may come from comparative genomic analysis linked to epidemiologic data coming from different countries.</p>
+      <p>Genetic variance analyses must now play a crucial role in expanding knowledge on this new virus to adopt measures to contain its outbreak. Complete viral genome sequences have been made rapidly publicly available to the research community and have recently surpassed the 48,000 units, thanks to the worldwide effort of scientists and to the GISAID consortium. This data avalanche will result in an unprecedently rapid effort to analyze data to understand genome diversity (Andersen et al., <xref rid="B2" ref-type="bibr">2020</xref>; Shen et al., <xref rid="B22" ref-type="bibr">2020</xref>), to hypothesize suitable targets for drug repositioning (Wu et al., <xref rid="B25" ref-type="bibr">2020</xref>; Zhou et al., <xref rid="B28" ref-type="bibr">2020</xref>) and to develop prevention strategies (Zhao and Chen, <xref rid="B27" ref-type="bibr">2020</xref>). In the present study, we performed the largest comparative study so far by analyzing more than 48,000 complete SARS-CoV-2 genomes. We report all mutations and stratify them genomically and geographically, also highlighting insurgence of sub-clades and genomic highly variable spots. These finding may be extremely useful to design and think about the efficacy of measures that have been taken on a regional basis to limit SARS-CoV-2 spreading.</p>
+    </sec>
+    <sec sec-type="methods" id="s2">
+      <title>Methods</title>
+      <p>Forty-eight thousand six hundred thirty-five SARS-CoV-2 genomic sequences were downloaded from GISAID (Shu and McCauley, <xref rid="B23" ref-type="bibr">2017</xref>) on June 26, 2020 (<xref ref-type="supplementary-material" rid="SM1">Supplementary File 1</xref>). Only viruses affecting human hosts were selected, removing low-quality sequences (&gt;5% NNNs) and using only full-length sequences (&gt;29,000 nt). Forty-eight thousand six hundred twenty-four sequences were associated to a geographic region, specifically: 514 from Africa, 3,340 from Asia, 31,818 from Europe, 10,250 from North America, 2,127 from Oceania and 575 from South America. Eleven sequences were not associated to any continent. We provide as <xref ref-type="supplementary-material" rid="SM2">Supplementary File 2</xref> a full geographic description of each sample used in the study.</p>
+      <p>The reference NC_045512.2 SARS-CoV-2 Wuhan genome (Coronaviridae Study Group of the International Committee on Taxonomy of Viruses, <xref rid="B6" ref-type="bibr">2020</xref>), 29,903 nucleotides long, was obtained from NCBI GenBank. A GFF3 annotation associated to the refence, showing genomic coordinates for all protein sequences of SARS-CoV-2, is provided as <xref ref-type="supplementary-material" rid="SM3">Supplementary File 3</xref>. The large ORF1 polyprotein was split into its constituent Non-structural proteins (NSPs). The NSP12, encoding for the viral RNA-dependent RNA polymerase, was considered in the annotation as two regions, NSP12a and NSP12b, corresponding to the regions before and after a ribosomal frameshift, occurring as nucleotide 13,468 is translated as both the last nucleotide of a codon and the first of the next codon.</p>
+      <p>NUCMER version 3.1 (Delcher, <xref rid="B7" ref-type="bibr">2002</xref>) was used to align all 48,635 genome sequences over the NC_045512.2 reference. The output of the alignment was converted to an annotated list of all mutational events using an internally developed R SARS-CoV-2 annotation algorithm provided as <xref ref-type="supplementary-material" rid="SM4">Supplementary File 4</xref>.</p>
+      <p>SARS-CoV-2 5&#x2032;UTR RNA secondary structure has been predicted by free energy minimization together with equilibrium partition function and base pair binding probabilities algorithm from the RNAfold WebServer using default settings (Gruber et al., <xref rid="B11" ref-type="bibr">2008</xref>).</p>
+    </sec>
+    <sec sec-type="results" id="s3">
+      <title>Results</title>
+      <p>Our analysis of 48,635 SARS-CoV-2 highlights a total of 353,341 mutation events compared to the NC_045512.2 Wuhan reference genome. Our results, event by event, are available as <xref ref-type="supplementary-material" rid="SM5">Supplementary File 5</xref>. While 256 samples, mostly originating from Asia, did not have any difference from the reference, 48,379 samples possessed at least one mutation. The number of mutations is relatively low, with mode per sample equaling 6, an average of 7.23, and very few samples having more than 15 events (<xref ref-type="fig" rid="F1">Figure 1A</xref>). Overall, no continent differs significantly from the average mutation rate (<xref ref-type="fig" rid="F1">Figure 1B</xref>), but there is a significant difference (one-way ANOVA <italic>p</italic> = 9.55 &#xD7; 10<sup>&#x2212;205</sup>) in the average number of mutations per sample between countries. Specifically, amongst the top 40 nations with the highest number of sequenced full viral genomes (<xref ref-type="fig" rid="F1">Figure 1C</xref>), these countries have a slightly but significant higher number of observed mutations per sample, when compared to the world\'s average: India: (8.40), Congo (8.30), Bangladesh (9.83), and Kazakhstan (9.47). On the other hand, the sequences from the following countries show a significantly lower mutational burden: Germany (6.09), Japan (4.55), Italy (5.92), Greece (5.91), Hong Kong (5.00), and Kenya (5.38). One must bear in mind that some sampling biases may affect this comparison: for example, some countries have generated the highest number of sequences in the early phases of the pandemic, and may have therefore observed fewer mutations (for example, Italy has not shared any sequence in the months of May and June 2020, the last two considered in our analysis). On the other hand, one would expect China to have a lower number of mutations, being the likely point of origin of SARS-CoV-2 (Ceraolo and Giorgi, <xref rid="B5" ref-type="bibr">2020</xref>), and indeed the distribution of mutations per sample seems to suggest that (<xref ref-type="fig" rid="F1">Figure 1C</xref>); however, a small number of sequences carrying a very high number (&gt;50) of mutations are associated to China, shifting the distribution for this country. Upon manual inspection, these sequences do not appear to share similarities between each other, and are likely the product of technical sequencing errors.</p>
+      <fig id="F1" position="float">
+        <label>Figure 1</label>
+        <caption>
+          <p><bold>(A)</bold> Distribution of number of mutational events for all SARS-CoV-2 genome samples analyzed. <bold>(B)</bold> Distributions of number of mutations for each sample, stratified per continent. The main boxplot rectangles are drawn between the 1st and 3rd quartile, with the median value indicated as a thick line. Boxplot whiskers fall on the closest point to the 1st/3rd quartile + 1.5 interquartile range as described in the R boxplot() function. The number in brackets after the continent name indicates the number of sequenced genomes. The horizontal red line indicates the average number of mutations per sample, worldwide. <bold>(C)</bold> As in <bold>(B)</bold>, with stratification performed country-wise, using the 40 countries with the highest number of sequenced genomes. The boxplot color indicates the country has a mutation rate higher (red) or lower (blue) than the world\'s average (Kolmogorov-Smirnov test <italic>p</italic> &lt; 2.2 &#xD7; 10<sup>&#x2212;16</sup> and absolute difference of averages between country and world higher than one).</p>
+        </caption>
+        <graphic xlink:href="fmicb-11-01800-g0001"/>
+      </fig>
+      <p>We analyzed the nature of each mutation, highlighting a massive prevalence of single-nucleotide polymorphisms (SNPs) over short insertion/deletion events (indels) worldwide (<xref ref-type="supplementary-material" rid="SM6">Supplementary File 6</xref>) and in every continent (<xref ref-type="fig" rid="F2">Figure 2A</xref>). Worldwide, we observed 205,482 amino acid(aa)-changing SNP events (58.2% of the total), with fewer than half silent SNPs falling in coding regions (27.6%, with 97,573 events). There are 44,345 events in intergenic regions (12.6%), prevalently the 5&#x2032;UTR and 3&#x2032;UTR of the SARS-CoV-2 RNA sequence. Short frameshift deletions are the most common indel event in the SARS-CoV-2 population (0.8%), followed by in-frame deletions (3x deletions reducing the viral protein length without introducing stop codons), which account for 0.6% of all observed mutational events. SNPs generating a stop codon are also very rare (496 observed events, 0.1% of the total). Insertions are an extremely rare event, accounting for &lt;0.1% of all SARS-CoV-2 mutations detected so far. Similar profiles and relative percentages are observed in all continents, suggesting a conserved molecular basis for SARS-CoV-2 evolution (<xref ref-type="fig" rid="F2">Figure 2A</xref>).</p>
+      <fig id="F2" position="float">
+        <label>Figure 2</label>
+        <caption>
+          <p><bold>(A)</bold> Distribution of SARS-CoV-2 mutation classes in continents. &#x201C;SNP,&#x201D; &#x201C;deletion,&#x201D; and &#x201C;insertion&#x201D; terms without further specifications are intended as frameshift-preserving aa-changing events. <bold>(B)</bold> Continent-stratified distribution of SARS-CoV-2 mutation types. Colors are assigned randomly but preserved across panels to facilitate tracking of identical types across continents. Listed nucleotide changes represent those found in the positive-sense viral RNA. We indicate the thymine T letter for consistency with the NCBI reference sequence NC_045512.2, but the actual viral sequence will be factually represented by a U (uracil) as the RNA counterpart for thymine. Dots (&#x2018;&#xB7;&#x2019;) on the x-axis mutation type names indicate nucleotide deletion.</p>
+        </caption>
+        <graphic xlink:href="fmicb-11-01800-g0002"/>
+      </fig>
+      <p>We then classified the SARS-CoV-2 mutations according to their type, observing a prevalence of SNP transitions (purine-&gt;purine and pyrimidine-&gt;pyrimidine) over SNP transversions (purine-&gt;pyrimidine and vice versa), an observation that matches what was observed for SARS-CoV (Hu et al., <xref rid="B14" ref-type="bibr">2003</xref>). The most common event, both worldwide and continent-wise, is by far the C&gt;T transition, accounting for 55.1% of all observed worldwide viral mutations (<xref ref-type="fig" rid="F2">Figure 2B</xref>, <xref ref-type="supplementary-material" rid="SM6">Supplementary File 6</xref>). The A&gt;G transition is the second most common event worldwide (14.8%) and in Africa, Europe, and the Americas. The most common transversion, G&gt;T, is the third most common event worldwide, with 42,408 occurrences (12.0%), but it is the second most common event in Asia and Oceania. The most common indel, the deletion of the ATG codon, is the 12th most common event worldwide, with a total of 1,298 occurrences, but it rises to the 9th most frequent in European genomes (<xref ref-type="fig" rid="F2">Figure 2B</xref>). A peculiar multi-nucleotide event, the substitution of a GGG triplet with AAC, was also observed as the 5th most common event worldwide (4.0%, <xref ref-type="supplementary-material" rid="SM6">Supplementary File 6</xref>). As we will discuss later, this mutation type is mostly associated to a specific event affecting the Nucleocapsid locus, which characterizes the clade GR in the viral phylogenetic tree. It must be noted here that our choice of the &#x201C;T&#x201D; base notation, corresponding to thymine, was made for compatibility reasons with the NCBI NC_045512.2 reference genome notation, while the actual RNA base in the SARS-CoV-2 genome is a &#x201C;U&#x201D; (Uracil).</p>
+      <p>We went into higher detail and analyzed the effects of each mutation on the protein sequences of SARS-CoV-2. Again, the profiles appear quite similar across continents. The most prevalent mutation in sequenced genomes worldwide is a transversion affecting the 23,403rd nucleotide adenosine (<xref ref-type="supplementary-material" rid="SM6">Supplementary File 6</xref>), transformed into a guanosine (A23403G), defining the so-called G-clade of SARS-CoV-2 genomes, prevalent in Europe (where overall the highest sequencing effort has been undertaken, and therefore the highest number of samples), Oceania, South America, and Africa (<xref ref-type="fig" rid="F3">Figure 3A</xref>). This mutation causes a D614G (aspartate to glycine in protein position 614) aa-change of the Spike (S) protein, which is responsible for the initial entry of the virus in the cell via the ACE2 human receptor (Guzzi et al., <xref rid="B12" ref-type="bibr">2020</xref>). However, this mutation is outside the observed Spike/ACE2 binding domain, roughly located between amino acids 330 and 530 (Wang et al., <xref rid="B24" ref-type="bibr">2020</xref>). Three mutations show similar frequency with A23403G: C14408T, C241T, and C3037T (<xref ref-type="fig" rid="F3">Figure 3A</xref>). As we will show later, these four mutations are almost always co-occurring in the same genomes, defining the major clade G observed in the viral population. In Asia, while the most common mutation was G11083T for samples sequenced between December 2019 and March 2020, recent sequencing efforts have highlighted a current profile similar to those of the other continents (<xref ref-type="fig" rid="F3">Figure 3A</xref>).</p>
+      <fig id="F3" position="float">
+        <label>Figure 3</label>
+        <caption>
+          <p><bold>(A)</bold> Continent-stratified distribution of SARS-CoV-2 most frequent specific events, annotated as nucleotide coordinates over the reference genome NC_045512.2. Colors are assigned randomly but preserved across panels to facilitate tracking of identical types across continents. <bold>(B)</bold> Continent-stratified distribution of SARS-CoV-2 most frequent specific events, annotated protein changes using the format protein:mutation. Colors are assigned randomly but preserved across panels to facilitate tracking of identical types across continents.</p>
+        </caption>
+        <graphic xlink:href="fmicb-11-01800-g0003"/>
+      </fig>
+      <p>The effect of the majority of SARS-CoV-2 nucleotide mutations is reflected in protein changes. We show, in <xref ref-type="fig" rid="F3">Figure 3B</xref>, the most common mutations, in protein annotation, in the six continents, while in <xref rid="T1" ref-type="table">Table 1</xref> we highlight the effect of the 20 most common mutations worldwide, in nucleotide and protein coordinates. The most common set of events is a quadruplet of mutations, corresponding to the G clade nucleotide mutations described before. Apart from the aforementioned D614G mutation observed in the Spike protein, the second most common amino acid changing mutation is P314L, affecting the Non-structural Protein 12 (NSP12), the viral RNA-dependent RNA polymerase. The other two mutations in the top four do not affect the protein sequence, as they are silent mutations targeting the 106th codon of NSP3 (a viral predicted phosphoesterase) and the 5&#x2032;UTR in position 241.</p>
+      <table-wrap id="T1" position="float">
+        <label>Table 1</label>
+        <caption>
+          <p>The 20 most frequent mutation events observed in sequenced SARS-CoV-2 genomes.</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th valign="top" align="left" rowspan="1" colspan="1">
+                <bold>Genomic coordinate</bold>
+              </th>
+              <th valign="top" align="left" rowspan="1" colspan="1">
+                <bold>Effect on protein/UTR</bold>
+              </th>
+              <th valign="top" align="center" rowspan="1" colspan="1">
+                <bold>Nr of samples</bold>
+              </th>
+              <th valign="top" align="left" rowspan="1" colspan="1">
+                <bold>Class</bold>
+              </th>
+              <th valign="top" align="left" rowspan="1" colspan="1">
+                <bold>Genomic region</bold>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">A23403G</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">S:D614G</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">36,500</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Spike protein</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C14408T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP12b:P314L</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">36,444</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 12, post-ribosomal frameshift (RNA-dependent RNA polymerase)</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C3037T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP3:F106F</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">36,384</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">silent SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 3 (predicted phosphoesterase)</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C241T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">5&#x2032;UTR:241</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">36,007</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">5&#x2032;UTR SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">5&#x2032; UnTranslated Region</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">GGG28881AAC</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">N:RG203KR</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">14,095</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP triplet</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Nucleocapsid protein</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">G25563T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">ORF3a:Q57H</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">10,929</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">ORF3a protein</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C1059T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP2:T85I</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">8,451</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 2</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">G11083T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP6:L37F</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">5,507</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 6 (transmembrane protein)</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C14805T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP12b:Y446Y</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">4,505</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">silent SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 12, post-ribosomal frameshift (RNA-dependent RNA polymerase)</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">T28144C</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">ORF8:L84S</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">3,804</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">ORF8 protein</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">G26144T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">ORF3a:G251V</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">3,792</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">ORF3a protein</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C8782T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP4:S76S</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">3,743</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">silent SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 4</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">A20268G</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP15:L216L</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">2,479</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">silent SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 15 (endoRNAse)</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C18060T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP14:L7L</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">1,813</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">silent SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 14 (3&#x2032;-5&#x2032; exonuclease)</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C23731T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">S:T723T</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">1,799</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">silent SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Spike protein</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">G10097A</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP5:G15S</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">1798</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 5 (protease)</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">A17858G</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP13:Y541C</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">1,780</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 13</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C17747T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP13:P504L</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">1,736</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 13</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">C2558T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP2:P585S</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">1,701</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 2</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">A2480G</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP2:I559V</td>
+              <td valign="top" align="center" rowspan="1" colspan="1">1,615</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">aa-changing SNP</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">Non-structural protein 2</td>
+            </tr>
+          </tbody>
+        </table>
+        <table-wrap-foot>
+          <p><italic>The acronym &#x201C;aa&#x201D; stands for &#x201C;amino acid&#x201D;</italic>.</p>
+        </table-wrap-foot>
+      </table-wrap>
+      <p>Other common mutations affecting protein sequence are N:RG203KR (in the Nucleocapsid protein N), induced by a tri-nucleotide mutation and determining a 2-amino acid change and mutations affecting the less characterized ORF3a, ORF8, NSP2, NSP6, and NSP13 proteins (<xref rid="T1" ref-type="table">Table 1</xref>). The G15S mutation in the viral protease NSP5 is the 16th most common event worldwide, with 1,798 samples affected (3.7%), however it seems to be too peripheric, in the protein sequence, to influence catalytic activity, and folding (Zhang et al., <xref rid="B26" ref-type="bibr">2020</xref>).</p>
+      <p>We proceeded then to analyze the distribution of mutation groups rather than individual events, in order to observe their phylogenetic groups and geographical and temporal distributions. Our observation on co-occurring mutations (<xref ref-type="fig" rid="F4">Figure 4</xref>) matches the current phylogenetic classification defined by the GISAID consortium (<xref rid="T2" ref-type="table">Table 2</xref>). Specifically, the four mutations C241T, C3037T, C14408T, and A23403G are observed in all samples from the clade &#x201C;G&#x201D; (named after the Spike D614G mutation) and its two derivative GH (further characterized by the ORF3a:Q57H mutation) and GR (affected by the trinucleotide mutation in the Nucleocapsid gene, inducing a RG203KR mutation).</p>
+      <fig id="F4" position="float">
+        <label>Figure 4</label>
+        <caption>
+          <p>Dot mat showing as X-axis the 29,903 nucleotide positions (sorted from left, 5&#x2032; to right, 3&#x2032;) of SARS-CoV-2, and as Y axis the 48,635 genomes analyzed in this study. The genomic sequences were clustered using simple correlation followed by the &#x201C;complete&#x201D; clustering algorithm. Coding sequence regions are shown at the top. To the right of the plot, we assigned a color to each sample according to the continent of origin. On the left, we manually annotated the groups according to the known GISAID clades (G, GH, GR, S, and V) and the mutations that named them. Labels of clade-defining mutations are placed on the corresponding genomic coordinate.</p>
+        </caption>
+        <graphic xlink:href="fmicb-11-01800-g0004"/>
+      </fig>
+      <table-wrap id="T2" position="float">
+        <label>Table 2</label>
+        <caption>
+          <p>Current definition of characterizing mutations of SARS-CoV-2 phylogenetic categorization systems (GISAID clades and PANGOLIN lineages).</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th valign="top" align="left" rowspan="1" colspan="1">
+                <bold>GISAID clade</bold>
+              </th>
+              <th valign="top" align="left" rowspan="1" colspan="1">
+                <bold>PANGOLIN lineage</bold>
+              </th>
+              <th valign="top" align="left" rowspan="1" colspan="1">
+                <bold>Nucleotide features</bold>
+              </th>
+              <th valign="top" align="left" rowspan="1" colspan="1">
+                <bold>Corresponding effects on protein sequence</bold>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">G</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">B.1</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">C241T <break/> C3037T <break/> C14408T <break/> A23403G</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">5&#x2032;UTR <break/> NSP3:F106F <break/> NSP12b:P314L <break/> S:D614G</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">GH</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">B.1.*</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">C241T <break/> C3037T <break/> C14408T <break/> A23403G <break/> G25563T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">5&#x2032;UTR <break/> NSP3:F106F <break/> NSP12b:P314L <break/> S:D614G <break/> ORF3a:Q57H</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">GR</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">B.1.1</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">C241T <break/> C3037T <break/> C14408T <break/> A23403G <break/> GGG28881AAC</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">5&#x2032;UTR <break/> NSP3:F106F <break/> NSP12b:P314L <break/> S:D614G <break/> N:RG203KR</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">S</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">A</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">C8782T <break/> T28144C</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP4:S76S <break/> ORF8:L84S</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">V</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">B.2</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">G11083T <break/> G26144T</td>
+              <td valign="top" align="left" rowspan="1" colspan="1">NSP6:L37F <break/> ORF3a:G251V</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">L</td>
+              <td rowspan="1" colspan="1"/>
+              <td valign="top" align="left" rowspan="1" colspan="1">Reference in all nts defining clades G, GH, GR, S, and V</td>
+              <td rowspan="1" colspan="1"/>
+            </tr>
+            <tr>
+              <td valign="top" align="left" rowspan="1" colspan="1">O</td>
+              <td rowspan="1" colspan="1"/>
+              <td valign="top" align="left" rowspan="1" colspan="1">Others</td>
+              <td rowspan="1" colspan="1"/>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <p>Other two major clades are called &#x201C;S,&#x201D; named after the mutation in ORF8 L84S (Ceraolo and Giorgi, <xref rid="B5" ref-type="bibr">2020</xref>), also characterized by a silent C8782T genomic mutation, and &#x201C;V,&#x201D; from the ORF3a:G251V mutation, almost always co-occurring with the NSP6:L37F event, and identified by early phylogenetic studies (Forster et al., <xref rid="B10" ref-type="bibr">2020</xref>). The original lineage &#x201C;L,&#x201D; corresponding to the reference genome NC_045512.2, is populated in our study by all genomes carrying reference alleles for all loci defined in clades G, GH, GR, S, and V (<xref rid="T2" ref-type="table">Table 2</xref>). Finally, a general group for other sequences not matching any of these criteria (e.g., other alleles or combinations) is defined here as &#x201C;O&#x201D; clade. Clustering all genomes clearly highlights the five major phylogenetic groups G, GH, GR, S, and V and their characterizing mutations (<xref ref-type="fig" rid="F4">Figure 4</xref>), as well as more nascent clades (e.g., in the GH clade, further split by a novel mutation in the NSP2 locus, C1059T), and a general distribution of non-recurring mutations for the majority of sequences. There are, however, a few hundreds of highly &#x201C;clean&#x201D; sequences (e.g., for clade GR), characterized by the exclusive presence of the clade-characterizing mutations.</p>
+      <p>Generally, the G and GR clades are prevalently present in Europe, while the clade S and GH have been mostly observed in the Americas (<xref ref-type="fig" rid="F4">Figure 4</xref>). The &#x201C;L&#x201D; reference clade is mostly represented by sequences from Asia, where the virus likely originated (Andersen et al., <xref rid="B2" ref-type="bibr">2020</xref>). In <xref rid="T2" ref-type="table">Table 2</xref>, we also report, for reference and completeness, the corresponding nomenclature used by the PANGOLIN phylogenetic classification (Rambaut et al., <xref rid="B21" ref-type="bibr">2020</xref>).</p>
+      <p>Currently, the G clade and its offspring, GH and GR, are the most common clades amongst the sequenced SARS-CoV-2 genomes, globally accounting for 74% of all world sequences (<xref ref-type="fig" rid="F5">Figure 5A</xref>). Specifically, the GR clade, carrying the combination of Spike D614G and Nucleocapsid RG203KR mutations, is currently the most common representative of the SARS-CoV-2 population worldwide. The original viral strain, represented by clade L, still accounts for 7% of the sequenced genomes, and the other derived clades S and V have similar frequencies in the global dataset.</p>
+      <fig id="F5" position="float">
+        <label>Figure 5</label>
+        <caption>
+          <p><bold>(A)</bold> Distribution of SARS-CoV-2 clades in the World at the time of writing (26 June 2020). <bold>(B)</bold> Stacked area chart of relative SARS-CoV-2 clade frequency (y-axis) over time (x-axis) worldwide. <bold>(C)</bold> Stacked area charts of relative SARS-CoV-2 clade frequency over time in six continents.</p>
+        </caption>
+        <graphic xlink:href="fmicb-11-01800-g0005"/>
+      </fig>
+      <p>At the beginning of the COVID-19 pandemic (December 2019) the most commonly retrieved genome was the reference one (clade L), but the first mutated virus appeared in sequence databases at the beginning of 2020 (clade S) alongside other, less clearly defined, sequences (generic clade O). The clade V (mutated in NSP6 and ORF3a) appeared around mid-January 2020, around the same time as the original clade G (<xref ref-type="fig" rid="F5">Figure 5B</xref>). The first detection of subclades GH and GR can be placed more than a month later, at the end of February 2020. Sequencing efforts, mostly located in North America and Europe, have demonstrated an ever-increasing frequency of G, GH, and GR genomes, which have gradually become the most represented sequences in the GISAID database (<xref ref-type="fig" rid="F5">Figure 5B</xref>).</p>
+      <p>Our analysis highlights pivotal differences in clade distribution over time between continents (<xref ref-type="supplementary-material" rid="SM7">Supplementary File 7</xref>, <xref ref-type="fig" rid="F5">Figure 5C</xref>). Currently, the vastly prevalent genome in North America is GH (mutations in Spike D614G and ORF3a Q57H), accounting for more than 50% sequences submitted. In Europe and South America, the most frequent clades are GR, while in Oceania there seems to be the most balanced co-existence of all observed clades. Africa shows a prevalence of clade G. It is interesting to note that Asia, initially characterized by reference sequences, is currently observing a rise in G, GH, and GR genomes, which gained ground in the continent at the beginning of March 2020, more than 1 month after the appearance of these clades in Europe (<xref ref-type="fig" rid="F5">Figure 5C</xref>).</p>
+      <p>We provide, as <xref ref-type="supplementary-material" rid="SM8">Supplementary File 8</xref>, also a country-wise analysis of the 32 countries with most SARS-CoV-2 full genome sequences available. As a general observation, countries tend to follow the general trend of their continent, with a few notable exceptions. China, for example, has produced almost no sequences belonging to clades G and derivatives. Moreover, some European countries have a prevalence of GH genomes (Denmark, France), while others show higher numbers of GR (United Kingdom, Portugal). The currently predominant clade in the United States of America is GH, like Israel and Saudi Arabia, while the most common genomes in Russia and Brazil belong to clade GR.</p>
+      <p>Generally speaking, we observe an increase over time in G clade genomes, and its derivatives GH and GR, paired by a gradual disappearance of clades L and V. Clade S, while declining, seems to be still accounting for a significant minority of sequenced genomes, especially in the United States of America and Spain.</p>
+      <p>As a final part of our analysis, we analyzed the effects of mutations in the 26 SARS-CoV-2 proteins, producing a map of all the most frequent observed aa-changing mutations (<xref ref-type="supplementary-material" rid="SM9">Supplementary File 9</xref>). All proteins are affected by at least one recurring (&gt;75 observations), even if rarer, non-silent mutation. In general, mutations seem to be distributed uniformly across the viral genome, with the obvious exception of highly frequent clade-defining mutations. We analyzed in detail the four structural proteins S (Spike), E (Envelope), M (Membrane), and N (Nucleocapsid) in <xref ref-type="fig" rid="F6">Figure 6A</xref>. The Spike protein, apart from the discussed D614G mutation, has no other event present in more than 1% of the viral population; amongst the top 5, a N439K variant located in the Spike/ACE2 interaction domain is observed in 0.7% of the viruses. The Envelope protein appears to be the most conserved, with the most frequent mutations present in the C-terminus and never present in more than 0.2% of the population. More than 1% of sequenced viruses show a T175M mutation in the Membrane protein. The Nucleocapsid protein, apart from the clade GR-defining RG203KR mutation, has several non-silent mutations above the threshold of 1% frequency in the population, specifically P13L, D103Y, S194L, and S197L (<xref ref-type="fig" rid="F6">Figure 6A</xref>).</p>
+      <fig id="F6" position="float">
+        <label>Figure 6</label>
+        <caption>
+          <p><bold>(A)</bold> Occurrence of mutations in the four SARS-CoV-2 structural proteins S (Spike), E (Envelope), M (Membrane), and N (Nucleocapsid). On the x-axis, the amino acid coordinate of the mutation. On the y-axis, the Log10 of the number of samples where the mutations have been observed, worldwide. The horizontal dashed line indicates the maximum (Log10 of all the 48,635 samples). In blue, silent mutations, and in red, mutations affecting the protein sequence. The frequency (in percentage) of the top 5 aa-changing mutations is also indicated. <bold>(B)</bold> Dot-bracket notation of minimum free energy prediction of the secondary structure of SARS-CoV-2 5&#x2032;UTR (nt 1-265), WT (left) and C241T variant (right). Base reliability is expressed as positional entropy and colored accordingly.</p>
+        </caption>
+        <graphic xlink:href="fmicb-11-01800-g0006"/>
+      </fig>
+      <p>We also analyzed the C241T mutation, located in the SARS-CoV-2 5&#x2032;UTR. While not inducing a change in protein sequence, we postulated that this event may have effects in the secondary RNA structure, therefore influencing the rate of RNA replication and therefore the speed of the viral infection cycle (Kim et al., <xref rid="B16" ref-type="bibr">2020</xref>). Our prediction, based on the Vienna RNA suite (<xref ref-type="fig" rid="F6">Figure 6B</xref>) shows no significant difference in the secondary structure of the wild-type (WT) genome and the C241T variant, since this nucleotide is not participating in any hydrogen bond with other nucleotides.</p>
+    </sec>
+    <sec sec-type="discussion" id="s4">
+      <title>Discussion</title>
+      <p>Our analysis, based on 48,635 samples, confirms a low mutation rate of the virus, with an average of 7.23 mutations per sample with respect to the reference SARS-CoV-2 genome sequences. One <italic>caveat</italic> of our estimate is that it is based on assembled genomes, not on raw Illumina, Oxford Nanopore, or Sanger sequencing data. This made it impossible to analyze e.g., the presence of viral subpopulations within the same patient and to evaluate the complex evolutionary events within the SARS-CoV-2 quasispecies (Knyazev et al., <xref rid="B17" ref-type="bibr">2020</xref>). It is therefore likely that the actual mutation rate of SARS-CoV-2 is higher than 7.23, which is calculated from reported sequences of the sole dominant population. This is further sustained by the recent evidence of intense RNA editing in the SARS-CoV-2 genome, fueled by the human host cell APOBEC mechanism (Milewska et al., <xref rid="B20" ref-type="bibr">2018</xref>; Di Giorgio et al., <xref rid="B8" ref-type="bibr">2020</xref>), which can also explain the prevalence of transitions as the prevalently observed mutational events.</p>
+      <p>While few, the existing detected mutations allow to group the samples into five distinct clades, G, GH, GR, S, and V, characterized by a collection of specific mutations. The clades can be further characterized by most recent mutations and will likely be split even further in the future.</p>
+      <p>The aa-changing SNPs are the most prevalent mutational events, followed by silent SNPs and extragenic (mostly 5&#x2032;UTR) SNPs. The silent events may not determine an immediate effect on the protein sequences, but they have repercussions as they may change the codon usage and translation efficiency. In the case of the 5&#x2032;UTR SNPs, mutations may affect the transcription and replication rates of the virus, or the folding of the genomic ssRNA, processes that have been only recently and only partially elucidated (Kim et al., <xref rid="B16" ref-type="bibr">2020</xref>).</p>
+      <p>The early studies currently performed on SARS-CoV-2 transcriptome dynamics may also suggest mechanisms for mutation onset, which our study shows being prevalently single-nucleotide transitions. This phenomenon can be associated to defective efficiency of the viral RNA-depedent RNA polymerase or, as recently suggested, by mechanisms of RNA editing triggered by the host cell as a defense mechanism (Di Giorgio et al., <xref rid="B8" ref-type="bibr">2020</xref>). Whatever the origin, SARS-CoV-2 tends to retain its genomic integrity across propagation, with almost no reported large indels across sequenced genomes (the largest reported being a unique 80-nucleotide deletion in ORF7a, in Arizona sample EPI_ISL_424669 &#x2013; <xref ref-type="supplementary-material" rid="SM5">Supplementary File 5</xref>).</p>
+      <p>Further studies combining genomic details with epidemiological information and clinical features of COVID-19 patients may be extremely useful to identify strategies and therapies that can help to reduce the burden of this disease. There is currently little evidence on the clinical and molecular differences between the circulating clades of SARS-CoV-2; for example, one study has shown that the D614G mutation in the Spike protein may be associated to higher case fatality rates (Becerra-Flores and Cardozo, <xref rid="B3" ref-type="bibr">2020</xref>). However, as this coronavirus continues to evolve, surely new features will emerge or mutate alongside the genomic sequences, with clinical and pharmacological repercussions.</p>
+      <p>The emergence of new mutations may force the development of new antiviral therapies, as well as the adaptation of current ones to tackle the new molecular structures of the virus. For example, the development of protein-based and RNA-based vaccines based on the SARS-CoV-2 Spike region (Amanat and Krammer, <xref rid="B1" ref-type="bibr">2020</xref>) will have to take into account the observed diversity of the Spike protein. The prevalent Spike D614G mutation does not seem to affect the interaction domain with ACE2 (Wang et al., <xref rid="B24" ref-type="bibr">2020</xref>), responsible for the viral entry into epithelial cells (Guzzi et al., <xref rid="B12" ref-type="bibr">2020</xref>), but other mutations are currently located in that domain, such as N439K, present in 0.7% of the sequenced SARS-CoV-2 genomes. Our analysis in <xref ref-type="fig" rid="F4">Figure 4</xref> shows that new mutations and clades are emerging beyond the current clade categorization and will likely expand if they confer an evolutionary advantage to SARS-CoV-2.</p>
+      <p>Constant monitoring of mutations will also be pivotal in tracking the movement of the virus between individuals and across geographical areas. For example, our descriptive analysis of clade prevalence over time (<xref ref-type="fig" rid="F5">Figure 5</xref>) shows the birth of the original L clade in Asia (China) in December 2019, followed by the appearance of the G clade in Europe in January 2020. G and G-derived clades have then reached North America and Asia in March 2020 and are currently the fastest growing viral subpopulation worldwide. Tracking viral evolution must benefit however from constant monitoring of the SARS-CoV-2 genomic sequences, with <italic>ad-hoc</italic> epidemiological and genomic online resources that go beyond the scope of this publication (Hufsky et al., <xref rid="B15" ref-type="bibr">2020</xref>; Mercatelli et al., <xref rid="B19" ref-type="bibr">2020</xref>). One of such tools is NextStrain (Hadfield et al., <xref rid="B13" ref-type="bibr">2018</xref>), which also allows for scalable phylogenetic analyses and real time tracking of specific mutations.</p>
+    </sec>
+    <sec sec-type="data-availability" id="s5">
+      <title>Data Availability Statement</title>
+      <p>Publicly available datasets were analyzed in this study. This data can be found here: <ext-link ext-link-type="uri" xlink:href="https://www.gisaid.org/">https://www.gisaid.org/</ext-link>.</p>
+    </sec>
+    <sec id="s6">
+      <title>Author Contributions</title>
+      <p>FG designed the study. FG and DM performed research, analyzed data, and wrote the manuscript. All authors contributed to the article and approved the submitted version.</p>
+    </sec>
+    <sec id="s7">
+      <title>Conflict of Interest</title>
+      <p>The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The authors wish to thank Prof. Michele Morgante and Dr. Davide Scaglione for the fruitful discussions and Dr. Maurizio Grassini and Dr. Giorgio Provenzano for their precious IT support.</p>
+    </ack>
+    <fn-group>
+      <fn fn-type="financial-disclosure">
+        <p><bold>Funding.</bold> This work was supported by the Italian Ministry of University and Research, Montalcini Grant 2016, and by CINECA (grant HP10CC5F89).</p>
+      </fn>
+    </fn-group>
+    <sec sec-type="supplementary-material" id="s8">
+      <title>Supplementary Material</title>
+      <p>The Supplementary Material for this article can be found online at: <ext-link ext-link-type="uri" xlink:href="https://www.frontiersin.org/articles/10.3389/fmicb.2020.01800/full#supplementary-material">https://www.frontiersin.org/articles/10.3389/fmicb.2020.01800/full#supplementary-material</ext-link></p>
+      <supplementary-material content-type="local-data" id="SM1">
+        <label>Supplementary File 1</label>
+        <caption>
+          <p>GISAID acknowledgment table reporting the geographic origin and contributions of genomes analyzed in this study.</p>
+        </caption>
+        <media xlink:href="Table_1.XLS">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="SM2">
+        <label>Supplementary File 2</label>
+        <caption>
+          <p>Annotation of samples used in this dataset.</p>
+        </caption>
+        <media xlink:href="Table_2.XLSX">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="SM3">
+        <label>Supplementary File 3</label>
+        <caption>
+          <p>Annotation of NC_045512.2 SARS-CoV-2 Wuhan genome sequence (GFF3 format).</p>
+        </caption>
+        <media xlink:href="Table_3.DOCX">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="SM4">
+        <label>Supplementary File 4</label>
+        <caption>
+          <p>Bash/R scripts used to generate and annotate genome variants.</p>
+        </caption>
+        <media xlink:href="Table_4.DOCX">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="SM5">
+        <label>Supplementary File 5</label>
+        <caption>
+          <p>Full annotation of all mutations identified by this study. Columns are described here. Sample: GISAID sample id; refpos: position in the NC_045512.2 reference genome; refvar: nucleotide composition of the reference at refpos coordinate (a &#x201C;.&#x201D; indicates an insertion); qvar: variant in the query sample (a &#x201C;.&#x201D; indicates a deletion); qlength: length of the query genome (reference genome is always 29,903 nucleotides long); region: region annotated in the event position (coding sequence, intergenic or UTR); variant: either a protein change (shown as aminoacid code) or the genomic position (if the event affects a non-coding region); varclass: variant class (as in <xref ref-type="fig" rid="F2">Figure 2A</xref>); annotation: full name of the protein coded by the affected region (if coding); varname: full name of protein variant; varclade: full name of nucleotide variant.</p>
+        </caption>
+        <media xlink:href="Table_5.XLSX">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="SM6">
+        <label>Supplementary File 6</label>
+        <caption>
+          <p>Worldwide analysis of most frequent mutations categorized per class, type, nucleotide, and protein events.</p>
+        </caption>
+        <media xlink:href="Table_6.DOCX">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="SM7">
+        <label>Supplementary File 7</label>
+        <caption>
+          <p>Distribution of SARS-CoV-2 clades in all continents at the time of writing.</p>
+        </caption>
+        <media xlink:href="Table_7.XLSX">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="SM8">
+        <label>Supplementary File 8</label>
+        <caption>
+          <p>Stacked area charts of relative SARS-CoV-2 clade frequency (y-axis) over time (x-axis) in the 32 countries with the highest number of full genome sequences.</p>
+        </caption>
+        <media xlink:href="Image_1.PNG">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="SM9">
+        <label>Supplementary File 9</label>
+        <caption>
+          <p>Table of aa-changing mutations, categorized by protein and sorted by number of samples where the mutation has been observed.</p>
+        </caption>
+        <media xlink:href="Data_Sheet_1.PDF">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+    </sec>
+    <ref-list>
+      <title>References</title>
+      <ref id="B1">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Amanat</surname><given-names>F.</given-names></name><name><surname>Krammer</surname><given-names>F.</given-names></name></person-group> (<year>2020</year>). <article-title>SARS-CoV- 2 vaccines: status report</article-title>. <source>Immunity</source>. <volume>52</volume>, <fpage>583</fpage>&#x2013;<lpage>589</lpage>. <pub-id pub-id-type="doi">10.1016/j.immuni.2020.03.007</pub-id><pub-id pub-id-type="pmid">32259480</pub-id></mixed-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Andersen</surname><given-names>K. G.</given-names></name><name><surname>Rambaut</surname><given-names>A.</given-names></name><name><surname>Lipkin</surname><given-names>W. I.</given-names></name><name><surname>Holmes</surname><given-names>E. C.</given-names></name><name><surname>Garry</surname><given-names>R. F.</given-names></name></person-group> (<year>2020</year>). <article-title>The proximal origin of SARS-CoV-2</article-title>. <source>Nat. Med</source>. <volume>26</volume>, <fpage>450</fpage>&#x2013;<lpage>452</lpage>. <pub-id pub-id-type="doi">10.1038/s41591-020-0820-9</pub-id><pub-id pub-id-type="pmid">32284615</pub-id></mixed-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Becerra-Flores</surname><given-names>M.</given-names></name><name><surname>Cardozo</surname><given-names>T.</given-names></name></person-group> (<year>2020</year>). <article-title>SARS-CoV-2 viral spike G614 mutation exhibits higher case fatality rate</article-title>. <source>Int. J. Clin. Pract</source>. <fpage>e13525</fpage>. <pub-id pub-id-type="doi">10.1111/ijcp.13525</pub-id>. [Epub ahead of print].<pub-id pub-id-type="pmid">32374903</pub-id></mixed-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Brufsky</surname><given-names>A.</given-names></name></person-group> (<year>2020</year>). <article-title>Distinct viral clades of SARS-CoV-2: implications for modeling of viral spread</article-title>. <source>J. Med. Virol.</source>
+<pub-id pub-id-type="doi">10.1002/jmv.25902</pub-id>. [Epub ahead of print].<pub-id pub-id-type="pmid">32311094</pub-id></mixed-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ceraolo</surname><given-names>C.</given-names></name><name><surname>Giorgi</surname><given-names>F. M.</given-names></name></person-group> (<year>2020</year>). <article-title>Genomic variance of the 2019-nCoV coronavirus</article-title>. <source>J. Med. Virol</source>. <volume>92</volume>, <fpage>522</fpage>&#x2013;<lpage>528</lpage>. <pub-id pub-id-type="doi">10.1002/jmv.25700</pub-id><pub-id pub-id-type="pmid">32027036</pub-id></mixed-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><collab>Coronaviridae Study Group of the International Committee on Taxonomy of Viruses</collab></person-group> (<year>2020</year>). <article-title>The species severe acute respiratory syndrome-related coronavirus: classifying 2019-nCoV and naming it SARS-CoV-2</article-title>. <source>Nat. Microbiol.</source>
+<volume>5</volume>, <fpage>536</fpage>&#x2013;<lpage>544</lpage>. <pub-id pub-id-type="doi">10.1038/s41564-020-0695-z</pub-id><pub-id pub-id-type="pmid">32123347</pub-id></mixed-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Delcher</surname><given-names>A. L.</given-names></name></person-group> (<year>2002</year>). <article-title>Fast algorithms for large-scale genome alignment and comparison</article-title>. <source>Nucleic Acids Res</source>. <volume>30</volume>, <fpage>2478</fpage>&#x2013;<lpage>2483</lpage>. <pub-id pub-id-type="doi">10.1093/nar/30.11.2478</pub-id><pub-id pub-id-type="pmid">12034836</pub-id></mixed-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Di Giorgio</surname><given-names>S.</given-names></name><name><surname>Martignano</surname><given-names>F.</given-names></name><name><surname>Torcia</surname><given-names>M. G.</given-names></name><name><surname>Mattiuz</surname><given-names>G.</given-names></name><name><surname>Conticello</surname><given-names>S. G.</given-names></name></person-group> (<year>2020</year>). <article-title>Evidence for host-dependent RNA editing in the transcriptome of SARS-CoV-2</article-title>. <source>Sci. Adv</source>. <volume>6</volume>:<fpage>eabb5813</fpage>. <pub-id pub-id-type="doi">10.1126/sciadv.abb5813</pub-id><pub-id pub-id-type="pmid">32596474</pub-id></mixed-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Dowd</surname><given-names>J. B.</given-names></name><name><surname>Andriano</surname><given-names>L.</given-names></name><name><surname>Brazel</surname><given-names>D. M.</given-names></name><name><surname>Rotondi</surname><given-names>V.</given-names></name><name><surname>Block</surname><given-names>P.</given-names></name><name><surname>Ding</surname><given-names>X.</given-names></name><etal/></person-group>. (<year>2020</year>). <article-title>Demographic science aids in understanding the spread and fatality rates of COVID-19. <italic>Proc. Natl. Acad. Sci</italic></article-title>. <source>U.S.A</source>. <volume>117</volume>, <fpage>9696</fpage>&#x2013;<lpage>9698</lpage>. <pub-id pub-id-type="doi">10.1073/pnas.2004911117</pub-id><pub-id pub-id-type="pmid">32300018</pub-id></mixed-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Forster</surname><given-names>P.</given-names></name><name><surname>Forster</surname><given-names>L.</given-names></name><name><surname>Renfrew</surname><given-names>C.</given-names></name><name><surname>Forster</surname><given-names>M.</given-names></name></person-group> (<year>2020</year>). <article-title>Phylogenetic network analysis of SARS-CoV-2 genomes. <italic>Proc. Natl. Acad. Sci</italic></article-title>. <source>U.S.A</source>. <volume>117</volume>, <fpage>9241</fpage>&#x2013;<lpage>9243</lpage>. <pub-id pub-id-type="doi">10.1073/pnas.2004999117</pub-id><pub-id pub-id-type="pmid">32269081</pub-id></mixed-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Gruber</surname><given-names>A. R.</given-names></name><name><surname>Lorenz</surname><given-names>R.</given-names></name><name><surname>Bernhart</surname><given-names>S. H.</given-names></name><name><surname>Neub&#xF6;ck</surname><given-names>R.</given-names></name><name><surname>Hofacker</surname><given-names>I. L.</given-names></name></person-group> (<year>2008</year>). <article-title>The vienna RNA websuite</article-title>. <source>Nucleic Acids Res</source>. <volume>36</volume>, <fpage>W70</fpage>&#x2013;<lpage>74</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkn188</pub-id><pub-id pub-id-type="pmid">18424795</pub-id></mixed-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Guzzi</surname><given-names>P. H.</given-names></name><name><surname>Mercatelli</surname><given-names>D.</given-names></name><name><surname>Ceraolo</surname><given-names>C.</given-names></name><name><surname>Giorgi</surname><given-names>F. M.</given-names></name></person-group> (<year>2020</year>). <article-title>Master regulator analysis of the SARS-CoV-2/human interactome</article-title>. <source>J. Clin. Med</source>. <volume>9</volume>:<fpage>982</fpage>. <pub-id pub-id-type="doi">10.3390/jcm9040982</pub-id><pub-id pub-id-type="pmid">32244779</pub-id></mixed-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Hadfield</surname><given-names>J.</given-names></name><name><surname>Megill</surname><given-names>C.</given-names></name><name><surname>Bell</surname><given-names>S. M.</given-names></name><name><surname>Huddleston</surname><given-names>J.</given-names></name><name><surname>Potter</surname><given-names>B.</given-names></name><name><surname>Callender</surname><given-names>C.</given-names></name><etal/></person-group>. (<year>2018</year>). <article-title>Nextstrain: real-time tracking of pathogen evolution</article-title>. <source>Bioinformatics</source>
+<volume>34</volume>, <fpage>4121</fpage>&#x2013;<lpage>4123</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/bty407</pub-id><pub-id pub-id-type="pmid">29790939</pub-id></mixed-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Hu</surname><given-names>J.</given-names></name><name><surname>Wang</surname><given-names>J.</given-names></name><name><surname>Xu</surname><given-names>J.</given-names></name><name><surname>Li</surname><given-names>W.</given-names></name><name><surname>Han</surname><given-names>Y.</given-names></name><name><surname>Li</surname><given-names>Y.</given-names></name><etal/></person-group>. (<year>2003</year>). <article-title>Evolution and variation of the SARS-CoV genome</article-title>. <source>Genomics Proteomics Bioinform.</source>
+<volume>1</volume>, <fpage>216</fpage>&#x2013;<lpage>225</lpage>. <pub-id pub-id-type="doi">10.1016/S1672-0229(03)01027-1</pub-id><pub-id pub-id-type="pmid">15629034</pub-id></mixed-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Hufsky</surname><given-names>F.</given-names></name><name><surname>Lamkiewicz</surname><given-names>K.</given-names></name><name><surname>Almeida</surname><given-names>A.</given-names></name><name><surname>Aouacheria</surname><given-names>A.</given-names></name><name><surname>Arighi</surname><given-names>C.</given-names></name><name><surname>Bateman</surname><given-names>A.</given-names></name><etal/></person-group> (<year>2020</year>). <article-title>Computational strategies to combat, COVID-19: useful tools to accelerate SARS-CoV-2 and coronavirus research</article-title>. <source>Life Sci</source>. <pub-id pub-id-type="doi">10.20944/preprints202005.0376.v1</pub-id></mixed-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kim</surname><given-names>D.</given-names></name><name><surname>Joo-Yeon</surname><given-names>L.</given-names></name><name><surname>Jeong-Sun</surname><given-names>Y.</given-names></name><name><surname>Jun Won</surname><given-names>K.</given-names></name><name><surname>Narry</surname><given-names>K.</given-names></name><name><surname>Hyeshik</surname><given-names>C.</given-names></name></person-group> (<year>2020</year>). <article-title>The architecture of SARS-CoV-2 transcriptome</article-title>. <source>Cell Press</source>
+<volume>181</volume>, <fpage>914</fpage>&#x2013;<lpage>921</lpage>.e10. <pub-id pub-id-type="doi">10.1016/j.cell.2020.04.011</pub-id><pub-id pub-id-type="pmid">32330414</pub-id></mixed-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Knyazev</surname><given-names>S.</given-names></name><name><surname>Hughes</surname><given-names>L.</given-names></name><name><surname>Skums</surname><given-names>P.</given-names></name><name><surname>Zelikovsky</surname><given-names>A.</given-names></name></person-group> (<year>2020</year>). <article-title>Epidemiological data analysis of viral quasispecies in the next-generation sequencing era</article-title>. <source>Brief Bioinform.</source>
+<fpage>bbaa101</fpage>. <pub-id pub-id-type="doi">10.1093/bib/bbaa101</pub-id>. [Epub ahead of print].<pub-id pub-id-type="pmid">32568371</pub-id></mixed-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Lu</surname><given-names>R.</given-names></name><name><surname>Zhao</surname><given-names>X.</given-names></name><name><surname>Li</surname><given-names>J.</given-names></name><name><surname>Niu</surname><given-names>P.</given-names></name><name><surname>Yang</surname><given-names>B.</given-names></name><name><surname>Wu</surname><given-names>H.</given-names></name><etal/></person-group>. (<year>2020</year>). <article-title>Genomic characterisation and epidemiology of 2019 novel coronavirus: implications for virus origins and receptor binding</article-title>. <source>Lancet</source>
+<volume>395</volume>, <fpage>565</fpage>&#x2013;<lpage>574</lpage>. <pub-id pub-id-type="doi">10.1016/S0140-6736(20)30251-8</pub-id><pub-id pub-id-type="pmid">32007145</pub-id></mixed-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Mercatelli</surname><given-names>D.</given-names></name><name><surname>Triboli</surname><given-names>L.</given-names></name><name><surname>Fornasari</surname><given-names>E.</given-names></name><name><surname>Ray</surname><given-names>F.</given-names></name><name><surname>Giorgi</surname><given-names>F. M.</given-names></name></person-group> (<year>2020</year>). <article-title>Coronapp: a web application to annotate and monitor SARS-Co V-<italic>2</italic> mutations</article-title>. <source>bioRxiv [Preprint]</source>. <pub-id pub-id-type="doi">10.1101/2020.05.31.124966</pub-id></mixed-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Milewska</surname><given-names>A.</given-names></name><name><surname>Kindler</surname><given-names>E.</given-names></name><name><surname>Vkovski</surname><given-names>P.</given-names></name><name><surname>Zeglen</surname><given-names>S.</given-names></name><name><surname>Ochman</surname><given-names>M.</given-names></name><name><surname>Thiel</surname><given-names>V.</given-names></name><etal/></person-group>. (<year>2018</year>). <article-title>APOBEC3-mediated restriction of RNA virus replication</article-title>. <source>Sci. Rep</source>. <volume>8</volume>:<fpage>5960</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-018-24448-2</pub-id><pub-id pub-id-type="pmid">29654310</pub-id></mixed-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Rambaut</surname><given-names>A.</given-names></name><name><surname>Holmes</surname><given-names>E. C.</given-names></name><name><surname>Hill</surname><given-names>V.</given-names></name><name><surname>O\'Toole</surname><given-names>&#xC1;.</given-names></name><name><surname>McCrone</surname><given-names>J.</given-names></name><name><surname>Ruis</surname><given-names>C.</given-names></name><etal/></person-group>. (<year>2020</year>). <article-title>A dynamic nomenclature proposal for SARS-CoV-2 to assist genomic epidemiology</article-title>. <source>bioRxiv [Preprint].</source>. <pub-id pub-id-type="doi">10.1101/2020.04.17.046086</pub-id><pub-id pub-id-type="pmid">32669681</pub-id></mixed-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Shen</surname><given-names>Z.</given-names></name><name><surname>Xiao</surname><given-names>Y.</given-names></name><name><surname>Kang</surname><given-names>L.</given-names></name><name><surname>Ma</surname><given-names>W.</given-names></name><name><surname>Shi</surname><given-names>L.</given-names></name><name><surname>Zhang</surname><given-names>L.</given-names></name><etal/></person-group>. (<year>2020</year>). <article-title>Genomic diversity of SARS-CoV-2 in coronavirus disease 2019 patients</article-title>. <source>Clin. Infect. Dis</source>. <fpage>ciaa203</fpage>. <pub-id pub-id-type="doi">10.1093/cid/ciaa203</pub-id>. [Epub ahead of print].<pub-id pub-id-type="pmid">32129843</pub-id></mixed-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Shu</surname><given-names>Y.</given-names></name><name><surname>McCauley</surname><given-names>J.</given-names></name></person-group> (<year>2017</year>). <article-title>GISAID: global initiative on sharing all influenza data&#x2013;from vision to reality</article-title>. <source>Eurosurveillance</source>
+<volume>22</volume>:<fpage>30494</fpage>. <pub-id pub-id-type="doi">10.2807/1560-7917.ES.2017.22.13.30494</pub-id><pub-id pub-id-type="pmid">28382917</pub-id></mixed-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>Q.</given-names></name><name><surname>Zhang</surname><given-names>Y.</given-names></name><name><surname>Wu</surname><given-names>L.</given-names></name><name><surname>Niu</surname><given-names>S.</given-names></name><name><surname>Song</surname><given-names>C.</given-names></name><name><surname>Zhang</surname><given-names>Z.</given-names></name><etal/></person-group>. (<year>2020</year>). <article-title>Structural and functional basis of SARS-CoV-2 entry by using human ACE2</article-title>. <source>Cell</source>
+<volume>181</volume>, <fpage>894</fpage>&#x2013;<lpage>904</lpage>.e9. <pub-id pub-id-type="doi">10.1016/j.cell.2020.03.045</pub-id><pub-id pub-id-type="pmid">32275855</pub-id></mixed-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wu</surname><given-names>C.</given-names></name><name><surname>Liu</surname><given-names>Y.</given-names></name><name><surname>Yang</surname><given-names>Y.</given-names></name><name><surname>Zhang</surname><given-names>P.</given-names></name><name><surname>Zhong</surname><given-names>W.</given-names></name><name><surname>Wang</surname><given-names>Y.</given-names></name><etal/></person-group>. (<year>2020</year>). <article-title>Analysis of therapeutic targets for SARS-CoV-2 and discovery of potential drugs by computational methods</article-title>. <source>Acta Pharm. Sin. B</source>
+<volume>10</volume>, <fpage>766</fpage>&#x2013;<lpage>788</lpage>. <pub-id pub-id-type="doi">10.1016/j.apsb.2020.02.008</pub-id><pub-id pub-id-type="pmid">32292689</pub-id></mixed-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Zhang</surname><given-names>L.</given-names></name><name><surname>Lin</surname><given-names>D.</given-names></name><name><surname>Sun</surname><given-names>X.</given-names></name><name><surname>Curth</surname><given-names>U.</given-names></name><name><surname>Drosten</surname><given-names>C.</given-names></name><name><surname>Sauerhering</surname><given-names>L.</given-names></name><etal/></person-group>. (<year>2020</year>). <article-title>Crystal structure of SARS-CoV-2 main protease provides a basis for design of improved &#x3B1;-ketoamide inhibitors</article-title>. <source>Science.</source>
+<volume>368</volume>, <fpage>409</fpage>&#x2013;<lpage>412</lpage>. <pub-id pub-id-type="doi">10.1126/science.abb3405</pub-id><pub-id pub-id-type="pmid">32198291</pub-id></mixed-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Zhao</surname><given-names>S.</given-names></name><name><surname>Chen</surname><given-names>H.</given-names></name></person-group> (<year>2020</year>). <article-title>Modeling the epidemic dynamics and control of COVID-19 outbreak in China</article-title>. <source>Quant. Biol</source>. <volume>8</volume>, <fpage>11</fpage>&#x2013;<lpage>19</lpage>. <pub-id pub-id-type="doi">10.1007/s40484-020-0199-0</pub-id><pub-id pub-id-type="pmid">32395492</pub-id></mixed-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Zhou</surname><given-names>Y.</given-names></name><name><surname>Hou</surname><given-names>Y.</given-names></name><name><surname>Shen</surname><given-names>J.</given-names></name><name><surname>Huang</surname><given-names>Y.</given-names></name><name><surname>Martin</surname><given-names>W.</given-names></name><name><surname>Cheng</surname><given-names>F.</given-names></name></person-group> (<year>2020</year>). <article-title>Network-based drug repurposing for novel coronavirus 2019-nCoV/SARS-CoV-2</article-title>. <source>Cell Discov</source>. <volume>6</volume>:<fpage>14</fpage>. <pub-id pub-id-type="doi">10.1038/s41421-020-0153-3</pub-id><pub-id pub-id-type="pmid">32194980</pub-id></mixed-citation>
+      </ref>
+    </ref-list>
+    <glossary>
+      <def-list>
+        <title>Abbreviations</title>
+        <def-item>
+          <term>AA</term>
+          <def>
+            <p>amino acid</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>COVID-19</term>
+          <def>
+            <p>Coronavirus Disease 2019</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>GISAID</term>
+          <def>
+            <p>Global Initiative on Sharing All Influenza Data</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>Indel</term>
+          <def>
+            <p>insertion/deletion event</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>NSP</term>
+          <def>
+            <p>non-structural protein</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>ORF</term>
+          <def>
+            <p>open reading frame</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>S</term>
+          <def>
+            <p>SARS-CoV-2 spike protein</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>SARS-CoV-2</term>
+          <def>
+            <p>Severe Acute Respiratory Syndrome, Coronavirus 2</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>SNP</term>
+          <def>
+            <p>single nucleotide polymorphism.</p>
+          </def>
+        </def-item>
+      </def-list>
+    </glossary>
+  </back>
+</article>
+</pmc-articleset>

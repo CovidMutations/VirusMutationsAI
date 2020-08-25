@@ -1,9 +1,9 @@
-import { Controller, Logger, Post, UseInterceptors, UploadedFile } from '@nestjs/common';
+import { Controller, Logger, Post, UseInterceptors, UploadedFile, Body } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { MutationAnnotationService } from './mutation-annotation.service';
 import { extname } from 'path';
 import { diskStorage } from 'multer';
-import {MutationAnnotationModel} from '../model/mutation-annotation.model';
+import {MutationAnnotationModel, SearchMutationDTOreq} from '../model/mutation-annotation.model';
 
 
 @Controller('api')
@@ -24,5 +24,12 @@ export class MutationAnnotationController {
   uploadVCF(@UploadedFile() file): Promise<MutationAnnotationModel> {
     this.logger.verbose(`User uploaded VCF file`);
     return this.mutationAnnotationService.uploadVCF(file.path);
+  }
+
+
+  @Post('/search-mutation')
+  getArticlesByMutation(@Body() mutation: SearchMutationDTOreq): Promise<MutationAnnotationModel> {
+    this.logger.verbose(`getArticlesByMutation`);
+    return this.mutationAnnotationService.getArticlesByMutation(mutation.mutation);
   }
 }
