@@ -50,10 +50,10 @@ export class AdminService {
   async updateDB(): Promise<ResUpdateDBModel> {
     this.logger.verbose('setUpdateDBDate');
 
-    const pyPath = path.join(__dirname, '..', '..', 'scripts', 'update_articles_db.py');
-    const scriptFolderPath = path.join(__dirname, '..', '..', 'scripts');
-    const dbFolderPath = path.join(__dirname, '..', '..', 'db');
-    const mappingPath = path.join(__dirname, '..', '..', 'db', 'articles2mutations.txt');
+    const pyPath = path.join(__dirname, '..', '..', 'py', 'update_articles_db.py');
+    const scriptFolderPath = path.join(__dirname, '..', '..', 'py');
+    const dbFolderPath = path.join(__dirname, '..', '..', 'py', 'db');
+    const mappingPath = path.join(__dirname, '..', '..', 'py', 'db', 'articles2mutations.txt');
 
     const pythonShellRun = promisify(PythonShell.run);
     const results = await pythonShellRun(pyPath, {args: [scriptFolderPath, dbFolderPath, mappingPath]});
