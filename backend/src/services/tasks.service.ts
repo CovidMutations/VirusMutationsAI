@@ -4,7 +4,7 @@ import { Cron, SchedulerRegistry } from '@nestjs/schedule';
 import { CronJob } from 'cron';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as csvdata from 'csvdata';
+import * as jsonfile from 'jsonfile';
 import {promisify} from 'util';
 const stat = promisify(fs.stat);
 import { DBUpdatingCronEnum, AdminSettingsModel  } from '../model/admin.model';
@@ -14,7 +14,7 @@ import { AdminService  } from '../admin/admin.service';
 @Injectable()
 export class TasksService {
   private logger = new Logger('TasksService ');
-  private adminFilePath = path.join(__dirname, '..', '..', 'assets', 'admin.csv');
+  private adminFilePath = path.join(__dirname, '..', '..', 'assets', 'admin.json');
   ;
 
   constructor(
@@ -35,8 +35,8 @@ export class TasksService {
     const result = await stat(this.adminFilePath);
 
     if (result) {
-      const res: AdminSettingsModel[] = await csvdata.load(this.adminFilePath);
-      cronTime = DBUpdatingCronEnum[res[0].frequency]
+      const res: AdminSettingsModel = await jsonfile.readFile(this.adminFilePath);
+      cronTime = DBUpdatingCronEnum[res.frequency]
     }
 
     const job = new CronJob(cronTime, () => {

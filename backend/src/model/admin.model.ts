@@ -28,7 +28,7 @@ export class AdminSettingsModel {
   frequency: string;
   status: string;
   status_text: string;
-
+  
   constructor(row?) {
     if(row) {
       Object.keys(row).forEach(innerProp =>{
