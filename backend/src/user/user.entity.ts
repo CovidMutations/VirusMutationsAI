@@ -1,8 +1,9 @@
-/* import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, BaseEntity} from 'typeorm';
-//import * as bcrypt from 'bcryptjs';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, BaseEntity} from 'typeorm';
+import * as bcrypt from 'bcryptjs';
 import { UserRO } from './user.dto';
 import * as config from 'config';
 const jwtConfig = config.get('jwt');
+
 
 @Entity('user')
 export class UserEntity extends BaseEntity {
@@ -31,21 +32,16 @@ export class UserEntity extends BaseEntity {
   salt: string;
 
 
- // toResponseObject(showToken: boolean = true): UserRO {
-   // const {id, created, username, email } = this;
-   // return {id, created, username, token};
-  //  const responceObject: any = {id, created, username, email};
+ toResponseObject(showToken: boolean = true): UserRO {
+   const {id, created, username, email } = this;
+
+   const responceObject: any = {id, created, username, email};
 
     // if (showToken) {
     //   responceObject.token = token;
     // }
-      if (this.ideas) {
-      responceObject.ideas = this.ideas;
-    }
-    if (this.bookmarks) {
-      responceObject.bookmarks = this.bookmarks; 
-    // } 
-    // return responceObject;
+   
+    return responceObject;
   } 
 
    async comparePassword(attempt: string) {
@@ -57,4 +53,3 @@ export class UserEntity extends BaseEntity {
   }
  
 }
- */

@@ -19,7 +19,7 @@ export class RegistrationComponent implements OnInit {
 
   ) {
     this.registrationForm = new FormGroup({
-      name: new FormControl('',  Validators.required),
+      username: new FormControl('',  Validators.required),
       email: new FormControl('', Validators.compose([Validators.email, Validators.required])),
       password: new FormControl('', Validators.required)
     });
@@ -39,7 +39,10 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.authService.registration(this.registrationForm.value);
+    this.authService.registration(this.registrationForm.value).subscribe(data => {
+      console.log('registration', data);
+
+    });
   }
 
 }

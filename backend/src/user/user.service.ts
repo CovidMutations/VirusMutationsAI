@@ -1,19 +1,74 @@
-/* import { Injectable, Body, HttpException, HttpStatus, Query, NotFoundException } from '@nestjs/common';
+import { Injectable, Logger, HttpException, HttpStatus, Query, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from './user.entity';
 import { UserDTO, UserRO } from './user.dto';
 import { Repository, DeleteResult } from 'typeorm';
-import { LoginDTO } from '../model/auth.model';
 import * as bcrypt from 'bcryptjs';
 import { UserRepository } from './user.repository';
+import {RegistrationDTO, LoginDTO} from '../model/auth.model';
 
 
 @Injectable()
 export class UserService {
+  private logger = new Logger('UserService');
   constructor(
- //   @InjectRepository(UserEntity)
     private userRepository: UserRepository,
   ) { }
+
+  
+  async registration(data: RegistrationDTO): Promise<string> {
+    this.logger.verbose('registration');
+      const {username} = data;
+      let user = await this.userRepository.findOne({where: {username}});
+
+      if (user) {
+        throw new HttpException('User already exist', HttpStatus.BAD_REQUEST);
+      }
+
+      user = await this.userRepository.create(data);
+      await this.userRepository.save(user);
+
+  //    return user.toResponseObject();
+      
+  
+    return '';
+  }
+
+  async login(res: LoginDTO): Promise<string> {
+    this.logger.verbose('login');
+  
+    return '';
+  }
+
+
+  // async login(data: UserDTO): Promise<UserRO> {
+  //   const {username, password} = data;
+  //   const user = await this.userRepository.findOne({where: {username}});
+  //   if (!user || !(await user.comparePassword(password))) {
+  //     throw new HttpException(
+  //       'Invalid username/password',
+  //       HttpStatus.BAD_REQUEST,
+  //     );
+  //   }
+  //   return user.toResponseObject();
+  // }
+
+
+  // async register(data: UserDTO): Promise<UserRO> {
+  //   const {username} = data;
+  //   let user = await this.userRepository.findOne({where: {username}});
+
+  //   if (user) {
+  //     throw new HttpException('User already exist', HttpStatus.BAD_REQUEST);
+  //   }
+
+  //   user = await this.userRepository.create(data);
+  //   await this.userRepository.save(user);
+
+  //   return user.toResponseObject();
+  // }
+
+
  
   async showAll(page: number = 1): Promise<UserRO[]> {
      const users = await this.userRepository.find();
@@ -31,32 +86,6 @@ export class UserService {
     return user.toResponseObject(isShowPassword);
   }
 
-  async login(data: UserDTO): Promise<UserRO> {
-    const {username, password} = data;
-    const user = await this.userRepository.findOne({where: {username}});
-    if (!user || !(await user.comparePassword(password))) {
-      throw new HttpException(
-        'Invalid username/password',
-        HttpStatus.BAD_REQUEST,
-      );
-    }
-    return user.toResponseObject();
-  }
-
-
-  async register(data: UserDTO): Promise<UserRO> {
-    const {username} = data;
-    let user = await this.userRepository.findOne({where: {username}});
-
-    if (user) {
-      throw new HttpException('User already exist', HttpStatus.BAD_REQUEST);
-    }
-
-    user = await this.userRepository.create(data);
-    await this.userRepository.save(user);
-
-    return user.toResponseObject();
-  }
 
   async update(id: string, data: UserDTO): Promise<UserRO> {
     const user = await this.userRepository.findOne({where: {id}});
@@ -106,4 +135,3 @@ export class UserService {
 
  
 }
- */

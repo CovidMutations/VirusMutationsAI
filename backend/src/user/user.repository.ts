@@ -1,4 +1,4 @@
-/* import { EntityRepository, Repository } from 'typeorm';
+import { EntityRepository, Repository } from 'typeorm';
 import { ConflictException, InternalServerErrorException, Logger } from '@nestjs/common';
 import * as bcrypt from 'bcryptjs';
 import { UserEntity } from './user.entity';
@@ -50,5 +50,3 @@ export class UserRepository extends Repository<UserEntity> {
 
 
 }
-
- */

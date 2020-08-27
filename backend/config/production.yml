@@ -2,3 +2,14 @@ server:
   port: 3000
   origin: 'http://localhost:4200/'
   mode: 'production'
+db: 
+  type: 'postgres'
+  host: 'localhost'
+  username: 'postgres'
+  database: 'covid'
+  password: 1
+  synchronize: true
+
+jwt: 
+  secret: 'TopSecret51'
+  

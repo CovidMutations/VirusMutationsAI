@@ -3,7 +3,7 @@ import {IsString, IsEmail, IsBoolean, IsNotEmpty, IsEmpty, IsBooleanString} from
 
 export class RegistrationDTO {
   @IsString()
-  name: string;
+  username: string;
 
   @IsString()
   @IsEmail()

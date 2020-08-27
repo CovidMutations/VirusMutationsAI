@@ -12,7 +12,6 @@ import { ValidationPipe } from './shared/validation.pipe';
 import { ScheduleModule } from '@nestjs/schedule';
 import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
 import { AdminModule } from './admin/admin.module';
-import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 
  import { TasksService } from './services/tasks.service';
@@ -20,10 +19,10 @@ import { UserModule } from './user/user.module';
  import { typeOrmConfig } from '../typeorm.config';
 
 
-
+console.log(typeOrmConfig)
 @Module({
   imports: [
- //   TypeOrmModule.forRoot(typeOrmConfig),
+    TypeOrmModule.forRoot(typeOrmConfig),
     ServeStaticModule.forRoot({
       rootPath: path.join(__dirname),
     }),
@@ -31,7 +30,6 @@ import { UserModule } from './user/user.module';
     ScheduleModule.forRoot(),
     MutationAnnotationModule,
     AdminModule,
-    AuthModule,
     UserModule
     // GraphQLModule.forRoot({
     //   installSubscriptionHandlers: true,
