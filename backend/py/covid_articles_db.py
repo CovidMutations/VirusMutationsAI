@@ -42,6 +42,30 @@ while True:
         break
 print("{}: found {} articles for '{}'".format(ncbi_db, len(all_cov_ids), query))
 
+# Uncomment block bellow to download all missing articles to the index folder
+'''
+files = [i for i in os.listdir(article_root_folder) if i.endswith("xml")]
+count_removed_files = 0
+for file in files:
+    if file[:-4] not in df_index['uid'].values:
+        os.remove(article_root_folder + file)
+        count_removed_files += 1
+print("Removed {} unindexed files".format(count_removed_files))
+
+uids = df_index['uid'].tolist()
+count_notexist_files = 0
+for uid in uids:
+    if not os.path.exists(article_root_folder + uid + '.xml'):
+        count_notexist_files += 1
+        handle = Entrez.efetch(db=ncbi_db, id=uid, rettype="xml", retmode="text")
+        record = handle.read()
+        output_str = str(record)
+        output_str = output_str.replace('\\n', '\n')[2:-1] #removing extra symbols not related to XML
+
+        with open(article_root_folder + uid + ".xml", "w") as file_article:
+            file_article.write(str(output_str))
+print("Appended {} non-exist files to download".format(count_notexist_files))
+'''
 # Request articles one by one and add them to the index if they're not in the index
 count_appended_items = 0
 count_errors = 0
@@ -59,11 +83,12 @@ for i in range(0
 
             tree = etree.fromstring(output_str)
             article_title = tree.find('.//front/article-meta/title-group/article-title').text
-            if not article_title:
+            if not article_title or article_title == '' or article_title == '\n':
                 article_title = tree.find('.//front/article-meta/title-group/article-title/*')
                 article_title = article_title.text + (article_title.tail if article_title.tail else '')
 
-            article_title = article_title.replace('\n', '')
+            article_title = article_title.replace('\n', '') # replace all multi-line titles to one-line
+            article_title = article_title.replace('‐', '-') # replace unicode '-' to ascii '-'
             article_uid = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + tree.find(".//front/article-meta/article-id[@pub-id-type='pmc']").text
             str_uid = uuid.uuid4().hex[0:8]
 
@@ -79,7 +104,7 @@ for i in range(0
         count_errors += 1
         print("ERROR: {}: {}".format(i, all_cov_ids[i]))
         pass
-    if i % int(len(all_cov_ids)/10) == 0:
+    if i > 10 and i % int(len(all_cov_ids)/10) == 0:
         # the index is dumped to the file from time to time do not loose all collected data on crash
         print("Progress {}/{}...".format(i, len(all_cov_ids)))
         df_index.to_csv(article_root_folder + '/index.csv', index=False)
