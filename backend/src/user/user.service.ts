@@ -16,42 +16,37 @@ export class UserService {
   ) { }
 
   
-  async registration(data: RegistrationDTO): Promise<string> {
+  async registration(data: RegistrationDTO): Promise<UserRO> {
     this.logger.verbose('registration');
-      const {username} = data;
-      let user = await this.userRepository.findOne({where: {username}});
-
+      const {email} = data;
+      let user = await this.userRepository.findOne({where: {email}});
+      this.logger.verbose(`user: ${JSON.stringify(user)}`);
       if (user) {
         throw new HttpException('User already exist', HttpStatus.BAD_REQUEST);
       }
 
       user = await this.userRepository.create(data);
       await this.userRepository.save(user);
-
-  //    return user.toResponseObject();
+      return user.toResponseObject();
       
-  
-    return '';
+
   }
 
-  async login(res: LoginDTO): Promise<string> {
+
+
+  async login(data: LoginDTO): Promise<UserRO> {
     this.logger.verbose('login');
-  
-    return '';
+
+    const {email, password} = data;
+    const user = await this.userRepository.findOne({where: {email}});
+    if (!user || !(await user.comparePassword(password))) {
+      throw new HttpException(
+        'Invalid username/password',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+    return user.toResponseObject();
   }
-
-
-  // async login(data: UserDTO): Promise<UserRO> {
-  //   const {username, password} = data;
-  //   const user = await this.userRepository.findOne({where: {username}});
-  //   if (!user || !(await user.comparePassword(password))) {
-  //     throw new HttpException(
-  //       'Invalid username/password',
-  //       HttpStatus.BAD_REQUEST,
-  //     );
-  //   }
-  //   return user.toResponseObject();
-  // }
 
 
   // async register(data: UserDTO): Promise<UserRO> {

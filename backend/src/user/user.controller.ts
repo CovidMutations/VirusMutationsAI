@@ -1,6 +1,6 @@
 import { Controller, Post, Logger, Body, Query, UseGuards, Delete, Param, Put, CacheInterceptor, UseInterceptors } from '@nestjs/common';
 import { UserService } from './user.service';
-import { UserDTO, UserDTOFull } from './user.dto';
+import { UserDTO, UserDTOFull, UserRO } from './user.dto';
 // import { ValidationPipe } from 'src/shared/validation.pipe';
 // import { User } from './user.decorator';
 // import { RoleGuard } from '../shared/role.guard';
@@ -17,13 +17,13 @@ export class UserController {
 
     
   @Post('/registration')
-  registration(@Body() res: RegistrationDTO): Promise<string> {
+  registration(@Body() res: RegistrationDTO): Promise<UserRO> {
     this.logger.log(`registration ${JSON.stringify(res)}`);
     return this.userService.registration(res);
   }
 
   @Post('/login')
-  login(@Body() res: LoginDTO): Promise<string> {
+  login(@Body() res: LoginDTO): Promise<UserRO> {
     this.logger.log(`login ${JSON.stringify(res)}`);
     return this.userService.login(res);
   }
