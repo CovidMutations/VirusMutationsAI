@@ -18,16 +18,16 @@ export class UserService {
   
   async registration(data: RegistrationDTO): Promise<UserRO> {
     this.logger.verbose('registration');
-      const {email} = data;
-      let user = await this.userRepository.findOne({where: {email}});
-      this.logger.verbose(`user: ${JSON.stringify(user)}`);
-      if (user) {
-        throw new HttpException('User already exist', HttpStatus.BAD_REQUEST);
-      }
+      // const {email} = data;
+      // let user = await this.userRepository.findOne({where: {email}});
+      // this.logger.verbose(`user: ${JSON.stringify(user)}`);
+      // if (user) {
+      //   throw new HttpException('User already exist', HttpStatus.BAD_REQUEST);
+      // }
 
-      user = await this.userRepository.create(data);
-      await this.userRepository.save(user);
-      return user.toResponseObject();
+      // user = await this.userRepository.create(data);
+      return await this.userRepository.signUp(data);
+    //  return user.toResponseObject();
       
 
   }

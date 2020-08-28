@@ -8,7 +8,7 @@ import { UserDTOFull, UserDTO, UserRO } from './user.dto';
 export class UserRepository extends Repository<UserEntity> {
   logger = new Logger('UserRepository');
 
-  async signUp(authCredentalsDTO: UserDTOFull): Promise<void> {
+  async signUp(authCredentalsDTO: UserDTOFull): Promise<UserRO> {
     this.logger.verbose(`signUp: ${authCredentalsDTO}`);
     const {username, password, email} = authCredentalsDTO;
 
@@ -19,6 +19,7 @@ export class UserRepository extends Repository<UserEntity> {
     user.email = email;
     try {
      await user.save();
+     return user.toResponseObject();
     } catch (err) {
       if (err.code === '23505') {
         throw new ConflictException({
