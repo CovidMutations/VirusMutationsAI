@@ -42,8 +42,8 @@ while True:
         break
 print("{}: found {} articles for '{}'".format(ncbi_db, len(all_cov_ids), query))
 
-# Uncomment this block to download all missing articles XMLs to the index folder
-
+# Uncomment block bellow to download all missing articles to the index folder
+'''
 files = [i for i in os.listdir(article_root_folder) if i.endswith("xml")]
 count_removed_files = 0
 for file in files:
@@ -65,7 +65,7 @@ for uid in uids:
         with open(article_root_folder + uid + ".xml", "w") as file_article:
             file_article.write(str(output_str))
 print("Appended {} non-exist files to download".format(count_notexist_files))
-
+'''
 # Request articles one by one and add them to the index if they're not in the index
 count_appended_items = 0
 count_errors = 0
