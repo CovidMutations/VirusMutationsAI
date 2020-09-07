@@ -1,12 +1,20 @@
 # import logging
 import os
 import pandas as pd
+import re
+from Bio.Data.IUPACData import protein_letters_3to1_extended
 
 # Note: the 'logging' module does not work with unit tests for some reason, replaced to 'print' for now
 # logging.basicConfig(level=logging.DEBUG)
 
 
+COL__INFO = 'INFO'
+
+
 class VcfParser:
+    """
+    Class for loading and parsing specified VCF file, with ability to extract mutations.
+    """
     def __init__(self, expected_vcf_format='##fileformat=VCFv4.2'):
         self.df_vcf = None
         self.expected_vcf_format = expected_vcf_format  # First expected line. May be None to skip the check.
@@ -56,8 +64,65 @@ class VcfParser:
         mutations_series = df.POS.astype(str) + df.REF + '>' + df.ALT
         return mutations_series
 
+    @staticmethod
+    def convert_protein_mutations_from_3_to_1_letters(muts: [list, set]):
+        new_muts = []
+        for mut in muts:
+            m = re.match(r"p\.(?P<acid1>[A-Z][a-z][a-z])(?P<pos>\d+)(?P<acid2>[A-Z][a-z][a-z])", mut)
+            try:
+                assert m, "Unexpected format! Good example: 'p.Ser3Ser"
+                acid1 = m['acid1']
+                acid2 = m['acid2']
+                assert acid1 in protein_letters_3to1_extended, f'Cannot recognize acid1: {acid1}'
+                assert acid2 in protein_letters_3to1_extended, f'Cannot recognize acid2: {acid2}'
+                new_acid1 = protein_letters_3to1_extended[acid1]
+                new_acid2 = protein_letters_3to1_extended[acid2]
+                new_mut = f"p.{new_acid1}{m['pos']}{new_acid2}"
+                new_muts.append(new_mut)
+            except AssertionError as e:
+                raise ValueError(f"Error while parsing protein mutation '{mut}': {e}")
+        return new_muts
+
+    @staticmethod
+    def _extract_protein_mutations(info_text):
+        """
+        Example: QNAME=hCoV-19...;QSTART=274;QSTRAND=+;ANN=
+        T|synonymous_variant|LOW|ORF1ab|GU280_gp01|transcript|GU280_gp01|
+        protein_coding|1/2|c.9C>T|p.Ser3Ser|9/21291|9/21291|3/7096||,
+        T|synonymous_variant|LOW|ORF1ab|GU280_gp01|transcript|YP_009725297.1|
+        protein_coding|1/1|c.9C>T|p.Ser3Ser|9/540|9/540|3/179||WARNING_TRANSCRIPT_NO_STOP_CODON,
+        ...,
+        T|upstream_gene_variant|MODIFIER|ORF1ab|GU280_gp01|transcript|YP_009742610.1|
+        protein_coding||c.-2446C>T|||||2446|WARNING_TRANSCRIPT_NO_START_CODON
+        """
+        # Use regexp to find nucleotide mutations (for future use) and protein mutations
+        res_list = []
+        # for m in re.findall(r"protein_coding\|\d+/\d+\|(?P<nuc_mut>[c.\dACGT>]*)\|(?P<prot_mut>[^|]*)", info_text):
+        for m in re.finditer(r"protein_coding\|\d+/\d+\|(?P<nuc_mut>[c.\dACGT>]*)\|(?P<prot_mut>[^|]*)", info_text):
+            res_list.append(m.group('prot_mut'))
+        return res_list
+
+    def get_protein_mutations(self, verbose=False):
+        # Checks
+        if self.df_vcf is None:
+            raise Exception('No VCF data is loaded. Use read_vcf_file first')
+        if COL__INFO not in self.df_vcf.columns:
+            raise Exception(f"Cannot find column '{COL__INFO}' in the file header: '{self.df_vcf.columns}'")
+
+        # For each row - extract information text and parse it
+        found_muts = set()
+        for i, (_, row) in enumerate(self.df_vcf.iterrows()):
+            muts = self._extract_protein_mutations(row[COL__INFO])
+            if verbose:
+                print(f'DBG: processing row {i}. Found muts: {muts}')
+            found_muts.update(muts)
+        if verbose:
+            print(f'DBG: total number of found muts: {len(found_muts)}')
+        # Convert 3-letter acids to 1-letter
+        new_muts = self.convert_protein_mutations_from_3_to_1_letters(found_muts)
+        return sorted(new_muts)  # List of found mutations
+
     def write_mutations_to_file(self, output_file, notation=None):
         mutations = self.get_mutations(notation)
         mutations.to_csv(output_file, index=False)
         print(f'Success. Mutations written to file {output_file}')
-
