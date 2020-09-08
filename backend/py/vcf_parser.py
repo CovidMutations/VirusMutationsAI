@@ -65,7 +65,7 @@ class VcfParser:
         return mutations_series
 
     @staticmethod
-    def convert_protein_mutations_from_3_to_1_letters(muts: [list, set]):
+    def convert_protein_mutations_from_3_to_1_letters(muts: [list, set], is_strict_check=True):
         new_muts = []
         for mut in muts:
             m = re.match(r"p\.(?P<acid1>[A-Z][a-z][a-z])(?P<pos>\d+)(?P<acid2>[A-Z][a-z][a-z])", mut)
@@ -80,7 +80,10 @@ class VcfParser:
                 new_mut = f"p.{new_acid1}{m['pos']}{new_acid2}"
                 new_muts.append(new_mut)
             except AssertionError as e:
-                raise ValueError(f"Error while parsing protein mutation '{mut}': {e}")
+                if is_strict_check:
+                    raise ValueError(f"Error while parsing protein mutation '{mut}': {e}.")
+                else:
+                    print(f"Warning while parsing protein mutation '{mut}': {e} -> it will be skipped.")
         return new_muts
 
     @staticmethod
@@ -102,7 +105,7 @@ class VcfParser:
             res_list.append(m.group('prot_mut'))
         return res_list
 
-    def get_protein_mutations(self, verbose=False):
+    def get_protein_mutations(self, is_strict_check=True, verbose=False):
         # Checks
         if self.df_vcf is None:
             raise Exception('No VCF data is loaded. Use read_vcf_file first')
@@ -119,7 +122,7 @@ class VcfParser:
         if verbose:
             print(f'DBG: total number of found muts: {len(found_muts)}')
         # Convert 3-letter acids to 1-letter
-        new_muts = self.convert_protein_mutations_from_3_to_1_letters(found_muts)
+        new_muts = self.convert_protein_mutations_from_3_to_1_letters(found_muts, is_strict_check=is_strict_check)
         return sorted(new_muts)  # List of found mutations
 
     def write_mutations_to_file(self, output_file, notation=None):
