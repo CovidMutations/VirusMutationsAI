@@ -2,11 +2,20 @@ import { EntityRepository, Repository } from 'typeorm';
 import { ConflictException, InternalServerErrorException, Logger } from '@nestjs/common';
 import * as bcrypt from 'bcryptjs';
 import { UserEntity } from './user.entity';
+import { LoginDTO } from '../model/auth.model';
 import { UserDTOFull, UserDTO, UserRO } from './user.dto';
+import { JwtService } from '@nestjs/jwt';
 
 @EntityRepository(UserEntity)
 export class UserRepository extends Repository<UserEntity> {
   logger = new Logger('UserRepository');
+
+
+  constructor(
+    private jwtService: JwtService
+  ) {
+    super();
+  }
 
   async signUp(authCredentalsDTO: UserDTOFull): Promise<UserRO> {
     this.logger.verbose(`signUp: ${authCredentalsDTO}`);
@@ -31,6 +40,13 @@ export class UserRepository extends Repository<UserEntity> {
     }
   }
 
+  async login(user: any) {
+    const payload = { username: user.email, sub: user.userId };
+    return {
+      access_token: this.jwtService.sign(payload),
+    };
+  }
+
   async validateUserPassword(authCredentalsDTO: UserDTO): Promise<UserRO> {
     this.logger.verbose(`validateUserPassword: ${JSON.stringify(authCredentalsDTO)}`);
     const {username, password} = authCredentalsDTO;
@@ -47,7 +63,6 @@ export class UserRepository extends Repository<UserEntity> {
     }
 
   }
-
 
 
 }
