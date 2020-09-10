@@ -29,8 +29,6 @@ export class UserDTOFull extends UserDTO {
   @MaxLength(11)
   username: string;
 
-  
-
 }
 
 

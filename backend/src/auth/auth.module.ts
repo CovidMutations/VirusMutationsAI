@@ -9,11 +9,14 @@ const jwtConfig = config.get('jwt');
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { UserRepository } from '../user/user.repository';
+import { MailModule } from '../mail/mail.module';
+import { MailService } from '../mail/mail.service';
 
 
 @Module({
   imports: [
     UserModule,
+    MailModule,
     TypeOrmModule.forFeature([UserRepository]),
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.register({
@@ -22,7 +25,7 @@ import { UserRepository } from '../user/user.repository';
     }),
   ],
   controllers: [AuthController],
-  providers: [ JwtStrategy, AuthService],
+  providers: [ JwtStrategy, AuthService, MailService],
   exports: [AuthService],
 })
 export class AuthModule {}

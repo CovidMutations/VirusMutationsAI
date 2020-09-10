@@ -14,6 +14,7 @@ import { MutationAnnotationModule } from './mutation-annotation/mutation-annotat
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
+import { MailModule } from './mail/mail.module';
 
  import { TasksService } from './services/tasks.service';
 
@@ -32,7 +33,8 @@ console.log(typeOrmConfig)
     MutationAnnotationModule,
     AdminModule,
     UserModule,
-    AuthModule
+    AuthModule,
+    MailModule
     // GraphQLModule.forRoot({
     //   installSubscriptionHandlers: true,
     //   typePaths: ['./**/*.graphql'],

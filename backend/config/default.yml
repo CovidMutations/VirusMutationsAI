@@ -11,3 +11,9 @@ db:
   synchronize: true
 jwt: 
   secret: 'TopSecret51'
+mail:
+  service: 'gmail'
+  email: 'virusmutationsai@gmail.com'
+  pass: 'Virus123!'
+  subject: 'VirusMutationsAI'
+
