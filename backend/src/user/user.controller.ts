@@ -16,17 +16,17 @@ export class UserController {
         private userService: UserService,
     ) {}
     
-    @Post('/registration')
-    registration(@Body() res: UserDTOFull): Promise<UserRO> {
-        this.logger.log(`registration ${JSON.stringify(res)}`);
-        return this.userService.registration(res);
-    }
+    // @Post('/registration')
+    // registration(@Body() res: UserDTOFull): Promise<UserRO> {
+    //     this.logger.log(`registration ${JSON.stringify(res)}`);
+    //     return this.userService.registration(res);
+    // }
 
-    @Post('/login')
-    login(@Body() res: UserDTO): Promise<UserRO> {
-        this.logger.log(`login ${JSON.stringify(res)}`);
-        return this.userService.login(res);
-    }
+    // @Post('/login')
+    // login(@Body() res: UserDTO): Promise<UserRO> {
+    //     this.logger.log(`login ${JSON.stringify(res)}`);
+    //     return this.userService.login(res);
+    // }
 
   /*   @Get('users')
     showAllUsers(@Query('page') page: number) {

@@ -7,23 +7,43 @@ import * as bcrypt from 'bcryptjs';
 import { UserRepository } from './user.repository';
 
 
+
 @Injectable()
 export class UserService {
   private logger = new Logger('UserService');
   constructor(
-    private userRepository: UserRepository,
+    private readonly userRepository: UserRepository
   ) { }
 
   
-  async registration(data: UserDTOFull): Promise<UserRO> {
-    this.logger.verbose('registration');
-      return await this.userRepository.signUp(data);
-  }
+  // async registration(data: UserDTOFull): Promise<UserRO> {
+  //   this.logger.verbose('registration');
+  //     return await this.userRepository.signUp(data);
+  // }
 
-  async login(data: UserDTO): Promise<UserRO> {
-    this.logger.verbose('login');
-    return await this.userRepository.signIn(data);
-  }
+  // async login(data: UserDTO): Promise<UserRO> {
+  //   this.logger.verbose('login');
+  //   return await this.userRepository.signIn(data);
+  // }
+
+  // async login(loginCredentalsDTO: UserDTO): Promise<any> {
+  //   this.logger.verbose('login');
+
+  //   const {email, password} = loginCredentalsDTO;
+  //   const _user = await this.userRepository.findOne({email});
+  //   if (!_user || !(await _user.validatePassword(password))) {
+  //     throw new HttpException(
+  //       'Invalid username/password',
+  //       HttpStatus.BAD_REQUEST,
+  //     );
+  //   }
+
+  //   console.log('this.jwtService', this.jwtService)
+  //   return new UserRO({
+  //     ..._user,
+  //     token: this.jwtService.sign(_user)
+  //   });
+  // }
 
  
   async showAll(page: number = 1): Promise<UserRO[]> {

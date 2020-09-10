@@ -33,17 +33,29 @@ export class UserDTOFull extends UserDTO {
 
 }
 
-// tslint:disable-next-line:max-classes-per-file
-export class UserRO extends BaseModel {
-  id: string;
-  username: string;
-  email: string;
-  created: Date;
-  token?: string;
-  password?: string;
+
+export class UserInfoRO extends BaseModel {
+  id: string = undefined;
+  username: string = undefined;
+  email: string = undefined;
+  constructor(row?){
+    super(); super.checkFields(row);
+  }
+}
+
+export class UserInfoTokenRO extends UserInfoRO {
+  token?: string = undefined;
+  constructor(row?){
+    super(); super.checkFields(row);
+  }
+}
+
+export class UserRO extends UserInfoRO {
+  created: Date = undefined;
+  token?: string = undefined;
+  password?: string = undefined;
 
   constructor(row?){
-    super();
-    this.checkFields(row);
+    super(); super.checkFields(row);
   }
 }
