@@ -1,12 +1,15 @@
 import {IsNotEmpty, IsEmail, IsString, MinLength, MaxLength, Matches} from 'class-validator';
+import {BaseModel} from '../model/base.model';
 
 export class UserDTO {
 
+
   @IsNotEmpty()
   @IsString()
-  @MinLength(3)
-  @MaxLength(11)
-  username: string;
+  @IsEmail()
+  @MinLength(5)
+  @MaxLength(20)
+  email: string;
 
   @IsNotEmpty()
   @IsString()
@@ -21,17 +24,26 @@ export class UserDTO {
 export class UserDTOFull extends UserDTO {
 
   @IsNotEmpty()
-  @IsEmail()
-  email: string;
+  @IsString()
+  @MinLength(3)
+  @MaxLength(11)
+  username: string;
+
+  
 
 }
 
 // tslint:disable-next-line:max-classes-per-file
-export class UserRO {
+export class UserRO extends BaseModel {
   id: string;
   username: string;
   email: string;
   created: Date;
   token?: string;
   password?: string;
+
+  constructor(row?){
+    super();
+    this.checkFields(row);
+  }
 }

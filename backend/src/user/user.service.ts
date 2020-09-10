@@ -1,11 +1,10 @@
 import { Injectable, Logger, HttpException, HttpStatus, Query, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from './user.entity';
-import { UserDTO, UserRO } from './user.dto';
+import { UserDTO, UserDTOFull, UserRO } from './user.dto';
 import { Repository, DeleteResult } from 'typeorm';
 import * as bcrypt from 'bcryptjs';
 import { UserRepository } from './user.repository';
-import {RegistrationDTO, LoginDTO} from '../model/auth.model';
 
 
 @Injectable()
@@ -16,69 +15,29 @@ export class UserService {
   ) { }
 
   
-  async registration(data: RegistrationDTO): Promise<UserRO> {
+  async registration(data: UserDTOFull): Promise<UserRO> {
     this.logger.verbose('registration');
-      // const {email} = data;
-      // let user = await this.userRepository.findOne({where: {email}});
-      // this.logger.verbose(`user: ${JSON.stringify(user)}`);
-      // if (user) {
-      //   throw new HttpException('User already exist', HttpStatus.BAD_REQUEST);
-      // }
-
-      // user = await this.userRepository.create(data);
       return await this.userRepository.signUp(data);
-    //  return user.toResponseObject();
-      
-
   }
 
-
-
-  async login(data: LoginDTO): Promise<UserRO> {
+  async login(data: UserDTO): Promise<UserRO> {
     this.logger.verbose('login');
-
-    const {email, password} = data;
-    const user = await this.userRepository.findOne({where: {email}});
-    if (!user || !(await user.comparePassword(password))) {
-      throw new HttpException(
-        'Invalid username/password',
-        HttpStatus.BAD_REQUEST,
-      );
-    }
-    return user.toResponseObject();
+    return await this.userRepository.signIn(data);
   }
-
-
-  // async register(data: UserDTO): Promise<UserRO> {
-  //   const {username} = data;
-  //   let user = await this.userRepository.findOne({where: {username}});
-
-  //   if (user) {
-  //     throw new HttpException('User already exist', HttpStatus.BAD_REQUEST);
-  //   }
-
-  //   user = await this.userRepository.create(data);
-  //   await this.userRepository.save(user);
-
-  //   return user.toResponseObject();
-  // }
-
 
  
   async showAll(page: number = 1): Promise<UserRO[]> {
      const users = await this.userRepository.find();
       
-     return users.map(user => user.toResponseObject(false));
+     return users.map(user => new UserRO(user));
   }
 
-  async read(username: string, isShowPassword = false) {
-    const user = await this.userRepository.findOne({
-      where: {username},
-    });
+  async read(id: string) {
+    const user = await this.userRepository.findOne({id });
     if (!user) {
       throw new NotFoundException();
     }
-    return user.toResponseObject(isShowPassword);
+    return new UserRO(user);
   }
 
 
@@ -88,7 +47,7 @@ export class UserService {
       await this.userRepository.update({id}, data);
       const updateUser = await this.userRepository.findOne({where: {id}});
 
-      return updateUser.toResponseObject();
+      return new UserRO(updateUser);
     }
   }
 
@@ -96,7 +55,7 @@ export class UserService {
     return await this.userRepository.find();
   }
 
-  async findByLogin(userDTO: LoginDTO): Promise<UserRO> {
+  async findByLogin(userDTO: UserDTO): Promise<UserRO> {
     const { email, password } = userDTO;
     const user = await this.userRepository.findOne({ email });
     

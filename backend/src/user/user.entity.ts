@@ -13,10 +13,7 @@ export class UserEntity extends BaseEntity {
   @CreateDateColumn()
   created: Date;
 
-  @Column({
-    type: 'text',
-    unique: true,
-  })
+  @Column('text')
   username: string;
 
   @Column({
@@ -32,24 +29,9 @@ export class UserEntity extends BaseEntity {
   salt: string;
 
 
- toResponseObject(showToken: boolean = true): UserRO {
-   const {id, created, username, email } = this;
-
-   const responceObject: any = {id, created, username, email};
-
-    // if (showToken) {
-    //   responceObject.token = token;
-    // }
-   
-    return responceObject;
-  } 
-
-   async comparePassword(attempt: string) {
-    return await bcrypt.compare(attempt, this.password);
-  }
-
   async validatePassword(pass: string): Promise<boolean> {
-    return await bcrypt.compare(pass + (process.env.SECRET || jwtConfig.secret), this.password); ///hash === this.password;
+    console.log(pass, this.password)
+    return await bcrypt.compare(pass + jwtConfig.secret, this.password); ///hash === this.password;
   }
  
 }

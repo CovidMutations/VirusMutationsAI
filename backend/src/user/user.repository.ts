@@ -1,10 +1,11 @@
 import { EntityRepository, Repository } from 'typeorm';
-import { ConflictException, InternalServerErrorException, Logger } from '@nestjs/common';
+import { ConflictException, InternalServerErrorException, Logger, HttpException, HttpStatus } from '@nestjs/common';
 import * as bcrypt from 'bcryptjs';
 import { UserEntity } from './user.entity';
-import { LoginDTO } from '../model/auth.model';
 import { UserDTOFull, UserDTO, UserRO } from './user.dto';
 import { JwtService } from '@nestjs/jwt';
+import * as config from 'config';
+const jwtConfig = config.get('jwt');
 
 @EntityRepository(UserEntity)
 export class UserRepository extends Repository<UserEntity> {
@@ -12,7 +13,7 @@ export class UserRepository extends Repository<UserEntity> {
 
 
   constructor(
-    private jwtService: JwtService
+    private readonly jwtService: JwtService
   ) {
     super();
   }
@@ -24,11 +25,11 @@ export class UserRepository extends Repository<UserEntity> {
     const user = new UserEntity();
     user.username = username;
     user.salt = await bcrypt.genSalt();
-    user.password = await bcrypt.hash(password + process.env.SECRET, user.salt);
+    user.password = await bcrypt.hash(password + jwtConfig.secret, user.salt);
     user.email = email;
     try {
      await user.save();
-     return user.toResponseObject();
+     return new UserRO(user);
     } catch (err) {
       if (err.code === '23505') {
         throw new ConflictException({
@@ -40,29 +41,39 @@ export class UserRepository extends Repository<UserEntity> {
     }
   }
 
-  async login(user: any) {
-    const payload = { username: user.email, sub: user.userId };
-    return {
-      access_token: this.jwtService.sign(payload),
-    };
+  async signIn(loginCredentalsDTO: UserDTO): Promise<any> {
+    const {email, password} = loginCredentalsDTO;
+    const _user = await this.findOne({email});
+    if (!_user || !(await _user.validatePassword(password))) {
+      throw new HttpException(
+        'Invalid username/password',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+
+    console.log('this.jwtService', this.jwtService)
+    return new UserRO({
+      ..._user,
+      token: this.jwtService.sign(_user)
+    });
   }
 
   async validateUserPassword(authCredentalsDTO: UserDTO): Promise<UserRO> {
     this.logger.verbose(`validateUserPassword: ${JSON.stringify(authCredentalsDTO)}`);
-    const {username, password} = authCredentalsDTO;
+    const {email, password} = authCredentalsDTO;
 
-    const user = await this.findOne({ username });
+    const user = await this.findOne({ email });
     this.logger.verbose(`validateUserPassword user: ${JSON.stringify(user)}`);
 
-    console.log('validatePassword', password, await user.validatePassword(password));
-
     if (user && await user.validatePassword(password)) {
-      return user.toResponseObject();
+      return new UserRO(user);
     } else {
       return null;
     }
 
   }
+
+  
 
 
 }

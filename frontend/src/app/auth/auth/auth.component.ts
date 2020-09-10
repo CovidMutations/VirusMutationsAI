@@ -38,6 +38,6 @@ export class AuthComponent implements OnInit {
 
 
   onSubmit(): void {
-    this.authService.login(this.authForm.value);
+    this.authService.login(this.authForm.value).subscribe();
   }
 }
