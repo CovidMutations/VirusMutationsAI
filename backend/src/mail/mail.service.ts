@@ -28,7 +28,7 @@ export class MailService {
 
     this.transporter.sendMail(_mailOptions, (error, info) =>{
       if (error) {
-        this.logger.error(`Error: ${error}`);
+        this.logger.error(`${error}`);
       } else {
         this.logger.verbose(`Email sent: ${info.response}`);
       }
