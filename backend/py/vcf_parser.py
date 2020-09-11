@@ -66,6 +66,9 @@ class VcfParser:
 
     @staticmethod
     def convert_protein_mutations_from_3_to_1_letters(muts: [list, set], is_strict_check=True):
+        """
+        Convert protein mutations from 3-letter acids to 1-letter acid format. Example: "p.Thr5262Ile" -> "T5262I"
+        """
         new_muts = []
         for mut in muts:
             m = re.match(r"p\.(?P<acid1>[A-Z][a-z][a-z])(?P<pos>\d+)(?P<acid2>[A-Z][a-z][a-z])", mut)
@@ -77,7 +80,7 @@ class VcfParser:
                 assert acid2 in protein_letters_3to1_extended, f'Cannot recognize acid2: {acid2}'
                 new_acid1 = protein_letters_3to1_extended[acid1]
                 new_acid2 = protein_letters_3to1_extended[acid2]
-                new_mut = f"p.{new_acid1}{m['pos']}{new_acid2}"
+                new_mut = f"{new_acid1}{m['pos']}{new_acid2}"
                 new_muts.append(new_mut)
             except AssertionError as e:
                 if is_strict_check:
@@ -127,5 +130,5 @@ class VcfParser:
 
     def write_mutations_to_file(self, output_file, notation=None):
         mutations = self.get_mutations(notation)
-        mutations.to_csv(output_file, index=False)
+        mutations.to_csv(output_file, index=False, header=False)
         print(f'Success. Mutations written to file {output_file}')

@@ -66,7 +66,7 @@ class TestVcfParser(unittest.TestCase):
         vcf_obj = vcf_parser.VcfParser()
         muts = ['p.Ser3Ser', 'p.Thr5262Ile']
         new_muts = vcf_obj.convert_protein_mutations_from_3_to_1_letters(muts)
-        self.assertEqual(new_muts, ['p.S3S', 'p.T5262I'])
+        self.assertEqual(new_muts, ['S3S', 'T5262I'])
 
         # Bad first letter ('x')
         with self.assertRaisesRegex(ValueError, 'Unexpected format'):
