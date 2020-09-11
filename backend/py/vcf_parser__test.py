@@ -16,11 +16,11 @@ class TestVcfParser(unittest.TestCase):
 
         # Test get mutations
         muts = vcf_obj.get_mutations()
-        print(muts.head())
+        print(muts[:5])
 
         # Test write to file
-        output_file = f'__out_mutations1_{time.time()}.txt'
-        vcf_obj.write_mutations_to_file(output_file)
+        output_file = f'__out_{time.time()}__ut_mutations_vcf1.txt'
+        vcf_obj.write_mutations_to_file(muts, output_file)
 
 
     def test_load_with_snpeff_data(self):
@@ -30,11 +30,24 @@ class TestVcfParser(unittest.TestCase):
 
         # Test get mutations
         muts = vcf_obj.get_mutations()
-        print(muts.head())
+        print(muts[:5])
 
         # Test write to file
-        output_file = f'__out_mutations2_{time.time()}.txt'
-        vcf_obj.write_mutations_to_file(output_file)
+        output_file = f'__out_{time.time()}__ut_mutations_vcf2.txt'
+        vcf_obj.write_mutations_to_file(muts, output_file)
+
+    def test_load_with_snpeff_data__protein(self):
+        vcf_obj = vcf_parser.VcfParser()
+        vcf_obj.read_vcf_file(TEST_VCF_FILE2)
+        self.assertEqual(vcf_obj.df_vcf.shape, (500, 10))
+
+        # Test get mutations
+        muts = vcf_obj.get_protein_mutations(is_strict_check=False)
+        print(muts[:5])
+
+        # Test write to file
+        output_file = f'__out_{time.time()}__ut_mutations_vcf2-protein.txt'
+        vcf_obj.write_mutations_to_file(muts, output_file)
 
     def test_parse_protein_mutations(self):
         test_info = \

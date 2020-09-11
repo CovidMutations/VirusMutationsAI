@@ -62,7 +62,7 @@ class VcfParser:
 
         # Return pandas Series object with mutation strings
         mutations_series = df.POS.astype(str) + df.REF + '>' + df.ALT
-        return mutations_series
+        return mutations_series.tolist()
 
     @staticmethod
     def convert_protein_mutations_from_3_to_1_letters(muts: [list, set], is_strict_check=True):
@@ -73,7 +73,7 @@ class VcfParser:
         for mut in muts:
             m = re.match(r"p\.(?P<acid1>[A-Z][a-z][a-z])(?P<pos>\d+)(?P<acid2>[A-Z][a-z][a-z])", mut)
             try:
-                assert m, "Unexpected format! Good example: 'p.Ser3Ser"
+                assert m, "Unexpected format (correct example: 'p.Thr42Ser')."
                 acid1 = m['acid1']
                 acid2 = m['acid2']
                 assert acid1 in protein_letters_3to1_extended, f'Cannot recognize acid1: {acid1}'
@@ -86,7 +86,7 @@ class VcfParser:
                 if is_strict_check:
                     raise ValueError(f"Error while parsing protein mutation '{mut}': {e}.")
                 else:
-                    print(f"Warning while parsing protein mutation '{mut}': {e} -> it will be skipped.")
+                    print(f"Warning while parsing protein mutation '{mut}' -> it will be skipped. Details: {e}")
         return new_muts
 
     @staticmethod
@@ -128,7 +128,7 @@ class VcfParser:
         new_muts = self.convert_protein_mutations_from_3_to_1_letters(found_muts, is_strict_check=is_strict_check)
         return sorted(new_muts)  # List of found mutations
 
-    def write_mutations_to_file(self, output_file, notation=None):
-        mutations = self.get_mutations(notation)
-        mutations.to_csv(output_file, index=False, header=False)
+    def write_mutations_to_file(self, mutations: list, output_file: str):
+        df = pd.Series(mutations)
+        df.to_csv(output_file, index=False, header=False)
         print(f'Success. Mutations written to file {output_file}')

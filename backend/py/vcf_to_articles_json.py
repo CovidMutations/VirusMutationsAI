@@ -129,7 +129,8 @@ def main():
             vcf_parser_obj = vcf_parser.VcfParser()
             try:
                 vcf_parser_obj.read_vcf_file(args.vcf_file_or_request, verbose=verbose)
-                vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose).tolist()
+                #vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose).tolist()
+                vcf_mutations = vcf_parser_obj.get_protein_mutations(is_strict_check=False, verbose=verbose)
             except Exception as e:
                 # Re-raise exception with additional context
                 raise Exception(f'ERROR while parsing vcf file: {e}')
