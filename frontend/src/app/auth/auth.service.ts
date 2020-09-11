@@ -6,7 +6,7 @@ import { APP_CONFIG, IAppConfig } from '../app.config';
 import { SharedService } from '../shared/shared.service';
 import { AuthStore } from './store/auth.store';
 import { AuthQuery } from './store/auth.query';
-import { UserInfoModel, RegistrationFormModel, LoginFormModel } from '../models/auth.model';
+import { UserInfoModel, RegistrationFormModel, LoginFormModel, UserRO } from '../models/auth.model';
 import { HashMap } from '@datorama/akita';
 
 
@@ -16,8 +16,8 @@ import { HashMap } from '@datorama/akita';
 export class AuthService {
   regEndpoint = 'registration';
   loginEndpoint = 'login';
-
   API_URL;
+
   constructor(
     private readonly http: HttpClient,
     private readonly authStore: AuthStore,
@@ -36,15 +36,10 @@ export class AuthService {
   }
 
   registration(formVal: RegistrationFormModel): any {
- //   console.log(new UserInfoModel(formVal));
-  //  this.authStore.update(new UserInfoModel(formVal));
     return this.http.post(this.API_URL + this.regEndpoint, formVal);
   }
 
-  login(formVal: LoginFormModel): void {
- //   console.log(new UserInfoModel(formVal));
- //   this.authStore.update(new UserInfoModel(formVal));
-//    this.http.post(this.API_URL + this.regEndpoint, fd,  {
+  login(formVal: LoginFormModel): Observable<UserRO> {
+    return this.http.post(this.API_URL + this.loginEndpoint, formVal) as Observable<UserRO>;
   }
-
 }

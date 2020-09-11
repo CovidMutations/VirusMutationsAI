@@ -29,3 +29,12 @@ export class LoginFormModel extends BaseModel {
 }
 
 
+export class UserRO {
+  id: string;
+  username: string;
+  email: string;
+  created: Date;
+  token?: string;
+}
+
+

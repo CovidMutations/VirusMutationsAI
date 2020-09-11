@@ -13,6 +13,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
 
  import { TasksService } from './services/tasks.service';
 
@@ -30,7 +31,8 @@ console.log(typeOrmConfig)
     ScheduleModule.forRoot(),
     MutationAnnotationModule,
     AdminModule,
-    UserModule
+    UserModule,
+    AuthModule
     // GraphQLModule.forRoot({
     //   installSubscriptionHandlers: true,
     //   typePaths: ['./**/*.graphql'],
