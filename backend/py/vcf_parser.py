@@ -1,14 +1,19 @@
-# import logging
+from Bio.Data.IUPACData import protein_letters_3to1_extended
 import os
 import pandas as pd
 import re
-from Bio.Data.IUPACData import protein_letters_3to1_extended
+import sys
 
 # Note: the 'logging' module does not work with unit tests for some reason, replaced to 'print' for now
 # logging.basicConfig(level=logging.DEBUG)
 
 
 COL__INFO = 'INFO'
+
+
+def eprint(*a):
+    """Print message to stderr (in cases when stdout is used for json generation, etc.)"""
+    print(*a, file=sys.stderr)
 
 
 class VcfParser:
@@ -46,7 +51,7 @@ class VcfParser:
             assert col in self.df_vcf.columns, f"Cannot find column '{col}' in the file header: '{self.df_vcf.columns}'"
 
         if verbose:
-            print(f'Success. Loaded data shape: {self.df_vcf.shape}')
+            eprint(f'Success. Loaded data shape: {self.df_vcf.shape}')
 
     def get_mutations(self, notation=None, verbose=False):
         # Checks
@@ -58,32 +63,35 @@ class VcfParser:
         df = self.df_vcf[['POS', 'ID', 'REF', 'ALT']].drop_duplicates()
         cnt_duplicates = len(self.df_vcf) - len(df)
         if verbose:
-            print(f'Original mutations: {len(self.df_vcf)}, unique: {len(df)}, duplicates removed: {cnt_duplicates}')
+            eprint(f'Original mutations: {len(self.df_vcf)}, unique: {len(df)}, duplicates removed: {cnt_duplicates}')
 
         # Return pandas Series object with mutation strings
         mutations_series = df.POS.astype(str) + df.REF + '>' + df.ALT
-        return mutations_series
+        return mutations_series.tolist()
 
     @staticmethod
     def convert_protein_mutations_from_3_to_1_letters(muts: [list, set], is_strict_check=True):
+        """
+        Convert protein mutations from 3-letter acids to 1-letter acid format. Example: "p.Thr5262Ile" -> "T5262I"
+        """
         new_muts = []
         for mut in muts:
             m = re.match(r"p\.(?P<acid1>[A-Z][a-z][a-z])(?P<pos>\d+)(?P<acid2>[A-Z][a-z][a-z])", mut)
             try:
-                assert m, "Unexpected format! Good example: 'p.Ser3Ser"
+                assert m, "Unexpected format (correct example: 'p.Thr42Ser')."
                 acid1 = m['acid1']
                 acid2 = m['acid2']
                 assert acid1 in protein_letters_3to1_extended, f'Cannot recognize acid1: {acid1}'
                 assert acid2 in protein_letters_3to1_extended, f'Cannot recognize acid2: {acid2}'
                 new_acid1 = protein_letters_3to1_extended[acid1]
                 new_acid2 = protein_letters_3to1_extended[acid2]
-                new_mut = f"p.{new_acid1}{m['pos']}{new_acid2}"
+                new_mut = f"{new_acid1}{m['pos']}{new_acid2}"
                 new_muts.append(new_mut)
             except AssertionError as e:
                 if is_strict_check:
                     raise ValueError(f"Error while parsing protein mutation '{mut}': {e}.")
                 else:
-                    print(f"Warning while parsing protein mutation '{mut}': {e} -> it will be skipped.")
+                    eprint(f"Warning while parsing protein mutation '{mut}' -> it will be skipped. Details: {e}")
         return new_muts
 
     @staticmethod
@@ -117,15 +125,16 @@ class VcfParser:
         for i, (_, row) in enumerate(self.df_vcf.iterrows()):
             muts = self._extract_protein_mutations(row[COL__INFO])
             if verbose:
-                print(f'DBG: processing row {i}. Found muts: {muts}')
+                eprint(f'DBG: processing row {i}. Found muts: {muts}')
             found_muts.update(muts)
         if verbose:
-            print(f'DBG: total number of found muts: {len(found_muts)}')
+            eprint(f'DBG: total number of found muts: {len(found_muts)}')
         # Convert 3-letter acids to 1-letter
         new_muts = self.convert_protein_mutations_from_3_to_1_letters(found_muts, is_strict_check=is_strict_check)
         return sorted(new_muts)  # List of found mutations
 
-    def write_mutations_to_file(self, output_file, notation=None):
-        mutations = self.get_mutations(notation)
-        mutations.to_csv(output_file, index=False)
+    @staticmethod
+    def write_mutations_to_file(mutations: list, output_file: str):
+        df = pd.Series(mutations)
+        df.to_csv(output_file, index=False, header=False)
         print(f'Success. Mutations written to file {output_file}')

@@ -4,6 +4,7 @@ import os
 import pandas as pd
 import re
 import shutil
+import sys
 import time
 
 
@@ -16,12 +17,17 @@ COL_MUTATIONS = 'mutations'
 OUT_COLS = [COL_UID, COL_MUTATIONS]
 
 
+def eprint(*a):
+    """Print message to stderr (in cases when stdout is used for json generation, etc.)"""
+    print(*a, file=sys.stderr)
+
+
 def get_files_by_mask(data_dir, mask, verbose=False):
     assert os.path.isdir(data_dir)
     files_mask = os.path.join(data_dir, mask)
     files = sorted(glob.glob(files_mask))
     if verbose:
-        print("Files mask: '{}', found: {} files".format(files_mask, len(files)))
+        eprint("Files mask: '{}', found: {} files".format(files_mask, len(files)))
     return files
 
 
@@ -45,18 +51,18 @@ def process_article_lines(lines: list, file_type: str, verbose=False):
             mut = f"{m.group('pos')}{m.group('from')}>{m.group('to')}"
             muts.append(mut)
     if verbose:
-        print(f'Found muts: {muts}')
+        eprint(f'Found muts: {muts}')
     return muts
 
 
 def process_article_file(input_filename, file_type: str, verbose=False):
     if verbose:
-        print(f'Start processing article file {input_filename}')
+        eprint(f'Start processing article file {input_filename}')
     with open(input_filename, 'r') as f:
         lines = f.readlines()
     mut_list = process_article_lines(lines, file_type, verbose=verbose)
     if verbose:
-        print(f'..lines: {len(lines)}, mutations: {len(mut_list)}')
+        eprint(f'..lines: {len(lines)}, mutations: {len(mut_list)}')
     return mut_list
 
 
