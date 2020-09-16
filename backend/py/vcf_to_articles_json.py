@@ -118,8 +118,9 @@ def get_mutations_from_file(vcf_file_name, verbose):
     vcf_parser_obj = vcf_parser.VcfParser()
     try:
         vcf_parser_obj.read_vcf_file(vcf_file_name, verbose=verbose)
-        # vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose)
-        vcf_mutations = vcf_parser_obj.get_protein_mutations(is_strict_check=False, verbose=verbose)
+        # TODO(2020-09): logic for different mutation types is required here
+        vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose)
+        # vcf_mutations = vcf_parser_obj.get_protein_mutations(is_strict_check=False, verbose=verbose)
         assert isinstance(vcf_mutations, list)
     except Exception as e:
         # Re-raise exception with additional context
