@@ -2,7 +2,6 @@ import argparse
 import ast
 from collections import defaultdict
 import json
-import numpy as np
 import os
 import pandas as pd
 
@@ -84,6 +83,22 @@ def append_found_results_to_out_dict(found_articles, article_index_df, out_dict,
         out_dict[vcf_mut] = mutation_list  # Modify the dict in-place
 
 
+def get_mutations_from_file(vcf_file_name, verbose):
+    if not os.path.isfile(vcf_file_name):
+        raise FileNotFoundError(f"Cannot find VCF file: {vcf_file_name}")
+    # Parse VCF into sequence of mutations
+    vcf_parser_obj = vcf_parser.VcfParser()
+    try:
+        vcf_parser_obj.read_vcf_file(vcf_file_name, verbose=verbose)
+        # vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose)
+        vcf_mutations = vcf_parser_obj.get_protein_mutations(is_strict_check=False, verbose=verbose)
+        assert isinstance(vcf_mutations, list)
+    except Exception as e:
+        # Re-raise exception with additional context
+        raise Exception(f'ERROR while parsing vcf file: {e}')
+    return vcf_mutations
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description='For each mutation in VCF file tries to find related articles. ' +
                                      'The output in JSON format is dumped to stdout.')
@@ -116,25 +131,15 @@ def main():
         # Parse and check args
         args = parse_args()
         verbose = args.verbose
-        if args.vcf_file_or_request.endswith('.vcf'):
-            print('DBG: check input files..') if verbose > 0 else None
-            if not os.path.isfile(args.vcf_file_or_request):
-                raise FileNotFoundError(f"Cannot find VCF file: {args.vcf_file_or_request}")
-            if not os.path.isfile(args.article_index_file_name):
-                raise FileNotFoundError(f"Cannot find article index file: {args.article_index_file_name}")
-            if not os.path.isfile(args.article_mutations_file_name):
-                raise FileNotFoundError(f"Cannot find article mutations file: {args.article_mutations_file_name}")
+        print('DBG: check input files..') if verbose > 0 else None
+        if not os.path.isfile(args.article_index_file_name):
+            raise FileNotFoundError(f"Cannot find article index file: {args.article_index_file_name}")
+        if not os.path.isfile(args.article_mutations_file_name):
+            raise FileNotFoundError(f"Cannot find article mutations file: {args.article_mutations_file_name}")
 
-            # Parse VCF into sequence of mutations
-            vcf_parser_obj = vcf_parser.VcfParser()
-            try:
-                vcf_parser_obj.read_vcf_file(args.vcf_file_or_request, verbose=verbose)
-                #vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose)
-                vcf_mutations = vcf_parser_obj.get_protein_mutations(is_strict_check=False, verbose=verbose)
-                assert isinstance(vcf_mutations, list)
-            except Exception as e:
-                # Re-raise exception with additional context
-                raise Exception(f'ERROR while parsing vcf file: {e}')
+        # Get mutations, either directly or load them from VCF file
+        if args.vcf_file_or_request.endswith('.vcf'):
+            vcf_mutations = get_mutations_from_file(args.vcf_file_or_request, verbose)
         else:
             vcf_mutations = [args.vcf_file_or_request]
 
@@ -166,4 +171,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
