@@ -4,6 +4,8 @@ from collections import defaultdict
 import json
 import os
 import pandas as pd
+import subprocess
+import time
 
 import vcf_parser
 
@@ -14,6 +16,11 @@ COL__MUTATIONS = 'mutations'
 
 DEFAULT_ARTICLE_INDEX_PATH = '../db/index.csv'
 DEFAULT_ARTICLE_MUTATIONS_PATH = '../db/articles2mutations.txt'
+
+
+def eprint(*a):
+    """Print message to stderr (in cases when stdout is used for json generation, etc.)"""
+    print(*a, file=sys.stderr)
 
 
 # The logic is opposite to write_article_to_mutations_list_to_file in mutations_extractor.py
@@ -54,7 +61,7 @@ def find_articles_by_vcf_mutations(vcf_mutations: list, mutation_to_articles_dic
         else:
             not_founds.append(vcf_mut)
     if verbose:
-        print(f'Finding articles for VCF mutations: for {len(out_list)} found, for {len(not_founds)} not found.')
+        eprint(f'Finding articles for VCF mutations: for {len(out_list)} found, for {len(not_founds)} not found.')
     return out_list, not_founds
 
 
@@ -70,7 +77,7 @@ def append_found_results_to_out_dict(found_articles, article_index_df, out_dict,
             title = temp_df.title.iloc[0]  # Get first (and the only) item
             if not isinstance(title, str):
                 if verbose:
-                    print(f"WARNING: Article with uid {uid} has non-string title: '{title}' -> will be skipped.")
+                    eprint(f"WARNING: Article with uid {uid} has non-string title: '{title}' -> will be skipped.")
                 continue
             mutation_map['article_name'] = title
             
@@ -83,9 +90,28 @@ def append_found_results_to_out_dict(found_articles, article_index_df, out_dict,
         out_dict[vcf_mut] = mutation_list  # Modify the dict in-place
 
 
+def apply_snpeff_to_vcf(vcf_file_name: str, snp_eff_jar_path: str, verbose: bool):
+    if verbose:
+        eprint('DBG: launching snpeff..')
+
+    # Prepare unique file names for results
+    tmp_vcf_file = f'__out_{time.time()}__vcf_after_snpeff.vcf'
+    tmp_err_file = f'__out_{time.time()}__stderr_after_snpeff.txt'
+
+    # Compose command line and run it
+    cmd_parts = ['java', '-jar', snp_eff_jar_path, "eff", vcf_file_name, "1>", tmp_vcf_file, "2>", tmp_err_file]
+    subprocess.check_call(cmd_parts)
+
+    if verbose:
+        eprint(f'..done. Out files: {tmp_vcf_file}, {tmp_err_file}')
+
+    return tmp_vcf_file
+
+
 def get_mutations_from_file(vcf_file_name, verbose):
     if not os.path.isfile(vcf_file_name):
         raise FileNotFoundError(f"Cannot find VCF file: {vcf_file_name}")
+
     # Parse VCF into sequence of mutations
     vcf_parser_obj = vcf_parser.VcfParser()
     try:
@@ -113,6 +139,11 @@ def parse_args():
                         type=str,
                         default=DEFAULT_ARTICLE_MUTATIONS_PATH,
                         help='Path to input CVS file with article to mutations mapping.')
+    parser.add_argument('--snp_eff_jar_path',
+                        type=str,
+                        default='',
+                        help='Path to snpeff jar file. If omitted, the snpeff will not be called (i.e. mutations will'
+                             'be taken from original VCF file).')
     parser.add_argument('--verbose',
                         type=int,
                         choices=[0, 1],
@@ -131,15 +162,21 @@ def main():
         # Parse and check args
         args = parse_args()
         verbose = args.verbose
-        print('DBG: check input files..') if verbose > 0 else None
+        # TODO(2020-09): move to separate function
+        eprint('DBG: check input files..') if verbose > 0 else None
         if not os.path.isfile(args.article_index_file_name):
             raise FileNotFoundError(f"Cannot find article index file: {args.article_index_file_name}")
         if not os.path.isfile(args.article_mutations_file_name):
             raise FileNotFoundError(f"Cannot find article mutations file: {args.article_mutations_file_name}")
+        if (args.snp_eff_jar_path != '') and (not os.path.isfile(args.snp_eff_jar_path)):
+            raise FileNotFoundError(f"Cannot find snpeff jar file: {args.snp_eff_jar_path}")
 
-        # Get mutations, either directly or load them from VCF file
+        # Get mutations, either directly as a string, or extract them from VCF file
         if args.vcf_file_or_request.endswith('.vcf'):
-            vcf_mutations = get_mutations_from_file(args.vcf_file_or_request, verbose)
+            vcf_file = args.vcf_file_or_request
+            if args.snp_eff_jar_path != '':
+                vcf_file = apply_snpeff_to_vcf(vcf_file, args.snp_eff_jar_path, verbose)
+            vcf_mutations = get_mutations_from_file(vcf_file, verbose)
         else:
             vcf_mutations = [args.vcf_file_or_request]
 

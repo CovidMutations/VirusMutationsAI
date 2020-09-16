@@ -22,7 +22,6 @@ class TestVcfParser(unittest.TestCase):
         output_file = f'__out_{time.time()}__ut_mutations_vcf1.txt'
         vcf_obj.write_mutations_to_file(muts, output_file)
 
-
     def test_load_with_snpeff_data(self):
         vcf_obj = vcf_parser.VcfParser()
         vcf_obj.read_vcf_file(TEST_VCF_FILE2)
