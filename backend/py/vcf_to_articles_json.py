@@ -100,8 +100,9 @@ def apply_snpeff_to_vcf(vcf_file_name: str, snp_eff_jar_path: str, verbose: bool
     tmp_err_file = f'__out_{time.time()}__stderr_after_snpeff.txt'
 
     # Compose command line and run it
-    cmd_parts = ['java', '-jar', snp_eff_jar_path, "eff", vcf_file_name, "1>", tmp_vcf_file, "2>", tmp_err_file]
-    subprocess.check_call(cmd_parts)
+    cmd_parts = ['java', '-jar', snp_eff_jar_path, "eff", '-v', 'NC_045512.2', vcf_file_name,
+                 "1>", tmp_vcf_file, "2>", tmp_err_file]
+    subprocess.run(cmd_parts, check=True)
 
     if verbose:
         eprint(f'..done. Out files: {tmp_vcf_file}, {tmp_err_file}')
