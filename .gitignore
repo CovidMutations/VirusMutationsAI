@@ -8,7 +8,7 @@
 /frontend/dist
 /backend/dist
 /backend/db/*.xml
-/backend/config
+/backend/config/*
 /tmp
 /out-tsc
 # Only exists if Bazel was run
