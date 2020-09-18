@@ -7,16 +7,33 @@ const mailConfig = config.get('mail');
 @Injectable()
 export class MailService {
   private logger = new Logger('MailService');
-
+  userTokens;
   transporter = nodemailer.createTransport({
-    service: mailConfig.service,
+    service: 'gmail',
     auth: {
       user: mailConfig.email,
-      pass: mailConfig.pass
+      pass: mailConfig.pass,
     }
   });
 
-  constructor() { }
+  constructor() {
+  //   this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
+  //       let accessToken = this.userTokens[user];
+  //       if(!accessToken){
+  //           return callback(new Error('Unknown user'));
+  //       }else{
+  //           return callback(null, accessToken);
+  //       }
+  //   });
+
+  //   this.transporter.on('token', token => {
+  //     console.log('A new access token was generated');
+  //     console.log('User: %s', token.user);
+  //     console.log('Access Token: %s', token.accessToken);
+  //     console.log('Expires: %s', new Date(token.expires));
+  //     this.userTokens = token.user;
+  // });
+  }
 
   send(mailOptions?: any) {
 
@@ -25,6 +42,7 @@ export class MailService {
       subject: mailConfig.subject,
       ...mailOptions
     });
+    console.log(_mailOptions)
 
     this.transporter.sendMail(_mailOptions, (error, info) =>{
       if (error) {

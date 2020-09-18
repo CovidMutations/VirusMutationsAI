@@ -21,9 +21,8 @@ export class AuthService {
 
   
   async registration(authCredentalsDTO: UserDTOFull): Promise<void> {
-    this.logger.verbose('registration');
      
-    this.logger.verbose(`signUp: ${authCredentalsDTO}`);
+    this.logger.verbose(`registration: ${JSON.stringify(authCredentalsDTO)}`);
     const {username, password, email} = authCredentalsDTO;
 
     const user = new UserEntity();
@@ -40,10 +39,10 @@ export class AuthService {
      await this.mailService.send({
         to: user.email,
         subject: 'VirusMutationsAI Verification code',
-        text: 'This code is used to verify your account: ' + user.verificationCode
+        html: '<p>This code is used to verify your account:</p> '
       });
 
-      // `
+      // ` + user.verificationCode
       //   <table style="background:#fff;border-top-color:#2086e0;border-top-style:solid;border-top-width:2px;margin-top:46px;text-align:center;width:100%"><tbody>
       //     <tr><td style="color:#303030;font-size:20px;font-weight:400;padding-top:120px">Registration Verification Code</td></tr>
       //     <tr><td style="color:#178bfe;font-size:36px;font-weight:800">${user.verificationCode}</td></tr>
