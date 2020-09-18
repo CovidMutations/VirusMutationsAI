@@ -6,7 +6,7 @@ export class MailModel extends BaseModel {
   from: string = undefined;
   to: string = undefined;
   subject: string = undefined;
-  text: string = undefined;
+  html: string = undefined;
 
   constructor(row?){
     super(); super.checkFields(row);
