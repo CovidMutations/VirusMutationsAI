@@ -8,7 +8,7 @@ export class UserDTO {
   @IsString()
   @IsEmail()
   @MinLength(5)
-  @MaxLength(20)
+  @MaxLength(50)
   email: string;
 
   @IsNotEmpty()

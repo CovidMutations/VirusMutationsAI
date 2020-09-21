@@ -16,24 +16,7 @@ export class MailService {
     }
   });
 
-  constructor() {
-  //   this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
-  //       let accessToken = this.userTokens[user];
-  //       if(!accessToken){
-  //           return callback(new Error('Unknown user'));
-  //       }else{
-  //           return callback(null, accessToken);
-  //       }
-  //   });
-
-  //   this.transporter.on('token', token => {
-  //     console.log('A new access token was generated');
-  //     console.log('User: %s', token.user);
-  //     console.log('Access Token: %s', token.accessToken);
-  //     console.log('Expires: %s', new Date(token.expires));
-  //     this.userTokens = token.user;
-  // });
-  }
+  constructor() { }
 
   send(mailOptions?: any) {
 
