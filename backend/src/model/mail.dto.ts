@@ -13,16 +13,3 @@ export class MailModel extends BaseModel {
   }
 }
 
-
-
-export class CodeVerificationModel extends BaseModel {
-  @IsNotEmpty()
-  @MinLength(5)
-  @MaxLength(10)
-  @IsNumber()
-  code: number = undefined;
-  
-  constructor(row?){
-    super(); super.checkFields(row);
-  }
-}

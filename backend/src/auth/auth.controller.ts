@@ -1,7 +1,6 @@
-import { Controller, Post, Logger, Body, Get, UseGuards, Delete, Param, Put, CacheInterceptor, UseInterceptors } from '@nestjs/common';
+import { Controller, Post, Logger, Body, Get, UseGuards, Delete, Param, Put, CacheInterceptor, UseInterceptors, Query } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { UserDTO, UserDTOFull, UserInfoTokenRO } from '../user/user.dto';
-import { CodeVerificationModel } from '../model/mail.dto';
 
 @Controller('api')
 // @UseInterceptors(CacheInterceptor)
@@ -23,10 +22,10 @@ export class AuthController {
         this.authService.sendCodeVerification(userId);
     }
 
-    @Post('/confirm-code-verification/:userId')
-    confirmCodeVerification(@Param('userId') userId: string, @Body() res: CodeVerificationModel): void {
-        this.logger.log(`confirmCodeVerification ${JSON.stringify(res)}`);
-        this.authService.confirmCodeVerification(userId, res);
+    @Get('/confirm-code-verification/:userId')
+    confirmCodeVerification(@Param('userId') userId: string, @Query('code') code: string): void {
+        this.logger.log(`confirmCodeVerification ${JSON.stringify(code)}`);
+        this.authService.confirmCodeVerification(userId, code);
     }
 
     @Post('/login')

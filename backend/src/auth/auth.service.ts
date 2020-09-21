@@ -3,11 +3,11 @@ import { UserDTO, UserDTOFull, UserInfoTokenRO } from '../user/user.dto';
 import * as bcrypt from 'bcryptjs';
 import { UserRepository } from '../user/user.repository';
 import { UserEntity } from '../user/user.entity';
-import { EmailVerificationModel, MailModel} from '../model/mail.dto';
 import { MailService} from '../mail/mail.service';
 import { JwtService } from '@nestjs/jwt';
 import * as config from 'config';
 const jwtConfig = config.get('jwt');
+const serverConfig = config.get('server');
 
 
 @Injectable()
@@ -49,7 +49,7 @@ export class AuthService {
 
   }
 
-  async confirmCodeVerification(userId: string, res: EmailVerificationModel): Promise<void> {
+  async confirmCodeVerification(userId: string, code: string): Promise<void> {
     const _user = await this.userRepository.findOne({id: userId});
     if (!_user) {
       throw new HttpException(
@@ -57,7 +57,7 @@ export class AuthService {
         HttpStatus.BAD_REQUEST,
       );
     }
-    if(!_user.active && res.code == _user.verificationCode) {
+    if(!_user.active && Number(code) == _user.verificationCode) {
       _user.active = true;
       _user.save();
     }
@@ -79,7 +79,7 @@ export class AuthService {
     await this.mailService.send({
       to: user.email,
       subject: 'VirusMutationsAI Verification code',
-      html: `<p>This code is used to verify your account: <span style="color:#178bfe;font-size:36px;font-weight:800"> ${user.verificationCode}</span><p>`
+      html: `<p>Verify your account: <a href="${serverConfig.host}/confirm-code-verification/${user.userId}?code=${user.verificationCode}" style="color:#178bfe;font-size:36px;font-weight:800">Follow this link</a><p>`
     });
 
   //   ` <table style="background:#fff;border-top-color:#2086e0;border-top-style:solid;border-top-width:2px;margin-top:46px;text-align:center;width:100%"><tbody>
