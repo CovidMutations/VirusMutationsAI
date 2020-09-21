@@ -36,24 +36,7 @@ export class AuthService {
     try {
 
      await user.save();
-     await this.mailService.send({
-        to: user.email,
-        subject: 'VirusMutationsAI Verification code',
-        html: '<p>This code is used to verify your account:</p> '
-      });
-
-      // ` + user.verificationCode
-      //   <table style="background:#fff;border-top-color:#2086e0;border-top-style:solid;border-top-width:2px;margin-top:46px;text-align:center;width:100%"><tbody>
-      //     <tr><td style="color:#303030;font-size:20px;font-weight:400;padding-top:120px">Registration Verification Code</td></tr>
-      //     <tr><td style="color:#178bfe;font-size:36px;font-weight:800">${user.verificationCode}</td></tr>
-      //     <tr><td style="color:#303030;font-size:16px;font-weight:200;padding-top:30px">This code is used to verify your account:</td></tr>
-      //     <tr><td style="border-bottom-color:#eee;border-bottom-style:solid;border-bottom-width:1px;color:#303030;font-size:16px;font-weight:400;padding-bottom:108px">
-      //       <a href="mailto:${user.email}">${user.email}</a>
-      //     </td></tr>
-      //     <tr><td style="color:#9b9b9b;font-size:13px;font-weight:200;padding-top:20px">Please return to finish your registration</td></tr>
-      //   </tbody></table>
-      //   `
-
+     this.sendCodeVerificationMail(user); 
     } catch (err) {
       if (err.code === '23505') {
         throw new ConflictException({
@@ -66,7 +49,7 @@ export class AuthService {
 
   }
 
-  async emailverification(userId: string, res: EmailVerificationModel): Promise<void> {
+  async confirmCodeVerification(userId: string, res: EmailVerificationModel): Promise<void> {
     const _user = await this.userRepository.findOne({id: userId});
     if (!_user) {
       throw new HttpException(
@@ -78,6 +61,38 @@ export class AuthService {
       _user.active = true;
       _user.save();
     }
+  }
+
+
+  async sendCodeVerification(userId: string) {
+    const _user = await this.userRepository.findOne({id: userId});
+    if (!_user) {
+      throw new HttpException(
+        'User not found',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+    this.sendCodeVerificationMail(_user);
+  }
+
+  private async sendCodeVerificationMail(user) {
+    await this.mailService.send({
+      to: user.email,
+      subject: 'VirusMutationsAI Verification code',
+      html: `<p>This code is used to verify your account: <span style="color:#178bfe;font-size:36px;font-weight:800"> ${user.verificationCode}</span><p>`
+    });
+
+  //   ` <table style="background:#fff;border-top-color:#2086e0;border-top-style:solid;border-top-width:2px;margin-top:46px;text-align:center;width:100%"><tbody>
+  //   <tr><td style="color:#303030;font-size:20px;font-weight:400;padding-top:120px">Registration Verification Code</td></tr>
+  //   <tr><td style="color:#178bfe;font-size:36px;font-weight:800">${user.verificationCode}</td></tr>
+  //   <tr><td style="color:#303030;font-size:16px;font-weight:200;padding-top:30px">This code is used to verify your account:</td></tr>
+  //   <tr><td style="border-bottom-color:#eee;border-bottom-style:solid;border-bottom-width:1px;color:#303030;font-size:16px;font-weight:400;padding-bottom:108px">
+  //     <a href="mailto:${user.email}">${user.email}</a>
+  //   </td></tr>
+  //   <tr><td style="color:#9b9b9b;font-size:13px;font-weight:200;padding-top:20px">Please return to finish your registration</td></tr>
+  // </tbody></table>
+  // `
+
   }
 
   async login(loginCredentalsDTO: UserDTO): Promise<any> {

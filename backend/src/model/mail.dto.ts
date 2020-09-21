@@ -15,7 +15,7 @@ export class MailModel extends BaseModel {
 
 
 
-export class EmailVerificationModel extends BaseModel {
+export class CodeVerificationModel extends BaseModel {
   @IsNotEmpty()
   @MinLength(5)
   @MaxLength(10)
