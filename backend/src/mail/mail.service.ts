@@ -11,31 +11,34 @@ export class MailService {
   transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      // type: 'OAuth2',
-      // clientId: 'virusmutationsai-290310',
-      // clientSecret: 789890015183,
+      type: 'OAuth2',
+      clientId: 'virusmutationsai-290310',
+      clientSecret: 789890015183,
       user: mailConfig.email,
-      pass: mailConfig.pass,
+    //  pass: mailConfig.pass,
     }
   });
 
   constructor() { 
-    // this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
-    //   let accessToken = this.userTokens[user];
-    //   if(!accessToken){
-    //       return callback(new Error('Unknown user'));
-    //   }else{
-    //       return callback(null, accessToken);
-    //   }
-    // });
+    this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
+      this.logger.verbose(`oauth2_provision_cb: ${user}`);
+      let accessToken = this.userTokens[user];
+      if(!accessToken){
+          return callback(new Error('Unknown user'));
+      }else{
+          return callback(null, accessToken);
+      }
+    });
 
-    // this.transporter.on('token', token => {
-    //   this.userTokens = token.accessToken;
-    //   console.log('A new access token was generated');
-    //   console.log('User: %s', token.user);
-    //   console.log('Access Token: %s', token.accessToken);
-    //   console.log('Expires: %s', new Date(token.expires));
-    // });
+    this.transporter.on('token', token => {
+      this.logger.verbose(`token: ${token}`);
+
+      this.userTokens = token.accessToken;
+      console.log('A new access token was generated');
+      console.log('User: %s', token.user);
+      console.log('Access Token: %s', token.accessToken);
+      console.log('Expires: %s', new Date(token.expires));
+    });
   }
 
   send(mailOptions?: any) {
