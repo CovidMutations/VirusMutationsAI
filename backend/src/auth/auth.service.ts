@@ -8,7 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 import * as config from 'config';
 const jwtConfig = config.get('jwt');
 const serverConfig = config.get('server');
-
+const origin =   process.env.ORIGIN || serverConfig.origin;
 
 @Injectable()
 export class AuthService {
@@ -79,7 +79,7 @@ export class AuthService {
     await this.mailService.send({
       to: user.email,
       subject: 'VirusMutationsAI Verification code',
-      html: `<p>Verify your account: <a href="${serverConfig.host}/confirm-code-verification/${user.userId}?code=${user.verificationCode}" style="color:#178bfe;font-size:36px;font-weight:800">Follow this link</a><p>`
+      html: `<p>Verify your account: <a href="${origin}/confirm-code-verification/${user.userId}?code=${user.verificationCode}" style="color:#178bfe;font-size:36px;font-weight:800">Follow this link</a><p>`
     });
 
   //   ` <table style="background:#fff;border-top-color:#2086e0;border-top-style:solid;border-top-width:2px;margin-top:46px;text-align:center;width:100%"><tbody>
