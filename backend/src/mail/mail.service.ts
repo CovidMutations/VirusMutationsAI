@@ -20,6 +20,13 @@ export class MailService {
   });
 
   constructor() { 
+
+    console.log( {
+      type: 'OAuth2',
+      clientId: mailConfig.clientId,
+      clientSecret: mailConfig.clientSecret,
+      user: mailConfig.email
+    })
     this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
       this.logger.verbose(`oauth2_provision_cb: ${user}`);
       let accessToken = this.userTokens[user];
