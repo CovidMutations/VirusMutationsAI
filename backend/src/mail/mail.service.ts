@@ -12,8 +12,8 @@ export class MailService {
     service: 'gmail',
     auth: {
       type: 'OAuth2',
-      clientId: 'virusmutationsai-290310',
-      clientSecret: 789890015183,
+      clientId: mailConfig.clientId,
+      clientSecret: mailConfig.clientSecret,
       user: mailConfig.email,
     //  pass: mailConfig.pass,
     }
