@@ -11,6 +11,7 @@ export class MailService {
   transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
+      type: 'OAuth2',
       user: mailConfig.email,
       clientId: mailConfig.clientId,
       clientSecret: mailConfig.clientSecret,
