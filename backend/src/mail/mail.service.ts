@@ -12,11 +12,31 @@ export class MailService {
     service: 'gmail',
     auth: {
       user: mailConfig.email,
-      pass: mailConfig.pass,
+      clientId: mailConfig.clientId,
+      clientSecret: mailConfig.clientSecret,
+      // pass: mailConfig.pass,
     }
   });
 
   constructor() { 
+    this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
+      this.logger.verbose(`oauth2_provision_cb: ${user}`);
+      let accessToken = this.userTokens[user];
+      if(!accessToken){
+          return callback(new Error('Unknown user'));
+      }else{
+          return callback(null, accessToken);
+      }
+    });
+    this.transporter.on('token', token => {
+      this.logger.verbose(`token: ${token}`);
+
+      this.userTokens = token;
+      console.log('A new access token was generated');
+      console.log('User: %s', token.user);
+      console.log('Access Token: %s', token.accessToken);
+      console.log('Expires: %s', new Date(token.expires));
+    });
 
   }
 
