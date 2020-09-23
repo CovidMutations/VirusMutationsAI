@@ -13,7 +13,7 @@
   <div class="form-group row">
     <label  class="col-sm-6 col-form-label">{{'myaccount.subscribe.label_mutation' | translate}}</label>
     <div class="col-sm-6">
-      <input type="text" *ngFor="let mutation of subscribeForm.get('mutations').controls" [formControl]="mutation" class="form-control mb-2" >
+      <input type="text" *ngFor="let mutation of mutations.controls" [formControl]="mutation" class="form-control mb-2" >
     </div>
   </div>
   <div class="form-group row">
