@@ -14,9 +14,10 @@ import { HashMap } from '@datorama/akita';
   providedIn: 'root'
 })
 export class AuthService {
-  regEndpoint = 'registration';
-  loginEndpoint = 'login';
-  API_URL;
+  private regEndpoint = 'registration';
+  private loginEndpoint = 'login';
+  private codeVerificationEndpoint = 'confirm-code-verification';
+  private API_URL;
 
   constructor(
     private readonly http: HttpClient,
@@ -42,4 +43,9 @@ export class AuthService {
   login(formVal: LoginFormModel): Observable<UserRO> {
     return this.http.post(this.API_URL + this.loginEndpoint, formVal) as Observable<UserRO>;
   }
+
+  confirmCodeVerification(userId: string, code: string): Observable<any> {
+    return this.http.get(this.API_URL + this.codeVerificationEndpoint + '/' + userId + '/' + code) as Observable<any>;
+  }
+
 }

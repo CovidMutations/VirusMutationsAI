@@ -79,7 +79,7 @@ export class AuthService {
     await this.mailService.send({
       to: user.email,
       subject: 'VirusMutationsAI Verification code',
-      html: `<p>Verify your account: <a href="${origin}/confirm-code-verification/${user.id}?code=${user.verificationCode}" style="color:#178bfe;font-weight:800">Follow this link</a><p>`
+      html: `<p>Verify your account: <a href="${origin}/auth/confirm-code-verification/${user.id}/${user.verificationCode}" style="color:#178bfe;font-weight:800">Follow this link</a><p>`
     });
 
   //   ` <table style="background:#fff;border-top-color:#2086e0;border-top-style:solid;border-top-width:2px;margin-top:46px;text-align:center;width:100%"><tbody>

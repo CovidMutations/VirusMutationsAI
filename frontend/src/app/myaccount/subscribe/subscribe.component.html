@@ -1,0 +1,28 @@
+<h4>{{'myaccount.subscribe.title' | translate}}</h4>
+
+<form [formGroup]="subscribeForm" (submit)="onSubmit()">
+  <div class="form-group row">
+    <label for="frequency" class="col-sm-6 col-form-label">{{'myaccount.subscribe.label_frequency' | translate}}</label>
+    <div class="col-sm-7">
+      <select id="frequency" class="form-control" formControlName="frequency">
+        <option >Choose...</option>
+        <option *ngFor="let item of dbUpdatingFrequency | keyvalue: toolService.originalOrder" [value]="item.key">{{'myaccount.subscribe.option_frequency.' + item.key | translate}}</option> 
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label  class="col-sm-6 col-form-label">{{'myaccount.subscribe.label_mutation' | translate}}</label>
+    <div class="col-sm-6">
+      <input type="text" *ngFor="let mutation of subscribeForm.get('mutations').controls" [formControl]="mutation" class="form-control mb-2" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label  class="col-sm-6"></label>
+    <div class="col-sm-6">
+      <button type="button" class="btn btn-primary" (click)="addNewMutation()">{{'myaccount.subscribe.btn_add' | translate}}</button>
+    </div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">{{'myaccount.subscribe.btn_submit' | translate}}</button>
+  
+</form>

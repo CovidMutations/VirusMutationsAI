@@ -24,7 +24,8 @@
       "password": "Password",
       "btn_submit": "Submit",
       "err_message": "Incorrect data"
-    }
+    },
+    "title_end": "Your registration nearly finished"
   },
   "auth":{
     "title": "Login",
@@ -46,6 +47,20 @@
       "daily": "Once a day",
       "weekly": "Once a week",
       "monthly": "Once a month"
+    }
+  },
+  "myaccount": {
+    "subscribe": {
+      "title": "My subscriptions",
+      "label_frequency": "Email Frequency",
+      "option_frequency": {
+        "daily": "Once a day",
+        "weekly": "Once a week",
+        "monthly": "Once a month"
+      },
+      "label_mutation": "Mutation",
+      "btn_submit":"Subscribe",
+      "btn_add":"Add new mutation"
     }
   }
 }

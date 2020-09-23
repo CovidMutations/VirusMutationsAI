@@ -22,8 +22,8 @@ export class AuthController {
         this.authService.sendCodeVerification(userId);
     }
 
-    @Get('/confirm-code-verification/:userId')
-    confirmCodeVerification(@Param('userId') userId: string, @Query('code') code: string): void {
+    @Get('/confirm-code-verification/:userId/:code')
+    confirmCodeVerification(@Param('userId') userId: string, @Param('code') code: string): void {
         this.logger.log(`confirmCodeVerification ${JSON.stringify(code)}`);
         this.authService.confirmCodeVerification(userId, code);
     }
