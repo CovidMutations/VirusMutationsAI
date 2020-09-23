@@ -52,47 +52,53 @@ def create_mutation_to_articles_dict(article_to_mutations_df: pd.DataFrame):
             out_dict[mut].append(article_uid)
     return out_dict
 
-
-def find_articles_by_vcf_mutations(vcf_mutations: list, mutation_to_articles_dict: dict, verbose=False):
-    out_list = []
-    not_founds = []
-    for vcf_mut in vcf_mutations:
-        if vcf_mut in mutation_to_articles_dict:
-            out_list.append((vcf_mut, mutation_to_articles_dict[vcf_mut]))
-        else:
-            not_founds.append(vcf_mut)
-    if verbose:
-        eprint(f'Finding articles for VCF mutations: for {len(out_list)} found, for {len(not_founds)} not found.')
-    return out_list, not_founds
-
-
-def append_found_results_to_out_dict(found_articles, article_index_df, out_dict, verbose=False):
-    for (vcf_mut, uids) in found_articles:
+def make_search_response_from_mutation_list(vcf_mutations: list, mutation_to_articles_dict: dict, article_index_df, out_dict, verbose=False):
+    # Iterate over list of enumerations (each enumeration is nucleotide mutation and its protein synonims)
+    for vcf_mut_list in vcf_mutations:
+        muts =  vcf_mut_list.split(',')
+        base_mutation = muts[0] # 1st element in the enumeration is always nucleotide mutation
         mutation_list = []
-        for uid in uids:
-            mutation_map = {}
-            temp_df = article_index_df[article_index_df.uid == uid]
-            assert len(temp_df) == 1, f"Unexpected number of results ({len(temp_df)}) for article uid '{uid}'"
+        # Iterate over each nucleotide mutatation and its pretein synonims (if any)
+        unique_uids = set()
+        for counter, mut in enumerate(muts):
+            if mut in mutation_to_articles_dict:
+                uids = mutation_to_articles_dict[mut]
+                # Iterate over each article found for one of the search tags
+                for uid in uids:
+                    # Skip UID if it's the same for several items in the enumeration
+                    if uid in unique_uids:
+                        continue
+                    else:
+                        unique_uids.add(uid)
+                    mutation_map = {}
+                    temp_df = article_index_df[article_index_df.uid == uid]
+                    assert len(temp_df) == 1, f"Unexpected number of results ({len(temp_df)}) for article uid '{uid}'"
 
-            # Get and check article title
-            title = temp_df.title.iloc[0]  # Get first (and the only) item
-            if not isinstance(title, str):
-                if verbose:
-                    eprint(f"WARNING: Article with uid {uid} has non-string title: '{title}' -> will be skipped.")
-                continue
-            mutation_map['article_name'] = title
-            
-            # Get and check article url
-            url = temp_df.url.iloc[0]       # Get first (and the only) item
-            assert isinstance(url, str)
-            mutation_map['article_url'] = url
+                    # Get and check article title
+                    title = temp_df.title.iloc[0]  # Get first (and the only) item
+                    if not isinstance(title, str):
+                        if verbose:
+                            eprint(f"WARNING: Article with uid {uid} has non-string title: '{title}' -> will be skipped.")
+                        continue
+                    if counter > 0:
+                        # Add a GUI-comment for each protein synonim on where does it come from
+                        mutation_map['base_mutation'] = base_mutation + ' => ' + mut + ' (snpeff)'
+                    mutation_map['article_name'] = title
 
-            mutation_list.append(mutation_map)
-        out_dict[vcf_mut] = mutation_list  # Modify the dict in-place
+                    # Get and check article url
+                    url = temp_df.url.iloc[0]       # Get first (and the only) item
+                    assert isinstance(url, str)
+                    mutation_map['article_url'] = url
+                    mutation_list.append(mutation_map)
+        if len(mutation_list) > 0:
+            # Add to the results if at least one article is found
+            out_dict[base_mutation] = mutation_list  # Modify the dict in-place
 
 
 def apply_snpeff_to_vcf(vcf_file_name: str, snp_eff_jar_path: str, verbose: bool):
+    snpeff_verbose = '-q'
     if verbose:
+        snpeff_verbose = '-v'
         eprint('DBG: launching snpeff..')
 
     # Prepare unique file names for results
@@ -100,17 +106,19 @@ def apply_snpeff_to_vcf(vcf_file_name: str, snp_eff_jar_path: str, verbose: bool
     tmp_err_file = f'__out_{time.time()}__stderr_after_snpeff.txt'
 
     # Compose command line and run it
-    cmd_parts = ['java', '-jar', snp_eff_jar_path, "eff", '-v', 'NC_045512.2', vcf_file_name,
+    cmd_parts = ['java', '-jar', snp_eff_jar_path, "eff", snpeff_verbose, 'NC_045512.2', vcf_file_name,
                  "1>", tmp_vcf_file, "2>", tmp_err_file]
     subprocess.run(" ".join(cmd_parts), shell=True, check=True)
 
     if verbose:
         eprint(f'..done. Out files: {tmp_vcf_file}, {tmp_err_file}')
+    else:
+        os.remove(tmp_err_file)
 
     return tmp_vcf_file
 
 
-def get_mutations_from_file(vcf_file_name, verbose):
+def get_mutations_from_file(vcf_file_name, check_protein_mutations = False, verbose = 0):
     if not os.path.isfile(vcf_file_name):
         raise FileNotFoundError(f"Cannot find VCF file: {vcf_file_name}")
 
@@ -118,15 +126,15 @@ def get_mutations_from_file(vcf_file_name, verbose):
     vcf_parser_obj = vcf_parser.VcfParser()
     try:
         vcf_parser_obj.read_vcf_file(vcf_file_name, verbose=verbose)
-        # TODO(2020-09): logic for different mutation types is required here
-        vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose)
-        # vcf_mutations = vcf_parser_obj.get_protein_mutations(is_strict_check=False, verbose=verbose)
+        if check_protein_mutations:
+            vcf_mutations = vcf_parser_obj.get_protein_mutations(is_strict_check=False, verbose=verbose)
+        else:
+            vcf_mutations = vcf_parser_obj.get_mutations(verbose=verbose)
         assert isinstance(vcf_mutations, list)
     except Exception as e:
         # Re-raise exception with additional context
         raise Exception(f'ERROR while parsing vcf file: {e}')
     return vcf_mutations
-
 
 def parse_args():
     parser = argparse.ArgumentParser(description='For each mutation in VCF file tries to find related articles. ' +
@@ -144,7 +152,7 @@ def parse_args():
                         help='Path to input CVS file with article to mutations mapping.')
     parser.add_argument('--snp_eff_jar_path',
                         type=str,
-                        default='',
+                        default=None,
                         help='Path to snpeff jar file. If omitted, the snpeff will not be called (i.e. mutations will'
                              'be taken from original VCF file).')
     parser.add_argument('--verbose',
@@ -157,7 +165,6 @@ def parse_args():
 
 
 def main():
-
     out_dict = {}
     verbose = 0
 
@@ -171,15 +178,21 @@ def main():
             raise FileNotFoundError(f"Cannot find article index file: {args.article_index_file_name}")
         if not os.path.isfile(args.article_mutations_file_name):
             raise FileNotFoundError(f"Cannot find article mutations file: {args.article_mutations_file_name}")
-        if (args.snp_eff_jar_path != '') and (not os.path.isfile(args.snp_eff_jar_path)):
+        if (args.snp_eff_jar_path != None) and (not os.path.isfile(args.snp_eff_jar_path)):
             raise FileNotFoundError(f"Cannot find snpeff jar file: {args.snp_eff_jar_path}")
 
         # Get mutations, either directly as a string, or extract them from VCF file
         if args.vcf_file_or_request.endswith('.vcf'):
             vcf_file = args.vcf_file_or_request
-            if args.snp_eff_jar_path != '':
+            if args.snp_eff_jar_path != None:
                 vcf_file = apply_snpeff_to_vcf(vcf_file, args.snp_eff_jar_path, verbose)
-            vcf_mutations = get_mutations_from_file(vcf_file, verbose)
+                # check_protein_mutations = True: returning list of coma separated enumerations
+                vcf_mutations = get_mutations_from_file(vcf_file, True, verbose)
+                if not verbose:
+                    os.remove(vcf_file)
+            else:
+                # check_protein_mutations = False: returning list of nucleotide mutations
+                vcf_mutations = get_mutations_from_file(vcf_file, False, verbose)
         else:
             vcf_mutations = [args.vcf_file_or_request]
 
@@ -187,17 +200,11 @@ def main():
         tmp_df = _read_article_to_mutations_df_from_file(args.article_mutations_file_name)
         mutation_to_articles_dict = create_mutation_to_articles_dict(tmp_df)
 
-        # Find articles for VCF mutations
-        found_articles, not_founds = find_articles_by_vcf_mutations(vcf_mutations, mutation_to_articles_dict,
-                                                                    verbose=verbose)
-
         # Load index of articles, should go without errors
         article_index_df = pd.read_csv(args.article_index_file_name)
 
         # Prepare final structure for json
-        append_found_results_to_out_dict(found_articles, article_index_df, out_dict, verbose)
-        if verbose:
-            out_dict['mutations_without_articles'] = not_founds  # VCF mutations without found articles
+        make_search_response_from_mutation_list(vcf_mutations, mutation_to_articles_dict, article_index_df, out_dict, verbose)
 
     except Exception as e:
         if verbose > 0:

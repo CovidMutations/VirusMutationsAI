@@ -121,17 +121,31 @@ class VcfParser:
             raise Exception(f"Cannot find column '{COL__INFO}' in the file header: '{self.df_vcf.columns}'")
 
         # For each row - extract information text and parse it
-        found_muts = set()
+        resulting_set = set()
         for i, (_, row) in enumerate(self.df_vcf.iterrows()):
-            muts = self._extract_protein_mutations(row[COL__INFO])
+            if len(row['REF']) > 1 or row['REF'] == 'N' or len(row['ALT']) > 1 or row['ALT'] == 'N':
+                # Skip non-relevant mutations
+                continue
+            nuc_mutation = str(row['POS']) + row['REF'] + '>' + row['ALT']
+            prot_mutations = self._extract_protein_mutations(row[COL__INFO])
             if verbose:
-                eprint(f'DBG: processing row {i}. Found muts: {muts}')
-            found_muts.update(muts)
+                eprint(f'DBG: processing row {i}. Found muts: {prot_mutations}')
+            unique_prot_mutations = set()
+            # Save only unique protein mutations
+            unique_prot_mutations.update(prot_mutations)
+            # Convert 3-letter acids to 1-letter
+            unique_prot_mutations_converted = self.convert_protein_mutations_from_3_to_1_letters(unique_prot_mutations, is_strict_check=is_strict_check)
+            # Keep nucleotide and protein mutations as one enumerator (comma separated)
+            resulting_string = nuc_mutation if len(prot_mutations) == 0 else nuc_mutation + ',' + ','.join(unique_prot_mutations_converted)
+            # Put the connected mutations in unique output set
+            resulting_set.update([resulting_string])
         if verbose:
-            eprint(f'DBG: total number of found muts: {len(found_muts)}')
-        # Convert 3-letter acids to 1-letter
-        new_muts = self.convert_protein_mutations_from_3_to_1_letters(found_muts, is_strict_check=is_strict_check)
-        return sorted(new_muts)  # List of found mutations
+            eprint(f'DBG: total number of found muts: {len(resulting_set)}')
+
+        resulting_list = list(resulting_set)
+        resulting_list = sorted(resulting_list)
+
+        return resulting_list  # List enumerators (comma separated)
 
     @staticmethod
     def write_mutations_to_file(mutations: list, output_file: str):
