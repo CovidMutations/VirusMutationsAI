@@ -11,21 +11,37 @@ export class MailService {
   transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'hiltittcmdcalculator@gmail.com',
-      //mailConfig.email,
-      pass: 'TTC_MD_CALCULATOR123!'//mailConfig.pass
+      type: 'OAuth2',
+      clientId: mailConfig.clientId,
+      clientSecret: mailConfig.clientSecret,
+      user: mailConfig.email,
+    //  pass: mailConfig.pass
     }
   });
 
   constructor() { 
-
+    this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
+      let accessToken = this.userTokens[user];
+      if(!accessToken){
+          return callback(new Error('Unknown user'));
+      }else{
+          return callback(null, accessToken);
+      }
+    });
+    this.transporter.on('token', token => {
+      this.userTokens = token;
+      console.log('A new access token was generated');
+      console.log('User: %s', token.user);
+      console.log('Access Token: %s', token.accessToken);
+      console.log('Expires: %s', new Date(token.expires));
+    });
   }
 
   send(mailOptions?: any) {
 
     let _mailOptions = new MailModel({
-      from: 'hiltittcmdcalculator@gmail.com', //mailConfig.email,
-      subject: 'Test',//mailConfig.subject,
+      from: mailConfig.email,
+      subject: mailConfig.subject,
       ...mailOptions
     });
     console.log(_mailOptions)
