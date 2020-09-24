@@ -11,7 +11,12 @@ const serverConfig = config.get('server');
 export class MailService {
   private logger = new Logger('MailService');
   userTokens = '';
-  oauth2Client;
+
+  oauth2Client = new OAuth2(
+    mailConfig.clientId,
+    mailConfig.clientSecret,
+    serverConfig.origin
+  );
   
   transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -25,14 +30,12 @@ export class MailService {
   });
 
   constructor() { 
+    this.googleAuth();
+  }
 
-    this.oauth2Client = new OAuth2(
-      mailConfig.clientId,
-      mailConfig.clientSecret,
-      serverConfig.origin
-    );
+  async googleAuth() {
 
-    const accessToken = this.oauth2Client.getAccessToken();
+    const accessToken = await this.oauth2Client.getAccessToken();
     this.logger.verbose(`accessToken: ${JSON.stringify(accessToken)}`);
 
     this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
