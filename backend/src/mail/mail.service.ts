@@ -24,7 +24,7 @@ export class MailService {
   send(mailOptions?: any) {
 
     let _mailOptions = new MailModel({
-      from: mailConfig.email,
+      from: 'hiltittcmdcalculator@gmail.com', //mailConfig.email,
       subject: 'Test',//mailConfig.subject,
       ...mailOptions
     });
