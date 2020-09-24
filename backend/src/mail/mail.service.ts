@@ -11,8 +11,9 @@ export class MailService {
   transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: mailConfig.email,
-      pass: mailConfig.pass
+      user: 'hiltittcmdcalculator@gmail.com',
+      //mailConfig.email,
+      pass: 'TTC_MD_CALCULATOR123!'//mailConfig.pass
     }
   });
 
@@ -24,7 +25,7 @@ export class MailService {
 
     let _mailOptions = new MailModel({
       from: mailConfig.email,
-      subject: mailConfig.subject,
+      subject: 'Test',//mailConfig.subject,
       ...mailOptions
     });
     console.log(_mailOptions)
