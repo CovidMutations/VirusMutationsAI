@@ -1,6 +1,8 @@
 import { Injectable, Logger} from '@nestjs/common';
 import * as  nodemailer from 'nodemailer';
 import { MailModel} from '../model/mail.dto';
+import { google} from 'googleapis';
+const OAuth2 = google.auth.OAuth2;
 import * as config from 'config';
 const mailConfig = config.get('mail');
 
@@ -8,6 +10,11 @@ const mailConfig = config.get('mail');
 export class MailService {
   private logger = new Logger('MailService');
   userTokens = '';
+
+  oauth2Client = new OAuth2(
+    mailConfig.clientId,
+    mailConfig.clientSecret
+  );
   transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -20,6 +27,8 @@ export class MailService {
   });
 
   constructor() { 
+    const accessToken = this.oauth2Client.getAccessToken();
+    console.log('accessToken',accessToken)
     this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
       let accessToken = this.userTokens[user];
       if(!accessToken){
