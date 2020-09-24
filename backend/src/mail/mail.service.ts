@@ -34,7 +34,7 @@ export class MailService {
   }
 
   async googleAuth() {
-    this.logger.verbose(`googleAuth`);
+    this.logger.verbose(`googleAuth${JSON.stringify(this.oauth2Client)}`);
     const accessToken = await this.oauth2Client.getAccessToken();
     const refreshToken = await this.oauth2Client.getRefreshToken();
     this.logger.verbose(`accessToken: ${JSON.stringify(accessToken)}`);
