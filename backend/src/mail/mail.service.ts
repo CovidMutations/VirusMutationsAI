@@ -36,13 +36,13 @@ export class MailService {
   async googleAuth() {
     this.logger.verbose(`googleAuth${JSON.stringify(this.oauth2Client)}`);
     const accessToken = await this.oauth2Client.getAccessToken();
-    const refreshToken = await this.oauth2Client.getRefreshToken();
-    this.logger.verbose(`accessToken: ${JSON.stringify(accessToken)}`);
-    this.logger.verbose(`refreshToken: ${JSON.stringify(refreshToken)}`);
 
-    this.oauth2Client.setCredentials({
-      refresh_token: refreshToken
-    });
+    this.logger.verbose(`accessToken: ${JSON.stringify(accessToken)}`);
+    // this.logger.verbose(`refreshToken: ${JSON.stringify(refreshToken)}`);
+
+    // this.oauth2Client.setCredentials({
+    //   refresh_token: refreshToken
+    // });
 
     
     this.logger.verbose(`accessToken: ${JSON.stringify(accessToken)}`);
