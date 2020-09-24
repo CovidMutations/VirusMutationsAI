@@ -25,19 +25,21 @@ export class MailService {
   });
 
   constructor() { 
-    this.logger.verbose(`transporter: ${this.transporter}`);
+    this.logger.verbose(`transporter: ${JSON.stringify(this.transporter)}`);
 
     this.oauth2Client = new OAuth2(
       mailConfig.clientId,
       mailConfig.clientSecret,
       serverConfig.origin
     );
-    this.logger.verbose(`oauth2Client: ${this.oauth2Client}`);
+    this.logger.verbose(`oauth2Client: ${JSON.stringify(this.oauth2Client)}`);
 
     const accessToken = this.oauth2Client.getAccessToken();
-    this.logger.verbose(`accessToken: ${accessToken}`);
+    this.logger.verbose(`accessToken: ${JSON.stringify(accessToken)}`);
 
     this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
+      this.logger.verbose(`oauth2_provision_cb: ${JSON.stringify(user)}`);
+
       let accessToken = this.userTokens[user];
       if(!accessToken){
           return callback(new Error('Unknown user'));
@@ -46,6 +48,8 @@ export class MailService {
       }
     });
     this.transporter.on('token', token => {
+      this.logger.verbose(`transporter token: ${JSON.stringify(token)}`);
+
       this.userTokens = token;
       console.log('A new access token was generated');
       console.log('User: %s', token.user);
