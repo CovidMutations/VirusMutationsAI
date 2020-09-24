@@ -28,7 +28,9 @@ export class MailService {
 
   constructor() { 
     const accessToken = this.oauth2Client.getAccessToken();
-    console.log('accessToken',accessToken)
+    this.logger.verbose(`accessToken: ${accessToken}`);
+    this.logger.verbose(`transporter: ${this.transporter}`);
+
     this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
       let accessToken = this.userTokens[user];
       if(!accessToken){
