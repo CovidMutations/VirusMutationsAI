@@ -5,16 +5,14 @@ import { google} from 'googleapis';
 const OAuth2 = google.auth.OAuth2;
 import * as config from 'config';
 const mailConfig = config.get('mail');
+const serverConfig = config.get('server');
 
 @Injectable()
 export class MailService {
   private logger = new Logger('MailService');
   userTokens = '';
-
-  oauth2Client = new OAuth2(
-    mailConfig.clientId,
-    mailConfig.clientSecret
-  );
+  oauth2Client;
+  
   transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -27,9 +25,17 @@ export class MailService {
   });
 
   constructor() { 
+    this.logger.verbose(`transporter: ${this.transporter}`);
+
+    this.oauth2Client = new OAuth2(
+      mailConfig.clientId,
+      mailConfig.clientSecret,
+      serverConfig.origin
+    );
+    this.logger.verbose(`oauth2Client: ${this.oauth2Client}`);
+
     const accessToken = this.oauth2Client.getAccessToken();
     this.logger.verbose(`accessToken: ${accessToken}`);
-    this.logger.verbose(`transporter: ${this.transporter}`);
 
     this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
       let accessToken = this.userTokens[user];
