@@ -18,45 +18,54 @@ export class MailService {
     serverConfig.origin
   );
   
-  transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      type: 'OAuth2',
-      clientId: mailConfig.clientId,
-      clientSecret: mailConfig.clientSecret,
-      user: mailConfig.email,
-    //  pass: mailConfig.pass
-    }
-  });
+  // transporter = nodemailer.createTransport({
+  //   service: 'gmail',
+  //   auth: {
+  //     type: 'OAuth2',
+  //     clientId: mailConfig.clientId,
+  //     clientSecret: mailConfig.clientSecret,
+  //     user: mailConfig.email,
+  //   //  pass: mailConfig.pass
+  //   }
+  // });
 
   constructor() { 
     this.googleAuth();
   }
 
   async googleAuth() {
-
+    this.logger.verbose(`googleAuth`);
     const accessToken = await this.oauth2Client.getAccessToken();
+    const refreshToken = await this.oauth2Client.getRefreshToken();
+    this.logger.verbose(`accessToken: ${JSON.stringify(accessToken)}`);
+    this.logger.verbose(`refreshToken: ${JSON.stringify(refreshToken)}`);
+
+    this.oauth2Client.setCredentials({
+      refresh_token: refreshToken
+    });
+
+    
     this.logger.verbose(`accessToken: ${JSON.stringify(accessToken)}`);
 
-    this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
-      this.logger.verbose(`oauth2_provision_cb: ${JSON.stringify(user)}`);
+    // this.transporter.set('oauth2_provision_cb', (user, renew, callback)=>{
+    //   this.logger.verbose(`oauth2_provision_cb: ${JSON.stringify(user)}`);
 
-      let accessToken = this.userTokens[user];
-      if(!accessToken){
-          return callback(new Error('Unknown user'));
-      }else{
-          return callback(null, accessToken);
-      }
-    });
-    this.transporter.on('token', token => {
-      this.logger.verbose(`transporter token: ${JSON.stringify(token)}`);
+    //   let accessToken = this.userTokens[user];
+    //   if(!accessToken){
+    //       return callback(new Error('Unknown user'));
+    //   }else{
+    //       return callback(null, accessToken);
+    //   }
+    // });
+    // this.transporter.on('token', token => {
+    //   this.logger.verbose(`transporter token: ${JSON.stringify(token)}`);
 
-      this.userTokens = token;
-      console.log('A new access token was generated');
-      console.log('User: %s', token.user);
-      console.log('Access Token: %s', token.accessToken);
-      console.log('Expires: %s', new Date(token.expires));
-    });
+    //   this.userTokens = token;
+    //   console.log('A new access token was generated');
+    //   console.log('User: %s', token.user);
+    //   console.log('Access Token: %s', token.accessToken);
+    //   console.log('Expires: %s', new Date(token.expires));
+    // });
   }
 
   send(mailOptions?: any) {
@@ -68,13 +77,13 @@ export class MailService {
     });
     console.log(_mailOptions)
 
-    this.transporter.sendMail(_mailOptions, (error, info) =>{
-      if (error) {
-        this.logger.error(`${error}`);
-      } else {
-        this.logger.verbose(`Email sent: ${info.response}`);
-      }
-    });
+    // this.transporter.sendMail(_mailOptions, (error, info) =>{
+    //   if (error) {
+    //     this.logger.error(`${error}`);
+    //   } else {
+    //     this.logger.verbose(`Email sent: ${info.response}`);
+    //   }
+    // });
   }
 
 }
