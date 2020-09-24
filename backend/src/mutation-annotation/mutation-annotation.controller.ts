@@ -21,9 +21,9 @@ export class MutationAnnotationController {
       },
     }),
   }))
-  uploadVCF(@UploadedFile() file): Promise<MutationAnnotationModel> {
-    this.logger.verbose(`User uploaded VCF file`);
-    return this.mutationAnnotationService.uploadVCF(file.path);
+  uploadVCF(@UploadedFile() file, @Body('snpEffect') snpEffect): Promise<MutationAnnotationModel> {
+    this.logger.verbose(`User uploaded VCF file, snpEffect: ${snpEffect}`);
+    return this.mutationAnnotationService.uploadVCF(file.path, Boolean(snpEffect));
   }
 
 

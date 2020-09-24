@@ -14,6 +14,7 @@ export class MutationAnnotationComponent implements OnInit {
   private listArticlesOrigin: HashMap<MutationAnnotationModel>;
   listArticles: HashMap<MutationAnnotationModel>;
   activeItem = '';
+  snpEffect = false;
 
   constructor(
     private readonly mutationAnnotationService: MutationAnnotationService,
@@ -39,11 +40,15 @@ export class MutationAnnotationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeSnpEffect(): void {
+    this.snpEffect = !this.snpEffect;
+  }
+
   uploadVCF(e): void {
     const file: FileUploadModel = e.srcElement.files[0];
     const ext = file.name && file.name.split('.')[1];
     if (ext === 'vcf') {
-      this.mutationAnnotationService.uploadVCF(file).subscribe(list => {
+      this.mutationAnnotationService.uploadVCF(file, this.snpEffect).subscribe(list => {
         this.listArticles = list;
       });
 

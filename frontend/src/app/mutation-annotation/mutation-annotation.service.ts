@@ -35,11 +35,12 @@ export class MutationAnnotationService {
    }
 
 
-  uploadVCF(file): Observable<any> {
+    uploadVCF(file, snpEffect = false): Observable<any> {
 
     this.mutationAnnotationStore.setLoading(true);
     const fd = new FormData();
     fd.append('file', new File([file], file.name, {type: file.type}));
+    fd.append('snpEffect', String(snpEffect));
     return this.http.post(this.API_URL + this.uploadVCFapiEndpoint, fd,  {
       reportProgress: true, // for progress data
     }).pipe(

@@ -33,7 +33,7 @@ export class SubscribeComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.subscribeForm.value);
-    // this.authService.registration(this.subscribeForm.value).subscribe(data => {
+    // this.authService.saveSubscriptions(this.subscribeForm.value).subscribe(data => {
     //   console.log('registration', data);
 
     // });

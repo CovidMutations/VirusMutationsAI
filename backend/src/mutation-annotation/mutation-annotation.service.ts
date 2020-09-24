@@ -9,10 +9,10 @@ import {MutationAnnotationModel} from '../model/mutation-annotation.model';
 export class MutationAnnotationService {
   private logger = new Logger('MutationAnnotationService');
 
-  async uploadVCF(file): Promise<MutationAnnotationModel> {
+  async uploadVCF(file, snpEffect: boolean): Promise<MutationAnnotationModel> {
     
     this.logger.verbose('uploadVCF');
-    return await this.getArticles(file);
+    return await this.getArticles(file, snpEffect);
   }
 
   async getArticlesByMutation(mutation: string): Promise<MutationAnnotationModel> {
@@ -30,16 +30,24 @@ export class MutationAnnotationService {
     });
   }
 
-  private async getArticles(fileOrMutation) {
+  private async getArticles(fileOrMutation, snpEffect?: boolean) {
     let isFile = typeof fileOrMutation !== 'string';
 
-    const pyPath = path.join(__dirname, '..', '..', 'py', 'vcf_to_articles_json.py');
-    const indexPath = '--article_index_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'index.csv');
-    const mappingPath = '--article_mutations_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'articles2mutations.txt');
-    const filePath = (isFile) ? path.join(__dirname, '..', '..', 'py', fileOrMutation) :  fileOrMutation ;
-    
+    console.log(isFile ,' && ', snpEffect,' fileOrMutation-> ',fileOrMutation);
+
+    const pyPath =  path.join(__dirname, '..', '..', 'py', 'vcf_to_articles_json.py') ;
+    const filePath =  (isFile) ? path.join(__dirname, '..', '..', 'py', fileOrMutation) :  fileOrMutation;
+
+    const args = [];
+    args.push( '--article_index_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'index.csv') );
+    args.push(  '--article_mutations_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'articles2mutations.txt') );
+    args.push( filePath );
+    if (isFile && snpEffect) {
+      args.push( '--snp_eff_jar_path=' + path.join(__dirname,'..', '..', 'py', 'snpEff', 'snpEff.jar') );
+    }
+console.log({args})
     const pythonShellRun = promisify(PythonShell.run);
-    const results = await pythonShellRun(pyPath, {args: [filePath, indexPath, mappingPath]});
+    const results = await pythonShellRun(pyPath, {args});
 
     if (results && isFile)  { this.removeVCF(filePath); }
 
