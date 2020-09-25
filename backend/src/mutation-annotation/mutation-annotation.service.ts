@@ -12,7 +12,7 @@ export class MutationAnnotationService {
   async uploadVCF(file, snpEffect: boolean): Promise<MutationAnnotationModel> {
     
     this.logger.verbose('uploadVCF');
-    return await this.getArticles(file, snpEffect);
+    return await this.getArticles(file, true, snpEffect);
   }
 
   async getArticlesByMutation(mutation: string): Promise<MutationAnnotationModel> {
@@ -30,22 +30,24 @@ export class MutationAnnotationService {
     });
   }
 
-  private async getArticles(fileOrMutation, snpEffect?: boolean) {
-    let isFile = typeof fileOrMutation !== 'string';
+  private async getArticles(fileOrMutation: string, isFile = false, snpEffect?: boolean) {
+   // let isFile = typeof fileOrMutation !== 'string';
 
     console.log(isFile ,' && ', snpEffect,' fileOrMutation-> ',fileOrMutation);
 
     const pyPath =  path.join(__dirname, '..', '..', 'py', 'vcf_to_articles_json.py') ;
-    const filePath =  (isFile) ? path.join(__dirname, '..', '..', 'py', fileOrMutation) :  fileOrMutation;
+    const filePath =  (isFile) ? path.join(__dirname, '..', '..', '..', fileOrMutation) :  fileOrMutation;
 
     const args = [];
     args.push( '--article_index_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'index.csv') );
     args.push(  '--article_mutations_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'articles2mutations.txt') );
-    args.push( filePath );
     if (isFile && snpEffect) {
       args.push( '--snp_eff_jar_path=' + path.join(__dirname,'..', '..', 'py', 'snpEff', 'snpEff.jar') );
     }
-console.log({args})
+    args.push( filePath );
+
+    this.logger.verbose(`pythonShellRun args: ${JSON.stringify({args})}`);
+
     const pythonShellRun = promisify(PythonShell.run);
     const results = await pythonShellRun(pyPath, {args});
 

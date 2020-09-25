@@ -23,7 +23,7 @@ export class MutationAnnotationController {
   }))
   uploadVCF(@UploadedFile() file, @Body('snpEffect') snpEffect): Promise<MutationAnnotationModel> {
     this.logger.verbose(`User uploaded VCF file, snpEffect: ${snpEffect}`);
-    return this.mutationAnnotationService.uploadVCF(file.path, Boolean(snpEffect));
+    return this.mutationAnnotationService.uploadVCF(file.path, (snpEffect == 'true'));
   }
 
 
