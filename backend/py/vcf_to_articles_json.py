@@ -52,7 +52,7 @@ def create_mutation_to_articles_dict(article_to_mutations_df: pd.DataFrame):
             out_dict[mut].append(article_uid)
     return out_dict
 
-def make_search_response_from_mutation_list(vcf_mutations: list, mutation_to_articles_dict: dict, article_index_df, out_dict, verbose=False):
+def make_search_response_from_mutation_list(vcf_mutations: list, mutation_to_articles_dict: dict, article_index_df, out_dict, search_since_time=0, verbose=False):
     # Iterate over list of enumerations (each enumeration is nucleotide mutation and its protein synonims)
     for vcf_mut_list in vcf_mutations:
         muts =  vcf_mut_list.split(',')
@@ -73,6 +73,10 @@ def make_search_response_from_mutation_list(vcf_mutations: list, mutation_to_art
                     mutation_map = {}
                     temp_df = article_index_df[article_index_df.uid == uid]
                     assert len(temp_df) == 1, f"Unexpected number of results ({len(temp_df)}) for article uid '{uid}'"
+
+                    if search_since_time and temp_df.add_time.iloc[0] < search_since_time:
+                        # skip results with timestamp before requested
+                        continue
 
                     # Get and check article title
                     title = temp_df.title.iloc[0]  # Get first (and the only) item
@@ -155,6 +159,10 @@ def parse_args():
                         default=None,
                         help='Path to snpeff jar file. If omitted, the snpeff will not be called (i.e. mutations will'
                              'be taken from original VCF file).')
+    parser.add_argument('--epoch_time_search_since',
+                        type=int,
+                        default=0,
+                        help='Get only articles added after specified timestamp (unix epoch time format)')
     parser.add_argument('--verbose',
                         type=int,
                         choices=[0, 1],
@@ -181,6 +189,9 @@ def main():
         if (args.snp_eff_jar_path != None) and (not os.path.isfile(args.snp_eff_jar_path)):
             raise FileNotFoundError(f"Cannot find snpeff jar file: {args.snp_eff_jar_path}")
 
+        if args.epoch_time_search_since and (args.epoch_time_search_since < 1500000000 or args.epoch_time_search_since > 1900000000):
+            raise ValueError("Invalid --epoch_time_search_since value")
+
         # Get mutations, either directly as a string, or extract them from VCF file
         if args.vcf_file_or_request.endswith('.vcf'):
             vcf_file = args.vcf_file_or_request
@@ -204,7 +215,7 @@ def main():
         article_index_df = pd.read_csv(args.article_index_file_name)
 
         # Prepare final structure for json
-        make_search_response_from_mutation_list(vcf_mutations, mutation_to_articles_dict, article_index_df, out_dict, verbose)
+        make_search_response_from_mutation_list(vcf_mutations, mutation_to_articles_dict, article_index_df, out_dict, args.epoch_time_search_since, verbose)
 
     except Exception as e:
         if verbose > 0:
