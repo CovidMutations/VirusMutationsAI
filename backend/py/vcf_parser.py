@@ -90,8 +90,9 @@ class VcfParser:
             except AssertionError as e:
                 if is_strict_check:
                     raise ValueError(f"Error while parsing protein mutation '{mut}': {e}.")
-                else:
-                    eprint(f"Warning while parsing protein mutation '{mut}' -> it will be skipped. Details: {e}")
+                # Cannot sort out stderr from stdout on the backend side, so no warnings for now
+                #else:
+                #    eprint(f"Warning while parsing protein mutation '{mut}' -> it will be skipped. Details: {e}")
         return new_muts
 
     @staticmethod
