@@ -14,7 +14,7 @@ export class MutationAnnotationController {
   @Post('/uploadVCF')
   @UseInterceptors(FileInterceptor('file', {
     storage: diskStorage({
-      destination: './assets/vcf',
+    destination: './backend/assets/vcf',
       filename: (req, file, cb) => {
         const randomName = Array(32).fill(null).map(() => (Math.round(Math.random() * 16)).toString(16)).join('');
         return cb(null, `${randomName}${extname(file.originalname)}`);
