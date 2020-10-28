@@ -1,6 +1,7 @@
 import {IsString, IsEmail, IsBoolean, IsNotEmpty, IsEmpty, IsBooleanString} from 'class-validator';
 
 export interface MutationAnnotationArticleModel {
+  'base_mutation': string;
   'article_name': string;
   'article_url': string;
 }
