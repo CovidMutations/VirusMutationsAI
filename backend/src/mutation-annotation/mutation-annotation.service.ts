@@ -36,7 +36,7 @@ export class MutationAnnotationService {
     console.log(isFile ,' && ', snpEffect,' fileOrMutation-> ',fileOrMutation);
 
     const pyPath =  path.join(__dirname, '..', '..', 'py', 'vcf_to_articles_json.py') ;
-    const filePath =  (isFile) ? path.join(__dirname, '..', '..', '..', fileOrMutation) :  fileOrMutation;
+    const filePath =  (isFile) ? path.join(__dirname, '..', '..', fileOrMutation) :  fileOrMutation;
 
     const args = [];
     args.push( '--article_index_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'index.csv') );
