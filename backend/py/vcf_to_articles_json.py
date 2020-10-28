@@ -87,6 +87,8 @@ def make_search_response_from_mutation_list(vcf_mutations: list, mutation_to_art
                     if counter > 0:
                         # Add a GUI-comment for each protein synonim on where does it come from
                         mutation_map['base_mutation'] = base_mutation + ' => ' + mut + ' (snpeff)'
+                    else:
+                        mutation_map['base_mutation'] = ''
                     mutation_map['article_name'] = title
 
                     # Get and check article url
