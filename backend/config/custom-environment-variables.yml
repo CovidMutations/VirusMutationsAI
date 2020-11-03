@@ -1,0 +1,21 @@
+server: 
+  port: PORT
+  origin: ORIGIN
+  mode: MODE
+db: 
+  type: DB_TYPE
+  host: DB_HOST
+  port: DB_PORT
+  username: DB_USER
+  database: DB_NAME
+  password: DB_PASSWORD
+  synchronize: DB_SYNCHRONIZE
+jwt:
+  secret: JWT_SECRET
+mail:
+  service: MAIL_SERVICE
+  email: MAIL_EMAIL
+  pass: MAIL_PASSWORD
+  clientId: MAIL_CLIENT_ID
+  clientSecret: MAIL_CLIENT_SECRET
+  subject: MAIL_SUBJECT

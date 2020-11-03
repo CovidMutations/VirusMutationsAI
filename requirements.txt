@@ -1,6 +1,5 @@
-Bio
+biopython
 lxml
-uuid
 pandas
 argparse
 

@@ -1,0 +1,50 @@
+version: "3.1"
+
+services:
+  db:
+    image: postgres:12-alpine
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+      DB_NAME: "covid"
+      DB_USER: "covid"
+      DB_USER_PASSWORD: "covid"
+    volumes:
+      - "./volumes/pg-docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d"
+      - "./volumes/pg-data:/var/lib/postgresql/data"
+
+  frontend:
+    image: docker.pkg.github.com/covidmutations/virusmutationsai/fe:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    environment:
+      API_URL: "http://localhost:3000/api/"
+
+  backend:
+    image: docker.pkg.github.com/covidmutations/virusmutationsai/be:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: "3000"
+      ORIGIN: "http://localhost"
+      DB_TYPE: "postgres"
+      DB_HOST: "db"
+      DB_PORT: "5432"
+      DB_USER: "covid"
+      DB_NAME: "covid"
+      DB_PASSWORD: "covid"
+      DB_SYNCHRONIZE: "true"
+      JWT_SECRET: "TopSecret51"
+      MAIL_SERVICE: "gmail"
+      MAIL_EMAIL: ""
+      MAIL_PASSWORD: ""
+      MAIL_CLIENT_ID: ""
+      MAIL_CLIENT_SECRET: ""
+      MAIL_SUBJECT: "Hello"
+    volumes:
+      - "./volumes/articles:/app/backend/py/db"
+      - "./volumes/admin:/app/backend/admin"

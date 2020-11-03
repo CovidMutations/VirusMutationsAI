@@ -1,3 +1,4 @@
+import { Server } from 'http';
 import 'dotenv/config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -41,8 +42,30 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
 
-  await app.listen(port);
+  const server = await app.listen(port);
   logger.log('Run on port:' + port);
 
+  process.on('SIGINT', () => {
+    logger.log('Got SIGINT. Graceful shutdown ', new Date().toISOString());
+    shutdown(server);
+  });
+
+  // quit properly on docker stop
+  process.on('SIGTERM', () => {
+    logger.log('Got SIGTERM. Graceful shutdown ', new Date().toISOString());
+    shutdown(server);
+  })
 }
+
+// shut down server
+function shutdown(server: Server): void {
+  server.close(err => {
+    if (err) {
+      console.error(err);
+      process.exitCode = 1;
+    }
+    process.exit();
+  });
+}
+
 bootstrap();
