@@ -9,6 +9,9 @@
 /backend/dist
 /backend/db/*.xml
 /backend/config/*
+!/backend/config/custom-environment-variables.yml
+/docker/volumes/*
+!/docker/volumes/pg-docker-entrypoint-initdb.d
 /tmp
 /out-tsc
 # Only exists if Bazel was run

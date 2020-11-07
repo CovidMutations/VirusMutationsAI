@@ -14,8 +14,7 @@ import { AdminService  } from '../admin/admin.service';
 @Injectable()
 export class TasksService {
   private logger = new Logger('TasksService ');
-  private adminFilePath = path.join(__dirname, '..', '..', 'assets', 'admin.json');
-  ;
+  private adminFilePath = path.join(__dirname, '..', '..', 'admin', 'admin.json');
 
   constructor(
     private readonly schedulerRegistry: SchedulerRegistry,

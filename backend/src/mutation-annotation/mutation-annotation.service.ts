@@ -36,7 +36,6 @@ export class MutationAnnotationService {
     console.log(isFile ,' && ', snpEffect,' fileOrMutation-> ',fileOrMutation);
 
     const pyPath =  path.join(__dirname, '..', '..', 'py', 'vcf_to_articles_json.py') ;
-    const filePath =  (isFile) ? path.join(__dirname,'..','..', '..', '..', fileOrMutation) :  fileOrMutation;
 
     const args = [];
     args.push( '--article_index_file_name=' + path.join(__dirname,'..', '..', 'py', 'db', 'index.csv') );
@@ -44,14 +43,16 @@ export class MutationAnnotationService {
     if (isFile && snpEffect) {
       args.push( '--snp_eff_jar_path=' + path.join(__dirname,'..', '..', 'py', 'snpEff', 'snpEff.jar') );
     }
-    args.push( filePath );
+    args.push(fileOrMutation);
 
     this.logger.verbose(`pythonShellRun args: ${JSON.stringify({args})}`);
 
     const pythonShellRun = promisify(PythonShell.run);
     const results = await pythonShellRun(pyPath, {args});
 
-    if (results && isFile)  { this.removeVCF(filePath); }
+    if (results && isFile) {
+      this.removeVCF(fileOrMutation);
+    }
 
     const jsonRes = JSON.parse(results.join(''));
 

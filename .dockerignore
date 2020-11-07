@@ -1,0 +1,11 @@
+**/node_modules
+.git/
+.idea/
+.vscode/
+**/dist/
+/backend/config/
+!/backend/config/custom-environment-variables.yml
+/backend/py/db
+/docker/volumes
+/env/
+/venv/

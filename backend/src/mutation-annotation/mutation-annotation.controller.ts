@@ -1,7 +1,7 @@
 import { Controller, Logger, Post, UseInterceptors, UploadedFile, Body } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { MutationAnnotationService } from './mutation-annotation.service';
-import { extname } from 'path';
+import * as path from 'path';
 import { diskStorage } from 'multer';
 import {MutationAnnotationModel, SearchMutationDTOreq} from '../model/mutation-annotation.model';
 
@@ -14,10 +14,10 @@ export class MutationAnnotationController {
   @Post('/uploadVCF')
   @UseInterceptors(FileInterceptor('file', {
     storage: diskStorage({
-    destination: './backend/assets/vcf',
+    destination: path.join(__dirname, '..', '..', 'assets', 'vcf'),
       filename: (req, file, cb) => {
         const randomName = Array(32).fill(null).map(() => (Math.round(Math.random() * 16)).toString(16)).join('');
-        return cb(null, `${randomName}${extname(file.originalname)}`);
+        return cb(null, `${randomName}${path.extname(file.originalname)}`);
       },
     }),
   }))

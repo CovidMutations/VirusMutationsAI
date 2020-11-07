@@ -13,7 +13,7 @@ import {SetFrequencyDTO, AdminSettingsModel, DBUpdatingCronEnum, ResUpdateDBMode
 export class AdminService {
   private logger = new Logger('AdminService');
 
-  private adminFilePath = path.join(__dirname,'..','..', '..', 'assets', 'admin.json');
+  private adminFilePath = path.join(__dirname, '..', '..', 'admin', 'admin.json');
   constructor(
     private readonly schedulerRegistry: SchedulerRegistry
   ) {
