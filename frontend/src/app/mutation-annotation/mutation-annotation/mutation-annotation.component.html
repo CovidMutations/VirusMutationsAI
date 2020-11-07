@@ -38,10 +38,6 @@
 
   </div>
   <div class="col">
-    <div class="m_content_scroll">
-      <div *ngFor="let subItem of listArticles[activeItem]" class="list-group-item">
-        <a [href]="subItem.article_url" target="blank">{{subItem.article_name}} {{subItem.base_mutation}}</a>
-      </div>
-    </div>
+    <app-annotation-list [items]="listArticles[activeItem]" class="m_content_scroll"></app-annotation-list>
   </div>
 </div>

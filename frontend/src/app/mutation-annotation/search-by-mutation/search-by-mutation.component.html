@@ -12,11 +12,4 @@
 
 </div>
 
-<div class="m_content_scroll">
-  <div *ngFor="let subItem of listArticles" class="list-group-item">
-	  <a [href]="subItem.article_url" target="blank">{{subItem.article_name}} {{subItem.base_mutation}}</a>
-  </div>
-  <div *ngIf="listArticles && listArticles.length == 0" class="text-danger">
-    {{'MutationAnnotation.message_notfound' | translate}}
-  </div>
-</div>
+<app-annotation-list [items]="listArticles" class="m_content_scroll"></app-annotation-list>
