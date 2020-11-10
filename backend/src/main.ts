@@ -11,11 +11,9 @@ import { ValidationPipe } from './shared/validation.pipe';
 import * as config from 'config';
 
 const serverConfig = config.get('server');
-const port = process.env.PORT || serverConfig.port;
-const mode =   process.env.MODE || serverConfig.mode;
-const origin =   process.env.ORIGIN || serverConfig.origin;
-
-
+const port = serverConfig.port;
+const mode = serverConfig.mode;
+const origin = serverConfig.origin.split(' ');
 
 async function bootstrap() {
   const logger = new Logger('bootstrap');

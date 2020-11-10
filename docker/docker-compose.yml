@@ -31,6 +31,7 @@ services:
     environment:
       PORT: "3000"
       ORIGIN: "http://localhost"
+      PUBLIC_URL: "http://localhost"
       DB_TYPE: "postgres"
       DB_HOST: "db"
       DB_PORT: "5432"

@@ -13,6 +13,8 @@ import { MailModule } from '../mail/mail.module';
 import { MailService } from '../mail/mail.service';
 
 
+const ACCESS_TOKEN_EXPIRE_MINUTES = 60;
+
 @Module({
   imports: [
     UserModule,
@@ -21,7 +23,7 @@ import { MailService } from '../mail/mail.service';
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.register({
       secret: jwtConfig.secret,
-      signOptions: { expiresIn: '60s' },
+      signOptions: { expiresIn: ACCESS_TOKEN_EXPIRE_MINUTES * 60 },
     }),
   ],
   controllers: [AuthController],

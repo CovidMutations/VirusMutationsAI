@@ -2,7 +2,8 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { UserRepository } from '../user/user.repository';
-import { UserDTO } from '../user/user.dto';
+import { UserRO } from '../user/user.dto';
+import { OAuth2PasswordRequestDTO } from './auth.dto';
 import * as config from 'config';
 const jwtConfig = config.get('jwt');
 
@@ -19,8 +20,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     });
   }
 
-  async validate(payload: UserDTO) {
-    const user = await this.userRepository.validateUserPassword(payload);
+  async validate(payload: OAuth2PasswordRequestDTO): Promise<UserRO> {
+    const user = await this.userRepository.validateUserPassword(payload.username, payload.password);
     if (!user) {
       throw new UnauthorizedException();
     }
