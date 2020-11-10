@@ -18,7 +18,6 @@ def subscribe_user_me(
     db: Session = Depends(deps.get_db),
     mutation: str
 ) -> Any:
-    #Depends(deps.add_user_suscription(mutation))
     subscr = models.Subscription(user_id = user.id, mutation = mutation)
     db.add(subscr)
     db.commit()
