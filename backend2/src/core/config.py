@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     SECRET_KEY: str
 
+    ACCESS_TOKEN_URL: str = "http://localhost:3000/api/login"
+
     POSTGRES_SERVER: str
     POSTGRES_PORT: str
     POSTGRES_USER: str

@@ -13,7 +13,7 @@ from src.db import models
 from src.db.session import SessionLocal
 
 reusable_oauth2 = OAuth2PasswordBearer(
-    tokenUrl=f"{settings.API_V1_STR}/login/access-token"
+    tokenUrl=settings.ACCESS_TOKEN_URL
 )
 
 
