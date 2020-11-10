@@ -52,13 +52,3 @@ def get_current_active_user(
         raise HTTPException(status_code=400, detail="Inactive user")
     return current_user
 
-
-def add_user_suscription(
-    mutation : str,
-    db: Session = Depends(get_db),
-    user: models.User = Depends(get_current_active_user)
-) -> Any:
-    print("!!!", mutation)
-    subscr = models.Subscription(user_id = user.id, mutation = mutation)
-    db.add(subscr)
-    return
