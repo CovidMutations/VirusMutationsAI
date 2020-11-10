@@ -1,7 +1,9 @@
 from typing import Any
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
+from sqlalchemy import exc
+from psycopg2 import errors
 
 from src import schemas
 from src.api import deps
@@ -20,5 +22,11 @@ def subscribe_user_me(
 ) -> Any:
     subscr = models.Subscription(user_id = user.id, mutation = mutation)
     db.add(subscr)
-    db.commit()
+    try:
+        db.commit()
+    except (exc.IntegrityError, errors.UniqueViolation) as e:
+        raise HTTPException(
+                status_code=status.HTTP_406_NOT_ACCEPTABLE,
+                detail="The mutation already subscribed",
+            )
     return {"mutation": mutation}
