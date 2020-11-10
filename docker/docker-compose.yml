@@ -30,7 +30,7 @@ services:
       - "3000:3000"
     environment:
       PORT: "3000"
-      ORIGIN: "http://localhost"
+      ORIGIN: "http://localhost http://localhost:3000 http://localhost:8000"
       PUBLIC_URL: "http://localhost"
       DB_TYPE: "postgres"
       DB_HOST: "db"
