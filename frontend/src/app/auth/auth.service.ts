@@ -1,13 +1,11 @@
 import { Injectable, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams, HttpParameterCodec} from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 import { APP_CONFIG, IAppConfig } from '../app.config';
 import { SharedService } from '../shared/shared.service';
 import { AuthStore } from './store/auth.store';
 import { AuthQuery } from './store/auth.query';
 import { UserInfoModel, RegistrationFormModel, LoginFormModel, UserRO } from '../models/auth.model';
-import { HashMap } from '@datorama/akita';
 
 
 @Injectable({
@@ -41,7 +39,10 @@ export class AuthService {
   }
 
   login(formVal: LoginFormModel): Observable<UserRO> {
-    return this.http.post(this.API_URL + this.loginEndpoint, formVal) as Observable<UserRO>;
+    const body = new HttpParams()
+      .append('username', formVal.email)
+      .append('password', formVal.password);
+    return this.http.post(this.API_URL + this.loginEndpoint, body) as Observable<UserRO>;
   }
 
   confirmCodeVerification(userId: string, code: string): Observable<any> {
