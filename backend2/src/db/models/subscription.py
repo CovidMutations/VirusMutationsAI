@@ -1,8 +1,7 @@
-from sqlalchemy import Column, text, UnicodeText, TIMESTAMP
-from sqlalchemy import Boolean, Integer, PrimaryKeyConstraint, ForeignKeyConstraint
+from sqlalchemy import Column, UnicodeText, PrimaryKeyConstraint, ForeignKeyConstraint
 from sqlalchemy.dialects.postgresql import UUID
 
-from src.db.session import Base
+from src.db.base import Base
 
 
 class Subscription(Base):
