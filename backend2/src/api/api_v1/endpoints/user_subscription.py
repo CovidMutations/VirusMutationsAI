@@ -13,7 +13,7 @@ from starlette.responses import Response
 router = APIRouter()
 
 
-@router.put("/subscribe_me/{mutation}", status_code=201)
+@router.put("/subscribe-me/{mutation}", status_code=201)
 def subscribe_user_me(
     *,
     user: models.User = Depends(deps.get_current_active_user),
@@ -25,8 +25,6 @@ def subscribe_user_me(
     try:
         db.commit()
     except (exc.IntegrityError, errors.UniqueViolation) as e:
-        raise HTTPException(
-                status_code=status.HTTP_406_NOT_ACCEPTABLE,
-                detail="The mutation already subscribed",
-            )
+        # The mutation already subscribed (expected case)
+        pass
     return {"mutation": mutation}
