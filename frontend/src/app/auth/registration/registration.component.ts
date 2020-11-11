@@ -1,10 +1,9 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SharedService } from '../../shared/shared.service';
-import {TranslateService } from '@ngx-translate/core';
-import {AuthService } from '../auth.service';
-import { distinctUntilKeyChanged, tap } from 'rxjs/operators';
+import { TranslateService } from '@ngx-translate/core';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -24,7 +23,6 @@ export class RegistrationComponent implements OnInit {
   ) {
 
     this.activatedRoute.params.subscribe((params) => {
-      console.log(params, params.userId);
       if (params && params.userId) {
         this.authService.confirmCodeVerification(params.userId, params.code).subscribe(_ => {
           this.router.navigate(['myaccount']);
@@ -40,17 +38,32 @@ export class RegistrationComponent implements OnInit {
   createForm(): void{
 
     this.registrationForm = new FormGroup({
-      username: new FormControl('',  Validators.required),
-      email: new FormControl('', Validators.compose([Validators.email, Validators.required])),
-      password: new FormControl('', Validators.required)
-    });
-
-    this.registrationForm.valueChanges.subscribe(_ => {
-      if (this.registrationForm.invalid) {
-        this.translateService.get('registration.form.err_message').subscribe(res => {
-          this.sharedService.errorModal(res);
-        });
+      username: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(50),
+      ]),
+      email: new FormControl('', Validators.compose([
+        Validators.email,
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(50),
+      ])),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(50),
+      ]),
+      password2: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(50),
+      ])
+    }, (form: FormGroup) => {
+      if (form.get('password').value !== form.get('password2').value) {
+        return { confirmPassword: true };
       }
+      return null;
     });
   }
 
@@ -59,10 +72,13 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.authService.registration(this.registrationForm.value).subscribe(data => {
-      console.log('registration', data);
-
-    });
+    this.authService.registration(this.registrationForm.value).subscribe(
+      () => this.registrationForm = null,
+      e => {
+        const message = e.error && e.error.message || this.translateService.instant('registration.form.err_message');
+        this.sharedService.errorModal(message);
+      },
+    );
   }
 
 }
