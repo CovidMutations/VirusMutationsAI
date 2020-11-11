@@ -1,9 +1,7 @@
-import {IsNotEmpty, IsEmail, IsString, MinLength, MaxLength, Matches} from 'class-validator';
-import {BaseModel} from '../model/base.model';
+import { IsNotEmpty, IsEmail, IsString, MinLength, MaxLength } from 'class-validator';
+import { BaseModel } from '../model/base.model';
 
 export class UserDTO {
-
-
   @IsNotEmpty()
   @IsString()
   @IsEmail()
@@ -14,35 +12,23 @@ export class UserDTO {
   @IsNotEmpty()
   @IsString()
   @MinLength(3)
-  @MaxLength(11)
-  @Matches(/((?=.*d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {message: 'Password too weak'})
+  @MaxLength(50)
   password: string;
-
 }
 
 // tslint:disable-next-line:max-classes-per-file
 export class UserDTOFull extends UserDTO {
-
   @IsNotEmpty()
   @IsString()
   @MinLength(3)
-  @MaxLength(11)
+  @MaxLength(50)
   username: string;
-
 }
-
 
 export class UserInfoRO extends BaseModel {
   id: string = undefined;
   username: string = undefined;
   email: string = undefined;
-  constructor(row?){
-    super(); super.checkFields(row);
-  }
-}
-
-export class UserInfoTokenRO extends UserInfoRO {
-  token?: string = undefined;
   constructor(row?){
     super(); super.checkFields(row);
   }

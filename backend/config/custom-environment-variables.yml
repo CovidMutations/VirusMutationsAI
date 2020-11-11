@@ -2,7 +2,8 @@ server:
   port: PORT
   origin: ORIGIN
   mode: MODE
-db: 
+  public_url: PUBLIC_URL
+db:
   type: DB_TYPE
   host: DB_HOST
   port: DB_PORT

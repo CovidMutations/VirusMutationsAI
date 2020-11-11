@@ -27,7 +27,8 @@
       "btn_submit": "Submit",
       "err_message": "Incorrect data"
     },
-    "title_end": "Your registration nearly finished"
+    "title_end": "Your registration nearly finished",
+    "followup": "Please, follow the instructions in the email."
   },
   "auth":{
     "title": "Login",

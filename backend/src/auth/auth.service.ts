@@ -1,14 +1,15 @@
 import { Injectable, Logger, HttpException, HttpStatus, InternalServerErrorException, ConflictException } from '@nestjs/common';
-import { UserDTO, UserDTOFull, UserInfoTokenRO } from '../user/user.dto';
+import { UserDTOFull } from '../user/user.dto';
 import * as bcrypt from 'bcryptjs';
 import { UserRepository } from '../user/user.repository';
 import { UserEntity } from '../user/user.entity';
 import { MailService} from '../mail/mail.service';
 import { JwtService } from '@nestjs/jwt';
 import * as config from 'config';
+import { OAuth2PasswordRequestDTO, Token, TokenPayload } from './auth.dto';
 const jwtConfig = config.get('jwt');
 const serverConfig = config.get('server');
-const origin =   process.env.ORIGIN || serverConfig.origin;
+const public_url = serverConfig.public_url;
 
 @Injectable()
 export class AuthService {
@@ -79,7 +80,7 @@ export class AuthService {
     await this.mailService.send({
       to: user.email,
       subject: 'VirusMutationsAI Verification code',
-      html: `<p>Verify your account: <a href="${origin}/auth/confirm-code-verification/${user.id}/${user.verificationCode}" style="color:#178bfe;font-weight:800">Follow this link</a><p>`
+      html: `<p>Verify your account: <a href="${public_url}/auth/confirm-code-verification/${user.id}/${user.verificationCode}" style="color:#178bfe;font-weight:800">Follow this link</a><p>`
     });
 
   //   ` <table style="background:#fff;border-top-color:#2086e0;border-top-style:solid;border-top-width:2px;margin-top:46px;text-align:center;width:100%"><tbody>
@@ -95,24 +96,27 @@ export class AuthService {
 
   }
 
-  async login(loginCredentalsDTO: UserDTO): Promise<any> {
+  async login(loginCredentalsDTO: OAuth2PasswordRequestDTO): Promise<Token> {
     this.logger.verbose('login');
 
-    const {email, password} = loginCredentalsDTO;
-    const _user = await this.userRepository.findOne({email});
-    if (!_user || !(await _user.validatePassword(password))) {
+    const { username, password } = loginCredentalsDTO;
+    const user = await this.userRepository.findOne({ email: username });
+    if (!user || !(await user.validatePassword(password))) {
       throw new HttpException(
         'Invalid username/password',
         HttpStatus.BAD_REQUEST,
       );
     }
 
-    return new UserInfoTokenRO({
-      ..._user,
-      token: this.jwtService.sign(loginCredentalsDTO)
-    });
-  }
+    const payload: TokenPayload = {
+      sub: user.id,
+      email: user.email,
+      username: user.username,
+    };
 
- 
- 
+    return {
+      access_token: this.jwtService.sign(payload),
+      token_type: 'bearer',
+    };
+  }
 }

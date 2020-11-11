@@ -1,6 +1,7 @@
-import { Controller, Post, Logger, Body, Get, UseGuards, Delete, Param, Put, CacheInterceptor, UseInterceptors, Query } from '@nestjs/common';
+import { Controller, Post, Logger, Body, Get, Param } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { UserDTO, UserDTOFull, UserInfoTokenRO } from '../user/user.dto';
+import { UserDTOFull } from '../user/user.dto';
+import { OAuth2PasswordRequestDTO, Token } from './auth.dto';
 
 @Controller('api')
 // @UseInterceptors(CacheInterceptor)
@@ -29,11 +30,7 @@ export class AuthController {
     }
 
     @Post('/login')
-    login(@Body() res: UserDTO): Promise<UserInfoTokenRO> {
-        this.logger.log(`login ${JSON.stringify(res)}`);
+    login(@Body() res: OAuth2PasswordRequestDTO): Promise<Token> {
         return this.authService.login(res);
     }
-
-
-
 }

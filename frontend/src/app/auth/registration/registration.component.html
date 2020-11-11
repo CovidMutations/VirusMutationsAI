@@ -3,23 +3,54 @@
   <form [formGroup]="registrationForm" (submit)="onSubmit()">
     <div class="form-group">
       <label for="name">{{'registration.form.name' | translate}}</label>
-      <input type="text" formControlName="username" class="form-control" id="name">
+      <input
+        type="text"
+        formControlName="username"
+        class="form-control"
+        [ngClass]="{'is-invalid': registrationForm.get('username').dirty && registrationForm.get('username').invalid}"
+        id="name"
+      >
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">{{'registration.form.email' | translate}}</label>
-      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1">
+      <label for="email">{{'registration.form.email' | translate}}</label>
+      <input
+        type="email"
+        formControlName="email"
+        class="form-control"
+        [ngClass]="{'is-invalid': registrationForm.get('email').dirty && registrationForm.get('email').invalid}"
+        id="email"
+      >
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">{{'registration.form.password' | translate}}</label>
-      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+      <label for="password">{{'registration.form.password' | translate}}</label>
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        [ngClass]="{'is-invalid': registrationForm.get('password').dirty && registrationForm.get('password').invalid}"
+        id="password"
+      >
     </div>
-    
-    <button type="submit" class="btn btn-primary">{{'registration.form.btn_submit' | translate}}</button>
+    <div class="form-group">
+      <label for="password2">{{'registration.form.password' | translate}}</label>
+      <input
+        type="password"
+        formControlName="password2"
+        class="form-control"
+        [ngClass]="{'is-invalid': registrationForm.get('password2').dirty && registrationForm.get('password2').invalid}"
+        id="password2"
+      >
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">
+      {{'registration.form.btn_submit' | translate}}
+    </button>
   </form>
 </div>
 
 <div *ngIf="!registrationForm">
   <h4>{{'registration.title_end' | translate}}</h4>
+  <p>{{'registration.followup' | translate}}</p>
   <div class="spinner"></div>
 </div>
 
