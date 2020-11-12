@@ -1,11 +1,11 @@
-from sqlalchemy import Column, text, UnicodeText, TIMESTAMP
-from sqlalchemy import Boolean, Integer, PrimaryKeyConstraint, ForeignKeyConstraint
+from sqlalchemy import Column
+from sqlalchemy import Integer, PrimaryKeyConstraint, ForeignKeyConstraint
 from sqlalchemy.dialects.postgresql import UUID
 
-from src.db.session import Base
+from src.db.base import Base
 
 
-class User_config(Base):
+class UserConfig(Base):
     __tablename__ = "user_config"
 
     user_id = Column(UUID, primary_key=True)

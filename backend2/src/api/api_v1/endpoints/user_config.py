@@ -1,14 +1,10 @@
 from typing import Any
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from sqlalchemy import exc
-from psycopg2 import errors
 
-from src import schemas
 from src.api import deps
 from src.db import models
-from starlette.responses import Response
 
 router = APIRouter()
 
@@ -20,10 +16,21 @@ def config_subscription_interval_user_me(
     db: Session = Depends(deps.get_db),
     interval_days: int
 ) -> Any:
-    interval = models.User_config(user_id = user.id, subscription_interval = interval_days)
+    """
+    Set subscription interval
+    """
+    interval = models.UserConfig(user_id=user.id, subscription_interval=interval_days)
     db.merge(interval)
-    try:
-        db.commit()
-    except:
-        raise
+    db.commit()
+
     return {"subscription_interval": interval_days}
+
+@router.get("/config-me/subscription-interval", status_code=201)
+def read_user_subscription_interval(
+    user: models.User = Depends(deps.get_current_active_user),
+    db: Session = Depends(deps.get_db),
+) -> Any:
+    """
+    Get subscription interval
+    """
+    return db.query(models.UserConfig.subscription_interval).filter(models.UserConfig.user_id == user.id).first()
