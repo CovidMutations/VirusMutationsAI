@@ -1,40 +1,44 @@
+from datetime import timedelta
 from typing import Any
 
-from fastapi import APIRouter, Depends
-from sqlalchemy import func
+from fastapi import APIRouter, Depends, status, HTTPException
 from sqlalchemy.orm import Session
-from sqlalchemy.sql.functions import concat
-from sqlalchemy.dialects.postgresql import INTERVAL
 
+from src import schemas
 from src.api import deps
 from src.db import models
 
 router = APIRouter()
 
 
-@router.put("/me/config/subscription-interval/{id}", status_code=201)
-def config_subscription_interval_user_me(
+@router.put("/config/subscription-interval", response_model=int, status_code=status.HTTP_201_CREATED)
+def set_subscription_interval(
     *,
-    id: int,
+    item_in: schemas.UserConfigSubscriptionIntervalIn,
     user: models.User = Depends(deps.get_current_active_user),
     db: Session = Depends(deps.get_db),
 ) -> Any:
     """
     Set subscription interval
     """
-    interval = models.UserConfig(user_id=user.id, subscription_interval
-                                 =func.cast(concat(id, ' DAYS'), INTERVAL))
+    subscription_interval = timedelta(days=item_in.subscription_interval)
+    interval = models.UserConfig(user_id=user.id, subscription_interval=subscription_interval)
     db.merge(interval)
     db.commit()
 
-    return {"subscription_interval": id}
+    return interval.subscription_interval.days
 
-@router.get("/me/config/subscription-interval", status_code=201)
-def read_user_subscription_interval(
+
+@router.get("/config/subscription-interval", response_model=int)
+def read_subscription_interval(
     user: models.User = Depends(deps.get_current_active_user),
     db: Session = Depends(deps.get_db),
 ) -> Any:
     """
-    Get subscription interval
+    Get subscription interval in days
     """
-    return db.query(models.UserConfig.subscription_interval).filter(models.UserConfig.user_id == user.id).first()
+    res = db.query(models.UserConfig.subscription_interval).filter(models.UserConfig.user_id == user.id).first()
+    if not res:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Subscription interval is not set")
+
+    return res[0].days
