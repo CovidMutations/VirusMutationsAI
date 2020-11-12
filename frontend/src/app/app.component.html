@@ -4,23 +4,29 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+  <a class="nav-link" routerLink="/">{{'menu.MutationAnnotation' | translate }}</a>
+
   <div class="collapse navbar-collapse" [class.show]="isMenuShow">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/">{{'menu.MutationAnnotation' | translate }}</a>
+    <ul class="navbar-nav ml-auto">
+      <li *ngIf="!(authQuery.isLoggedIn$ | async)" class="nav-item">
+        <a class="nav-link" routerLink="auth/registration" routerLinkActive="active">
+          {{'menu.singUp' | translate }}
+        </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">{{'menu.Part1' | translate }}</a>
+      <li *ngIf="!(authQuery.isLoggedIn$ | async)" class="nav-item">
+        <a class="nav-link" routerLink="auth" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          {{'menu.singIn' | translate }}
+        </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">{{'menu.Part2' | translate }}</a>
+      <li *ngIf="authQuery.isLoggedIn$ | async" class="nav-item">
+        <span class="navbar-text">{{'menu.hello' | translate: {name: (authQuery.select('name') | async)} }}</span>
+      </li>
+      <li *ngIf="authQuery.isLoggedIn$ | async" class="nav-item">
+        <a class="nav-link" routerLink="/" (click)="onLogoutClick()">
+          {{'menu.logout' | translate }}
+        </a>
       </li>
     </ul>
-    
-  </div>
-  <div>
-    <a routerLink="auth/registration">Reg</a> |
-    <a routerLink="auth">Auth</a>
   </div>
 </nav>
 <div class="container-fluid">

@@ -15,6 +15,7 @@ import { ErrorModalComponent } from './shared/error-modal/error-modal.component'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AppComponent } from './app.component';
   providers: [
     { provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }},
     { provide: APP_CONFIG, useValue: VMAI_CONFIG },
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
