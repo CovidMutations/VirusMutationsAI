@@ -4,6 +4,6 @@ from uuid import UUID
 from pydantic import BaseModel
 
 
-class User_config(BaseModel):
+class UserConfig(BaseModel):
     user_id: UUID
     subscription_interval: int
