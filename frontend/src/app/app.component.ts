@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SharedService } from './shared/shared.service';
+import { AuthQuery } from './auth/store/auth.query';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,9 @@ export class AppComponent {
   modalMessage = '';
 
   constructor(
-    private readonly sharedService: SharedService
+    private readonly sharedService: SharedService,
+    public readonly authQuery: AuthQuery,
+    private readonly authService: AuthService,
   ) {
 
     this.sharedService.preloaderSbj.subscribe(val => {
@@ -23,5 +27,7 @@ export class AppComponent {
     });
   }
 
-
+  public onLogoutClick(): void {
+    this.authService.logout();
+  }
 }

@@ -9,6 +9,14 @@ export class UserInfoModel extends BaseModel {
   }
 }
 
+export class AuthState extends UserInfoModel {
+  accessToken: string = undefined;
+
+  constructor(row?){
+    super();
+    super.checkFields(row);
+  }
+}
 
 export class RegistrationFormModel extends BaseModel {
   name: string = undefined;
@@ -28,13 +36,15 @@ export class LoginFormModel extends BaseModel {
   }
 }
 
-
-export class UserRO {
-  id: string;
-  username: string;
-  email: string;
-  created: Date;
-  token?: string;
+// tslint:disable:variable-name
+export interface TokenResp {
+  token_type: string;
+  access_token?: string;
 }
+// tslint:enable:variable-name
 
-
+export interface TokenPayload {
+  sub: string;
+  email: string;
+  username: string;
+}

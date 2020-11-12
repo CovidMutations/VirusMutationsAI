@@ -1,8 +1,10 @@
 {
   "menu": {
-      "MutationAnnotation":"COVID-19 Mutation annotation",
-      "Part1":"Part 1",
-      "Part2":"Part 2"
+    "MutationAnnotation": "COVID-19 Mutation annotation",
+    "singUp": "Sign up",
+    "singIn": "Sign in",
+    "hello": "Hello, {{name}}!",
+    "logout": "Logout"
   },
   "MutationAnnotation": {
     "title": "Found following articles",
