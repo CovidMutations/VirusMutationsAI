@@ -1,0 +1,10 @@
+# Normalize line endings by default
+* text=auto
+
+# Don't normalize executable scripts
+*.bat text eol=crlf
+*.sh text eol=lf
+
+# Don't try to automatically merge lock files
+yarn.lock -diff
+poetry.lock -diff
