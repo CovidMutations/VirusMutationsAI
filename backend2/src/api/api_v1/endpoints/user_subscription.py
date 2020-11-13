@@ -25,7 +25,7 @@ def subscribe_user_me(
     db.add(subscr)
     try:
         db.commit()
-    except (exc.IntegrityError, errors.UniqueViolation) as e:
+    except exc.IntegrityError as e:
         # The mutation already subscribed (expected case)
         pass
     return mutation
