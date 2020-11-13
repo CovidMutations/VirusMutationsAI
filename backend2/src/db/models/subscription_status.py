@@ -5,8 +5,8 @@ from sqlalchemy.dialects.postgresql import UUID
 from src.db.base import Base
 
 
-class SubscriptionConfig(Base):
-    __tablename__ = "subscription_config"
+class SubscriptionStatus(Base):
+    __tablename__ = "subscription_status"
 
     user_id = Column(UUID, primary_key=True)
     last_send = Column(DateTime)
