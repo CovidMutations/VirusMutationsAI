@@ -51,7 +51,7 @@ def unsubscribe_user_me(
     mutation: str
 ) -> Any:
     """
-    Add a subscription to the subscriptions
+    Delete a subscription from the subscriptions
     """
     db.query(models.Subscription.mutation).filter(models.Subscription.user_id == user.id,
                                                   models.Subscription.mutation == mutation).delete()
