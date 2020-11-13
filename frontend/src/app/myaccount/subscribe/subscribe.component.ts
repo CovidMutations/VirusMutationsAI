@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
-import { DBUpdatingFrequencyEnum } from '../../models/admin-db.model';
-import { ToolService } from '../../shared/tool.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { take } from 'rxjs/operators';
+import { MyaccountService } from '../myaccount.service';
+import { AuthQuery } from '../../auth/store/auth.query';
 
 @Component({
   selector: 'app-subscribe',
@@ -9,34 +10,86 @@ import { ToolService } from '../../shared/tool.service';
   styleUrls: ['./subscribe.component.scss']
 })
 export class SubscribeComponent implements OnInit {
-  dbUpdatingFrequency = DBUpdatingFrequencyEnum;
   subscribeForm: FormGroup;
-  mutations = new FormArray([]);
+  frequencyForm: FormGroup;
+  mutations: string[] = [];
+  curPage = 0;
+  hasNext = false;
+  hasPrev = false;
+
+  private itemsLimit = 10;
 
   constructor(
-    readonly toolService: ToolService
-  ) {
-    this.subscribeForm = new FormGroup({
-      frequency: new FormControl('',  Validators.required),
-      mutations: this.mutations
-    });
-    this.addNewMutation();
-
-   }
+    private readonly accountService: MyaccountService,
+    public readonly authQuery: AuthQuery,
+  ) { }
 
   ngOnInit(): void {
+    this.initFrequencyForm();
+    this.initSubscribeForm();
+    this.refreshMutations(this.curPage);
   }
 
-  addNewMutation(): void {
-    this.mutations.push(new FormControl('', Validators.required));
+  private initFrequencyForm(): void {
+    this.accountService.getSubscriptionFrequency()
+      .pipe(
+        take(1),
+      ).subscribe(v => {
+        this.frequencyForm = new FormGroup({
+          frequency: new FormControl(v, Validators.compose([
+            Validators.required,
+            Validators.min(0),
+            Validators.pattern(/^[0-9]*$/),
+          ])),
+        });
+      });
   }
 
-  onSubmit(): void {
-    console.log(this.subscribeForm.value);
-    // this.authService.saveSubscriptions(this.subscribeForm.value).subscribe(data => {
-    //   console.log('registration', data);
-
-    // });
+  private initSubscribeForm(): void {
+    this.subscribeForm = new FormGroup({
+      mutation: new FormControl('',  Validators.required),
+    });
   }
 
+  private refreshMutations(page: number): void {
+    const skip = page * this.itemsLimit;
+    this.accountService.getMutations(this.itemsLimit, skip)
+      .pipe(take(1))
+      .subscribe(v => {
+        this.mutations = v.items;
+        this.hasPrev = page > 0;
+        this.hasNext = v.total > (page + 1) * this.itemsLimit;
+      });
+  }
+
+  prevPage(): void {
+    this.curPage = this.curPage - 1;
+    this.refreshMutations(this.curPage);
+  }
+
+  nextPage(): void {
+    this.curPage = this.curPage + 1;
+    this.refreshMutations(this.curPage);
+  }
+
+  subscribe(): void {
+    this.accountService.subscribeToMutation(this.subscribeForm.value.mutation)
+      .pipe(take(1))
+      .subscribe(() => {
+        this.refreshMutations(this.curPage);
+        this.subscribeForm.reset();
+      });
+  }
+
+  unsubscribe(mutation: string): void {
+    this.accountService.unsubscribeFromMutation(mutation)
+      .pipe(take(1))
+      .subscribe(() => this.refreshMutations(this.curPage));
+  }
+
+  setFrequency(): void {
+    this.accountService.setSubscriptionFrequency(this.frequencyForm.value.frequency)
+      .pipe(take(1))
+      .subscribe();
+  }
 }

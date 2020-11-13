@@ -18,7 +18,8 @@
     },
     "search": {
       "title": "Find articles by mutation"
-    }
+    },
+    "btnSubscribe": "Subscribe"
   },
   "registration":{
     "title": "Registration",
@@ -55,17 +56,18 @@
     }
   },
   "myaccount": {
+    "linkText": "Profile",
     "subscribe": {
       "title": "My subscriptions",
-      "label_frequency": "Email Frequency",
-      "option_frequency": {
-        "daily": "Once a day",
-        "weekly": "Once a week",
-        "monthly": "Once a month"
-      },
-      "label_mutation": "Mutation",
-      "btn_submit":"Subscribe",
-      "btn_add":"Add new mutation"
+      "labelFrequency": "Email Frequency",
+      "frequencyUnitDays": "days",
+      "labelMutation": "Mutation",
+      "btnSubmit": "Subscribe",
+      "btnSave": "Save"
     }
+  },
+  "pagination": {
+    "prev": "Previous",
+    "next": "Next"
   }
 }

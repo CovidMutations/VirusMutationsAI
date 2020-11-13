@@ -21,7 +21,8 @@ services:
     ports:
       - "80:80"
     environment:
-      API_URL: "http://localhost:3000/api/"
+      API_URL: "http://localhost:3000/api"
+      API2_URL: "http://localhost:8000/api"
 
   backend:
     image: docker.pkg.github.com/covidmutations/virusmutationsai/be:latest

@@ -16,8 +16,8 @@ import { HashMap } from '@datorama/akita';
   providedIn: 'root'
 })
 export class MutationAnnotationService {
-  private readonly uploadVCFapiEndpoint = 'uploadVCF';
-  private readonly searchMutationApiEndpoint = 'search-mutation';
+  private readonly uploadVCFapiEndpoint = '/uploadVCF';
+  private readonly searchMutationApiEndpoint = '/search-mutation';
   private API_URL;
   constructor(
     private readonly http: HttpClient,
