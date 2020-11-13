@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, List
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
@@ -13,18 +13,51 @@ from starlette.responses import Response
 router = APIRouter()
 
 
-@router.put("/subscribe-me/{mutation}", status_code=201)
+@router.put("/subscribe/{mutation}", response_model=str, status_code=status.HTTP_201_CREATED)
 def subscribe_user_me(
     *,
     user: models.User = Depends(deps.get_current_active_user),
     db: Session = Depends(deps.get_db),
     mutation: str
 ) -> Any:
-    subscr = models.Subscription(user_id = user.id, mutation = mutation)
+    """
+    Add a subscription to the subscriptions
+    """
+    subscr = models.Subscription(user_id=user.id, mutation=mutation)
     db.add(subscr)
     try:
         db.commit()
     except (exc.IntegrityError, errors.UniqueViolation) as e:
         # The mutation already subscribed (expected case)
         pass
-    return {"mutation": mutation}
+    return mutation
+
+@router.get("/read-subscriptions", response_model=[])
+def read_subscriptions_user_me(
+    skip: int = 0,
+    limit: int = 100,
+    user: models.User = Depends(deps.get_current_active_user),
+    db: Session = Depends(deps.get_db),
+) -> Any:
+    """
+    Get subscription list
+    """
+    res = db.query(models.Subscription.mutation).filter(models.Subscription.user_id == user.id).slice(skip, limit).all()
+    if not res:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No subscriptions found")
+    return [x[0] for x in res]
+
+@router.delete("/unsubscribe/{mutation}")
+def unsubscribe_user_me(
+    *,
+    user: models.User = Depends(deps.get_current_active_user),
+    db: Session = Depends(deps.get_db),
+    mutation: str
+) -> Any:
+    """
+    Add a subscription to the subscriptions
+    """
+    db.query(models.Subscription.mutation).filter(models.Subscription.user_id == user.id,
+                                                  models.Subscription.mutation == mutation).delete()
+    db.commit()
+    return mutation

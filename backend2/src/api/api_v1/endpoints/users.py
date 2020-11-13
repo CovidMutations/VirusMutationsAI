@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends
 
 from src import schemas
 from src.api import deps
-from . import user_config
+from . import user_config, user_subscription
 from src.db import models
 
 router = APIRouter()
@@ -21,3 +21,4 @@ def read_user_me(
 
 
 router.include_router(user_config.router, prefix="/me")
+router.include_router(user_subscription.router, prefix="/me")
