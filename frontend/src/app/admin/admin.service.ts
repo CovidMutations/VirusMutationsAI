@@ -15,8 +15,8 @@ import { DBUpdatingFrequencyEnum, UpdateDBStatusModel } from '../models/admin-db
   providedIn: 'root'
 })
 export class AdminService {
-  private readonly updatefrequencyEndpoint = 'frequency';
-  private readonly updatedbEndpoint = 'updatedb';
+  private readonly updatefrequencyEndpoint = '/frequency';
+  private readonly updatedbEndpoint = '/updatedb';
   private API_URL;
   constructor(
     private readonly http: HttpClient,

@@ -20,9 +20,9 @@ import {
   providedIn: 'root'
 })
 export class AuthService {
-  private regEndpoint = 'registration';
-  private loginEndpoint = 'login';
-  private codeVerificationEndpoint = 'confirm-code-verification';
+  private regEndpoint = '/registration';
+  private loginEndpoint = '/login';
+  private codeVerificationEndpoint = '/confirm-code-verification';
   private API_URL;
 
   constructor(

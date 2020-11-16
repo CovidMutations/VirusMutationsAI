@@ -1,11 +1,12 @@
-from typing import Any, List
+from typing import Any
 
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, status, Query
 from sqlalchemy.orm import Session
-from sqlalchemy import exc
+from sqlalchemy import exc, asc
 
 from src.api import deps
 from src.db import models
+from src.schemas import PaginatedList
 
 router = APIRouter()
 
@@ -30,18 +31,21 @@ def subscribe_user_me(
     return mutation
 
 
-@router.get("/subscriptions", response_model=List[str])
+@router.get("/subscriptions", response_model=PaginatedList[str])
 def read_subscriptions_user_me(
-    skip: int = 0,
-    limit: int = 100,
+    skip: int = Query(0, ge=0, description="Items offset"),
+    limit: int = Query(100, gt=0, le=100, description="Page size limit"),
     user: models.User = Depends(deps.get_current_active_user),
     db: Session = Depends(deps.get_db),
 ) -> Any:
     """
     Get subscription list
     """
-    res = db.query(models.Subscription.mutation).filter(models.Subscription.user_id == user.id).slice(skip, limit).all()
-    return [x[0] for x in res]
+    query = db.query(models.Subscription.mutation).filter(models.Subscription.user_id == user.id)
+    total = query.count()
+    items = query.order_by(asc(models.Subscription.mutation)).limit(limit).offset(skip).all()
+    res = PaginatedList(items=[x[0] for x in items], total=total)
+    return res
 
 
 @router.delete("/subscriptions/{mutation}", response_model=str)

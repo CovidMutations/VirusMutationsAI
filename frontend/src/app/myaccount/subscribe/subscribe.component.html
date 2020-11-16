@@ -1,28 +1,72 @@
+<h3>{{'menu.hello' | translate: {name: (authQuery.select('name') | async)} }}</h3>
 <h4>{{'myaccount.subscribe.title' | translate}}</h4>
 
-<form [formGroup]="subscribeForm" (submit)="onSubmit()">
+<form *ngIf="frequencyForm" [formGroup]="frequencyForm" (submit)="setFrequency()">
   <div class="form-group row">
-    <label for="frequency" class="col-sm-6 col-form-label">{{'myaccount.subscribe.label_frequency' | translate}}</label>
-    <div class="col-sm-7">
-      <select id="frequency" class="form-control" formControlName="frequency">
-        <option value=''>Choose...</option>
-        <option *ngFor="let item of dbUpdatingFrequency | keyvalue: toolService.originalOrder" [value]="item.key">{{'myaccount.subscribe.option_frequency.' + item.key | translate}}</option> 
-      </select>
+    <label for="frequency" class="col-sm-4 col-form-label">{{'myaccount.subscribe.labelFrequency' | translate}}</label>
+    <div class="input-group col-sm-4">
+      <input
+        id="frequency"
+        class="form-control"
+        formControlName="frequency"
+        type="number"
+        step="1"
+        min="0"
+        [ngClass]="{'is-invalid': frequencyForm.get('frequency').dirty && frequencyForm.get('frequency').invalid}"
+      >
+      <div class="input-group-append">
+        <span class="input-group-text">{{'myaccount.subscribe.frequencyUnitDays' | translate}}</span>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <button type="submit" class="btn btn-primary" [disabled]="frequencyForm.invalid">
+        {{'myaccount.subscribe.btnSave' | translate}}
+      </button>
+    </div>
+  </div>
+</form>
+
+<form [formGroup]="subscribeForm" (submit)="subscribe()">
+  <div class="form-group row">
+    <label for="mutation" class="col-sm-4 col-form-label">{{'myaccount.subscribe.labelMutation' | translate}}</label>
+    <div class="col-sm-4">
+      <input
+        id="mutation"
+        class="form-control"
+        formControlName="mutation"
+        [ngClass]="{'is-invalid': subscribeForm.get('mutation').dirty && subscribeForm.get('mutation').invalid}"
+      >
+    </div>
+    <div class="col-sm-4">
+      <button type="submit" class="btn btn-primary" [disabled]="subscribeForm.invalid">
+        {{'myaccount.subscribe.btnSubmit' | translate}}
+      </button>
+    </div>
+  </div>
+  <div class="form-group row" *ngFor="let mutation of mutations">
+    <div class="offset-sm-4 col-sm-4">{{mutation}}</div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-danger" (click)="unsubscribe(mutation)">
+        <i class="icon-cancel"></i>
+      </button>
     </div>
   </div>
   <div class="form-group row">
-    <label  class="col-sm-6 col-form-label">{{'myaccount.subscribe.label_mutation' | translate}}</label>
-    <div class="col-sm-6">
-      <input type="text" *ngFor="let mutation of mutations.controls" [formControl]="mutation" class="form-control mb-2" >
+    <div class="col-sm-12">
+      <nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item" [ngClass]="{disabled: !hasPrev}">
+            <button type="button" class="page-link" [disabled]="!hasPrev" (click)="prevPage()">
+              {{'pagination.prev' | translate}}
+            </button>
+          </li>
+          <li class="page-item" [ngClass]="{disabled: !hasNext}">
+            <button type="button" class="page-link" [disabled]="!hasNext" (click)="nextPage()">
+              {{'pagination.next' | translate}}
+            </button>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
-  <div class="form-group row">
-    <label  class="col-sm-6"></label>
-    <div class="col-sm-6">
-      <button type="button" class="btn btn-primary" (click)="addNewMutation()">{{'myaccount.subscribe.btn_add' | translate}}</button>
-    </div>
-  </div>
-  
-  <button type="submit" class="btn btn-primary">{{'myaccount.subscribe.btn_submit' | translate}}</button>
-  
 </form>
