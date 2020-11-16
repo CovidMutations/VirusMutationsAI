@@ -41,7 +41,7 @@ services:
       DB_USER: "covid"
       DB_NAME: "covid"
       DB_PASSWORD: "covid"
-      DB_SYNCHRONIZE: "true"
+      DB_SYNCHRONIZE: "false"
       JWT_SECRET: "TopSecret51"
       MAIL_SERVICE: "gmail"
       MAIL_EMAIL: ""
