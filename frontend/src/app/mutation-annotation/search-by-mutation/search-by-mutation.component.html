@@ -1,15 +1,22 @@
-
-<h4 class="mt-3 mb-3" >{{'MutationAnnotation.search.title' | translate}}</h4>
+<h4 class="mt-3 mb-3">{{'MutationAnnotation.search.title' | translate}}</h4>
 
 <div class="row">
   <div class="col-8">
-    <form  class="mb-3 wrap_icon-cancel">
-        <i class="icon-cancel" *ngIf="box.value" (click)="box.value='';onFilterListArticles(box.value)"></i>
-        <input  #box class="form-control" (keyup)="onFilterListArticles(box.value)" placeholder="241C>T">
+    <form class="mb-3 wrap_icon-cancel">
+      <i class="icon-cancel" *ngIf="box.value" (click)="box.value='';onFilterListArticles(box.value)"></i>
+      <input #box class="form-control" (keyup)="onFilterListArticles(box.value)" placeholder="241C>T">
     </form>
-
   </div>
-
+  <div *ngIf="listArticles.length" class="col-4">
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="subscribe(box.value)"
+      [disabled]="!(authQuery.isLoggedIn$ | async)"
+    >
+      {{'MutationAnnotation.btnSubscribe' | translate}}
+    </button>
+  </div>
 </div>
 
 <app-annotation-list [items]="listArticles" class="m_content_scroll"></app-annotation-list>
