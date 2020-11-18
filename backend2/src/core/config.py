@@ -43,5 +43,7 @@ class Settings(BaseSettings):
             path=f"/{values.get('POSTGRES_DB') or ''}",
         )
 
+    ENTREZ_EMAIL: str
+
 
 settings = Settings()
