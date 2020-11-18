@@ -1,7 +1,8 @@
 import logging
 from datetime import date, timedelta, datetime
+from http.client import HTTPResponse
 from typing import Optional, List
-from uuid import uuid4
+from uuid import uuid4, UUID
 
 from Bio import Entrez
 from sqlalchemy import desc
@@ -80,6 +81,31 @@ class ArticleCoreService:
         self.db.add(ArticleFetchLog(id=str(uuid4()), start_date=start, end_date=end, message=message))
         self.db.commit()
 
+    def fetch_and_save_article(self, id_: UUID):
+        article = self.db.query(Article).filter(Article.id == id_).with_for_update().first()
+
+        if not article:
+            raise RuntimeError(f'Article {id_} not found')
+
+        try:
+            self._update_article_body(article)
+        finally:
+            self.db.commit()
+
+    def fetch_and_save_new_article(self):
+        article = self.db.query(Article)\
+            .filter(Article.status == ArticleStatus.NEW)\
+            .with_for_update(skip_locked=True)\
+            .first()
+
+        if not article:
+            return
+
+        try:
+            self._update_article_body(article)
+        finally:
+            self.db.commit()
+
     def _fetch_article_ids_for_period_paged(self,
                                             query: str, start: date, end: date, limit=100000, offset=0) -> List[str]:
         mindate = start.strftime(ENTREZ_DATE_FORMAT)
@@ -105,3 +131,28 @@ class ArticleCoreService:
         logger.debug('IDs: ' + ', '.join(ids))
 
         return ids
+
+    def _update_article_body(self, article: Article) -> Article:
+        try:
+            response: HTTPResponse = self.entrez.efetch(
+                db=self.ncbi_db,
+                id=article.external_id,
+                rettype="xml",
+                retmode="text"
+            )
+            raw_body = response.read()
+            charset = response.headers.get_content_charset('utf-8')
+            body = raw_body.decode(charset)
+        except Exception as e:
+            logger.warning(f'Error while fetching article {article.id}: {e}')
+            article.status = ArticleStatus.ERROR
+            article.message = str(e)
+        else:
+            logger.info(f'Article {article.id} fetched')
+            logger.debug(f'Article {article.id} body: {body}')
+            article.status = ArticleStatus.FETCHED
+            article.body = body
+        finally:
+            response.close()
+
+        return article
