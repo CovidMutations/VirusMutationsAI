@@ -1,21 +1,28 @@
 import logging
 from datetime import date, timedelta, datetime
 from http.client import HTTPResponse
-from typing import Optional, List
+from typing import Optional, List, TypedDict, Set
 from uuid import uuid4, UUID
 
 from Bio import Entrez
 from sqlalchemy import desc
 from sqlalchemy.dialects.postgresql import insert
 
+from src.core.article_parser import ArticleXml
 from src.core.config import settings
 from src.db.models import ArticleFetchLog, Article
-from src.db.models.article import ArticleStatus
+from src.db.models.article import ArticleStatus, ArticleData, ArticleMutation
 from src.db.session import SessionLocal
 
 logger = logging.getLogger(__name__)
 
 ENTREZ_DATE_FORMAT = "%Y/%m/%d"
+PMC_BASE_URL = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC'
+
+
+class ArticleDataDict(TypedDict):
+    title: Optional[str]
+    mutations: Optional[Set[str]]
 
 
 class ArticleCoreService:
@@ -82,7 +89,7 @@ class ArticleCoreService:
         self.db.commit()
 
     def fetch_and_save_article(self, id_: UUID):
-        article = self.db.query(Article).filter(Article.id == id_).with_for_update().first()
+        article = self.db.query(Article).filter(Article.id == id_).with_for_update(key_share=True).first()
 
         if not article:
             raise RuntimeError(f'Article {id_} not found')
@@ -95,7 +102,7 @@ class ArticleCoreService:
     def fetch_and_save_new_article(self):
         article = self.db.query(Article)\
             .filter(Article.status == ArticleStatus.NEW)\
-            .with_for_update(skip_locked=True)\
+            .with_for_update(skip_locked=True, key_share=True)\
             .first()
 
         if not article:
@@ -105,6 +112,88 @@ class ArticleCoreService:
             self._update_article_body(article)
         finally:
             self.db.commit()
+
+    def parse_article(self, id_):
+        article = self.db.query(Article).filter(Article.id == id_).with_for_update(key_share=True).first()
+
+        if not article:
+            raise RuntimeError(f'Article {id_} not found')
+
+        try:
+            data = self._parse_article(article)
+        except Exception as e:
+            logger.warning(f'Cannot parse article {id_} body: {e}')
+            article.status = ArticleStatus.ERROR
+            article.message = str(e)
+            self.db.commit()
+            return
+
+        logger.info(f'{len(data["mutations"])} mutations found for article {article.id}')
+        logger.debug('Mutations for article {article.id}: ' + ', '.join(data["mutations"]))
+
+        url = f"{PMC_BASE_URL}{article.external_id}"
+        article_data = {"id": article.id, "title": data["title"], "url": url}
+        insert_statement = insert(ArticleData).values(article_data).on_conflict_do_update(
+            index_elements=[ArticleData.id],
+            set_={"title": article_data["title"], "url": article_data["url"], "updated": datetime.utcnow()}
+        )
+        self.db.get_bind().execute(insert_statement)
+        self.db.flush()
+
+        self.db.query(ArticleMutation).filter(ArticleMutation.article_id == article.id).delete()
+        self.db.add_all([
+            ArticleMutation(article_id=article.id, mutation=m) for m in data["mutations"]
+        ])
+
+        article.status = ArticleStatus.PARSED
+        self.db.commit()
+
+    def parse_new_article(self):
+        article = self.db.query(Article) \
+            .filter(Article.status == ArticleStatus.FETCHED) \
+            .with_for_update(skip_locked=True, key_share=True) \
+            .first()
+
+        if not article:
+            return
+
+        try:
+            data = self._parse_article(article)
+        except Exception as e:
+            logger.warning(f'Cannot parse article {article.id} body: {e}')
+            article.status = ArticleStatus.ERROR
+            article.message = str(e)
+            self.db.commit()
+            return
+
+        logger.info(f'{len(data["mutations"])} mutations found for article {article.id}')
+        logger.debug('Mutations for article {article.id}: ' + ', '.join(data["mutations"]))
+
+        url = f"{PMC_BASE_URL}{article.external_id}"
+        article_data = {"id": article.id, "title": data["title"], "url": url}
+        insert_statement = insert(ArticleData).values(article_data).on_conflict_do_update(
+            index_elements=[ArticleData.id],
+            set_={"title": article_data["title"], "url": article_data["url"], "updated": datetime.utcnow()}
+        )
+        self.db.get_bind().execute(insert_statement)
+        self.db.flush()
+
+        self.db.query(ArticleMutation).filter(ArticleMutation.article_id == article.id).delete()
+        self.db.add_all([
+            ArticleMutation(article_id=article.id, mutation=m) for m in data["mutations"]
+        ])
+
+        article.status = ArticleStatus.PARSED
+        self.db.commit()
+
+    def _parse_article(self, article) -> ArticleDataDict:
+        article_xml = ArticleXml(article.body)  # catch exception
+
+        title = article_xml.title()
+        mutations = article_xml.mutations()
+
+        return ArticleDataDict(title=title, mutations=mutations)
+
 
     def _fetch_article_ids_for_period_paged(self,
                                             query: str, start: date, end: date, limit=100000, offset=0) -> List[str]:
