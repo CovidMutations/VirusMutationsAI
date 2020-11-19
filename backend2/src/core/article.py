@@ -83,7 +83,7 @@ class ArticleCoreService:
                 index_elements=[Article.external_id],
                 set_={"status": ArticleStatus.NEW, "updated": datetime.utcnow()}
             )
-            self.db.get_bind().execute(bulk_insert)
+            self.db.execute(bulk_insert)
 
         self.db.add(ArticleFetchLog(id=str(uuid4()), start_date=start, end_date=end, message=message))
         self.db.commit()
@@ -137,7 +137,7 @@ class ArticleCoreService:
             index_elements=[ArticleData.id],
             set_={"title": article_data["title"], "url": article_data["url"], "updated": datetime.utcnow()}
         )
-        self.db.get_bind().execute(insert_statement)
+        self.db.execute(insert_statement)
         self.db.flush()
 
         self.db.query(ArticleMutation).filter(ArticleMutation.article_id == article.id).delete()
@@ -175,7 +175,7 @@ class ArticleCoreService:
             index_elements=[ArticleData.id],
             set_={"title": article_data["title"], "url": article_data["url"], "updated": datetime.utcnow()}
         )
-        self.db.get_bind().execute(insert_statement)
+        self.db.execute(insert_statement)
         self.db.flush()
 
         self.db.query(ArticleMutation).filter(ArticleMutation.article_id == article.id).delete()
