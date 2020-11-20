@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p>Hello {{username}},</p>
+        <p>New articles were published.</p>
+        {% for mutation, articles in mutations.items() %}
+            <p><b>{{mutation}}</b></p>
+            <p>
+                {% for article in articles %}
+                    <a href="{{article.url}}">{{article.title}}</a>
+                {% endfor %}
+            </p>
+        {% endfor %}
+    </body>
+</html>

@@ -19,6 +19,7 @@ yagmail = "^0.14.245"
 biopython = "^1.78"
 lxml = "^4.6.1"
 SQLAlchemy-Utils = "^0.36.8"
+Jinja2 = "^2.11.2"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
