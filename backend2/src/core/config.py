@@ -45,5 +45,8 @@ class Settings(BaseSettings):
 
     ENTREZ_EMAIL: str
 
+    EMAIL_FROM: str
+    GMAIL_CREDENTIALS_PATH: str
+
 
 settings = Settings()

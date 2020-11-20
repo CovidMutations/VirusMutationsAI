@@ -1,8 +1,10 @@
 from src.core.article import ArticleCoreService
+from src.core.email import EmailCoreService
 from src.core.subscription import SubscriptionCoreService
 
 article_service = ArticleCoreService()
 subscription_service = SubscriptionCoreService()
+mail_service = EmailCoreService()
 
 
 def fetch_new_article_ids():
@@ -30,13 +32,18 @@ def subscribers_to_send():
     print(users)
 
 
+def send_message_from_queue():
+    mail_service.send_message_from_queue()
+
+
 def main():
     # fetch_new_article_ids()
     # fetch_article()
     # fetch_article_by_id('0400ee7e-bef4-40c1-92ac-3eb60bce0757')
     # parse_article('0400ee7e-bef4-40c1-92ac-3eb60bce0757')
     # parse_new_article()
-    subscribers_to_send()
+    # subscribers_to_send()
+    send_message_from_queue()
 
 
 if __name__ == '__main__':
