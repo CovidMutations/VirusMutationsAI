@@ -58,7 +58,8 @@ class ArticleCoreService:
 
         return ids
 
-    def fetch_and_save_new_article_ids(self):
+    def fetch_and_save_new_article_ids(self) -> int:
+        """Fetches external article IDs and returns them"""
         last_fetch_date = self.get_last_fetch_date()
         if last_fetch_date:
             start = last_fetch_date + timedelta(days=1)  # next day after last fetch
@@ -87,6 +88,8 @@ class ArticleCoreService:
 
         self.db.add(ArticleFetchLog(id=str(uuid4()), start_date=start, end_date=end, message=message))
         self.db.commit()
+
+        return len(ids)
 
     def fetch_and_save_article(self, id_: UUID):
         article = self.db.query(Article).filter(Article.id == id_).with_for_update(key_share=True).first()
@@ -118,6 +121,9 @@ class ArticleCoreService:
 
         if not article:
             raise RuntimeError(f'Article {id_} not found')
+
+        if article.status != ArticleStatus.FETCHED:
+            raise RuntimeError(f"Article body hasn't been fetched. Please fetch it first")
 
         try:
             data = self._parse_article(article)

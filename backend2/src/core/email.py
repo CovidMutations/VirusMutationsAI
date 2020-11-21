@@ -22,14 +22,18 @@ class EmailCoreService:
         self._db.add(MessageQueue(to=to, subject=subject, contents=html, status=MessageStatus.NEW, message=""))
         self._db.commit()
 
-    def send_message_from_queue(self):
+    def send_message_from_queue(self) -> bool:
+        """Find a new message in the queue and send it.
+
+        Returns False if queue is empty
+        """
         message: MessageQueue = self._db.query(MessageQueue) \
             .filter(MessageQueue.status == MessageStatus.NEW) \
             .with_for_update(skip_locked=True, key_share=True) \
             .first()
 
         if not message:
-            return
+            return False
 
         try:
             self.send_message(message.to, message.subject, message.contents)  # TODO: Handle errors
@@ -37,6 +41,9 @@ class EmailCoreService:
             message.status = MessageStatus.OK
             self._db.commit()
 
-    def send_message(self, to: str, subject: str, contents: str):
-        contents = contents.replace("\n", " ")  # Prevent yagmail from replacing newlines with <br> tags
+        return True
+
+    def send_message(self, to: str, subject: str, contents: str, html=True):
+        if html:
+            contents = contents.replace("\n", " ")  # Prevent yagmail from replacing newlines with <br> tags
         return self._yag.send(to, subject, contents)

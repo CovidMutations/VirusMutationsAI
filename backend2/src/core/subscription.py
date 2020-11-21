@@ -15,12 +15,11 @@ class SubscriptionCoreService:
         self._email_service = EmailCoreService()
 
     def find_articles_to_send(self):
-        subscription_not_set = UserConfig.subscription_interval.is_(None)
         never_sent = SubscriptionStatus.last_send.is_(None)
         subscription_interval_reached = UserConfig.subscription_interval + SubscriptionStatus.last_send < now()
         article_not_sent = ArticleData.updated > SubscriptionStatus.last_send
 
-        subscription_condition = subscription_not_set | never_sent | subscription_interval_reached
+        subscription_condition = never_sent | subscription_interval_reached
         article_condition = never_sent | article_not_sent
 
         fields_to_select = (
@@ -52,7 +51,7 @@ class SubscriptionCoreService:
 
         return articles_by_mutation_by_user_id
 
-    def find_and_queue_articles_to_send(self):
+    def find_and_queue_articles_to_send(self) -> int:
         articles_to_send = self.find_articles_to_send()
         for user_id, articles in articles_to_send.items():
             self.add_new_articles_message_to_queue(articles["email"], articles)
@@ -63,6 +62,8 @@ class SubscriptionCoreService:
             )
             self._db.execute(insert_statement)
         self._db.commit()
+
+        return len(articles_to_send)
 
     def add_new_articles_message_to_queue(self, to, articles):
         self._email_service.add_message_to_queue(

@@ -1,50 +1,76 @@
-from src.core.article import ArticleCoreService
-from src.core.email import EmailCoreService
-from src.core.subscription import SubscriptionCoreService
+import os
+import sys
 
-article_service = ArticleCoreService()
-subscription_service = SubscriptionCoreService()
-mail_service = EmailCoreService()
+import click
 
+sys.path.append(os.getcwd())
 
-def fetch_new_article_ids():
-    article_service.fetch_and_save_new_article_ids()
+from src.commands import *  # noqa
 
 
-def fetch_article():
-    article_service.fetch_and_save_new_article()
+@click.group()
+def cli():
+    pass
 
 
-def fetch_article_by_id(id_):
-    article_service.fetch_and_save_article(id_)
+@cli.group()
+def articles():
+    pass
 
 
-def parse_article(id_):
-    article_service.parse_article(id_)
+@articles.command()
+@click.argument("id_", metavar='[ID]', type=click.UUID, required=False)
+def fetch(id_: str = None):
+    """Fetch articles"""
+    if id_:
+        fetch_article(id_)
+    else:
+        fetch_new_articles()
 
 
-def parse_new_article():
-    article_service.parse_new_article()
+@articles.command()
+@click.argument("id_", metavar='[ID]', type=click.UUID)
+def parse(id_: str = None):
+    """Parse article body"""
+    parse_article(id_)
 
 
-def subscribers_to_send():
-    users = subscription_service.find_and_queue_articles_to_send()
-    print(users)
+@cli.group()
+def subscription():
+    pass
 
 
-def send_message_from_queue():
-    mail_service.send_message_from_queue()
+@subscription.command()
+def queue():
+    """Find and queue new articles to send to subscribers"""
+    queue_articles()
 
 
-def main():
-    # fetch_new_article_ids()
-    # fetch_article()
-    # fetch_article_by_id('0400ee7e-bef4-40c1-92ac-3eb60bce0757')
-    # parse_article('0400ee7e-bef4-40c1-92ac-3eb60bce0757')
-    # parse_new_article()
-    # subscribers_to_send()
-    send_message_from_queue()
+@subscription.command()
+def send():
+    """Send messages from the queue"""
+    send_messages_from_queue()
 
 
-if __name__ == '__main__':
-    main()
+@cli.group()
+def gmail():
+    pass
+
+
+@gmail.command()
+def login():
+    """Log in to GMAIL and save credentials file"""
+    login_to_gmail()
+
+
+@gmail.command()
+@click.option('--to', help="To", required=True)
+@click.option('--subject', help="Subject", default="VirusMutationsAI test", show_default=True)
+@click.option('--body', help="Body", default="Test message from VirusMutationsAI", show_default=True)
+def test(to, subject, body):
+    """Send test message"""
+    send_message(to, subject, body)
+
+
+if __name__ == "__main__":
+    cli()
