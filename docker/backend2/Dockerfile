@@ -5,6 +5,8 @@ WORKDIR /requirements
 RUN apk add --no-cache \
         gcc \
         libffi-dev \
+        libxml2-dev \
+        libxslt-dev \
         musl-dev \
         openssl-dev \
         postgresql-dev \
@@ -21,8 +23,11 @@ FROM python:3.8-alpine
 
 ENV PYTHONUNBUFFERED=y
 WORKDIR /app
+VOLUME /credentials/gmail
 
-RUN apk add --no-cache libpq
+RUN apk add --no-cache \
+        libpq \
+        libxslt-dev
 
 COPY --from=builder /requirements /usr/local/lib/python3.8/site-packages
 COPY ./backend2 ./

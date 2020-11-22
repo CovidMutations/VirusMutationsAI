@@ -12,7 +12,7 @@ from src.db.session import SessionLocal
 class EmailCoreService:
     def __init__(self):
         self._db = SessionLocal()
-        self._jinja_env = Environment(loader=FileSystemLoader(searchpath="templates"))
+        self._jinja_env = Environment(loader=FileSystemLoader(searchpath="src/templates"))
         self._yag = SMTP(settings.EMAIL_FROM, oauth2_file=settings.GMAIL_CREDENTIALS_PATH)
 
     def add_message_to_queue(self, to: str, subject_template_path: str, html_template_path: str, environment: Any):
