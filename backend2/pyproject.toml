@@ -15,6 +15,12 @@ psycopg2-binary = "^2.8.6"
 alembic = "^1.4.3"
 python-jose = {extras = ["cryptography"], version = "^3.2.0"}
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+yagmail = "^0.14.245"
+biopython = "^1.78"
+lxml = "^4.6.1"
+SQLAlchemy-Utils = "^0.36.8"
+Jinja2 = "^2.11.2"
+click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"

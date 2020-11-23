@@ -68,6 +68,9 @@ services:
       POSTGRES_DB: "covid"
       POSTGRES_PORT: "5432"
       SECRET_KEY: "TopSecret51"
+      ENTREZ_EMAIL: "mail@example.com"
+      EMAIL_FROM: "mail@example.com"
+      GMAIL_CREDENTIALS_PATH: "/credentials/gmail/oauth.json"
 
   migration:
     image: docker.pkg.github.com/covidmutations/virusmutationsai/be2:latest

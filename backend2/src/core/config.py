@@ -43,5 +43,10 @@ class Settings(BaseSettings):
             path=f"/{values.get('POSTGRES_DB') or ''}",
         )
 
+    ENTREZ_EMAIL: str
+
+    EMAIL_FROM: str
+    GMAIL_CREDENTIALS_PATH: str
+
 
 settings = Settings()
