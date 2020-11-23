@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { take } from 'rxjs/operators';
 import { SharedService } from '../../shared/shared.service';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from '../auth.service';
@@ -21,18 +22,23 @@ export class RegistrationComponent implements OnInit {
     private readonly router: Router,
 
   ) {
-
-    this.activatedRoute.params.subscribe((params) => {
-      if (params && params.userId) {
-        this.authService.confirmCodeVerification(params.userId, params.code).subscribe(_ => {
-          this.router.navigate(['myaccount']);
-        });
-      } else {
-        this.createForm();
-      }
-    });
-
-
+    const { userId, code } = this.activatedRoute.snapshot.params;
+    if (userId) {
+      this.authService.confirmCodeVerification(userId, code)
+        .pipe(take(1))
+        .subscribe(
+          _ => {
+            this.router.navigate(['auth']);
+          },
+          e => {
+            const message = e.error && e.error.message
+              || this.translateService.instant('registration.form.err_message');
+            this.sharedService.errorModal(message);
+          }
+        );
+    } else {
+      this.createForm();
+    }
   }
 
   createForm(): void{
