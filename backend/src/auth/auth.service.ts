@@ -51,16 +51,23 @@ export class AuthService {
   }
 
   async confirmCodeVerification(userId: string, code: string): Promise<void> {
-    const _user = await this.userRepository.findOne({id: userId});
-    if (!_user) {
+    let _user;
+    try {
+      _user = await this.userRepository.findOneOrFail({id: userId});
+    } catch (e) {
       throw new HttpException(
         'User not found',
         HttpStatus.BAD_REQUEST,
       );
     }
-    if(!_user.active && Number(code) == _user.verificationCode) {
+    if (_user.active) {
+      return; // user is already active
+    }
+    if (Number(code) == _user.verificationCode) {
       _user.active = true;
       _user.save();
+    } else {
+      throw new HttpException('Incorrect verification code', HttpStatus.BAD_REQUEST);
     }
   }
 
