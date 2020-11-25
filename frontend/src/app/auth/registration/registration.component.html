@@ -1,5 +1,6 @@
 <div *ngIf="registrationForm">
   <h4>{{'registration.title' | translate}}</h4>
+  <p class="text-muted">{{'registration.help' | translate}}</p>
   <form [formGroup]="registrationForm" (submit)="onSubmit()">
     <div class="form-group">
       <label for="name">{{'registration.form.name' | translate}}</label>
