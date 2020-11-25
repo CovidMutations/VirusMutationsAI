@@ -1,0 +1,12 @@
+<p class="text-muted" [innerHTML]="'home.help' | translate"></p>
+<ul>
+  <li><a routerLink="/mutation/searchbymutation">
+    {{'MutationAnnotation.menu.search_by_mutation' | translate}}
+  </a></li>
+  <li><a routerLink="/mutation/searchbyfile">
+    {{'MutationAnnotation.menu.search_by_file' | translate}}
+  </a></li>
+  <li><a [routerLink]="(authQuery.isLoggedIn$ | async) ? '/myaccount' : '/auth'">
+    {{'MutationAnnotation.menu.subscribe' | translate}}
+  </a></li>
+</ul>

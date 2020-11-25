@@ -6,15 +6,21 @@
     "hello": "Hello, {{name}}!",
     "logout": "Logout"
   },
+  "home": {
+    "help": "This is interactive dashboard that finds articles for COVID-19 mutations. Article database is automatically updated from <a href=\"https://www.ncbi.nlm.nih.gov/pmc/\" target=\"_blank\" rel=\"noopener\">PMC</a> (PubMed Central). Mutations can be entered directly to the search box or uploaded in a VCF-file (Variant Call Format). It is possible to subscribe for periodic email notifications with most recent articles for certain mutations."
+  },
   "MutationAnnotation": {
     "title": "Found following articles",
+    "help": "Direct articles search for a mutation in nucleotide (e.g. “24213C>T”) or protein (e.g. “S884F”) formats. Enter one mutation in the search box to get links to all articles containing this mutation. Feel free signing up to enable quick subscription for mutations on this page.",
+    "vcf-help": "Bulk articles search for mutations in VCF-file (Variant Call Format). Submit your VCF-file with mutations using Upload button to get links to all articles containing mutations from the file. If “SNP-effect” enabled, protein form for each nucleotide mutation is added to the search results (it may take a little longer time).",
     "btn_load-vcf": "Upload VCF-File for COVID-19",
     "message_notfound":"The articles are not found",
     "label_SNP-effect":"Advanced search using SNP-effect",
     "label_SNP-effect-note": "It takes around 1 minutes",
     "menu": {
-      "search_by_mutation":"Search by mutation",
-      "search_by_file":"Search by VCF-file"
+      "search_by_mutation": "Search by mutation",
+      "search_by_file": "Search by VCF-file",
+      "subscribe": "Subscribe"
     },
     "search": {
       "title": "Find articles by mutation"
@@ -23,6 +29,7 @@
   },
   "registration":{
     "title": "Registration",
+    "help": "Registration activates subscription service (periodic email notifications with new articles for requested mutations).",
     "form": {
       "name": "Your name",
       "email": "Email address",
@@ -35,6 +42,7 @@
   },
   "auth":{
     "title": "Login",
+    "help": "Log in with registered email and password to enable quick subscription from the search page and manage your subscriptions.",
     "form": {
       "email": "Email address",
       "password": "Password",

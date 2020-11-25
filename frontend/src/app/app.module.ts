@@ -16,11 +16,14 @@ import { ErrorModalComponent } from './shared/error-modal/error-modal.component'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
+import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
+import { HomeComponent } from './main/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorModalComponent
+    ErrorModalComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { TokenInterceptor } from './shared/interceptors/token.interceptor';
     AppRoutingModule,
     environment.production ? [] : AkitaNgDevtools,
     AkitaNgRouterStoreModule,
+    MutationAnnotationModule,  //  eager loading
   //  GraphQLModule,
   ],
   providers: [

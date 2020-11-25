@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './main/home.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'mutation',
     loadChildren: () => import('./mutation-annotation/mutation-annotation.module').then(m => m.MutationAnnotationModule)
   },
   {
@@ -18,7 +23,7 @@ const routes: Routes = [
     path: 'myaccount',
     loadChildren: () => import('./myaccount/myaccount.module').then(m => m.MyaccountModule)
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
