@@ -2,9 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MutationAnnotationService } from '../mutation-annotation.service';
 import { MutationAnnotationModel } from '../../models/mutation-annotation.model';
 import { BehaviorSubject } from 'rxjs';
-import { distinctUntilChanged, filter, switchMap, take } from 'rxjs/operators';
+import { distinctUntilChanged, filter, map, switchMap, take } from 'rxjs/operators';
 import { MyaccountService } from '../../myaccount/myaccount.service';
 import { AuthQuery } from '../../auth/store/auth.query';
+
+const mutationRegEx = /^.{2,}[A-Z]$/;
 
 @Component({
   selector: 'app-search-by-mutation',
@@ -23,8 +25,9 @@ export class SearchByMutationComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.mutationBS.pipe(
+      map(v => v.trim().toUpperCase()),
       distinctUntilChanged(),
-      filter(mutation => /^[^>]+>{1,1}[^>]+$/gmi.test(mutation)),
+      filter(mutation => mutationRegEx.test(mutation)),
       switchMap(mutation => this.mutationAnnotationService.searchMutationAnnotationArticles(mutation))
     ).subscribe(list => {
       this.listArticles = list || [];
