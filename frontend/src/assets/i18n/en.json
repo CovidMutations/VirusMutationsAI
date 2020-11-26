@@ -37,6 +37,7 @@
       "btn_submit": "Submit",
       "err_message": "Incorrect data"
     },
+    "activationSuccess": "Your account has been successfully activated",
     "title_end": "Your registration nearly finished",
     "followup": "Please, follow the instructions in the email."
   },
@@ -50,19 +51,6 @@
       "err_message": "Incorrect data"
     }
   },
-  "admin": {
-    "title": "Update schedule the database",
-    "btn_update-now": "Update now",
-    "label_auto-update": "Automatic update",
-    "label_last-update": "Last update",
-    "label_manual-update": "Manual update",
-    "label_status": "Status on",
-    "option_frequency": {
-      "daily": "Once a day",
-      "weekly": "Once a week",
-      "monthly": "Once a month"
-    }
-  },
   "myaccount": {
     "linkText": "Profile",
     "subscribe": {
@@ -71,7 +59,10 @@
       "frequencyUnitDays": "days",
       "labelMutation": "Mutation",
       "btnSubmit": "Subscribe",
-      "btnSave": "Save"
+      "btnSave": "Save",
+      "setFrequencySuccess": "Email frequency set",
+      "subscribeSuccess": "Subscribed to {{mutation}}",
+      "unsubscribeSuccess": "Unsubscribed from {{mutation}}"
     }
   },
   "pagination": {

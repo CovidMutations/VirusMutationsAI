@@ -1,30 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, Subject} from 'rxjs';
-
-export interface IErrorModalSbj {
-  isOpen: boolean;
-  message: string;
-}
-
+import { TranslateService } from '@ngx-translate/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
   public preloaderSbj = new Subject<boolean>();
-  public errorModalSbj = new Subject<string>();
+
+  constructor(
+    private readonly translateService: TranslateService,
+  ) { }
 
   setLoader(val: boolean): void {
     this.preloaderSbj.next(val);
   }
 
-
-  errorModal(message?): void {
-    this.errorModalSbj.next(
-      message
-    );
+  extractErrorMessage(error: any): string {
+    return error.error && error.error.message || this.translateService.instant('auth.form.err_message');
   }
-
 }
 
 

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
+import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs/operators';
 import { MyaccountService } from '../myaccount.service';
 import { AuthQuery } from '../../auth/store/auth.query';
+import { SharedService } from '../../shared/shared.service';
 
 @Component({
   selector: 'app-subscribe',
@@ -22,6 +25,9 @@ export class SubscribeComponent implements OnInit {
   constructor(
     private readonly accountService: MyaccountService,
     public readonly authQuery: AuthQuery,
+    private readonly sharedService: SharedService,
+    private readonly toastr: ToastrService,
+    private readonly translateService: TranslateService,
   ) { }
 
   ngOnInit(): void {
@@ -73,9 +79,11 @@ export class SubscribeComponent implements OnInit {
   }
 
   subscribe(): void {
-    this.accountService.subscribeToMutation(this.subscribeForm.value.mutation)
+    const mutation = this.subscribeForm.value.mutation;
+    this.accountService.subscribeToMutation(mutation)
       .pipe(take(1))
       .subscribe(() => {
+        this.toastr.success(this.translateService.instant('myaccount.subscribe.subscribeSuccess', { mutation }));
         this.refreshMutations(this.curPage);
         this.subscribeForm.reset();
       });
@@ -84,12 +92,18 @@ export class SubscribeComponent implements OnInit {
   unsubscribe(mutation: string): void {
     this.accountService.unsubscribeFromMutation(mutation)
       .pipe(take(1))
-      .subscribe(() => this.refreshMutations(this.curPage));
+      .subscribe(() => {
+        this.toastr.success(this.translateService.instant('myaccount.subscribe.unsubscribeSuccess', { mutation }));
+        this.refreshMutations(this.curPage);
+      });
   }
 
   setFrequency(): void {
     this.accountService.setSubscriptionFrequency(this.frequencyForm.value.frequency)
       .pipe(take(1))
-      .subscribe();
+      .subscribe(
+        () => this.toastr.success(this.translateService.instant('myaccount.subscribe.setFrequencySuccess')),
+        err => this.toastr.error(this.sharedService.extractErrorMessage(err)),
+      );
   }
 }

@@ -11,7 +11,6 @@ import { AuthService } from './auth/auth.service';
 export class AppComponent {
   isMenuShow = false;
   isLoading = false;
-  modalMessage = '';
 
   constructor(
     private readonly sharedService: SharedService,
@@ -21,9 +20,6 @@ export class AppComponent {
 
     this.sharedService.preloaderSbj.subscribe(val => {
       this.isLoading = val;
-    });
-    this.sharedService.errorModalSbj.subscribe(message => {
-      this.modalMessage = message;
     });
   }
 

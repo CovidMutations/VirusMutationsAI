@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { KeyValuePipe} from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
+import { take } from 'rxjs/operators';
 import { FileUploadModel } from '../../models/file-upload.model';
 import { MutationAnnotationService } from '../mutation-annotation.service';
 import { MutationAnnotationModel } from '../../models/mutation-annotation.model';
 import { HashMap } from '@datorama/akita';
+import { SharedService } from '../../shared/shared.service';
 
 @Component({
   selector: 'app-mutation-annotation',
@@ -19,6 +22,8 @@ export class MutationAnnotationComponent implements OnInit {
   constructor(
     private readonly mutationAnnotationService: MutationAnnotationService,
     private readonly keyValuePipe: KeyValuePipe,
+    private readonly sharedService: SharedService,
+    private toastr: ToastrService,
   ) {
     this.mutationAnnotationService.getMutationAnnotationArticles().subscribe(list => {
       this.listArticlesOrigin = list;
@@ -48,10 +53,10 @@ export class MutationAnnotationComponent implements OnInit {
     const file: FileUploadModel = e.srcElement.files[0];
     const ext = file.name && file.name.split('.')[1];
     if (ext === 'vcf') {
-      this.mutationAnnotationService.uploadVCF(file, this.snpEffect).subscribe(list => {
-        this.listArticles = list;
-      });
-
+      this.mutationAnnotationService.uploadVCF(file, this.snpEffect).pipe(take(1)).subscribe(
+        list => this.listArticles = list,
+        err => this.toastr.error(this.sharedService.extractErrorMessage(err))
+      );
     }
   }
 
