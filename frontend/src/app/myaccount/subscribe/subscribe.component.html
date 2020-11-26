@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="col-sm-4">
-      <button type="submit" class="btn btn-primary" [disabled]="frequencyForm.invalid">
+      <button type="submit" class="btn btn-primary" [disabled]="frequencyForm.invalid || frequencyForm.pristine">
         {{'myaccount.subscribe.btnSave' | translate}}
       </button>
     </div>
@@ -51,7 +51,7 @@
       </button>
     </div>
   </div>
-  <div class="form-group row">
+  <div *ngIf="hasPrev || hasNext" class="form-group row">
     <div class="col-sm-12">
       <nav>
         <ul class="pagination justify-content-center">
