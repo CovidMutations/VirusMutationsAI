@@ -5,7 +5,7 @@
 @import './sass/icons';
 @import './sass/preloader';
 
-
+@import '~ngx-toastr/toastr-bs4-alert';
 
 label.btn input[type="file"] {
   display: none;

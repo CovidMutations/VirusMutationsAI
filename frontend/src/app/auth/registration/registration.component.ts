@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs/operators';
 import { SharedService } from '../../shared/shared.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -20,20 +21,21 @@ export class RegistrationComponent implements OnInit {
     private readonly authService: AuthService,
     private readonly activatedRoute: ActivatedRoute,
     private readonly router: Router,
-
+    private toastr: ToastrService,
   ) {
     const { userId, code } = this.activatedRoute.snapshot.params;
     if (userId) {
       this.authService.confirmCodeVerification(userId, code)
         .pipe(take(1))
         .subscribe(
-          _ => {
+          () => {
+            this.toastr.success(this.translateService.instant('registration.activationSuccess'));
             this.router.navigate(['auth']);
           },
           e => {
             const message = e.error && e.error.message
               || this.translateService.instant('registration.form.err_message');
-            this.sharedService.errorModal(message);
+            this.toastr.error(message);
           }
         );
     } else {
@@ -82,7 +84,7 @@ export class RegistrationComponent implements OnInit {
       () => this.registrationForm = null,
       e => {
         const message = e.error && e.error.message || this.translateService.instant('registration.form.err_message');
-        this.sharedService.errorModal(message);
+        this.toastr.error(message);
       },
     );
   }

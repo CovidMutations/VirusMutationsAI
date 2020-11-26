@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { APP_CONFIG, IAppConfig } from '../app.config';
 import { SharedService } from '../shared/shared.service';
 
@@ -35,7 +35,6 @@ export class MyaccountService {
           if (err.status === 404) {
             return of(0);  //  Return 0 if subscription frequency is not set
           }
-          this.sharedService.errorModal('Error: ' + err.error.detail);
           throw err;
         })
       );
@@ -47,16 +46,7 @@ export class MyaccountService {
       subscription_interval: days,
     };
 
-    return this.http.put(url, body, { responseType: 'text' })
-      .pipe(
-        map(
-          () => null,
-          err => {
-            this.sharedService.errorModal('Error: ' + err.error.message);
-            throw err;
-          }
-        )
-      );
+    return this.http.put(url, body, { responseType: 'text' }) as unknown as Observable<void>;
   }
 
   getMutations(limit = 100, skip = 0): Observable<PaginatedMutations> {

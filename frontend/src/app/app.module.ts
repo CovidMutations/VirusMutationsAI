@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
@@ -10,23 +11,21 @@ import {TranslateLoader, TranslateModule, TranslateCompiler} from '@ngx-translat
 import {TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { VMAI_CONFIG, APP_CONFIG } from './app.config';
-import { ErrorModalComponent } from './shared/error-modal/error-modal.component';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { MutationAnnotationModule } from './mutation-annotation/mutation-annotation.module';
 import { HomeComponent } from './main/home.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorModalComponent,
     HomeComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -42,6 +41,9 @@ import { HomeComponent } from './main/home.component';
     environment.production ? [] : AkitaNgDevtools,
     AkitaNgRouterStoreModule,
     MutationAnnotationModule,  //  eager loading
+    ToastrModule.forRoot({
+      timeOut: 10000,
+    }),
   //  GraphQLModule,
   ],
   providers: [
