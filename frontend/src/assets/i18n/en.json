@@ -23,6 +23,7 @@
       "subscribe": "Subscribe"
     },
     "search": {
+      "mutationInputPlaceholder": "e.g. 241C>T",
       "title": "Find articles by mutation"
     },
     "btnSubscribe": "Subscribe"

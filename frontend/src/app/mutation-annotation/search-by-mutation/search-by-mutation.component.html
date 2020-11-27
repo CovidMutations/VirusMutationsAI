@@ -4,7 +4,12 @@
   <div class="col-8">
     <form class="mb-3 wrap_icon-cancel">
       <i class="icon-cancel" *ngIf="box.value" (click)="box.value='';onFilterListArticles(box.value)"></i>
-      <input #box class="form-control mutation-input" (keyup)="onFilterListArticles(box.value)" placeholder="241C>T">
+      <input
+        #box
+        class="form-control mutation-input"
+        (keyup)="onFilterListArticles(box.value)"
+        placeholder="{{'MutationAnnotation.search.mutationInputPlaceholder' | translate}}"
+      >
     </form>
   </div>
   <div *ngIf="listArticles.length" class="col-4">
