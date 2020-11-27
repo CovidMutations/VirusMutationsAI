@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { MutationAnnotationService } from '../mutation-annotation.service';
 import { MutationAnnotationModel } from '../../models/mutation-annotation.model';
 import { BehaviorSubject, of } from 'rxjs';
-import { catchError, distinctUntilChanged, filter, map, switchMap, take } from 'rxjs/operators';
+import { catchError, debounceTime, distinctUntilChanged, filter, map, switchMap, take } from 'rxjs/operators';
 import { MyaccountService } from '../../myaccount/myaccount.service';
 import { AuthQuery } from '../../auth/store/auth.query';
 import { SharedService } from '../../shared/shared.service';
@@ -18,7 +18,7 @@ const mutationRegEx = /^.{2,}[A-Z]$/;
 })
 export class SearchByMutationComponent implements OnInit, OnDestroy {
   private mutationBS = new BehaviorSubject('');
-  listArticles: MutationAnnotationModel[] = [];
+  listArticles: MutationAnnotationModel[];
 
   constructor(
     private readonly mutationAnnotationService: MutationAnnotationService,
@@ -31,6 +31,7 @@ export class SearchByMutationComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.mutationBS.pipe(
+      debounceTime(300),
       map(v => v.trim().toUpperCase()),
       distinctUntilChanged(),
       filter(mutation => mutationRegEx.test(mutation)),

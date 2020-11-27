@@ -30,4 +30,9 @@
 
 .mutation-input {
   text-transform: uppercase;
+
+  &::placeholder {
+    text-transform: none;
+    opacity: .5;
+  }
 }
