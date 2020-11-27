@@ -50,13 +50,14 @@ export class MutationAnnotationComponent implements OnInit {
   }
 
   uploadVCF(e): void {
-    const file: FileUploadModel = e.srcElement.files[0];
-    const ext = file.name && file.name.split('.')[1];
+    const file: FileUploadModel = e.target.files[0];
+    const ext = file.name && file.name.split('.')[1].toLowerCase();
     if (ext === 'vcf') {
       this.mutationAnnotationService.uploadVCF(file, this.snpEffect).pipe(take(1)).subscribe(
         list => this.listArticles = list,
         err => this.toastr.error(this.sharedService.extractErrorMessage(err))
       );
+      e.target.value = null;
     }
   }
 

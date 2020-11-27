@@ -16,7 +16,7 @@
     "btn_load-vcf": "Upload VCF-File for COVID-19",
     "message_notfound":"The articles are not found",
     "label_SNP-effect":"Advanced search using SNP-effect",
-    "label_SNP-effect-note": "It takes around 1 minutes",
+    "labelSNPEffectNote": "It takes around 1 minute",
     "menu": {
       "search_by_mutation": "Search by mutation",
       "search_by_file": "Search by VCF-file",
