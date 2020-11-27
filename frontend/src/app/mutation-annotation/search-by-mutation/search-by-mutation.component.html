@@ -12,7 +12,7 @@
       >
     </form>
   </div>
-  <div *ngIf="listArticles.length" class="col-4">
+  <div *ngIf="listArticles && listArticles.length" class="col-4">
     <button
       type="button"
       class="btn btn-primary"
@@ -24,4 +24,4 @@
   </div>
 </div>
 
-<app-annotation-list [items]="listArticles" class="m_content_scroll"></app-annotation-list>
+<app-annotation-list *ngIf="listArticles" [items]="listArticles" class="m_content_scroll"></app-annotation-list>
