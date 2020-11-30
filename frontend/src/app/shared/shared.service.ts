@@ -17,7 +17,7 @@ export class SharedService {
   }
 
   extractErrorMessage(error: any): string {
-    return error.error && error.error.message || this.translateService.instant('auth.form.err_message');
+    return error.error && error.error.message || this.translateService.instant('generalError');
   }
 }
 
