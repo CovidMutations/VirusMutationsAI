@@ -4,9 +4,10 @@ import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs/operators';
 import { FileUploadModel } from '../../models/file-upload.model';
 import { MutationAnnotationService } from '../mutation-annotation.service';
-import { MutationAnnotationModel } from '../../models/mutation-annotation.model';
+import { MutationAnnotationArticleModel } from '../../models/mutation-annotation.model';
 import { HashMap } from '@datorama/akita';
 import { SharedService } from '../../shared/shared.service';
+import { MutationAnnotationQuery } from '../store/mutation-annotation.query';
 
 @Component({
   selector: 'app-mutation-annotation',
@@ -14,20 +15,20 @@ import { SharedService } from '../../shared/shared.service';
   styleUrls: ['./mutation-annotation.component.scss'],
 })
 export class MutationAnnotationComponent implements OnInit {
-  private listArticlesOrigin: HashMap<MutationAnnotationModel>;
-  listArticles: HashMap<MutationAnnotationModel>;
+  private listArticlesOrigin: HashMap<MutationAnnotationArticleModel[]>;
+  listArticles: HashMap<MutationAnnotationArticleModel[]>;
   activeItem = '';
   snpEffect = false;
 
   constructor(
     private readonly mutationAnnotationService: MutationAnnotationService,
+    private readonly mutationAnnotationQuery: MutationAnnotationQuery,
     private readonly keyValuePipe: KeyValuePipe,
     private readonly sharedService: SharedService,
     private toastr: ToastrService,
   ) {
-    this.mutationAnnotationService.getMutationAnnotationArticles().subscribe(list => {
-      this.listArticlesOrigin = list;
-      this.listArticles = this.listArticlesOrigin;
+    this.mutationAnnotationQuery.selectAll({ asObject: true }).subscribe(list => {
+      this.listArticles = this.listArticlesOrigin = list;
       this.setActiveItem();
     });
   }

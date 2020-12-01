@@ -69,5 +69,6 @@
   "pagination": {
     "prev": "Previous",
     "next": "Next"
-  }
+  },
+  "generalError": "Unknown error"
 }
