@@ -34,3 +34,9 @@ class ArticleXml:
             muts.add(mut)
 
         return muts
+
+    def abstract(self) -> str:
+        parts = self.tree.findall(".//front/article-meta/abstract/*")
+        text = "\n".join(etree.canonicalize(part, strip_text=True) for part in parts)
+
+        return text

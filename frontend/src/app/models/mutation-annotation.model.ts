@@ -5,6 +5,7 @@ export class MutationAnnotationArticleModel {
   base_mutation_src: string;
   article_name: string;
   article_url: string;
+  abstract_text: string;
   // tslint:enable:variable-name
 }
 
