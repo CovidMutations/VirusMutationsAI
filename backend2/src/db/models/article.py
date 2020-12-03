@@ -1,8 +1,10 @@
 from enum import Enum, unique
 from uuid import uuid4
 
+from markupsafe import Markup
 from sqlalchemy import Column, UnicodeText, Index, Date, Enum as EnumType, ForeignKeyConstraint, PrimaryKeyConstraint
 from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.orm import relationship
 from sqlalchemy_utils import Timestamp
 
 from src.db.base import Base
@@ -55,6 +57,12 @@ class ArticleData(Base, Timestamp):
     id = Column(UUID(as_uuid=True), nullable=False, default=uuid4)
     title = Column(UnicodeText, nullable=False)
     url = Column(UnicodeText, nullable=False)
+    abstract = Column(UnicodeText, nullable=False, server_default='')
+    mutations = relationship("ArticleMutation", back_populates="article_data")
+
+    @property
+    def abstract_text(self):
+        return Markup(self.abstract).striptags()
 
 
 class ArticleMutation(Base):
@@ -66,4 +74,5 @@ class ArticleMutation(Base):
     )
 
     article_id = Column(UUID(as_uuid=True), nullable=False, default=uuid4)
+    article_data = relationship('ArticleData', back_populates="mutations")
     mutation = Column(UnicodeText, nullable=False)

@@ -510,7 +510,7 @@ all = ["keyring"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "98a7796808f1dde5d26752b00bf8c3bd8450c13bc792f3f087ffab6270724a70"
+content-hash = "657b4ad0f91ff4ea14ec9a399d49414f88f6332f7cddae456396a20a5e73fc5d"
 
 [metadata.files]
 alembic = [
