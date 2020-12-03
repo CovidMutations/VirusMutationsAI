@@ -10,7 +10,7 @@ import { MutationAnnotationArticleModel, MutationAnnotationModel } from '../../m
 })
 export class ArticleSearchApi {
   private readonly uploadVCFapiEndpoint = '/uploadVCF';
-  private readonly articleSearchApi = '/articles/search';
+  private readonly articleSearchApi = '/v1/articles/search';
   private readonly API_URL: string;
   private readonly API2_URL: string;
 
