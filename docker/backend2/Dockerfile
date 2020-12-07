@@ -4,6 +4,7 @@ WORKDIR /requirements
 
 RUN apk add --no-cache \
         gcc \
+        g++ \
         libffi-dev \
         libxml2-dev \
         libxslt-dev \
@@ -27,6 +28,7 @@ VOLUME /credentials/gmail
 
 RUN apk add --no-cache \
         libpq \
+        libstdc++ \
         libxslt-dev
 
 COPY --from=builder /requirements /usr/local/lib/python3.8/site-packages
