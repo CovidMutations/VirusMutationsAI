@@ -72,5 +72,30 @@ def test(to, subject, body):
     send_message(to, subject, body)
 
 
+@cli.group()
+def mutations():
+    pass
+
+
+@mutations.command()
+@click.argument("file", metavar='input', type=click.File(encoding='utf-8'), required=True)
+@click.option(
+    '--header',
+    help="Specifies that the file contains a header line with the names of each column in the file",
+    is_flag=True,
+    default=False,
+    show_default=True
+)
+@click.option(
+    '--delimiter',
+    help="Specifies the character that separates columns within each row of the file",
+    default=",",
+    show_default=True
+)
+def import_mappings(file, header=False, delimiter=","):
+    """Import mutation-to-protein mappings from a CSV-file"""
+    add_mutation_mappings(file, header, delimiter)
+
+
 if __name__ == "__main__":
     cli()
