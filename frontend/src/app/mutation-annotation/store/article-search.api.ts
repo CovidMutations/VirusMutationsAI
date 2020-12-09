@@ -9,16 +9,14 @@ import { MutationAnnotationArticleModel, MutationAnnotationModel } from '../../m
   providedIn: 'root'
 })
 export class ArticleSearchApi {
-  private readonly uploadVCFapiEndpoint = '/uploadVCF';
+  private readonly uploadVCFapiEndpoint = '/v1/articles/search-by-file';
   private readonly articleSearchApi = '/v1/articles/search';
-  private readonly API_URL: string;
   private readonly API2_URL: string;
 
   constructor(
     private readonly http: HttpClient,
     @Inject(APP_CONFIG) config: IAppConfig,
   ) {
-    this.API_URL = config.apiEndpoint;
     this.API2_URL = config.apiEndpoint2;
   }
 
@@ -27,7 +25,7 @@ export class ArticleSearchApi {
     data.append('file', new File([file], file.name, { type: file.type }));
     data.append('snpEffect', useSnpEffect ? 'true' : 'false');
 
-    return this.http.post<MutationAnnotationModel>(this.API_URL + this.uploadVCFapiEndpoint, data);
+    return this.http.post<MutationAnnotationModel>(this.API2_URL + this.uploadVCFapiEndpoint, data);
   }
 
   search(mutation: string): Observable<MutationAnnotationArticleModel[]> {
