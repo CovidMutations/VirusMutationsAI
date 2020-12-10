@@ -34,6 +34,11 @@ def parse(id_: str = None):
     """Parse article body"""
     parse_article(id_)
 
+@articles.command()
+def parse_all():
+    """Parse all unparsed articles' bodies"""
+    parse_all_articles()
+
 
 @cli.group()
 def subscription():

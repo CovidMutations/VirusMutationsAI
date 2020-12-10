@@ -41,7 +41,9 @@ class Article(Base, Timestamp):
 
     id = Column(UUID(as_uuid=True), nullable=False, default=uuid4)
     external_id = Column(UnicodeText, nullable=False)
+    source = Column(UnicodeText, nullable=False, server_default='pmc')
     body = Column(UnicodeText, nullable=False)
+    meta = Column(UnicodeText, nullable=False, server_default='')
     status = Column(EnumType(ArticleStatus), nullable=False)
     message = Column(UnicodeText, nullable=False)
 
