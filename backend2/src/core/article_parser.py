@@ -63,7 +63,6 @@ class ArticleCord:
         meta_values = ['{}'.format(x) for x in list(csv.reader([article.meta], delimiter=',', quotechar='"'))[0]]
 
         if len(self.META_KEYS) != len(meta_values):
-            print(meta_values)
             raise TypeError(f'CORD19 format mismatch, keys_n={len(self.META_KEYS)} values_n={len(meta_values)}')
 
         self.meta = dict(zip(self.META_KEYS, meta_values))
