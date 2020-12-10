@@ -47,7 +47,7 @@ class VcfParser:
 
         logger.info(f'Success. Loaded data shape: {self.df_vcf.shape}')
 
-    def get_mutations(self, notation=None) -> List[str]:
+    def get_nucleotide_mutations(self, notation=None) -> List[str]:
         # Checks
         assert notation is None, 'Currently only None is supported as notation'
         if self.df_vcf is None:
