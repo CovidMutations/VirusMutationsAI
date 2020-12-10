@@ -77,6 +77,7 @@ class ArticleCoreService:
                 {
                     "id": str(uuid4()),
                     "external_id": id_,
+                    "source": "pmc",
                     "body": "",
                     "status": ArticleStatus.NEW,
                     "message": ""
@@ -181,6 +182,9 @@ class ArticleCoreService:
 
     def _parse_article(self, article) -> ArticleDataDict:
         article_parser = get_article_parser(article)  # catch exception
+
+        if article_parser is None:
+            raise TypeError(f'Cannot instantiate parser for source={article.source}')
 
         title = article_parser.title()
         mutations = article_parser.mutations()
