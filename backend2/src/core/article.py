@@ -146,7 +146,7 @@ class ArticleCoreService:
             .first()
 
         if not article:
-            return
+            return False
 
         try:
             self._parse_and_save_article_data(article)
@@ -158,27 +158,12 @@ class ArticleCoreService:
             article.status = ArticleStatus.PARSED
 
         self.db.commit()
+        return True
 
     def parse_all_new_articles(self):
-        articles = self.db.query(Article) \
-            .filter(Article.status == ArticleStatus.FETCHED) \
-            .with_for_update(skip_locked=True, key_share=True) \
-            .all()
-
-        if len(articles) == 0:
-            return
-
-        for article in articles:
-            try:
-                self._parse_and_save_article_data(article)
-            except Exception as e:
-                logger.warning(f'Cannot parse article {article.id} body: {e}')
-                article.status = ArticleStatus.ERROR
-                article.message = str(e)
-            else:
-                article.status = ArticleStatus.PARSED
-
-        self.db.commit()
+        while True:
+            if self.parse_new_article() is False:
+                break
 
     def _parse_article(self, article) -> ArticleDataDict:
         article_parser = get_article_parser(article)  # catch exception
