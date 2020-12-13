@@ -1,13 +1,18 @@
 import re
 from typing import Set
-
+from src.db.models import Article
+import csv
 from lxml import etree
 
+class ArticlePmc:
+    """ Parser implementation for PMC article format """
 
-class ArticleXml:
-    def __init__(self, data_xml: str):
-        self.raw_data = data_xml
-        self.tree = etree.fromstring(data_xml)  # catch exception
+    SOURCE_NAME = "pmc"
+    PMC_BASE_URL = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC'
+
+    def __init__(self, article: Article):
+        self.article = article
+        self.tree = etree.fromstring(article.body)  # catch exception
 
     def title(self) -> str:
         title = self.tree.find('.//front/article-meta/title-group/article-title').text.strip()
@@ -22,7 +27,7 @@ class ArticleXml:
 
     def mutations(self) -> Set[str]:
         muts = set()
-        text = re.sub('<[^<]+>', "", self.raw_data)  # Strip all xml tags
+        text = re.sub('<[^<]+>', "", self.article.body)  # Strip all xml tags
 
         muts.update(re.findall(r'[A-Z]\d+[A-Z]', text))  # Find patterns like P223Q
 
@@ -40,3 +45,58 @@ class ArticleXml:
         text = "\n".join(etree.canonicalize(part, strip_text=True) for part in parts)
 
         return text
+
+    def url(self) -> str:
+
+        return f"{self.PMC_BASE_URL}{self.article.external_id}"
+
+class ArticleCord:
+    """ Parser implementation for CORD19 article format """
+
+    SOURCE_NAME = "cord19_pdf"
+    META_KEYS = ['cord_uid', 'sha', 'source_x', 'title', 'doi', 'pmcid', 'pubmed_id', 'license',
+                 'abstract', 'publish_time', 'authors', 'journal', 'mag_id', 'who_covidence_id',
+                 'arxiv_id', 'pdf_json_files', 'pmc_json_files', 'url', 's2_id']
+
+    def __init__(self, article: Article):
+        self.article = article
+        meta_values = ['{}'.format(x) for x in list(csv.reader([article.meta], delimiter=',', quotechar='"'))[0]]
+
+        if len(self.META_KEYS) != len(meta_values):
+            raise TypeError(f'CORD19 format mismatch, keys_n={len(self.META_KEYS)} values_n={len(meta_values)}')
+
+        self.meta = dict(zip(self.META_KEYS, meta_values))
+
+    def title(self) -> str:
+        return self.meta['title']
+
+    def mutations(self) -> Set[str]:
+        muts = set()
+        text = re.sub('<[^<]+>', "", self.article.body)  # Strip all xml tags
+
+        muts.update(re.findall(r'[A-Z]\d+[A-Z]', text))  # Find patterns like P223Q
+
+        # Find patterns like "223 A > T" and convert them to canonical form "223A>T"
+        strings = re.findall(r'\d+ *[ACGT]+ *(?:>) *[ACGT]+', text)
+        for ss in strings:
+            m = re.search(r'(?P<pos>\d+) *(?P<from>[ACGT]+) *(:?>) *(?P<to>[ACGT]+)', ss)
+            mut = f"{m.group('pos')}{m.group('from')}>{m.group('to')}"
+            muts.add(mut)
+
+        return muts
+
+    def abstract(self) -> str:
+        return self.meta['abstract']
+
+    def url(self) -> str:
+        return self.meta['url'].split(';')[0]
+
+def get_article_parser(article: Article):
+    """ Factory method: choose a parser by source """
+
+    parsers = {
+        ArticlePmc.SOURCE_NAME: ArticlePmc,
+        ArticleCord.SOURCE_NAME: ArticleCord
+    }
+
+    return parsers[article.source](article)

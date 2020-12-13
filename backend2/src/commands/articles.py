@@ -27,3 +27,10 @@ def parse_article(id_):
         article_service.parse_article(id_)
     except RuntimeError as e:
         click.echo(str(e), err=True)
+
+
+def parse_all_articles():
+    try:
+        article_service.parse_all_new_articles()
+    except RuntimeError as e:
+        click.echo(str(e), err=True)

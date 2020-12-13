@@ -8,7 +8,7 @@ from Bio import Entrez
 from sqlalchemy import desc
 from sqlalchemy.dialects.postgresql import insert
 
-from src.core.article_parser import ArticleXml
+from src.core.article_parser import get_article_parser
 from src.core.config import settings
 from src.db.models import ArticleFetchLog, Article
 from src.db.models.article import ArticleStatus, ArticleData, ArticleMutation
@@ -17,7 +17,6 @@ from src.db.session import SessionLocal
 logger = logging.getLogger(__name__)
 
 ENTREZ_DATE_FORMAT = "%Y/%m/%d"
-PMC_BASE_URL = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC'
 
 
 class ArticleDataDict(TypedDict):
@@ -78,6 +77,7 @@ class ArticleCoreService:
                 {
                     "id": str(uuid4()),
                     "external_id": id_,
+                    "source": "pmc",
                     "body": "",
                     "status": ArticleStatus.NEW,
                     "message": ""
@@ -146,7 +146,7 @@ class ArticleCoreService:
             .first()
 
         if not article:
-            return
+            return False
 
         try:
             self._parse_and_save_article_data(article)
@@ -158,19 +158,28 @@ class ArticleCoreService:
             article.status = ArticleStatus.PARSED
 
         self.db.commit()
+        return True
+
+    def parse_all_new_articles(self):
+        while True:
+            if self.parse_new_article() is False:
+                break
 
     def _parse_article(self, article) -> ArticleDataDict:
-        article_xml = ArticleXml(article.body)  # catch exception
+        article_parser = get_article_parser(article)  # catch exception
 
-        title = article_xml.title()
-        mutations = article_xml.mutations()
-        abstract = article_xml.abstract()
+        if article_parser is None:
+            raise TypeError(f'Cannot instantiate parser for source={article.source}')
 
-        return ArticleDataDict(title=title, mutations=mutations, abstract=abstract)
+        title = article_parser.title()
+        mutations = article_parser.mutations()
+        abstract = article_parser.abstract()
+        url = article_parser.url()
+
+        return ArticleDataDict(title=title, mutations=mutations, abstract=abstract, url = url)
 
     def _parse_and_save_article_data(self, article: Article):
         data = self._parse_article(article)
-        data["url"] = f"{PMC_BASE_URL}{article.external_id}"
 
         logger.info(f'{len(data["mutations"])} mutations found for article {article.id}')
         logger.debug('Mutations for article {article.id}: ' + ', '.join(data["mutations"]))
