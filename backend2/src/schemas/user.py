@@ -1,12 +1,12 @@
 from datetime import datetime
 from uuid import UUID
 
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 
 class UserBase(BaseModel):
     username: str
-    email: str
+    email: EmailStr
 
 
 class User(UserBase):
