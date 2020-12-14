@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Virus Mutations AI API"
     API_V1_STR: str = "/api/v1"
     SECRET_KEY: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 1 day
 
     ACCESS_TOKEN_URL: str = "http://localhost:3000/api/login"
 
