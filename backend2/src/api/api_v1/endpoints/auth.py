@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
+from uuid import UUID
 
 from src import schemas
 from src.api import deps
@@ -73,11 +74,19 @@ def registration(
     return user
 
 
-# @router.post("/send-code-verification/{user_id}")
-# def send_verification_code():
-#     pass
-#
-#
-# @router.get("/confirm-code-verification/{user_id}/{code}")
-# def confirm_verification():
-#     pass
+@router.put("/registration/activation/{user_id}")
+def confirm_registration(
+    user_id: UUID,
+    item_in: schemas.Code,
+    db: Session = Depends(deps.get_db),
+):
+    user: models.User = db.query(models.User).filter(models.User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"User {user_id} not found")
+    if user.active:
+        return  # User is already active
+    if user.verification_code != item_in.code:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Incorrect verification code")
+
+    user.active = True
+    db.commit()

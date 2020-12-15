@@ -20,3 +20,7 @@ class User(UserBase):
 
 class UserCreate(UserBase):
     password: str
+
+
+class Code(BaseModel):
+    code: int
