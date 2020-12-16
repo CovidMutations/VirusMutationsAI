@@ -17,7 +17,7 @@ export class SharedService {
   }
 
   extractErrorMessage(error: any): string {
-    return error.error && error.error.message || this.translateService.instant('generalError');
+    return error.error && (error.error.message || error.error.detail) || this.translateService.instant('generalError');
   }
 }
 

@@ -14,16 +14,17 @@ import {
   AuthState,
   TokenPayload
 } from '../models/auth.model';
+import { HttpUrlStandardEncodingCodec } from '../shared/http-url-encoding-codec';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private regEndpoint = '/registration';
-  private loginEndpoint = '/login';
-  private codeVerificationEndpoint = '/confirm-code-verification';
-  private API_URL;
+  private readonly regEndpoint = '/v1/auth/registration';
+  private readonly loginEndpoint = '/v1/auth/access-token';
+  private readonly codeVerificationEndpoint = '/v1/auth/registration/activation';
+  private readonly API2_URL;
 
   constructor(
     private readonly http: HttpClient,
@@ -33,7 +34,7 @@ export class AuthService {
 
     @Inject(APP_CONFIG) config: IAppConfig
   ) {
-    this.API_URL = config.apiEndpoint;
+    this.API2_URL = config.apiEndpoint2;
     this.getAuthInfo();
    }
 
@@ -43,14 +44,14 @@ export class AuthService {
   }
 
   registration(formVal: RegistrationFormModel): any {
-    return this.http.post(this.API_URL + this.regEndpoint, formVal);
+    return this.http.post(this.API2_URL + this.regEndpoint, formVal);
   }
 
   login(formVal: LoginFormModel): Observable<AuthState> {
-    const body = new HttpParams()
+    const body = new HttpParams({ encoder: new HttpUrlStandardEncodingCodec() })
       .append('username', formVal.email)
       .append('password', formVal.password);
-    return this.http.post<TokenResp>(this.API_URL + this.loginEndpoint, body).pipe(
+    return this.http.post<TokenResp>(this.API2_URL + this.loginEndpoint, body).pipe(
       map(data => this.tokenToAuthState(data.access_token)),
       tap(authState => this.authStore.login(authState)),
     );
@@ -61,7 +62,7 @@ export class AuthService {
   }
 
   confirmCodeVerification(userId: string, code: string): Observable<any> {
-    return this.http.get(this.API_URL + this.codeVerificationEndpoint + '/' + userId + '/' + code) as Observable<any>;
+    return this.http.put(this.API2_URL + this.codeVerificationEndpoint + '/' + userId, { code });
   }
 
   private extractJWTPayload(token: string): TokenPayload | null {

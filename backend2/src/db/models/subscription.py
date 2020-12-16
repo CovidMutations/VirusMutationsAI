@@ -7,7 +7,7 @@ from src.db.base import Base
 class Subscription(Base):
     __tablename__ = "subscription"
 
-    user_id = Column(UUID, primary_key=True)
+    user_id = Column(UUID(as_uuid=True), primary_key=True)
     mutation = Column(UnicodeText, primary_key=True, nullable=False)
 
     __table_args__ = (

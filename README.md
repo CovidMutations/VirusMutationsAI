@@ -92,6 +92,7 @@ Backend app can be configured via environment variables.
 | ACCESS_TOKEN_URL | Authentication URL for Swagger | n | `http://localhost:3000/api/login` |
 | API_V1_STR | API version 1 prefix | n | `/api/v1` |
 | SECRET_KEY | JWT key | y | `VerySecretString` |
+| ACCESS_TOKEN_EXPIRE_MINUTES | JWT expiration time in minutes | n | `1440` |
 | CORS_ORIGINS | JSON-formatted list of origins | n | `["http://localhost:4200", "http://127.0.0.1:4200"]` |
 | PUBLIC_URL | Site address used in links in emails  | y | `http://localhost` |
 | POSTGRES_SERVER | | n | `172.17.0.1` |
