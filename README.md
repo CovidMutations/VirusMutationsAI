@@ -3,28 +3,36 @@ Welcome to VirusMutationsAI - a web-dashboard with smart routines to analyze gen
 Current implementation allows to search articles for mutations at the covid-19 virus genome.
 
 
-## Install packages
+## Local development
 
-Install and run `yarn`
+### Frontend
+We use [Yarn](https://yarnpkg.com/) as a package manager. Consider installing it globally.
 
+#### Dependencies
+Change directory to `frontend` and run `yarn` there.
 
-## Run backend
+#### Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-Run `yarn back`
+### Database
+We use [PostgreSQL](https://www.postgresql.org/) as a relational database.
 
-## Run frontend
+### Backend
+This project requires [Python 3.8](https://python.org/).
 
-Run `yarn front`
+We use [Poetry](https://python-poetry.org/) as a package manager. Consider installing it globally.
 
+#### Dependencies
+Change directory to `backend2` and run `poetry install` there.
 
-## Update articles DB manually:
+#### Development server
+Configure environment variables.
 
-Launch consequently from 'backend/scripts': covid_articles_db.py, mutations_extractor.py
+Change directory to `backend2` and run `alembic upgrade head` to upgrade database to current state.
 
+Run `uvicorn src.main:app` for a dev server.
+Navigate to `http://localhost:8000/docs` to see Open API docs.
 
-## Deploy
-
-Run `npm run covid`
 
 ## Docker
 
@@ -41,38 +49,7 @@ Frontend app can be configured via environment variables.
 
 | Variable | Description | Required | Example |
 | -------  | ----------- | -------- | ------- |
-| API_URL | Backend API URL | y | `http://localhost:3000/api/` |
-| API2_URL | 2nd backend API URL | y | `http://localhost:8000/api/` |
-
-#### Backend
-Run the following command in the root directory of the repo:
-
-`docker build -t <tag> -f docker/backend/Dockerfile .`
-
-The image exposes port `3000` by default
-but it can be configured via `PORT` environment variable.
-
-Backend app can be configured via environment variables.
-
-| Variable | Description | Required | Example |
-| -------  | ----------- | -------- | ------- |
-| PORT | | y | `3000` |
-| ORIGIN | | y | `http://localhost` |
-| PUBLIC_URL | Site address used for links in emails  | y | `http://localhost` |
-| DB_TYPE | | y | `postgres` |
-| DB_HOST | | y | `172.17.0.1` |
-| DB_PORT | | y | `5432` |
-| DB_USER | | y | `username` |
-| DB_NAME | | y | `covid` |
-| DB_PASSWORD | | y | `password` |
-| DB_SYNCHRONIZE | | y | `true` |
-| JWT_SECRET | | y | `VerySecretString` |
-| MAIL_SERVICE | | y | `gmail` |
-| MAIL_EMAIL | | y | `username@example.com` |
-| MAIL_PASSWORD | | y | `password` |
-| MAIL_CLIENT_ID | | y | `123456789.apps.googleusercontent.com` |
-| MAIL_CLIENT_SECRET | | y | `agHrjEwr5gWfc` |
-| MAIL_SUBJECT | | y | `Hello` |
+| API2_URL | Backend API URL | y | `http://localhost:8000/api/` |
 
 #### Backend 2
 Run the following command in the root directory of the repo:

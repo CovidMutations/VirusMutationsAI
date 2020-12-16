@@ -21,37 +21,7 @@ services:
     ports:
       - "80:80"
     environment:
-      API_URL: "http://localhost:3000/api"
       API2_URL: "http://localhost:8000/api"
-
-  backend:
-    image: docker.pkg.github.com/covidmutations/virusmutationsai/be:latest
-    restart: unless-stopped
-    depends_on:
-      - db
-    ports:
-      - "3000:3000"
-    environment:
-      PORT: "3000"
-      ORIGIN: "http://localhost http://localhost:3000 http://localhost:8000"
-      PUBLIC_URL: "http://localhost"
-      DB_TYPE: "postgres"
-      DB_HOST: "db"
-      DB_PORT: "5432"
-      DB_USER: "covid"
-      DB_NAME: "covid"
-      DB_PASSWORD: "covid"
-      DB_SYNCHRONIZE: "false"
-      JWT_SECRET: "TopSecret51"
-      MAIL_SERVICE: "gmail"
-      MAIL_EMAIL: ""
-      MAIL_PASSWORD: ""
-      MAIL_CLIENT_ID: ""
-      MAIL_CLIENT_SECRET: ""
-      MAIL_SUBJECT: "Hello"
-    volumes:
-      - "./volumes/articles:/app/backend/py/db"
-      - "./volumes/admin:/app/backend/admin"
 
   backend2:
     image: docker.pkg.github.com/covidmutations/virusmutationsai/be2:latest

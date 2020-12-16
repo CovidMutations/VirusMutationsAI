@@ -1,5 +1,0 @@
-biopython
-lxml
-pandas
-argparse
-

@@ -1,10 +1,9 @@
 @import './sass/variables';
-
 @import './assets/icons/style.css';
-@import './sass/mixin';
 @import './sass/icons';
 @import './sass/preloader';
 
+@import '~bootstrap/scss/bootstrap.scss';
 @import '~ngx-toastr/toastr-bs4-alert';
 
 label.btn input[type="file"] {
