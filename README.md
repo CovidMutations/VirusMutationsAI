@@ -1,6 +1,6 @@
 # VirusMutationsAI
 Welcome to VirusMutationsAI - a web-dashboard with smart routines to analyze genomes of viruses.
-Current implementation allows to search articles for mutations at the covid-19 virus genome.
+Current implementation allows to search articles for mutations at the SARS-CoV-2 virus genome.
 
 
 ## Local development
