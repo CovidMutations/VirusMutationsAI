@@ -82,18 +82,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "VirusMutationsAI:build"
+            "browserTarget": "virus-mutations-ai:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "VirusMutationsAI:build:production"
+              "browserTarget": "virus-mutations-ai:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "VirusMutationsAI:build"
+            "browserTarget": "virus-mutations-ai:build"
           }
         },
         "test": {
@@ -130,11 +130,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "VirusMutationsAI:serve"
+            "devServerTarget": "virus-mutations-ai:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "VirusMutationsAI:serve:production"
+              "devServerTarget": "virus-mutations-ai:serve:production"
             }
           }
         }
