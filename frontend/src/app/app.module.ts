@@ -5,7 +5,6 @@ import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
-// import { GraphQLModule } from './graphql.module';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {TranslateLoader, TranslateModule, TranslateCompiler} from '@ngx-translate/core';
 import {TranslateService} from '@ngx-translate/core';
@@ -44,7 +43,6 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot({
       timeOut: 10000,
     }),
-  //  GraphQLModule,
   ],
   providers: [
     { provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }},

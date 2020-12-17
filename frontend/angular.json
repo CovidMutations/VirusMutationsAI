@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "VirusMutationsAI": {
+    "virus-mutations-ai": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -75,7 +75,7 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": true,
-              "buildOptimizer": true,
+              "buildOptimizer": true
             }
           }
         },
@@ -140,5 +140,5 @@
         }
       }
     }},
-  "defaultProject": "VirusMutationsAI"
+  "defaultProject": "virus-mutations-ai"
 }
