@@ -41,8 +41,11 @@ class ArticlePmc:
         return muts
 
     def abstract(self) -> str:
-        parts = self.tree.findall(".//front/article-meta/abstract/*")
-        text = "\n".join(etree.canonicalize(part, strip_text=True) for part in parts)
+        try:
+            parts = self.tree.findall(".//front/article-meta/abstract/*")
+            text = "\n".join(etree.canonicalize(part, strip_text=True) for part in parts)
+        except:
+            text = ''
 
         return text
 

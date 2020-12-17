@@ -1,13 +1,13 @@
 {
   "menu": {
-    "MutationAnnotation": "COVID-19 Mutation annotation",
+    "MutationAnnotation": "SARS-CoV-2 Mutation annotation",
     "singUp": "Sign up",
     "singIn": "Sign in",
     "hello": "Hello, {{name}}!",
     "logout": "Logout"
   },
   "home": {
-    "help": "This is interactive dashboard that finds articles for COVID-19 mutations. Article database is automatically updated from <a href=\"https://www.ncbi.nlm.nih.gov/pmc/\" target=\"_blank\" rel=\"noopener\">PMC</a> (PubMed Central). Mutations can be entered directly to the search box or uploaded in a VCF-file (Variant Call Format). It is possible to subscribe for periodic email notifications with most recent articles for certain mutations."
+    "help": "This is interactive dashboard that finds articles for SARS-CoV-2 mutations. Article database is automatically updated from <a href=\"https://www.ncbi.nlm.nih.gov/pmc/\" target=\"_blank\" rel=\"noopener\">PMC</a> (PubMed Central). Mutations can be entered directly to the search box or uploaded in a VCF-file (Variant Call Format). It is possible to subscribe for periodic email notifications with most recent articles for certain mutations."
   },
   "MutationAnnotation": {
     "title": "Found following articles",
