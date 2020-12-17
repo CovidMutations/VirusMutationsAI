@@ -1,4 +1,5 @@
 from typing import Optional, List, Dict
+from datetime import date
 
 from pydantic import BaseModel
 
@@ -13,6 +14,7 @@ class ArticleSearchItem(BaseModel):
     article_name: str
     article_url: str
     abstract_text: str = ""
+    publish_date: date
 
 
 ArticleSearchOut = Dict[str, List[ArticleSearchItem]]

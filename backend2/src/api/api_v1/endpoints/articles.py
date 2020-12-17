@@ -102,4 +102,5 @@ def article_data_to_search_item(
         abstract_text=item.abstract_text,
         base_mutation=base_mutation.mutation if base_mutation else "",
         base_mutation_src=base_mutation.source if base_mutation else None,
+        publish_date=item.publish_date
     )

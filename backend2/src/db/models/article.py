@@ -61,6 +61,7 @@ class ArticleData(Base, Timestamp):
     url = Column(UnicodeText, nullable=False)
     abstract = Column(UnicodeText, nullable=False, server_default='')
     mutations = relationship("ArticleMutation", back_populates="article_data")
+    publish_date = Column(Date, nullable=False)
 
     @property
     def abstract_text(self):
