@@ -14,7 +14,7 @@ class ArticleSearchItem(BaseModel):
     article_name: str
     article_url: str
     abstract_text: str = ""
-    publish_date: date
+    publishing_date: date
 
 
 ArticleSearchOut = Dict[str, List[ArticleSearchItem]]

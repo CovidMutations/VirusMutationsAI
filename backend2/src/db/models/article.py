@@ -1,8 +1,9 @@
 from enum import Enum, unique
 from uuid import uuid4
+import datetime
 
 from markupsafe import Markup
-from sqlalchemy import Column, UnicodeText, Index, Date, Enum as EnumType, ForeignKeyConstraint, PrimaryKeyConstraint
+from sqlalchemy import Column, UnicodeText, Index, Date, Enum as EnumType, ForeignKeyConstraint, PrimaryKeyConstraint, text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 from sqlalchemy_utils import Timestamp
@@ -61,7 +62,7 @@ class ArticleData(Base, Timestamp):
     url = Column(UnicodeText, nullable=False)
     abstract = Column(UnicodeText, nullable=False, server_default='')
     mutations = relationship("ArticleMutation", back_populates="article_data")
-    publish_date = Column(Date, nullable=False)
+    publishing_date = Column(Date, nullable=False, server_default=text("now()"))
 
     @property
     def abstract_text(self):

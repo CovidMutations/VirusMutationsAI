@@ -54,19 +54,20 @@ class ArticlePmc:
 
         return f"{self.PMC_BASE_URL}{self.article.external_id}"
 
-    def publish_date(self) -> date:
+    def publishing_date(self) -> date:
+        cur_date = date.today()
         try:
             year = int(self.tree.findall(".//front/article-meta/pub-date/year")[0].text)
         except:
-            year = 2020
+            year = cur_date.year
         try:
             month = int(self.tree.findall(".//front/article-meta/pub-date/month")[0].text)
         except:
-            month = 1
+            month = cur_date.month
         try:
             day = int(self.tree.findall(".//front/article-meta/pub-date/day")[0].text)
         except:
-            day = 1
+            day = cur_date.day
 
         try:
             date(year, month, day)
@@ -116,7 +117,7 @@ class ArticleCord:
     def url(self) -> str:
         return self.meta['url'].split(';')[0]
 
-    def publish_date(self) -> date:
+    def publishing_date(self) -> date:
         year, month, day = [int(i) for i in self.meta['publish_time'].split('-')]
 
         return date(year, month, day)
