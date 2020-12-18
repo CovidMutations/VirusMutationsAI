@@ -3,6 +3,7 @@ from typing import Set
 from src.db.models import Article
 import csv
 from lxml import etree
+from datetime import date
 
 class ArticlePmc:
     """ Parser implementation for PMC article format """
@@ -53,6 +54,28 @@ class ArticlePmc:
 
         return f"{self.PMC_BASE_URL}{self.article.external_id}"
 
+    def publishing_date(self) -> date:
+        cur_date = date.today()
+        try:
+            year = int(self.tree.findall(".//front/article-meta/pub-date/year")[0].text)
+        except:
+            year = cur_date.year
+        try:
+            month = int(self.tree.findall(".//front/article-meta/pub-date/month")[0].text)
+        except:
+            month = cur_date.month
+        try:
+            day = int(self.tree.findall(".//front/article-meta/pub-date/day")[0].text)
+        except:
+            day = cur_date.day
+
+        try:
+            date(year, month, day)
+        except:
+            day = 1
+
+        return date(year, month, day)
+
 class ArticleCord:
     """ Parser implementation for CORD19 article format """
 
@@ -93,6 +116,11 @@ class ArticleCord:
 
     def url(self) -> str:
         return self.meta['url'].split(';')[0]
+
+    def publishing_date(self) -> date:
+        year, month, day = [int(i) for i in self.meta['publish_time'].split('-')]
+
+        return date(year, month, day)
 
 def get_article_parser(article: Article):
     """ Factory method: choose a parser by source """

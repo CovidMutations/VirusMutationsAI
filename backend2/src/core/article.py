@@ -24,6 +24,7 @@ class ArticleDataDict(TypedDict):
     title: Optional[str]
     abstract: Optional[str]
     mutations: Optional[Set[str]]
+    publishing_date: Optional[date]
 
 
 class ArticleCoreService:
@@ -175,8 +176,10 @@ class ArticleCoreService:
         mutations = article_parser.mutations()
         abstract = article_parser.abstract()
         url = article_parser.url()
+        publishing_date = article_parser.publishing_date()
 
-        return ArticleDataDict(title=title, mutations=mutations, abstract=abstract, url = url)
+        return ArticleDataDict(title=title, mutations=mutations, abstract=abstract,
+                               url = url, publishing_date = publishing_date)
 
     def _parse_and_save_article_data(self, article: Article):
         data = self._parse_article(article)
@@ -187,7 +190,7 @@ class ArticleCoreService:
         self._save_article_data(article, data)
 
     def _save_article_data(self, article: Article, data: ArticleDataDict):
-        base_data_keys = {"title", "abstract", "url"}
+        base_data_keys = {"title", "abstract", "url", "publishing_date"}
         base_data = {key: value for (key, value) in data.items() if key in base_data_keys}
         insert_statement = insert(ArticleData).values({**base_data, **{"id": article.id}}).on_conflict_do_update(
             index_elements=[ArticleData.id],
